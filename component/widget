@@ -1,0 +1,25 @@
+.rq-radio() {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+
+    &::before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        display: inline-block;
+        border-radius: 50%;
+        vertical-align: top;
+        margin-top: 3px;
+    }
+
+    &.active {
+        &::before {
+            background-color: red;
+        }
+    }
+}
+
