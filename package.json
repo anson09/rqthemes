@@ -1,0 +1,39 @@
+{
+  "name": "@rqjs/rqthemes",
+  "version": "0.1.1",
+  "description": "ricequant themes",
+  "style": "dist/index.css",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.ricequant.com:7999/node/ricequant-themes.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "build": "./scripts/updep.sh && parcel build src/index.scss --no-minify --no-source-maps --no-content-hash",
+    "lint": "./scripts/lint.sh",
+    "clean": "rm -rf .cache dist"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.6.1",
+    "@commitlint/config-conventional": "^7.6.0",
+    "autoprefixer": "^9.5.1",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.6",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.17.1",
+    "sass": "^1.20.1",
+    "stylelint": "^10.0.1",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-recess-order": "^2.0.2",
+    "stylelint-config-recommended-scss": "^3.3.0",
+    "stylelint-scss": "^3.6.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "highcharts": "^7.1.1"
+  }
+}
