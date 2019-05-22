@@ -1,13 +1,13 @@
 {
   "name": "@rqjs/rqthemes",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "description": "ricequant themes",
-  "style": "dist/index.css",
+  "main": "dist/index.css",
   "repository": {
     "type": "git",
     "url": "ssh://git@git.ricequant.com:7999/node/ricequant-themes.git"
   },
-  "author": "",
+  "author": "ansonw",
   "license": "MIT",
   "scripts": {
     "build": "./scripts/updep.sh && parcel build src/index.scss --no-minify --no-source-maps --no-content-hash",
@@ -33,7 +33,7 @@
     "stylelint-scss": "^3.6.1"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1",
-    "highcharts": "^7.1.1"
+    "highcharts": "^7.1.1",
+    "normalize.css": "^8.0.1"
   }
 }

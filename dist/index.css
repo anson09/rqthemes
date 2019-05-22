@@ -1,0 +1,1903 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+@charset "UTF-8";
+.theme-light {
+  --color-primary: #409eff;
+  --color-secondary: #f9f9fb;
+  --color-minor-1: #2c3242;
+  --color-minor-2: #2c364d;
+  --ele-primary-1: #ecf5ff;
+  --ele-primary-2: #36548d;
+  --ele-secondary-1: #66b1ff;
+  --ele-secondary-2: #ecf5ff;
+  --ele-minor-1: #ebeef5;
+  --ele-minor-2: #a0cfff;
+  --common-color-1: #606266;
+  --common-color-2: #c0c4cc;
+  --common-color-3: #f5f7fa;
+  --ele-radius: 4px;
+  --border-color-primary: #d7d7d7;
+  --white: #ffffff;
+  --grey: #909399;
+  --disable-color: #8cc5ff;
+  --background-color: var(--color-secondary);
+  --background-color-secondary: var(--white);
+  --hover-color: var(--color-primary);
+  --table-head-bg-color: var(--ele-minor-1);
+  --table-color: var(--white);
+  --table-hover-color: var(--common-color-3);
+  --table-active-color: var(--grey);
+  --table-head-text-color: var(--grey);
+  --text-color: #000000;
+  --text-color-secondary: var(--grey);
+  --border-color: var(--border-color-primary);
+  --border-hover-color: var(--color-primary);
+  --nav-text-color: var(--border-color-primary);
+  --nav-text-hover-color: var(--white);
+  --table-scroll-bg-color: var(--background-color-secondary);
+  --table-scroll-track-color: var(--grey);
+  --button-primary-color: var(--color-primary);
+  --button-primary-hover-color: var(--ele-secondary-1);
+  --button-primary-disabled-color: var(--ele-secondary-2);
+  --button-primary-text-color: var(--white);
+  --button-primary-text-disabled-color: var(
+    --color-primary
+  );
+  --button-primary-text-hover-color: var(--white);
+  --button-default-color: var(--white);
+  --button-default-hover-color: var(--hover-color);
+  --button-default-text-color: var(--common-color-1);
+  --button-default-text-disabled-color: var(--common-color-2);
+  --button-default-text-hover-color: var(--white);
+  --button-group-color: var(--color-primary);
+  --button-group-hover-color: var(--ele-secondary-1);
+  --button-group-disabled-color: var(--ele-minor-2);
+  --button-group-text-color: var(--white);
+  --checkbox-color: var(--color-primary);
+  --checkbox-inner-color: var(--white);
+  --date-table-weekend-color: var(
+    --button-hover-color
+  );
+  --date-table-current-text-color: var(--white);
+  --date-table-current-color: var(
+    --color-primary
+  );
+  --input-color: var(--background-color-secondary);
+  --input-text-color: var(--text-color-secondary);
+  --input-text-disabled-color: var(--text-color-secondary);
+  --select-text-color: var(--text-color-secondary);
+  --select-text-hover-color: var(--hover-color);
+}
+
+.theme-dark {
+  --color-primary: #264378;
+  --color-secondary: #1e2131;
+  --color-minor-1: #2c3242;
+  --color-minor-2: #2c364d;
+  --ele-primary-1: #2974cb;
+  --ele-primary-2: #36548d;
+  --ele-secondary-1: #3780d4;
+  --ele-secondary-2: #3e5c97;
+  --ele-minor-1: rgba(41, 116, 203, 30);
+  --ele-minor-2: rgba(61, 94, 155, 30);
+  --ele-minor-3: #bba37c;
+  --common-color-1: #243252;
+  --common-color-2: #212838;
+  --common-color-3: #5095cb;
+  --ele-radius: 4px;
+  --border-color-primary: #34394a;
+  --white: #ffffff;
+  --grey: #999999;
+  --disable-color: #8cc5ff;
+  --background-color: var(--color-secondary);
+  --background-color-secondary: var(--color-minor-1);
+  --button-color: var(--ele-primary-1);
+  --button-color-secondary: var(--ele-primary-2);
+  --button-hover-color: var(--ele-secondary-1);
+  --button-hover-color-secondary: var(--ele-secondary-2);
+  --hover-color: var(--ele-minor-3);
+  --table-head-bg-color: var(--common-color-1);
+  --table-color: var(--common-color-2);
+  --table-hover-color: var(--color-minor-2);
+  --table-active-color: var(--color-primary);
+  --table-head-text-color: var(--common-color-3);
+  --heading-color: var(--white);
+  --text-color: var(--white);
+  --text-color-secondary: var(--grey);
+  --border-color: var(--border-color-primary);
+  --border-hover-color: var(--ele-primary-1);
+  --button-primary-color: var(--ele-primary-1);
+  --button-primary-hover-color: var(--ele-secondary-1);
+  --button-primary-disabled-color: var(--ele-minor-1);
+  --button-primary-text-color: var(--white);
+  --button-primary-text-disabled-color: var(
+    --disable-color
+  );
+  --button-primary-text-hover-color: var(--white);
+  --button-default-color: var(--ele-primary-2);
+  --button-default-hover-color: var(--ele-secondary-2);
+  --button-default-text-color: var(--white);
+  --button-default-text-disabled-color: var(--disable-color);
+  --button-default-text-hover-color: var(--white);
+  --button-group-color: var(--color-minor-1);
+  --button-group-hover-color: var(--color-minor-2);
+  --button-group-disabled-color: var(--ele-minor-1);
+  --button-group-text-color: var(--white);
+  --checkbox-color: var(--color-minor-1);
+  --checkbox-inner-color: var(--ele-primary-1);
+  --date-table-weekend-color: var(--ele-secondary-2);
+  --date-table-current-text-color: var(--white);
+  --date-table-current-color: var(
+    --color-primary
+  );
+  --input-color: var(--color-secondary);
+  --input-text-color: var(--grey);
+  --input-text-disabled-color: var(--disable-color);
+  --select-text-color: var(--grey);
+  --select-text-hover-color: var(--ele-minor);
+  --nav-text-color: var(--white);
+  --nav-text-hover-color: var(--ele-minor-3);
+  --table-scroll-bg-color: var(--color-minor-1);
+  --table-scroll-track-color: var(--ele-primary-2);
+}
+.theme-dark .el-button {
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "wenquanyi micro hei", Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color, #f9f9fb);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--table-scroll-bg-color);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--table-scroll-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--table-scroll-track-color);
+  border-radius: 10px;
+}
+
+.el-tag.stock {
+  color: #dc4f4f;
+  background-color: #fdeeee;
+}
+.el-tag.bond {
+  color: #ec9f21;
+  background-color: #fef5e7;
+}
+
+.el-tree {
+  background-color: inherit;
+}
+
+.el-button-group .el-button {
+  color: var(--button-group-text-color);
+  background-color: var(--button-group-color);
+}
+.el-button-group .el-button.is-disabled {
+  color: var(--button-group-text-color);
+  background-color: var(--button-group-disabled-color);
+}
+.el-button-group .el-button.is-disabled:hover {
+  color: var(--button-group-text-color);
+  background-color: var(--button-group-disabled-color);
+}
+.el-button-group .el-button:hover {
+  color: var(--button-group-text-color);
+  background-color: var(--button-group-hover-color);
+}
+
+.el-button--default {
+  color: var(--button-default-text-color);
+  background-color: var(--button-default-color);
+}
+.el-button--default:hover {
+  color: var(--button-default-text-hover-color);
+  background-color: var(--button-default-hover-color);
+}
+.el-button--default.is-plain {
+  color: var(--button-default-text-color);
+  background-color: var(--button-default-color);
+}
+.el-button--default.is-plain.is-loading {
+  color: var(--button-default-text-color);
+  background-color: var(--button-default-hover-color);
+}
+.el-button--default.is-plain.is-disabled {
+  color: var(--button-default-text-disabled-color);
+  background-color: var(--button-default-color);
+}
+.el-button--default.is-plain.is-disabled:hover {
+  color: var(--button-default-text-disabled-color);
+  background-color: var(--button-default-color);
+}
+.el-button--default.is-plain:hover {
+  color: var(--button-default-text-hover-color);
+  background-color: var(--button-default-hover-color);
+}
+
+.el-button--primary {
+  color: var(--button-primary-text-color);
+  background-color: var(--button-primary-color);
+}
+.el-button--primary:hover {
+  color: var(--button-primary-text-hover-color);
+  background-color: var(--button-primary-hover-color);
+}
+.el-button--primary.is-plain {
+  color: var(--button-primary-text-color);
+  background-color: var(--button-primary-color);
+}
+.el-button--primary.is-plain.is-loading {
+  color: var(--button-primary-text-color);
+  background-color: var(--button-primary-hover-color);
+}
+.el-button--primary.is-plain.is-disabled {
+  color: var(--button-primary-text-disabled-color);
+  background-color: var(--button-primary-disabled-color);
+}
+.el-button--primary.is-plain.is-disabled:hover {
+  color: var(--button-primary-text-disabled-color);
+  background-color: var(--button-primary-disabled-color);
+}
+.el-button--primary.is-plain:hover {
+  background-color: var(--button-primary-hover-color);
+}
+
+.el-checkbox__label {
+  color: var(--text-color);
+}
+.el-checkbox__inner.is-checked, .el-checkbox__inner.is-indeterminate, .el-checkbox__input.is-checked, .el-checkbox__input.is-indeterminate {
+  border-color: var(--border-color);
+}
+.el-checkbox__inner.is-checked span.el-checkbox__inner, .el-checkbox__inner.is-indeterminate span.el-checkbox__inner, .el-checkbox__input.is-checked span.el-checkbox__inner, .el-checkbox__input.is-indeterminate span.el-checkbox__inner {
+  background-color: var(--checkbox-color);
+  border-color: var(--border-color);
+}
+.el-checkbox__inner.is-checked span.el-checkbox__inner:before, .el-checkbox__inner.is-indeterminate span.el-checkbox__inner:before, .el-checkbox__input.is-checked span.el-checkbox__inner:before, .el-checkbox__input.is-indeterminate span.el-checkbox__inner:before {
+  background-color: var(--checkbox-inner-color);
+}
+.el-checkbox__inner.is-checked span.el-checkbox__inner:after, .el-checkbox__inner.is-indeterminate span.el-checkbox__inner:after, .el-checkbox__input.is-checked span.el-checkbox__inner:after, .el-checkbox__input.is-indeterminate span.el-checkbox__inner:after {
+  border-color: var(--checkbox-inner-color);
+}
+.el-checkbox__inner.is-checked span.el-checkbox__inner.is-focus, .el-checkbox__inner.is-indeterminate span.el-checkbox__inner.is-focus, .el-checkbox__input.is-checked span.el-checkbox__inner.is-focus, .el-checkbox__input.is-indeterminate span.el-checkbox__inner.is-focus {
+  border-color: var(--checkbox-inner-color);
+}
+.el-checkbox__inner span.el-checkbox__inner, .el-checkbox__inner .el-checkbox__input__inner, .el-checkbox__input span.el-checkbox__inner, .el-checkbox__input .el-checkbox__input__inner {
+  background-color: var(--background-color-secondary);
+  border-color: var(--border-color);
+}
+.el-checkbox__inner span.el-checkbox__inner:after, .el-checkbox__inner .el-checkbox__input__inner:after, .el-checkbox__input span.el-checkbox__inner:after, .el-checkbox__input .el-checkbox__input__inner:after {
+  border-color: var(--checkbox-inner-color);
+}
+.el-checkbox__inner span.el-checkbox__inner.is-focus, .el-checkbox__inner .el-checkbox__input__inner.is-focus, .el-checkbox__input span.el-checkbox__inner.is-focus, .el-checkbox__input .el-checkbox__input__inner.is-focus {
+  border-color: var(--checkbox-inner-color);
+}
+
+.el-date-table td {
+  color: var(--text-color-secondary);
+}
+.el-date-table td.current:not(.disabled) span {
+  color: var(--date-table-current-text-color);
+  background-color: var(--date-table-current-color);
+}
+.el-date-table td.available {
+  color: var(--text-color);
+}
+.el-date-table td.available:nth-child(1), .el-date-table td.available:nth-child(7) {
+  color: var(--date-table-current-color);
+}
+.el-date-table td.disabled div {
+  background-color: var(--background-color-secondary);
+}
+
+.el-message-box {
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+}
+.el-message-box__title {
+  color: var(--text-color);
+}
+.el-message-box__content {
+  color: var(--text-color-secondary);
+}
+
+.el-input__inner {
+  color: var(--input-text);
+  background-color: var(--input-color);
+  border-color: var(--border-color);
+}
+.el-input.is-disabled .el-input__inner {
+  color: var(--input-text-disabled-color);
+  background-color: var(--background-color-secondary);
+  border-color: var(--border-color);
+}
+.el-input:hover .el-input__inner {
+  border-color: var(--border-hover-color);
+}
+.el-input-group__append {
+  color: var(--input-text);
+  background-color: var(--input-color);
+  border-color: var(--border-color);
+}
+
+.el-input-number.is-controls-right .el-input-number__decrease,
+.el-input-number.is-controls-right .el-input-number__increase {
+  color: var(--input-text-color);
+  background-color: var(--input-color);
+  border-color: var(--border-color);
+}
+
+.el-loading-mask {
+  background-color: var(--background-color-secondary);
+}
+
+.el-radio__label {
+  color: var(--text-color-secondary);
+}
+.el-radio-button__inner:hover {
+  color: var(--hover-color);
+}
+.el-radio-button__orig-radio:checked + .el-radio-button__inner {
+  color: var(--button-default-text-hover-color);
+  background-color: var(--button-default-hover-color);
+  border-color: var(--button-color);
+  box-shadow: -1px 0 0 0 var(--button-color);
+}
+
+.el-select-dropdown {
+  background-color: var(--background-color);
+  border-color: var(--border-hover-color);
+}
+.el-select-dropdown__item {
+  color: var(--select-text-color);
+}
+.el-select-dropdown__item.selected {
+  color: var(--select-text-hover-color);
+  background-color: inherit;
+}
+.el-select-dropdown__item.selected.hover, .el-select-dropdown__item.selected:hover {
+  background-color: var(--background-color-secondary);
+}
+.el-select-dropdown__item.hover {
+  background-color: var(--background-color-secondary);
+}
+
+.el-select .el-tag {
+  color: var(--select-text-hover-color);
+  background-color: inherit;
+  border: 1px solid var(--border-color);
+}
+.el-select .el-tag .el-tag__close.el-icon-close {
+  color: var(--select-text-color);
+  background-color: inherit;
+}
+.el-select .el-tag .el-tag__close.el-icon-close:hover {
+  color: var(--text-color);
+  background-color: var(--background-color-secondary);
+}
+
+div.el-tabs.el-tabs--top {
+  color: var(--text-color-secondary);
+  background-color: var(--background-color-secondary, #fff);
+  border: 1px solid var(--border-color, #d7d7d7);
+}
+div.el-tabs.el-tabs--top .el-form-item__label {
+  color: var(--text-color);
+}
+
+.el-table {
+  background-color: var(--table-color);
+}
+.el-table::before {
+  background-color: var(--border-color);
+}
+.el-table thead {
+  color: var(--table-head-text-color);
+}
+.el-table tr th {
+  background-color: var(--table-head-bg-color);
+  border-right-color: var(--border-color);
+}
+.el-table tr th.is-leaf {
+  border-bottom-color: var(--border-color);
+}
+.el-table tr {
+  background-color: var(--table-color);
+}
+.el-table td {
+  color: var(--text-color-secondary);
+  border-color: var(--border-color);
+}
+.el-table .hover-row:hover td {
+  background-color: var(--background-color);
+}
+.el-table tr.summary-row {
+  background-color: var(--background-color);
+}
+.el-table__body-wrapper::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--table-scroll-bg-color);
+}
+.el-table__body-wrapper::-webkit-scrollbar-track {
+  background-color: var(--table-scroll-bg-color);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.el-table__body-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--table-scroll-track-color);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.el-table--border {
+  border-color: var(--border-color);
+}
+.el-table--border::after {
+  background-color: var(--border-color);
+}
+.el-table--striped .el-table__body tr.el-table__row--striped td {
+  background-color: var(--background-color-secondary);
+}
+div.el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: var(--background-color);
+}
+div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
+  color: var(--hover-color);
+}
+
+.el-tabs__item {
+  color: var(--text-color-secondary);
+}
+
+.el-tree-node__content:hover {
+  background-color: var(--background-color-secondary);
+}
+.el-tree-node:focus .el-tree-node__content {
+  background-color: var(--background-color-secondary);
+}
+
+.el-picker-panel {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border-color: var(--border-hover-color);
+}
+.el-picker-panel__icon-btn {
+  color: var(--text-color);
+}
+.el-picker-panel .el-date-picker__header-label {
+  color: var(--text-color);
+}
+
+.el-popper[x-placement^=bottom] .popper__arrow {
+  top: -6px;
+  left: 50%;
+  margin-right: 3px;
+  border-top-width: 0;
+  border-bottom-color: var(--border-hover-color);
+}
+.el-popper[x-placement^=bottom] .popper__arrow:after {
+  top: 1px;
+  margin-left: -6px;
+  border-top-width: 0;
+  border-bottom-color: var(--background-color);
+}
+
+/**
+ * @license Highcharts
+ *
+ * (c) 2009-2016 Torstein Honsi
+ *
+ * License: www.highcharts.com/license
+ */
+.highcharts-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  line-height: normal;
+  z-index: 0;
+  /* #1072 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.highcharts-root {
+  display: block;
+}
+
+.highcharts-root text {
+  stroke-width: 0;
+}
+
+.highcharts-strong {
+  font-weight: bold;
+}
+
+.highcharts-emphasized {
+  font-style: italic;
+}
+
+.highcharts-anchor {
+  cursor: pointer;
+}
+
+.highcharts-background {
+  fill: #ffffff;
+}
+
+.highcharts-plot-border, .highcharts-plot-background {
+  fill: none;
+}
+
+.highcharts-label-box {
+  fill: none;
+}
+
+.highcharts-button-box {
+  fill: inherit;
+}
+
+.highcharts-tracker-line {
+  stroke-linejoin: round;
+  stroke: rgba(192, 192, 192, 0.0001);
+  stroke-width: 22;
+  fill: none;
+}
+
+.highcharts-tracker-area {
+  fill: rgba(192, 192, 192, 0.0001);
+  stroke-width: 0;
+}
+
+/* Titles */
+.highcharts-title {
+  fill: #333333;
+  font-size: 1.5em;
+}
+
+.highcharts-subtitle {
+  fill: #666666;
+}
+
+/* Axes */
+.highcharts-axis-line {
+  fill: none;
+  stroke: #ccd6eb;
+}
+
+.highcharts-yaxis .highcharts-axis-line {
+  stroke-width: 0;
+}
+
+.highcharts-axis-title {
+  fill: #666666;
+}
+
+.highcharts-axis-labels {
+  fill: #666666;
+  cursor: default;
+  font-size: 0.9em;
+}
+
+.highcharts-grid-line {
+  fill: none;
+  stroke: #e6e6e6;
+}
+
+.highcharts-xaxis-grid .highcharts-grid-line {
+  stroke-width: 0px;
+}
+
+.highcharts-tick {
+  stroke: #ccd6eb;
+}
+
+.highcharts-yaxis .highcharts-tick {
+  stroke-width: 0;
+}
+
+.highcharts-minor-grid-line {
+  stroke: #f2f2f2;
+}
+
+.highcharts-crosshair-thin {
+  stroke-width: 1px;
+  stroke: #cccccc;
+}
+
+.highcharts-crosshair-category {
+  stroke: #ccd6eb;
+  stroke-opacity: 0.25;
+}
+
+/* Credits */
+.highcharts-credits {
+  cursor: pointer;
+  fill: #999999;
+  font-size: 0.7em;
+  transition: fill 250ms, font-size 250ms;
+}
+
+.highcharts-credits:hover {
+  fill: black;
+  font-size: 1em;
+}
+
+/* Tooltip */
+.highcharts-tooltip {
+  cursor: default;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: stroke 150ms;
+}
+
+.highcharts-tooltip text {
+  fill: #333333;
+}
+
+.highcharts-tooltip .highcharts-header {
+  font-size: 0.85em;
+}
+
+.highcharts-tooltip-box {
+  stroke-width: 1px;
+  fill: #f7f7f7;
+  fill-opacity: 0.85;
+}
+
+.highcharts-tooltip-box .highcharts-label-box {
+  fill: #f7f7f7;
+  fill-opacity: 0.85;
+}
+
+.highcharts-selection-marker {
+  fill: #335cad;
+  fill-opacity: 0.25;
+}
+
+.highcharts-graph {
+  fill: none;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.highcharts-state-hover .highcharts-graph {
+  stroke-width: 3;
+}
+
+.highcharts-state-hover path {
+  transition: stroke-width 50;
+  /* quick in */
+}
+
+.highcharts-state-normal path {
+  transition: stroke-width 250ms;
+  /* slow out */
+}
+
+/* Legend hover affects points and series */
+g.highcharts-series,
+.highcharts-point,
+.highcharts-markers,
+.highcharts-data-labels {
+  transition: opacity 250ms;
+}
+
+.highcharts-legend-series-active g.highcharts-series:not(.highcharts-series-hover),
+.highcharts-legend-point-active .highcharts-point:not(.highcharts-point-hover),
+.highcharts-legend-series-active .highcharts-markers:not(.highcharts-series-hover),
+.highcharts-legend-series-active .highcharts-data-labels:not(.highcharts-series-hover) {
+  opacity: 0.2;
+}
+
+/* Series options */
+/* Default colors */
+.highcharts-color-0 {
+  fill: #6c8ff1;
+  stroke: #6c8ff1;
+}
+
+.highcharts-color-1 {
+  fill: #ffcb37;
+  stroke: #ffcb37;
+}
+
+.highcharts-color-2 {
+  fill: #50e3c2;
+  stroke: #50e3c2;
+}
+
+.highcharts-color-3 {
+  fill: #d94040;
+  stroke: #d94040;
+}
+
+.highcharts-color-4 {
+  fill: #b6b6b6;
+  stroke: #b6b6b6;
+}
+
+.highcharts-color-5 {
+  fill: #0064cd;
+  stroke: #0064cd;
+}
+
+.highcharts-color-6 {
+  fill: #7ed321;
+  stroke: #7ed321;
+}
+
+.highcharts-color-7 {
+  fill: #167b58;
+  stroke: #167b58;
+}
+
+.highcharts-color-8 {
+  fill: #6e48db;
+  stroke: #6e48db;
+}
+
+.highcharts-color-9 {
+  fill: #c17aff;
+  stroke: #c17aff;
+}
+
+.highcharts-color-10 {
+  fill: #ff9a00;
+  stroke: #ff9a00;
+}
+
+.highcharts-color-11 {
+  fill: #b5ea81;
+  stroke: #b5ea81;
+}
+
+.highcharts-color-12 {
+  fill: #ff27aa;
+  stroke: #ff27aa;
+}
+
+.highcharts-color-13 {
+  fill: #00c7ff;
+  stroke: #00c7ff;
+}
+
+.highcharts-color-14 {
+  fill: #c25b00;
+  stroke: #c25b00;
+}
+
+.highcharts-area {
+  fill-opacity: 0.75;
+  stroke-width: 0;
+}
+
+.highcharts-markers {
+  stroke-width: 1px;
+  stroke: #ffffff;
+}
+
+.highcharts-point {
+  stroke-width: 1px;
+}
+
+.highcharts-dense-data .highcharts-point {
+  stroke-width: 0;
+}
+
+.highcharts-data-label {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.highcharts-data-label-box {
+  fill: none;
+  stroke-width: 0;
+}
+
+.highcharts-data-label text, text.highcharts-data-label {
+  fill: #333333;
+}
+
+.highcharts-data-label-connector {
+  fill: none;
+}
+
+.highcharts-halo {
+  fill-opacity: 0.25;
+  stroke-width: 0;
+}
+
+.highcharts-series:not(.highcharts-pie-series) .highcharts-point-select,
+.highcharts-markers .highcharts-point-select {
+  fill: #cccccc;
+  stroke: #000000;
+}
+
+.highcharts-column-series rect.highcharts-point {
+  stroke: #ffffff;
+}
+
+.highcharts-column-series .highcharts-point {
+  transition: fill-opacity 250ms;
+}
+
+.highcharts-column-series .highcharts-point-hover {
+  fill-opacity: 0.75;
+  transition: fill-opacity 50ms;
+}
+
+.highcharts-pie-series .highcharts-point {
+  stroke-linejoin: round;
+  stroke: #ffffff;
+}
+
+.highcharts-pie-series .highcharts-point-hover {
+  fill-opacity: 0.75;
+  transition: fill-opacity 50ms;
+}
+
+.highcharts-funnel-series .highcharts-point {
+  stroke-linejoin: round;
+  stroke: #ffffff;
+}
+
+.highcharts-funnel-series .highcharts-point-hover {
+  fill-opacity: 0.75;
+  transition: fill-opacity 50ms;
+}
+
+.highcharts-funnel-series .highcharts-point-select {
+  fill: inherit;
+  stroke: inherit;
+}
+
+.highcharts-pyramid-series .highcharts-point {
+  stroke-linejoin: round;
+  stroke: #ffffff;
+}
+
+.highcharts-pyramid-series .highcharts-point-hover {
+  fill-opacity: 0.75;
+  transition: fill-opacity 50ms;
+}
+
+.highcharts-pyramid-series .highcharts-point-select {
+  fill: inherit;
+  stroke: inherit;
+}
+
+.highcharts-solidgauge-series .highcharts-point {
+  stroke-width: 0;
+}
+
+.highcharts-treemap-series .highcharts-point {
+  stroke-width: 1px;
+  stroke: #e6e6e6;
+  transition: stroke 250ms, fill 250ms, fill-opacity 250ms;
+}
+
+.highcharts-treemap-series .highcharts-point-hover {
+  stroke: #999999;
+  transition: stroke 25ms, fill 25ms, fill-opacity 25ms;
+}
+
+.highcharts-treemap-series .highcharts-above-level {
+  display: none;
+}
+
+.highcharts-treemap-series .highcharts-internal-node {
+  fill: none;
+}
+
+.highcharts-treemap-series .highcharts-internal-node-interactive {
+  fill-opacity: 0.15;
+  cursor: pointer;
+}
+
+.highcharts-treemap-series .highcharts-internal-node-interactive:hover {
+  fill-opacity: 0.75;
+}
+
+/* Legend */
+.highcharts-legend-box {
+  fill: none;
+  stroke-width: 0;
+}
+
+.highcharts-legend-item > text {
+  fill: #333333;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  stroke-width: 0;
+}
+
+.highcharts-legend-item:hover text {
+  fill: #000000;
+}
+
+.highcharts-legend-item-hidden * {
+  fill: #cccccc !important;
+  stroke: #cccccc !important;
+  transition: fill 250ms;
+}
+
+.highcharts-legend-nav-active {
+  fill: #003399;
+  cursor: pointer;
+}
+
+.highcharts-legend-nav-inactive {
+  fill: #cccccc;
+}
+
+circle.highcharts-legend-nav-active, circle.highcharts-legend-nav-inactive {
+  /* tracker */
+  fill: rgba(192, 192, 192, 0.0001);
+}
+
+.highcharts-legend-title-box {
+  fill: none;
+  stroke-width: 0;
+}
+
+/* Bubble legend */
+.highcharts-bubble-legend-symbol {
+  stroke-width: 2;
+  fill-opacity: 0.5;
+}
+
+.highcharts-bubble-legend-connectors {
+  stroke-width: 1;
+}
+
+.highcharts-bubble-legend-labels {
+  fill: #333333;
+}
+
+/* Loading */
+.highcharts-loading {
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 0.5;
+  text-align: center;
+  z-index: 10;
+  transition: opacity 250ms;
+}
+
+.highcharts-loading-hidden {
+  height: 0 !important;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 250ms, height 250ms step-end;
+}
+
+.highcharts-loading-inner {
+  font-weight: bold;
+  position: relative;
+  top: 45%;
+}
+
+/* Plot bands and polar pane backgrounds */
+.highcharts-plot-band, .highcharts-pane {
+  fill: #000000;
+  fill-opacity: 0.05;
+}
+
+.highcharts-plot-line {
+  fill: none;
+  stroke: #999999;
+  stroke-width: 1px;
+}
+
+/* Highcharts More and modules */
+.highcharts-boxplot-box {
+  fill: #ffffff;
+}
+
+.highcharts-boxplot-median {
+  stroke-width: 2px;
+}
+
+.highcharts-bubble-series .highcharts-point {
+  fill-opacity: 0.5;
+}
+
+.highcharts-errorbar-series .highcharts-point {
+  stroke: #000000;
+}
+
+.highcharts-gauge-series .highcharts-data-label-box {
+  stroke: #cccccc;
+  stroke-width: 1px;
+}
+
+.highcharts-gauge-series .highcharts-dial {
+  fill: #000000;
+  stroke-width: 0;
+}
+
+.highcharts-polygon-series .highcharts-graph {
+  fill: inherit;
+  stroke-width: 0;
+}
+
+.highcharts-waterfall-series .highcharts-graph {
+  stroke: #333333;
+  stroke-dasharray: 1, 3;
+}
+
+.highcharts-sankey-series .highcharts-point {
+  stroke-width: 0;
+}
+
+.highcharts-sankey-series .highcharts-link {
+  transition: fill 250ms, fill-opacity 250ms;
+  fill-opacity: 0.5;
+}
+
+.highcharts-sankey-series .highcharts-point-hover.highcharts-link {
+  transition: fill 50ms, fill-opacity 50ms;
+  fill-opacity: 1;
+}
+
+.highcharts-venn-series .highcharts-point {
+  fill-opacity: 0.75;
+  stroke: #cccccc;
+  transition: stroke 250ms, fill-opacity 250ms;
+}
+
+.highcharts-venn-series .highcharts-point-hover {
+  fill-opacity: 1;
+  stroke: #cccccc;
+}
+
+/* Highstock */
+.highcharts-navigator-mask-outside {
+  fill-opacity: 0;
+}
+
+.highcharts-navigator-mask-inside {
+  fill: #6685c2;
+  /* navigator.maskFill option */
+  fill-opacity: 0.25;
+  cursor: ew-resize;
+}
+
+.highcharts-navigator-outline {
+  stroke: #cccccc;
+  fill: none;
+}
+
+.highcharts-navigator-handle {
+  stroke: #cccccc;
+  fill: #f2f2f2;
+  cursor: ew-resize;
+}
+
+.highcharts-navigator-series {
+  fill: #335cad;
+  stroke: #335cad;
+}
+
+.highcharts-navigator-series .highcharts-graph {
+  stroke-width: 1px;
+}
+
+.highcharts-navigator-series .highcharts-area {
+  fill-opacity: 0.05;
+}
+
+.highcharts-navigator-xaxis .highcharts-axis-line {
+  stroke-width: 0;
+}
+
+.highcharts-navigator-xaxis .highcharts-grid-line {
+  stroke-width: 1px;
+  stroke: #e6e6e6;
+}
+
+.highcharts-navigator-xaxis.highcharts-axis-labels {
+  fill: #999999;
+}
+
+.highcharts-navigator-yaxis .highcharts-grid-line {
+  stroke-width: 0;
+}
+
+.highcharts-scrollbar-thumb {
+  fill: #cccccc;
+  stroke: #cccccc;
+  stroke-width: 1px;
+}
+
+.highcharts-scrollbar-button {
+  fill: #e6e6e6;
+  stroke: #cccccc;
+  stroke-width: 1px;
+}
+
+.highcharts-scrollbar-arrow {
+  fill: #666666;
+}
+
+.highcharts-scrollbar-rifles {
+  stroke: #666666;
+  stroke-width: 1px;
+}
+
+.highcharts-scrollbar-track {
+  fill: #f2f2f2;
+  stroke: #f2f2f2;
+  stroke-width: 1px;
+}
+
+.highcharts-button {
+  fill: #f7f7f7;
+  stroke: #cccccc;
+  cursor: default;
+  stroke-width: 1px;
+  transition: fill 250ms;
+}
+
+.highcharts-button text {
+  fill: #333333;
+}
+
+.highcharts-button-hover {
+  transition: fill 0ms;
+  fill: #e6e6e6;
+  stroke: #cccccc;
+}
+
+.highcharts-button-hover text {
+  fill: #333333;
+}
+
+.highcharts-button-pressed {
+  font-weight: bold;
+  fill: #e6ebf5;
+  stroke: #cccccc;
+}
+
+.highcharts-button-pressed text {
+  fill: #333333;
+  font-weight: bold;
+}
+
+.highcharts-button-disabled text {
+  fill: #333333;
+}
+
+.highcharts-range-selector-buttons .highcharts-button {
+  stroke-width: 0px;
+}
+
+.highcharts-range-label rect {
+  fill: none;
+}
+
+.highcharts-range-label text {
+  fill: #666666;
+}
+
+.highcharts-range-input rect {
+  fill: none;
+}
+
+.highcharts-range-input text {
+  fill: #333333;
+}
+
+.highcharts-range-input {
+  stroke-width: 1px;
+  stroke: #cccccc;
+}
+
+input.highcharts-range-selector {
+  position: absolute;
+  border: 0;
+  width: 1px;
+  /* Chrome needs a pixel to see it */
+  height: 1px;
+  padding: 0;
+  text-align: center;
+  left: -9em;
+  /* #4798 */
+}
+
+.highcharts-crosshair-label text {
+  fill: #ffffff;
+  font-size: 1.1em;
+}
+
+.highcharts-crosshair-label .highcharts-label-box {
+  fill: inherit;
+}
+
+.highcharts-candlestick-series .highcharts-point {
+  stroke: #000000;
+  stroke-width: 1px;
+}
+
+.highcharts-candlestick-series .highcharts-point-up {
+  fill: #ffffff;
+}
+
+.highcharts-ohlc-series .highcharts-point-hover {
+  stroke-width: 3px;
+}
+
+.highcharts-flags-series .highcharts-point .highcharts-label-box {
+  stroke: #999999;
+  fill: #ffffff;
+  transition: fill 250ms;
+}
+
+.highcharts-flags-series .highcharts-point-hover .highcharts-label-box {
+  stroke: #000000;
+  fill: #ccd6eb;
+}
+
+.highcharts-flags-series .highcharts-point text {
+  fill: #000000;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* Highmaps */
+.highcharts-map-series .highcharts-point {
+  transition: fill 500ms, fill-opacity 500ms, stroke-width 250ms;
+  stroke: #cccccc;
+}
+
+.highcharts-map-series .highcharts-point-hover {
+  transition: fill 0ms, fill-opacity 0ms;
+  fill-opacity: 0.5;
+  stroke-width: 2px;
+}
+
+.highcharts-mapline-series .highcharts-point {
+  fill: none;
+}
+
+.highcharts-heatmap-series .highcharts-point {
+  stroke-width: 0;
+}
+
+.highcharts-map-navigation {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.highcharts-coloraxis {
+  stroke-width: 0;
+}
+
+.highcharts-coloraxis-marker {
+  fill: #999999;
+}
+
+.highcharts-null-point {
+  fill: #f7f7f7;
+}
+
+/* 3d charts */
+.highcharts-3d-frame {
+  fill: transparent;
+}
+
+/* Exporting module */
+.highcharts-contextbutton {
+  fill: #ffffff;
+  /* needed to capture hover */
+  stroke: none;
+  stroke-linecap: round;
+}
+
+.highcharts-contextbutton:hover {
+  fill: #e6e6e6;
+  stroke: #e6e6e6;
+}
+
+.highcharts-button-symbol {
+  stroke: #666666;
+  stroke-width: 3px;
+}
+
+.highcharts-menu {
+  border: 1px solid #999999;
+  background: #ffffff;
+  padding: 5px 0;
+  box-shadow: 3px 3px 10px #888;
+}
+
+.highcharts-menu-item {
+  padding: 0.5em 1em;
+  background: none;
+  color: #333333;
+  cursor: pointer;
+  transition: background 250ms, color 250ms;
+}
+
+.highcharts-menu-item:hover {
+  background: #335cad;
+  color: #ffffff;
+}
+
+/* Drilldown module */
+.highcharts-drilldown-point {
+  cursor: pointer;
+}
+
+.highcharts-drilldown-data-label text,
+text.highcharts-drilldown-data-label,
+.highcharts-drilldown-axis-label {
+  cursor: pointer;
+  fill: #003399;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* No-data module */
+.highcharts-no-data text {
+  font-weight: bold;
+  font-size: 12px;
+  fill: #666666;
+}
+
+/* Drag-panes module */
+.highcharts-axis-resizer {
+  cursor: ns-resize;
+  stroke: black;
+  stroke-width: 2px;
+}
+
+/* Bullet type series */
+.highcharts-bullet-target {
+  stroke-width: 0;
+}
+
+/* Lineargauge type series */
+.highcharts-lineargauge-target {
+  stroke-width: 1px;
+  stroke: #333333;
+}
+
+.highcharts-lineargauge-target-line {
+  stroke-width: 1px;
+  stroke: #333333;
+}
+
+/* Annotations module */
+.highcharts-annotation-label-box {
+  stroke-width: 1px;
+  stroke: #000000;
+  fill: #000000;
+  fill-opacity: 0.75;
+}
+
+.highcharts-annotation-label text {
+  fill: #e6e6e6;
+}
+
+/* Gantt */
+.highcharts-treegrid-node-collapsed, .highcharts-treegrid-node-expanded {
+  cursor: pointer;
+}
+
+.highcharts-point-connecting-path {
+  fill: none;
+}
+
+.highcharts-grid-axis .highcharts-tick {
+  stroke-width: 1px;
+}
+
+.highcharts-grid-axis .highcharts-axis-line {
+  stroke-width: 1px;
+}
+
+.highcharts-navigator-series.highcharts-color-0 {
+  fill: #6c8ff1;
+  stroke: #6c8ff1;
+}
+
+.highcharts-navigator-series.highcharts-color-1 {
+  fill: #ffcb37;
+  stroke: #ffcb37;
+}
+
+.highcharts-navigator-series.highcharts-color-2 {
+  fill: #50e3c2;
+  stroke: #50e3c2;
+}
+
+.highcharts-navigator-series.highcharts-color-3 {
+  fill: #d94040;
+  stroke: #d94040;
+}
+
+.highcharts-navigator-series.highcharts-color-4 {
+  fill: #b6b6b6;
+  stroke: #b6b6b6;
+}
+
+.highcharts-navigator-series.highcharts-color-5 {
+  fill: #0064cd;
+  stroke: #0064cd;
+}
+
+.highcharts-navigator-series.highcharts-color-6 {
+  fill: #7ed321;
+  stroke: #7ed321;
+}
+
+.highcharts-navigator-series.highcharts-color-7 {
+  fill: #167b58;
+  stroke: #167b58;
+}
+
+.highcharts-navigator-series.highcharts-color-8 {
+  fill: #6e48db;
+  stroke: #6e48db;
+}
+
+.highcharts-navigator-series.highcharts-color-9 {
+  fill: #c17aff;
+  stroke: #c17aff;
+}
+
+.highcharts-navigator-series.highcharts-color-10 {
+  fill: #ff9a00;
+  stroke: #ff9a00;
+}
+
+.highcharts-navigator-series.highcharts-color-11 {
+  fill: #b5ea81;
+  stroke: #b5ea81;
+}
+
+.highcharts-navigator-series.highcharts-color-12 {
+  fill: #ff27aa;
+  stroke: #ff27aa;
+}
+
+.highcharts-navigator-series.highcharts-color-13 {
+  fill: #00c7ff;
+  stroke: #00c7ff;
+}
+
+.highcharts-navigator-series.highcharts-color-14 {
+  fill: #c25b00;
+  stroke: #c25b00;
+}
+
+.plot-line-zero {
+  stroke: #333;
+  stroke-dasharray: 2, 6;
+  stroke-width: 2px;
+}
+
+.highcharts-waterfall-series .highcharts-negative {
+  fill: #7ed321;
+  stroke: #7ed321;
+}
+
+.highcharts-credits {
+  font-size: 9px;
+  pointer-events: none;
+}
+
+.highcharts-background {
+  fill: var(--background-color-secondary);
+}
+
+.highcharts-yaxis-grid .highcharts-grid-line {
+  stroke: var(--border-color);
+}
+
+.highcharts-legend-item text {
+  fill: var(--text-color-secondary);
+}
+
+.highcharts-axis-labels text {
+  fill: var(--text-color-secondary);
+}
+
+.highcharts-data-label text {
+  fill: var(--text-color-secondary);
+}
+
+.highcharts-range-input text {
+  fill: var(--text-color-secondary);
+}
+
+.highcharts-range-selector-buttons text {
+  fill: var(--text-color-secondary);
+}
+
+.highcharts-button {
+  fill: var(--table-head-bg-color);
+}
+.highcharts-button text {
+  fill: var(--text-color-secondary);
+}
+.highcharts-button-disabled {
+  fill: var(--background-color);
+}
+.highcharts-button-pressed text {
+  fill: var(--text-color);
+}
+
+.highcharts-legend-item:hover text {
+  fill: var(--text-color);
+}

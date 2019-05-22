@@ -18,6 +18,10 @@
 
 ## Usage
 
+in js: import '@rqjs/rqthemes' or in css: @import '@rqjs/rqthemes'
+
+place it after element default style
+
 ## Commands
 
 ```bash
