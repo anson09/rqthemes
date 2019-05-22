@@ -38,6 +38,10 @@ npm publish: publish to npm
 
 master: https://www.npmjs.com/package/@rqjs/rqthemes
 
+## Developer
+
+import src/index.scss directly in project, modify and see changes.
+
 ## Contributions
 
 1. colors vars in themes files is **maintained by designer**.
