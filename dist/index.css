@@ -349,33 +349,63 @@ template {
 }
 @charset "UTF-8";
 .theme-light {
-  --color-primary: #409eff;
-  --color-secondary: #f9f9fb;
-  --color-minor-1: #2c3242;
-  --color-minor-2: #2c364d;
-  --ele-primary-1: #ecf5ff;
-  --ele-primary-2: #36548d;
-  --ele-secondary-1: #66b1ff;
-  --ele-secondary-2: #ecf5ff;
-  --ele-minor-1: #ebeef5;
-  --ele-minor-2: #a0cfff;
-  --common-color-1: #606266;
-  --common-color-2: #c0c4cc;
-  --common-color-3: #f5f7fa;
+  --color-primary: hsla(
+    216,
+    76%,
+    44%,
+    1
+  );
+  --color-secondary: hsla(215, 50%, 95%, 1);
+  --color-minor-1: hsla(
+    212,
+    100%,
+    17%,
+    1
+  );
+  --color-minor-2: hsla(221, 50%, 94%, 1);
+  --ele-primary-1: hsla(216, 76%, 44%, 1);
+  --ele-primary-2: hsla(216, 76%, 44%, 0.5);
+  --ele-secondary-1: hsla(
+    216,
+    73%,
+    52%,
+    1
+  );
+  --ele-secondary-2: hsla(216, 76%, 44%, 0.5);
+  --ele-minor-1: hsla(222, 17%, 88%, 1);
+  --ele-minor-2: rgba(61, 94, 155, 30);
+  --ele-minor-3: hsla(216, 76%, 44%, 0.1);
+  --common-color-1: hsla(215, 31%, 88%, 1);
+  --common-color-2: hsla(216, 33%, 97%, 1);
+  --common-color-3: hsla(0, 0%, 40%, 1);
   --ele-radius: 4px;
-  --border-color-primary: #d7d7d7;
-  --white: #ffffff;
-  --grey: #909399;
-  --disable-color: #8cc5ff;
+  --border-color-primary: hsla(223, 22%, 87%, 1);
+  --border-color-secondray: hsla(222, 33%, 94%, 1);
+  --text-color-primary: hsla(
+    0,
+    0%,
+    20%,
+    1
+  );
+  --white: hsla(0, 0%, 100%, 1);
+  --grey: hsla(0, 0%, 40%, 1);
+  --disable-color: hsla(220, 11%, 78%, 1);
+  --color-success: hsla(100, 54%, 49%, 1);
+  --color-warning: hsla(37, 91%, 55%, 1);
+  --color-danger: hsla(357, 91%, 55%, 1);
+  --font-size-primary: 14px;
+  --font-size-secondary: 16px;
+  --font-size-minor1: 12px;
+  --font-size-minor2: 20px;
   --background-color: var(--color-secondary);
   --background-color-secondary: var(--white);
   --hover-color: var(--color-primary);
   --table-head-bg-color: var(--ele-minor-1);
   --table-color: var(--white);
-  --table-hover-color: var(--common-color-3);
+  --table-hover-color: ar(--ele-minor-3);
   --table-active-color: var(--grey);
-  --table-head-text-color: var(--grey);
-  --text-color: #000000;
+  --table-head-text-color: var(--common-color-3);
+  --text-color: var(--text-color-primary);
   --text-color-secondary: var(--grey);
   --border-color: var(--border-color-primary);
   --border-hover-color: var(--color-primary);
@@ -385,16 +415,16 @@ template {
   --table-scroll-track-color: var(--grey);
   --button-primary-color: var(--color-primary);
   --button-primary-hover-color: var(--ele-secondary-1);
-  --button-primary-disabled-color: var(--ele-secondary-2);
+  --button-primary-disabled-color: var(--ele-minor-1);
   --button-primary-text-color: var(--white);
   --button-primary-text-disabled-color: var(
-    --color-primary
+    --disable-color
   );
   --button-primary-text-hover-color: var(--white);
   --button-default-color: var(--white);
   --button-default-hover-color: var(--hover-color);
   --button-default-text-color: var(--common-color-1);
-  --button-default-text-disabled-color: var(--common-color-2);
+  --button-default-text-disabled-color: var(--disable-color);
   --button-default-text-hover-color: var(--white);
   --button-group-color: var(--color-primary);
   --button-group-hover-color: var(--ele-secondary-1);
@@ -402,9 +432,7 @@ template {
   --button-group-text-color: var(--white);
   --checkbox-color: var(--color-primary);
   --checkbox-inner-color: var(--white);
-  --date-table-weekend-color: var(
-    --button-hover-color
-  );
+  --date-table-weekend-color: var(--ele-secondary-1);
   --date-table-current-text-color: var(--white);
   --date-table-current-color: var(
     --color-primary
