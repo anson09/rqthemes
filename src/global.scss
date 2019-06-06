@@ -3,6 +3,19 @@ html {
 }
 
 body {
+  --font-size-primary: 14px; //常规/表格数值/按钮
+  --font-size-secondary: 16px; // 组件名称/标题
+  --font-size-minor1: 12px; // 表单提醒/提示
+  --font-size-minor2: 20px; // 大标题
+
+  --index-normal: 1; // 普通的
+  --index-top: 1000; // model覆盖用的黑屏mask之下，（to-top, nav, select-panel, time-picker等）
+  --index-popper: 2000; // model-mask之下，（弹出层, 区域loading-mask, tooltip, popover等）
+  --index-max: 99999; // 顶层
+
+  --animation-time: 0.3s;
+  --animation-slowly-time: 0.5s;
+
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
     "Microsoft YaHei", "微软雅黑", "wenquanyi micro hei", Arial, sans-serif;
   color: var(--text-color);

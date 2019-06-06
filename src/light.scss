@@ -1,5 +1,4 @@
 .theme-light {
-  // this is color
   --color-primary: hsla(
     216,
     76%,
@@ -8,14 +7,18 @@
   ); // 全局主色/表格选中底线/标签选中/导航文字
   --color-secondary: hsla(215, 50%, 95%, 1); // 全局背景色/文本输入框背景色
   --color-minor-1: hsla(
-    212,
+    0,
+    0%,
     100%,
-    17%,
     1
   ); // 次要背景色/导航条背景色/checkbox背景色//标签页默认色
   --color-minor-2: hsla(221, 50%, 94%, 1); //表格悬停颜色/标签页悬停色/ Icon选中
+  --color-red: hsla(0, 89%, 71%, 1);
   --ele-primary-1: hsla(216, 76%, 44%, 1); // 主按钮背景色/ 边框选中
   --ele-primary-2: hsla(216, 76%, 44%, 0.5); // 次要按钮背景色
+  --ele-primary-3: hsla(216, 71%, 47%, 1); // 主要按钮点击色
+  --ele-primary-shadow-1: hsla(215, 83%, 93%, 1); // 半透明主色
+  --ele-primary-shadow-2: hsla(213, 69%, 97%, 1); // 半透明主色
   --ele-secondary-1: hsla(
     216,
     73%,
@@ -23,12 +26,14 @@
     1
   ); //主要按钮悬停/日期选择器周末颜色高亮
   --ele-secondary-2: hsla(216, 76%, 44%, 0.5); //次要按钮悬停
+  --ele-secondary-3: hsla(216, 71%, 47%, 0.7); //次要按钮点击
   --ele-minor-1: hsla(222, 17%, 88%, 1); //主按钮禁止背景色
   --ele-minor-2: rgba(61, 94, 155, 30); //次按钮禁止背景色
   --ele-minor-3: hsla(216, 76%, 44%, 0.1); //下拉选择背景悬停色
   --common-color-1: hsla(215, 31%, 88%, 1); //表格表头
   --common-color-2: hsla(216, 33%, 97%, 1); //表格里隔行颜色
   --common-color-3: hsla(0, 0%, 40%, 1); //表格表头字体
+  --common-color-4: hsl(216, 14%, 85%, 1); //aside 折叠条颜色
   --ele-radius: 4px; // 组件/浮层圆角
   --border-color-primary: hsla(223, 22%, 87%, 1); // 组件边框
   --border-color-secondray: hsla(222, 33%, 94%, 1); // 表格线条
@@ -44,18 +49,13 @@
   --color-success: hsla(100, 54%, 49%, 1); // 成功
   --color-warning: hsla(37, 91%, 55%, 1); // 警告
   --color-danger: hsla(357, 91%, 55%, 1); // 错误
-  // this is font
-  --font-size-primary: 14px; //常规/表格数值/按钮
-  --font-size-secondary: 16px; // 组件名称/标题
-  --font-size-minor1: 12px; // 表单提醒/提示
-  --font-size-minor2: 20px; // 大标题
 
   --background-color: var(--color-secondary); // 全局背景色
-  --background-color-secondary: var(--white); // 次要背景色
+  --background-color-secondary: var(--color-minor-1); // 次要背景色
   --hover-color: var(--color-primary); //组件悬停色
-  --table-head-bg-color: var(--ele-minor-1); //表格表头颜色
-  --table-color: var(--white); //表格颜色
-  --table-hover-color: ar(--ele-minor-3); //表格悬停颜色
+  --table-head-bg-color: var(--common-color-1); //表格表头颜色
+  --table-color: var(--color-minor-1); //表格颜色
+  --table-hover-color: var(--ele-minor-3); //表格悬停颜色
   --table-active-color: var(--grey); //表格选中颜色
   --table-head-text-color: var(--common-color-3); //表格表头字体颜色
   --text-color: var(--text-color-primary); // 主文本色
@@ -68,6 +68,7 @@
   --table-scroll-track-color: var(--grey); // 导航块颜色
   --button-primary-color: var(--color-primary); // 主按钮背景色
   --button-primary-hover-color: var(--ele-secondary-1); // 主按钮悬停背景色
+  --button-primary-active-color: var(--ele-primary-3); // 主按钮点击背景色
   --button-primary-disabled-color: var(--ele-minor-1); // 主按钮禁用背景色
   --button-primary-text-color: var(--white); // 主按钮字体色
   --button-primary-text-disabled-color: var(
@@ -95,4 +96,17 @@
   --input-text-disabled-color: var(--text-color-secondary); // 文本禁用字体色
   --select-text-color: var(--text-color-secondary); // 下拉选择字体色
   --select-text-hover-color: var(--hover-color); // 下拉选择字体悬停色
+  --aside-bg-color: var(--white); // 侧边栏背景颜色
+  --aside-decorator-color: var(--common-color-4); // 侧边栏饰品颜色
+  --aside-decorator-active-color: var(--ele-primary-1); // 侧边栏饰品激活时颜色
+  --aside-font-active-color: var(--ele-primary-1); // 侧边栏选中项字体颜色
+  --aside-bg-active-color: var(--ele-primary-shadow-1); // 侧边栏hover项背景颜色
+  --aside-collapse-bg-color: var(
+    --ele-primary-shadow-2
+  ); // 侧边栏当前展开项背景颜色
+  --pagination-text-color: var(--grey); // 导航条文字颜色
+  --pagination-text-disable-color: var(--disable-color); // 导航条禁用文字颜色
+  --pagination-text-active-color: var(--white); // 导航条选中项文字颜色
+  --pagination-text-hover-color: var(--color-primary); // 导航条hover文字颜色
+  --pagination-bg-active-color: var(--color-primary); // 导航条选中项背景颜色
 }
