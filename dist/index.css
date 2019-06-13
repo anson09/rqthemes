@@ -795,7 +795,6 @@ body {
 div.el-tabs.el-tabs--top {
   color: var(--text-color-secondary);
   background-color: var(--background-color-secondary, #fff);
-  border: 1px solid var(--border-color, #d7d7d7);
 }
 div.el-tabs.el-tabs--top .el-form-item__label {
   color: var(--text-color);
