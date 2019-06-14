@@ -1,6 +1,6 @@
 {
   "name": "@rqjs/rqthemes",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "ricequant themes",
   "main": "dist/index.css",
   "repository": {
