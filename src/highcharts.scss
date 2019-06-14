@@ -5,10 +5,53 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #b6b6b6, #0064cd, #7ed321, #167b58,
 
 @for $i from 1 through length($colors) {
   $color: nth($colors, $i);
-  .highcharts-navigator-series.highcharts-color-#{$i - 1} {
+  .highcharts-text-color-#{$i - 1} {
     fill: $color;
-    stroke: $color;
   }
+  .highcharts-color-#{$i - 1} {
+    &.highcharts-navigator-series,
+    &.highcharts-halo {
+      fill: $color;
+      stroke: $color;
+    }
+
+    &.highcharts-bar-series {
+      .highcharts-point {
+        fill: $color;
+        stroke: $color;
+      }
+    }
+
+    &.highcharts-point {
+      fill: $color;
+    }
+
+    &.highcharts-area-series {
+      path:nth-child(1) {
+        fill: $color;
+        fill-opacity: 0.2;
+      }
+
+      path:nth-child(2) {
+        stroke: $color;
+        stroke-width: 1px;
+      }
+
+      .highcharts-point {
+        fill: rgba($color, 0.4);
+        stroke: $color;
+      }
+    }
+  }
+}
+.highcharts-column-series rect.highcharts-point,
+.highcharts-pie-series .highcharts-point {
+  stroke: var(--background-color-secondary);
+  stroke-linejoin: round;
+}
+
+.highcharts-navigator-series .highcharts-area {
+  fill-opacity: 0.2;
 }
 
 .plot-line-zero {

@@ -366,7 +366,7 @@ template {
   --color-red: hsla(0, 89%, 71%, 1);
   --ele-primary-1: hsla(216, 76%, 44%, 1);
   --ele-primary-2: hsla(216, 76%, 44%, 0.5);
-  --ele-primary-3: hsla(216, 71%, 47%, 1);
+  --ele-primary-3: hsla(216, 71%, 47%, 0.8);
   --ele-primary-shadow-1: hsla(215, 83%, 93%, 1);
   --ele-primary-shadow-2: hsla(213, 69%, 97%, 1);
   --ele-secondary-1: hsla(
@@ -395,10 +395,7 @@ template {
   );
   --white: hsla(0, 0%, 100%, 1);
   --grey: hsla(0, 0%, 40%, 1);
-  --disable-color: hsla(220, 11%, 78%, 1);
-  --color-success: hsla(100, 54%, 49%, 1);
-  --color-warning: hsla(37, 91%, 55%, 1);
-  --color-danger: hsla(357, 91%, 55%, 1);
+  --disable-color-1: hsla(220, 11%, 78%, 1);
   --background-color: var(--color-secondary);
   --background-color-secondary: var(--color-minor-1);
   --hover-color: var(--color-primary);
@@ -407,6 +404,7 @@ template {
   --table-hover-color: var(--ele-minor-3);
   --table-active-color: var(--grey);
   --table-head-text-color: var(--common-color-3);
+  --table-border-hover-color: var(--color-primary);
   --text-color: var(--text-color-primary);
   --text-color-secondary: var(--grey);
   --border-color: var(--border-color-primary);
@@ -424,10 +422,11 @@ template {
     --disable-color
   );
   --button-primary-text-hover-color: var(--white);
-  --button-default-color: var(--white);
+  --button-default-color: var(--ele-primary-2);
   --button-default-hover-color: var(--hover-color);
-  --button-default-text-color: var(--common-color-1);
+  --button-default-text-color: var(--white);
   --button-default-text-disabled-color: var(--disable-color);
+  --button-default-disabled-color: var(--ele-minor-2);
   --button-default-text-hover-color: var(--white);
   --button-group-color: var(--color-primary);
   --button-group-hover-color: var(--ele-secondary-1);
@@ -445,6 +444,135 @@ template {
   --input-text-disabled-color: var(--text-color-secondary);
   --select-text-color: var(--text-color-secondary);
   --select-text-hover-color: var(--hover-color);
+  --select-dropdown-bg-color: var(
+    --background-color-secondary
+  );
+  --select-dropdown-bg-hover-color: var(--ele-minor-3);
+  --aside-bg-color: var(--white);
+  --aside-decorator-color: var(--common-color-4);
+  --aside-decorator-active-color: var(--ele-primary-1);
+  --aside-font-active-color: var(--ele-primary-1);
+  --aside-bg-active-color: var(--ele-primary-shadow-1);
+  --aside-collapse-bg-color: var(
+    --ele-primary-shadow-2
+  );
+  --pagination-text-color: var(--grey);
+  --pagination-text-disable-color: var(--disable-color);
+  --pagination-text-active-color: var(--white);
+  --pagination-text-hover-color: var(--color-primary);
+  --pagination-bg-active-color: var(--color-primary);
+  --tabs-active-bar-bg: var(--color-primary);
+  --tabs-active-color: var(--color-primary);
+  --popover-border-color: var(--color-primary);
+  --index-normal: 1;
+  --index-top: 1000;
+  --index-popper: 2000;
+  --index-max: 99999;
+  --animation-time: 0.3s;
+  --animation-slowly-time: 0.5s;
+}
+
+.theme-dark {
+  --color-primary: hsla(
+    201,
+    87%,
+    53%,
+    1
+  );
+  --color-secondary: hsla(227, 18%, 10%, 1);
+  --color-minor-1: hsla(
+    226,
+    14%,
+    18%,
+    1
+  );
+  --color-minor-2: hsla(
+    201,
+    87%,
+    53%,
+    0.1
+  );
+  --color-red: hsla(0, 89%, 71%, 1);
+  --ele-primary-1: hsla(201, 87%, 53%, 1);
+  --ele-primary-2: hsla(201, 87%, 53%, 0.5);
+  --ele-primary-3: hsla(201, 87%, 53%, 0.7);
+  --ele-primary-shadow-1: hsla(215, 83%, 93%, 1);
+  --ele-primary-shadow-2: hsla(213, 69%, 97%, 1);
+  --ele-secondary-1: hsla(201, 100%, 65%, 1);
+  --ele-secondary-2: hsla(201, 87%, 53%, 0.5);
+  --ele-secondary-3: hsla(201, 87%, 53%, 0.7);
+  --ele-minor-1: hsla(221, 40%, 19%, 1);
+  --ele-minor-2: hsla(221, 15%, 24%, 0.5);
+  --ele-minor-3: hsla(201, 87%, 53%, 0.1);
+  --common-color-1: hsla(227, 18%, 16%, 1);
+  --common-color-2: hsla(226, 14%, 24%, 1);
+  --common-color-3: hsla(213, 14%, 56%, 1);
+  --common-color-4: hsl(216, 14%, 85%, 1);
+  --ele-radius: 4px;
+  --border-color-primary: hsla(216, 22%, 25%, 1);
+  --border-color-secondray: hsla(216, 22%, 25%, 1);
+  --text-color-primary: hsla(
+    215,
+    22%,
+    89%,
+    1
+  );
+  --white: hsla(0, 0%, 100%, 1);
+  --grey: hsla(213, 14%, 56%, 1);
+  --disable-color: hsla(221, 15%, 24%, 1);
+  --background-color: var(--color-secondary);
+  --background-color-secondary: var(--color-minor-1);
+  --hover-color: var(--color-primary);
+  --table-head-bg-color: var(--common-color-1);
+  --table-color: var(--color-minor-1);
+  --table-hover-color: var(--ele-minor-3);
+  --table-active-color: var(--grey);
+  --table-head-text-color: var(--common-color-3);
+  --text-color: var(--text-color-primary);
+  --text-color-secondary: var(--grey);
+  --border-color: var(--border-color-primary);
+  --border-hover-color: var(--color-primary);
+  --nav-text-color: var(--text-color-primary);
+  --nav-text-hover-color: var(--white);
+  --table-scroll-bg-color: var(--background-color-secondary);
+  --table-scroll-track-color: var(--grey);
+  --button-primary-color: var(--color-primary);
+  --button-primary-hover-color: var(--ele-secondary-1);
+  --button-primary-active-color: var(--ele-primary-3);
+  --button-primary-disabled-color: var(--ele-minor-1);
+  --button-primary-text-color: var(--white);
+  --button-primary-text-disabled-color: var(
+    --disable-color
+  );
+  --button-primary-text-hover-color: var(--white);
+  --button-default-color: var(--ele-primary-2);
+  --button-default-hover-color: var(--hover-color);
+  --button-default-text-color: var(--white);
+  --button-default-text-disabled-color: var(
+    --disable-color
+  );
+  --button-default-disabled-color: var(--ele-minor-2);
+  --button-default-text-hover-color: var(--white);
+  --button-group-color: var(--color-primary);
+  --button-group-hover-color: var(--ele-secondary-1);
+  --button-group-disabled-color: var(--ele-minor-2);
+  --button-group-text-color: var(--white);
+  --checkbox-color: var(--color-primary);
+  --checkbox-inner-color: var(--white);
+  --date-table-weekend-color: var(--ele-secondary-1);
+  --date-table-current-text-color: var(--white);
+  --date-table-current-color: var(
+    --color-primary
+  );
+  --input-color: var(--background-color-secondary);
+  --input-text-color: var(--text-color-secondary);
+  --input-text-disabled-color: var(--text-color-secondary);
+  --select-text-color: var(--text-color-secondary);
+  --select-text-hover-color: var(--hover-color);
+  --select-dropdown-bg-color: var(
+    --background-color-secondary
+  );
+  --select-dropdown-bg-hover-color: var(--ele-minor-3);
   --aside-bg-color: var(--white);
   --aside-decorator-color: var(--common-color-4);
   --aside-decorator-active-color: var(--ele-primary-1);
@@ -460,96 +588,14 @@ template {
   --pagination-bg-active-color: var(--color-primary);
 }
 
-.theme-dark {
-  --color-primary: #264378;
-  --color-secondary: #1e2131;
-  --color-minor-1: #2c3242;
-  --color-minor-2: #2c364d;
-  --ele-primary-1: #2974cb;
-  --ele-primary-2: #36548d;
-  --ele-secondary-1: #3780d4;
-  --ele-secondary-2: #3e5c97;
-  --ele-minor-1: rgba(41, 116, 203, 30);
-  --ele-minor-2: rgba(61, 94, 155, 30);
-  --ele-minor-3: #bba37c;
-  --common-color-1: #243252;
-  --common-color-2: #212838;
-  --common-color-3: #5095cb;
-  --ele-radius: 4px;
-  --border-color-primary: #34394a;
-  --white: #ffffff;
-  --grey: #999999;
-  --disable-color: #8cc5ff;
-  --background-color: var(--color-secondary);
-  --background-color-secondary: var(--color-minor-1);
-  --button-color: var(--ele-primary-1);
-  --button-color-secondary: var(--ele-primary-2);
-  --button-hover-color: var(--ele-secondary-1);
-  --button-hover-color-secondary: var(--ele-secondary-2);
-  --hover-color: var(--ele-minor-3);
-  --table-head-bg-color: var(--common-color-1);
-  --table-color: var(--common-color-2);
-  --table-hover-color: var(--color-minor-2);
-  --table-active-color: var(--color-primary);
-  --table-head-text-color: var(--common-color-3);
-  --heading-color: var(--white);
-  --text-color: var(--white);
-  --text-color-secondary: var(--grey);
-  --border-color: var(--border-color-primary);
-  --border-hover-color: var(--ele-primary-1);
-  --button-primary-color: var(--ele-primary-1);
-  --button-primary-hover-color: var(--ele-secondary-1);
-  --button-primary-disabled-color: var(--ele-minor-1);
-  --button-primary-text-color: var(--white);
-  --button-primary-text-disabled-color: var(
-    --disable-color
-  );
-  --button-primary-text-hover-color: var(--white);
-  --button-default-color: var(--ele-primary-2);
-  --button-default-hover-color: var(--ele-secondary-2);
-  --button-default-text-color: var(--white);
-  --button-default-text-disabled-color: var(--disable-color);
-  --button-default-text-hover-color: var(--white);
-  --button-group-color: var(--color-minor-1);
-  --button-group-hover-color: var(--color-minor-2);
-  --button-group-disabled-color: var(--ele-minor-1);
-  --button-group-text-color: var(--white);
-  --checkbox-color: var(--color-minor-1);
-  --checkbox-inner-color: var(--ele-primary-1);
-  --date-table-weekend-color: var(--ele-secondary-2);
-  --date-table-current-text-color: var(--white);
-  --date-table-current-color: var(
-    --color-primary
-  );
-  --input-color: var(--color-secondary);
-  --input-text-color: var(--grey);
-  --input-text-disabled-color: var(--disable-color);
-  --select-text-color: var(--grey);
-  --select-text-hover-color: var(--ele-minor);
-  --nav-text-color: var(--white);
-  --nav-text-hover-color: var(--ele-minor-3);
-  --table-scroll-bg-color: var(--color-minor-1);
-  --table-scroll-track-color: var(--ele-primary-2);
-}
-.theme-dark .el-button {
-  border: none;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  --font-size-primary: 14px;
-  --font-size-secondary: 16px;
-  --font-size-minor1: 12px;
-  --font-size-minor2: 20px;
-  --index-normal: 1;
-  --index-top: 1000;
-  --index-popper: 2000;
-  --index-max: 99999;
-  --animation-time: 0.3s;
-  --animation-slowly-time: 0.5s;
+  --color-success: hsla(100, 54%, 49%, 1);
+  --color-warning: hsla(37, 91%, 55%, 1);
+  --color-danger: hsla(357, 91%, 55%, 1);
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "wenquanyi micro hei", Arial, sans-serif;
   color: var(--text-color);
   background-color: var(--background-color, #f9f9fb);
@@ -585,13 +631,15 @@ body {
   background-color: inherit;
 }
 
-.el-button-group .el-button {
+.el-button-group .el-button, .el-button-group .el-button:focus {
   color: var(--button-group-text-color);
   background-color: var(--button-group-color);
+  border-color: var(--border-color);
 }
-.el-button-group .el-button.is-disabled {
+.el-button-group .el-button.is-disabled, .el-button-group .el-button.is-disabled:focus {
   color: var(--button-group-text-color);
   background-color: var(--button-group-disabled-color);
+  border-color: var(--border-color);
 }
 .el-button-group .el-button.is-disabled:hover {
   color: var(--button-group-text-color);
@@ -600,74 +648,111 @@ body {
 .el-button-group .el-button:hover {
   color: var(--button-group-text-color);
   background-color: var(--button-group-hover-color);
+  border-color: var(--border-hover-color);
 }
 
-.el-button--default {
+.el-button--default, .el-button--default:focus {
   color: var(--button-default-text-color);
   background-color: var(--button-default-color);
+  border-color: var(--border-color);
 }
 .el-button--default:hover {
   color: var(--button-default-text-hover-color);
   background-color: var(--button-default-hover-color);
+  border-color: var(--border-hover-color);
 }
-.el-button--default.is-plain {
+.el-button--default.is-plain, .el-button--default.is-plain:focus {
   color: var(--button-default-text-color);
   background-color: var(--button-default-color);
+  border-color: var(--border-color);
 }
 .el-button--default.is-plain.is-loading {
   color: var(--button-default-text-color);
   background-color: var(--button-default-hover-color);
+  border-color: var(--border-hover-color);
 }
 .el-button--default.is-plain.is-disabled {
   color: var(--button-default-text-disabled-color);
-  background-color: var(--button-default-color);
+  background-color: var(--button-default-disabled-color);
+  border-color: var(--border-color);
 }
 .el-button--default.is-plain.is-disabled:hover {
   color: var(--button-default-text-disabled-color);
-  background-color: var(--button-default-color);
+  background-color: var(--button-default-disabled-color);
+  border-color: var(--border-color);
 }
 .el-button--default.is-plain:hover {
   color: var(--button-default-text-hover-color);
   background-color: var(--button-default-hover-color);
+  border-color: var(--border-hover-color);
 }
 
-.el-button--primary {
+.el-button--primary, .el-button--primary:focus {
+  color: var(--button-primary-text-color);
+  background-color: var(--button-primary-color);
+  border-color: var(--border-color);
+}
+.el-button--primary:focus, .el-button--primary:active {
   color: var(--button-primary-text-color);
   background-color: var(--button-primary-color);
 }
 .el-button--primary:hover {
   color: var(--button-primary-text-hover-color);
   background-color: var(--button-primary-hover-color);
+  border-color: var(--border-hover-color);
 }
-.el-button--primary.is-plain {
+.el-button--primary.is-disabled {
+  color: var(--button-primary-text-disabled-color);
+  background-color: var(--button-primary-disabled-color);
+  border-color: var(--border-color);
+}
+.el-button--primary.is-disabled:hover {
+  color: var(--button-primary-text-disabled-color);
+  background-color: var(--button-primary-disabled-color);
+  border-color: var(--border-color);
+}
+.el-button--primary.is-plain, .el-button--primary.is-plain:focus {
   color: var(--button-primary-text-color);
   background-color: var(--button-primary-color);
+  border-color: var(--border-color);
 }
 .el-button--primary.is-plain.is-loading {
   color: var(--button-primary-text-color);
   background-color: var(--button-primary-hover-color);
+  border-color: var(--border-hover-color);
 }
 .el-button--primary.is-plain.is-disabled {
   color: var(--button-primary-text-disabled-color);
   background-color: var(--button-primary-disabled-color);
+  border-color: var(--border-color);
 }
 .el-button--primary.is-plain.is-disabled:hover {
   color: var(--button-primary-text-disabled-color);
   background-color: var(--button-primary-disabled-color);
+  border-color: var(--border-color);
 }
 .el-button--primary.is-plain:hover {
   background-color: var(--button-primary-hover-color);
+  border-color: var(--border-hover-color);
 }
 
-.el-checkbox__label {
+.el-checkbox {
   color: var(--text-color);
 }
+.el-checkbox__label {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--text-color);
+}
+.el-checkbox__input.is-checked + .el-checkbox__label {
+  color: var(--checkbox-color);
+}
 .el-checkbox__inner.is-checked, .el-checkbox__inner.is-indeterminate, .el-checkbox__input.is-checked, .el-checkbox__input.is-indeterminate {
-  border-color: var(--border-color);
+  border-color: var(--border-hover-color);
 }
 .el-checkbox__inner.is-checked span.el-checkbox__inner, .el-checkbox__inner.is-indeterminate span.el-checkbox__inner, .el-checkbox__input.is-checked span.el-checkbox__inner, .el-checkbox__input.is-indeterminate span.el-checkbox__inner {
   background-color: var(--checkbox-color);
-  border-color: var(--border-color);
+  border-color: var(--border-hover-color);
 }
 .el-checkbox__inner.is-checked span.el-checkbox__inner:before, .el-checkbox__inner.is-indeterminate span.el-checkbox__inner:before, .el-checkbox__input.is-checked span.el-checkbox__inner:before, .el-checkbox__input.is-indeterminate span.el-checkbox__inner:before {
   background-color: var(--checkbox-inner-color);
@@ -677,6 +762,9 @@ body {
 }
 .el-checkbox__inner.is-checked span.el-checkbox__inner.is-focus, .el-checkbox__inner.is-indeterminate span.el-checkbox__inner.is-focus, .el-checkbox__input.is-checked span.el-checkbox__inner.is-focus, .el-checkbox__input.is-indeterminate span.el-checkbox__inner.is-focus {
   border-color: var(--checkbox-inner-color);
+}
+.el-checkbox__inner.is-checked + .el-checkbox__label, .el-checkbox__inner.is-indeterminate + .el-checkbox__label, .el-checkbox__input.is-checked + .el-checkbox__label, .el-checkbox__input.is-indeterminate + .el-checkbox__label {
+  color: var(--checkbox-color);
 }
 .el-checkbox__inner span.el-checkbox__inner, .el-checkbox__inner .el-checkbox__input__inner, .el-checkbox__input span.el-checkbox__inner, .el-checkbox__input .el-checkbox__input__inner {
   background-color: var(--background-color-secondary);
@@ -706,17 +794,6 @@ body {
   background-color: var(--background-color-secondary);
 }
 
-.el-message-box {
-  background-color: var(--background-color);
-  border-color: var(--border-color);
-}
-.el-message-box__title {
-  color: var(--text-color);
-}
-.el-message-box__content {
-  color: var(--text-color-secondary);
-}
-
 .el-input__inner {
   color: var(--input-text);
   background-color: var(--input-color);
@@ -736,6 +813,27 @@ body {
   border-color: var(--border-color);
 }
 
+.el-form-item.is-success .el-input__inner {
+  border-color: var(--color-success);
+}
+.el-form-item.is-error .el-input__inner {
+  border-color: var(--color-danger);
+}
+.el-form-item__label {
+  color: var(--text-color);
+}
+
+.el-message-box {
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+}
+.el-message-box__title {
+  color: var(--text-color);
+}
+.el-message-box__content {
+  color: var(--text-color-secondary);
+}
+
 .el-input-number.is-controls-right .el-input-number__decrease,
 .el-input-number.is-controls-right .el-input-number__increase {
   color: var(--input-text-color);
@@ -750,6 +848,9 @@ body {
 .el-radio__label {
   color: var(--text-color-secondary);
 }
+.el-radio-button__inner {
+  color: var(--text-color-secondary);
+}
 .el-radio-button__inner:hover {
   color: var(--hover-color);
 }
@@ -760,44 +861,63 @@ body {
   box-shadow: -1px 0 0 0 var(--button-color);
 }
 
-.el-select-dropdown {
-  background-color: var(--background-color);
+.el-dropdown-menu,
+.el-select-dropdown,
+.el-select-dropdown.is-multiple {
+  background-color: var(--select-dropdown-bg-color);
   border-color: var(--border-hover-color);
 }
-.el-select-dropdown__item {
+.el-dropdown-menu__item,
+.el-select-dropdown__item,
+.el-select-dropdown.is-multiple__item {
+  font-weight: normal;
   color: var(--select-text-color);
 }
-.el-select-dropdown__item.selected {
+.el-dropdown-menu__item.selected, .el-dropdown-menu__item.hover,
+.el-select-dropdown__item.selected,
+.el-select-dropdown__item.hover,
+.el-select-dropdown.is-multiple__item.selected,
+.el-select-dropdown.is-multiple__item.hover {
   color: var(--select-text-hover-color);
-  background-color: inherit;
+  background-color: var(--select-dropdown-bg-hover-color);
 }
-.el-select-dropdown__item.selected.hover, .el-select-dropdown__item.selected:hover {
-  background-color: var(--background-color-secondary);
+.el-dropdown-menu__item.selected:hover, .el-dropdown-menu__item.hover:hover,
+.el-select-dropdown__item.selected:hover,
+.el-select-dropdown__item.hover:hover,
+.el-select-dropdown.is-multiple__item.selected:hover,
+.el-select-dropdown.is-multiple__item.hover:hover {
+  background-color: var(--select-dropdown-bg-hover-color);
 }
-.el-select-dropdown__item.hover {
-  background-color: var(--background-color-secondary);
+.el-dropdown-menu__item:not(.is-disabled):hover,
+.el-select-dropdown__item:not(.is-disabled):hover,
+.el-select-dropdown.is-multiple__item:not(.is-disabled):hover {
+  background-color: var(--select-dropdown-bg-hover-color);
 }
 
-.el-select .el-tag {
-  color: var(--select-text-hover-color);
-  background-color: inherit;
-  border: 1px solid var(--border-color);
-}
 .el-select .el-tag .el-tag__close.el-icon-close {
-  color: var(--select-text-color);
-  background-color: inherit;
+  color: var(--select-decorator-text-color);
+  background-color: var(--select-decorator-bg-color);
 }
 .el-select .el-tag .el-tag__close.el-icon-close:hover {
-  color: var(--text-color);
-  background-color: var(--background-color-secondary);
+  background-color: var(--select-decorator-bg-active-color);
 }
 
 div.el-tabs.el-tabs--top {
   color: var(--text-color-secondary);
   background-color: var(--background-color-secondary, #fff);
+  border: 1px solid var(--border-color, #d7d7d7);
 }
 div.el-tabs.el-tabs--top .el-form-item__label {
   color: var(--text-color);
+}
+div.el-tabs .el-tabs__active-bar {
+  background-color: var(--tabs-active-bar-bg);
+}
+div.el-tabs .el-tabs__item {
+  color: var(--text-color-secondary);
+}
+div.el-tabs .el-tabs__item:hover, div.el-tabs .el-tabs__item.is-active {
+  color: var(--tabs-active-color);
 }
 
 .el-table {
@@ -861,10 +981,6 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   color: var(--hover-color);
 }
 
-.el-tabs__item {
-  color: var(--text-color-secondary);
-}
-
 .el-tree-node__content:hover {
   background-color: var(--background-color-secondary);
 }
@@ -884,18 +1000,140 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   color: var(--text-color);
 }
 
+.el-popper {
+  background-color: var(--background-color-secondary);
+  border-color: var(--border-hover-color);
+}
+.el-popper[x-placement^=left] .popper__arrow {
+  border-left-color: var(--border-hover-color);
+}
+.el-popper[x-placement^=left] .popper__arrow:after {
+  border-left-color: var(--background-color-secondary);
+}
+.el-popper[x-placement^=right] .popper__arrow {
+  border-right-color: var(--border-hover-color);
+}
+.el-popper[x-placement^=right] .popper__arrow:after {
+  border-right-color: var(--background-color-secondary);
+}
 .el-popper[x-placement^=bottom] .popper__arrow {
-  top: -6px;
-  left: 50%;
-  margin-right: 3px;
-  border-top-width: 0;
   border-bottom-color: var(--border-hover-color);
 }
 .el-popper[x-placement^=bottom] .popper__arrow:after {
-  top: 1px;
-  margin-left: -6px;
-  border-top-width: 0;
-  border-bottom-color: var(--background-color);
+  border-bottom-color: var(--background-color-secondary);
+}
+.el-popper[x-placement^=top] .popper__arrow {
+  border-top-color: var(--border-hover-color);
+}
+.el-popper[x-placement^=top] .popper__arrow:after {
+  border-top-color: var(--background-color-secondary);
+}
+
+.el-pagination {
+  padding: 8.5px 0;
+  text-align: center;
+  background-color: var(--white);
+}
+.el-pagination li.active {
+  color: var(--pagination-text-active-color);
+  background: var(--pagination-bg-active-color);
+  border-radius: 2px;
+}
+.el-pagination li.active:hover {
+  color: var(--pagination-text-active-color);
+}
+.el-pagination .btn-prev,
+.el-pagination .btn-next,
+.el-pagination .number,
+.el-pagination .el-icon {
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  padding: 0;
+  margin-right: 12px;
+  font-weight: 400;
+  color: var(--pagination-text-color);
+}
+.el-pagination .btn-prev:hover,
+.el-pagination .btn-next:hover,
+.el-pagination .number:hover,
+.el-pagination .el-icon:hover {
+  color: var(--pagination-text-hover-color);
+}
+.el-pagination .btn-prev i,
+.el-pagination .btn-next i,
+.el-pagination .number i,
+.el-pagination .el-icon i {
+  line-height: 30px;
+}
+.el-pagination button:disabled i {
+  color: var(--pagination-text-disable-color);
+}
+.el-pagination .el-pagination__jump .el-input {
+  width: 60px;
+  margin-right: 7px;
+}
+.el-pagination .el-pagination__jump .el-input input {
+  width: 60px;
+}
+
+.el-menu .iconfont {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  vertical-align: top;
+}
+.el-menu .el-menu-item {
+  transition: border var(--animation-time) ease-in-out;
+}
+.el-menu .el-menu-item:hover {
+  background-color: var(--aside-bg-active-color);
+}
+.el-menu .el-menu-item::after {
+  float: right;
+  margin-top: 20px;
+  font-size: 0;
+  content: "";
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 10px solid var(--aside-decorator-active-color);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform: translateX(-8px);
+          transform: translateX(-8px);
+}
+.el-menu .el-menu-item.is-active {
+  color: var(--aside-font-active-color);
+  background-color: var(--aside-bg-active-color);
+}
+.el-menu .el-menu-item.is-active::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  content: "";
+  border-left: 5px solid var(--aside-decorator-active-color);
+}
+.el-menu .el-menu-item.is-active::after {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.el-menu .el-submenu .el-submenu__title:hover {
+  background-color: var(--aside-bg-active-color);
+}
+.el-menu .el-submenu.is-active > .el-submenu__title, .el-menu .el-submenu.is-active > .el-submenu__title i {
+  color: var(--aside-font-active-color);
+}
+.el-menu .el-submenu.is-active .el-menu {
+  background-color: var(--aside-collapse-bg-color);
+}
+
+.el-menu--popup .el-menu-item.is-active {
+  padding-right: 20px;
 }
 
 /**
@@ -1819,79 +2057,434 @@ text.highcharts-drilldown-data-label,
   stroke-width: 1px;
 }
 
-.highcharts-navigator-series.highcharts-color-0 {
+.highcharts-text-color-0 {
+  fill: #6c8ff1;
+}
+
+.highcharts-color-0.highcharts-navigator-series, .highcharts-color-0.highcharts-halo {
   fill: #6c8ff1;
   stroke: #6c8ff1;
 }
+.highcharts-color-0.highcharts-bar-series .highcharts-point {
+  fill: #6c8ff1;
+  stroke: #6c8ff1;
+}
+.highcharts-color-0.highcharts-point {
+  fill: #6c8ff1;
+}
+.highcharts-color-0.highcharts-area-series path:nth-child(1) {
+  fill: #6c8ff1;
+  fill-opacity: 0.2;
+}
+.highcharts-color-0.highcharts-area-series path:nth-child(2) {
+  stroke: #6c8ff1;
+  stroke-width: 1px;
+}
+.highcharts-color-0.highcharts-area-series .highcharts-point {
+  fill: rgba(108, 143, 241, 0.4);
+  stroke: #6c8ff1;
+}
 
-.highcharts-navigator-series.highcharts-color-1 {
+.highcharts-text-color-1 {
+  fill: #ffcb37;
+}
+
+.highcharts-color-1.highcharts-navigator-series, .highcharts-color-1.highcharts-halo {
   fill: #ffcb37;
   stroke: #ffcb37;
 }
+.highcharts-color-1.highcharts-bar-series .highcharts-point {
+  fill: #ffcb37;
+  stroke: #ffcb37;
+}
+.highcharts-color-1.highcharts-point {
+  fill: #ffcb37;
+}
+.highcharts-color-1.highcharts-area-series path:nth-child(1) {
+  fill: #ffcb37;
+  fill-opacity: 0.2;
+}
+.highcharts-color-1.highcharts-area-series path:nth-child(2) {
+  stroke: #ffcb37;
+  stroke-width: 1px;
+}
+.highcharts-color-1.highcharts-area-series .highcharts-point {
+  fill: rgba(255, 203, 55, 0.4);
+  stroke: #ffcb37;
+}
 
-.highcharts-navigator-series.highcharts-color-2 {
+.highcharts-text-color-2 {
+  fill: #50e3c2;
+}
+
+.highcharts-color-2.highcharts-navigator-series, .highcharts-color-2.highcharts-halo {
   fill: #50e3c2;
   stroke: #50e3c2;
 }
+.highcharts-color-2.highcharts-bar-series .highcharts-point {
+  fill: #50e3c2;
+  stroke: #50e3c2;
+}
+.highcharts-color-2.highcharts-point {
+  fill: #50e3c2;
+}
+.highcharts-color-2.highcharts-area-series path:nth-child(1) {
+  fill: #50e3c2;
+  fill-opacity: 0.2;
+}
+.highcharts-color-2.highcharts-area-series path:nth-child(2) {
+  stroke: #50e3c2;
+  stroke-width: 1px;
+}
+.highcharts-color-2.highcharts-area-series .highcharts-point {
+  fill: rgba(80, 227, 194, 0.4);
+  stroke: #50e3c2;
+}
 
-.highcharts-navigator-series.highcharts-color-3 {
+.highcharts-text-color-3 {
+  fill: #d94040;
+}
+
+.highcharts-color-3.highcharts-navigator-series, .highcharts-color-3.highcharts-halo {
   fill: #d94040;
   stroke: #d94040;
 }
+.highcharts-color-3.highcharts-bar-series .highcharts-point {
+  fill: #d94040;
+  stroke: #d94040;
+}
+.highcharts-color-3.highcharts-point {
+  fill: #d94040;
+}
+.highcharts-color-3.highcharts-area-series path:nth-child(1) {
+  fill: #d94040;
+  fill-opacity: 0.2;
+}
+.highcharts-color-3.highcharts-area-series path:nth-child(2) {
+  stroke: #d94040;
+  stroke-width: 1px;
+}
+.highcharts-color-3.highcharts-area-series .highcharts-point {
+  fill: rgba(217, 64, 64, 0.4);
+  stroke: #d94040;
+}
 
-.highcharts-navigator-series.highcharts-color-4 {
+.highcharts-text-color-4 {
+  fill: #b6b6b6;
+}
+
+.highcharts-color-4.highcharts-navigator-series, .highcharts-color-4.highcharts-halo {
   fill: #b6b6b6;
   stroke: #b6b6b6;
 }
+.highcharts-color-4.highcharts-bar-series .highcharts-point {
+  fill: #b6b6b6;
+  stroke: #b6b6b6;
+}
+.highcharts-color-4.highcharts-point {
+  fill: #b6b6b6;
+}
+.highcharts-color-4.highcharts-area-series path:nth-child(1) {
+  fill: #b6b6b6;
+  fill-opacity: 0.2;
+}
+.highcharts-color-4.highcharts-area-series path:nth-child(2) {
+  stroke: #b6b6b6;
+  stroke-width: 1px;
+}
+.highcharts-color-4.highcharts-area-series .highcharts-point {
+  fill: rgba(182, 182, 182, 0.4);
+  stroke: #b6b6b6;
+}
 
-.highcharts-navigator-series.highcharts-color-5 {
+.highcharts-text-color-5 {
+  fill: #0064cd;
+}
+
+.highcharts-color-5.highcharts-navigator-series, .highcharts-color-5.highcharts-halo {
   fill: #0064cd;
   stroke: #0064cd;
 }
+.highcharts-color-5.highcharts-bar-series .highcharts-point {
+  fill: #0064cd;
+  stroke: #0064cd;
+}
+.highcharts-color-5.highcharts-point {
+  fill: #0064cd;
+}
+.highcharts-color-5.highcharts-area-series path:nth-child(1) {
+  fill: #0064cd;
+  fill-opacity: 0.2;
+}
+.highcharts-color-5.highcharts-area-series path:nth-child(2) {
+  stroke: #0064cd;
+  stroke-width: 1px;
+}
+.highcharts-color-5.highcharts-area-series .highcharts-point {
+  fill: rgba(0, 100, 205, 0.4);
+  stroke: #0064cd;
+}
 
-.highcharts-navigator-series.highcharts-color-6 {
+.highcharts-text-color-6 {
+  fill: #7ed321;
+}
+
+.highcharts-color-6.highcharts-navigator-series, .highcharts-color-6.highcharts-halo {
   fill: #7ed321;
   stroke: #7ed321;
 }
+.highcharts-color-6.highcharts-bar-series .highcharts-point {
+  fill: #7ed321;
+  stroke: #7ed321;
+}
+.highcharts-color-6.highcharts-point {
+  fill: #7ed321;
+}
+.highcharts-color-6.highcharts-area-series path:nth-child(1) {
+  fill: #7ed321;
+  fill-opacity: 0.2;
+}
+.highcharts-color-6.highcharts-area-series path:nth-child(2) {
+  stroke: #7ed321;
+  stroke-width: 1px;
+}
+.highcharts-color-6.highcharts-area-series .highcharts-point {
+  fill: rgba(126, 211, 33, 0.4);
+  stroke: #7ed321;
+}
 
-.highcharts-navigator-series.highcharts-color-7 {
+.highcharts-text-color-7 {
+  fill: #167b58;
+}
+
+.highcharts-color-7.highcharts-navigator-series, .highcharts-color-7.highcharts-halo {
   fill: #167b58;
   stroke: #167b58;
 }
+.highcharts-color-7.highcharts-bar-series .highcharts-point {
+  fill: #167b58;
+  stroke: #167b58;
+}
+.highcharts-color-7.highcharts-point {
+  fill: #167b58;
+}
+.highcharts-color-7.highcharts-area-series path:nth-child(1) {
+  fill: #167b58;
+  fill-opacity: 0.2;
+}
+.highcharts-color-7.highcharts-area-series path:nth-child(2) {
+  stroke: #167b58;
+  stroke-width: 1px;
+}
+.highcharts-color-7.highcharts-area-series .highcharts-point {
+  fill: rgba(22, 123, 88, 0.4);
+  stroke: #167b58;
+}
 
-.highcharts-navigator-series.highcharts-color-8 {
+.highcharts-text-color-8 {
+  fill: #6e48db;
+}
+
+.highcharts-color-8.highcharts-navigator-series, .highcharts-color-8.highcharts-halo {
   fill: #6e48db;
   stroke: #6e48db;
 }
+.highcharts-color-8.highcharts-bar-series .highcharts-point {
+  fill: #6e48db;
+  stroke: #6e48db;
+}
+.highcharts-color-8.highcharts-point {
+  fill: #6e48db;
+}
+.highcharts-color-8.highcharts-area-series path:nth-child(1) {
+  fill: #6e48db;
+  fill-opacity: 0.2;
+}
+.highcharts-color-8.highcharts-area-series path:nth-child(2) {
+  stroke: #6e48db;
+  stroke-width: 1px;
+}
+.highcharts-color-8.highcharts-area-series .highcharts-point {
+  fill: rgba(110, 72, 219, 0.4);
+  stroke: #6e48db;
+}
 
-.highcharts-navigator-series.highcharts-color-9 {
+.highcharts-text-color-9 {
+  fill: #c17aff;
+}
+
+.highcharts-color-9.highcharts-navigator-series, .highcharts-color-9.highcharts-halo {
   fill: #c17aff;
   stroke: #c17aff;
 }
+.highcharts-color-9.highcharts-bar-series .highcharts-point {
+  fill: #c17aff;
+  stroke: #c17aff;
+}
+.highcharts-color-9.highcharts-point {
+  fill: #c17aff;
+}
+.highcharts-color-9.highcharts-area-series path:nth-child(1) {
+  fill: #c17aff;
+  fill-opacity: 0.2;
+}
+.highcharts-color-9.highcharts-area-series path:nth-child(2) {
+  stroke: #c17aff;
+  stroke-width: 1px;
+}
+.highcharts-color-9.highcharts-area-series .highcharts-point {
+  fill: rgba(193, 122, 255, 0.4);
+  stroke: #c17aff;
+}
 
-.highcharts-navigator-series.highcharts-color-10 {
+.highcharts-text-color-10 {
+  fill: #ff9a00;
+}
+
+.highcharts-color-10.highcharts-navigator-series, .highcharts-color-10.highcharts-halo {
   fill: #ff9a00;
   stroke: #ff9a00;
 }
+.highcharts-color-10.highcharts-bar-series .highcharts-point {
+  fill: #ff9a00;
+  stroke: #ff9a00;
+}
+.highcharts-color-10.highcharts-point {
+  fill: #ff9a00;
+}
+.highcharts-color-10.highcharts-area-series path:nth-child(1) {
+  fill: #ff9a00;
+  fill-opacity: 0.2;
+}
+.highcharts-color-10.highcharts-area-series path:nth-child(2) {
+  stroke: #ff9a00;
+  stroke-width: 1px;
+}
+.highcharts-color-10.highcharts-area-series .highcharts-point {
+  fill: rgba(255, 154, 0, 0.4);
+  stroke: #ff9a00;
+}
 
-.highcharts-navigator-series.highcharts-color-11 {
+.highcharts-text-color-11 {
+  fill: #b5ea81;
+}
+
+.highcharts-color-11.highcharts-navigator-series, .highcharts-color-11.highcharts-halo {
   fill: #b5ea81;
   stroke: #b5ea81;
 }
+.highcharts-color-11.highcharts-bar-series .highcharts-point {
+  fill: #b5ea81;
+  stroke: #b5ea81;
+}
+.highcharts-color-11.highcharts-point {
+  fill: #b5ea81;
+}
+.highcharts-color-11.highcharts-area-series path:nth-child(1) {
+  fill: #b5ea81;
+  fill-opacity: 0.2;
+}
+.highcharts-color-11.highcharts-area-series path:nth-child(2) {
+  stroke: #b5ea81;
+  stroke-width: 1px;
+}
+.highcharts-color-11.highcharts-area-series .highcharts-point {
+  fill: rgba(181, 234, 129, 0.4);
+  stroke: #b5ea81;
+}
 
-.highcharts-navigator-series.highcharts-color-12 {
+.highcharts-text-color-12 {
+  fill: #ff27aa;
+}
+
+.highcharts-color-12.highcharts-navigator-series, .highcharts-color-12.highcharts-halo {
   fill: #ff27aa;
   stroke: #ff27aa;
 }
+.highcharts-color-12.highcharts-bar-series .highcharts-point {
+  fill: #ff27aa;
+  stroke: #ff27aa;
+}
+.highcharts-color-12.highcharts-point {
+  fill: #ff27aa;
+}
+.highcharts-color-12.highcharts-area-series path:nth-child(1) {
+  fill: #ff27aa;
+  fill-opacity: 0.2;
+}
+.highcharts-color-12.highcharts-area-series path:nth-child(2) {
+  stroke: #ff27aa;
+  stroke-width: 1px;
+}
+.highcharts-color-12.highcharts-area-series .highcharts-point {
+  fill: rgba(255, 39, 170, 0.4);
+  stroke: #ff27aa;
+}
 
-.highcharts-navigator-series.highcharts-color-13 {
+.highcharts-text-color-13 {
+  fill: #00c7ff;
+}
+
+.highcharts-color-13.highcharts-navigator-series, .highcharts-color-13.highcharts-halo {
   fill: #00c7ff;
   stroke: #00c7ff;
 }
+.highcharts-color-13.highcharts-bar-series .highcharts-point {
+  fill: #00c7ff;
+  stroke: #00c7ff;
+}
+.highcharts-color-13.highcharts-point {
+  fill: #00c7ff;
+}
+.highcharts-color-13.highcharts-area-series path:nth-child(1) {
+  fill: #00c7ff;
+  fill-opacity: 0.2;
+}
+.highcharts-color-13.highcharts-area-series path:nth-child(2) {
+  stroke: #00c7ff;
+  stroke-width: 1px;
+}
+.highcharts-color-13.highcharts-area-series .highcharts-point {
+  fill: rgba(0, 199, 255, 0.4);
+  stroke: #00c7ff;
+}
 
-.highcharts-navigator-series.highcharts-color-14 {
+.highcharts-text-color-14 {
+  fill: #c25b00;
+}
+
+.highcharts-color-14.highcharts-navigator-series, .highcharts-color-14.highcharts-halo {
   fill: #c25b00;
   stroke: #c25b00;
+}
+.highcharts-color-14.highcharts-bar-series .highcharts-point {
+  fill: #c25b00;
+  stroke: #c25b00;
+}
+.highcharts-color-14.highcharts-point {
+  fill: #c25b00;
+}
+.highcharts-color-14.highcharts-area-series path:nth-child(1) {
+  fill: #c25b00;
+  fill-opacity: 0.2;
+}
+.highcharts-color-14.highcharts-area-series path:nth-child(2) {
+  stroke: #c25b00;
+  stroke-width: 1px;
+}
+.highcharts-color-14.highcharts-area-series .highcharts-point {
+  fill: rgba(194, 91, 0, 0.4);
+  stroke: #c25b00;
+}
+
+.highcharts-column-series rect.highcharts-point,
+.highcharts-pie-series .highcharts-point {
+  stroke: var(--background-color-secondary);
+  stroke-linejoin: round;
+}
+
+.highcharts-navigator-series .highcharts-area {
+  fill-opacity: 0.2;
 }
 
 .plot-line-zero {
