@@ -18,9 +18,10 @@
 
 ## Usage
 
-in js: import '@rqjs/rqthemes' or in css: @import '@rqjs/rqthemes'
-
-place it after element default style
+- in js: import '@rqjs/rqthemes'
+- in css: @import '@rqjs/rqthemes'
+- **ie support light theme only**, and please use @rqjs/rqrhemes/legacy.css
+- place it after element-ui default css file
 
 ## Commands
 

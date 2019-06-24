@@ -1,8 +1,8 @@
 {
   "name": "@rqjs/rqthemes",
-  "version": "0.3.1",
+  "version": "0.4.1",
   "description": "ricequant themes",
-  "main": "dist/index.css",
+  "main": "index.css",
   "repository": {
     "type": "git",
     "url": "ssh://git@git.ricequant.com:7999/node/ricequant-themes.git"
@@ -10,9 +10,9 @@
   "author": "ansonw",
   "license": "MIT",
   "scripts": {
-    "build": "./scripts/updep.sh && parcel build src/index.scss --no-minify --no-source-maps --no-content-hash",
+    "build": "./scripts/updep.sh && parcel build src/index.scss --no-cache --no-minify --no-source-maps --no-content-hash -d ./ && LEGACY=true parcel build src/index.scss --no-cache --no-minify --no-source-maps --no-content-hash -d ./ --out-file legacy.css",
     "lint": "./scripts/lint.sh",
-    "clean": "rm -rf .cache dist"
+    "clean": "rm -rf index.css legacy.css"
   },
   "publishConfig": {
     "access": "public"
@@ -24,6 +24,7 @@
     "husky": "^2.4.1",
     "lint-staged": "^8.2.1",
     "parcel-bundler": "^1.12.3",
+    "postcss-css-variables": "^0.13.0",
     "prettier": "^1.18.2",
     "sass": "^1.21.0",
     "stylelint": "^10.1.0",
