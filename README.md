@@ -16,6 +16,11 @@
 - highcharts themes(styled mode)
   <!-- - iconfont -->
 
+## Caveats
+
+- `highcharts` reqiure v7.0.0+, using styled mode
+- themes supports only **default** and **plain** button in element
+
 ## Usage
 
 in js: import '@rqjs/rqthemes' or in css: @import '@rqjs/rqthemes'

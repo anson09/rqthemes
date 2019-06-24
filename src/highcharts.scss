@@ -25,23 +25,6 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #b6b6b6, #0064cd, #7ed321, #167b58,
     &.highcharts-point {
       fill: $color;
     }
-
-    &.highcharts-area-series {
-      path:nth-child(1) {
-        fill: $color;
-        fill-opacity: 0.2;
-      }
-
-      path:nth-child(2) {
-        stroke: $color;
-        stroke-width: 1px;
-      }
-
-      .highcharts-point {
-        fill: rgba($color, 0.4);
-        stroke: $color;
-      }
-    }
   }
 }
 .highcharts-column-series rect.highcharts-point,
