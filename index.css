@@ -363,9 +363,8 @@ template {
     1
   );
   --color-minor-2: hsla(221, 50%, 94%, 1);
-  --color-red: hsla(0, 89%, 71%, 1);
   --ele-primary-1: hsla(216, 76%, 44%, 1);
-  --ele-primary-2: hsla(216, 76%, 44%, 0.5);
+  --ele-primary-2: hsla(216, 76%, 44%, 0.2);
   --ele-primary-3: hsla(216, 71%, 47%, 0.8);
   --ele-primary-shadow-1: hsla(215, 83%, 93%, 1);
   --ele-primary-shadow-2: hsla(213, 69%, 97%, 1);
@@ -377,13 +376,13 @@ template {
   );
   --ele-secondary-2: hsla(216, 76%, 44%, 0.5);
   --ele-secondary-3: hsla(216, 71%, 47%, 0.7);
-  --ele-minor-1: hsla(222, 17%, 88%, 1);
-  --ele-minor-2: rgba(61, 94, 155, 30);
+  --ele-minor-1: hsla(216, 76%, 44%, 0.5);
+  --ele-minor-2: hsla(216, 76%, 44%, 0.2);
   --ele-minor-3: hsla(216, 76%, 44%, 0.1);
   --common-color-1: hsla(215, 31%, 88%, 1);
   --common-color-2: hsla(216, 33%, 97%, 1);
   --common-color-3: hsla(0, 0%, 40%, 1);
-  --common-color-4: hsl(216, 14%, 85%, 1);
+  --common-color-4: hsla(216, 14%, 85%, 1);
   --ele-radius: 4px;
   --border-color-primary: hsla(223, 22%, 87%, 1);
   --border-color-secondray: hsla(222, 33%, 94%, 1);
@@ -393,9 +392,10 @@ template {
     20%,
     1
   );
+  --text-color-minor: hsla(223, 22%, 87%, 1);
   --white: hsla(0, 0%, 100%, 1);
   --grey: hsla(0, 0%, 40%, 1);
-  --disable-color-1: hsla(220, 11%, 78%, 1);
+  --disable-color: hsla(0, 0%, 100%, 0.8);
   --background-color: var(--color-secondary);
   --background-color-secondary: var(--color-minor-1);
   --hover-color: var(--color-primary);
@@ -404,30 +404,33 @@ template {
   --table-hover-color: var(--ele-minor-3);
   --table-active-color: var(--grey);
   --table-head-text-color: var(--common-color-3);
-  --table-border-hover-color: var(--color-primary);
   --text-color: var(--text-color-primary);
   --text-color-secondary: var(--grey);
   --border-color: var(--border-color-primary);
   --border-hover-color: var(--color-primary);
-  --nav-text-color: var(--border-color-primary);
+  --nav-text-color: var(--common-color-1);
   --nav-text-hover-color: var(--white);
   --table-scroll-bg-color: var(--background-color-secondary);
-  --table-scroll-track-color: var(--grey);
-  --button-primary-color: var(--color-primary);
-  --button-primary-hover-color: var(--ele-secondary-1);
-  --button-primary-active-color: var(--ele-primary-3);
-  --button-primary-disabled-color: var(--ele-minor-1);
-  --button-primary-text-color: var(--white);
-  --button-primary-text-disabled-color: var(
+  --table-scroll-track-color: var(--common-color-1);
+  --button-default-color: var(--color-primary);
+  --button-default-click-color: var(--ele-primary-3);
+  --button-default-hover-color: var(--ele-secondary-1);
+  --button-default-active-color: var(--ele-primary-3);
+  --button-default-disabled-color: var(--ele-minor-1);
+  --button-default-text-color: var(--white);
+  --button-default-text-disabled-color: var(
     --disable-color
   );
-  --button-primary-text-hover-color: var(--white);
-  --button-default-color: var(--ele-primary-2);
-  --button-default-hover-color: var(--hover-color);
-  --button-default-text-color: var(--white);
-  --button-default-text-disabled-color: var(--disable-color);
-  --button-default-disabled-color: var(--ele-minor-2);
   --button-default-text-hover-color: var(--white);
+  --button-ghost-color: var(--ele-primary-2);
+  --button-ghost-click-color: var(--ele-secondary-3);
+  --button-ghost-border-color: var(--color-primary);
+  --button-ghost-hover-color: var(--ele-secondary-2);
+  --button-ghost-text-color: var(--ele-primary-1);
+  --button-ghost-text-disabled-color: var(--ele-secondary-2);
+  --button-ghost-disabled-color: var(--ele-minor-2);
+  --button-ghost-disable-border-color: var(--ele-secondary-2);
+  --button-ghost-text-hover-color: var(--white);
   --button-group-color: var(--color-primary);
   --button-group-hover-color: var(--ele-secondary-1);
   --button-group-disabled-color: var(--ele-minor-2);
@@ -464,12 +467,6 @@ template {
   --tabs-active-bar-bg: var(--color-primary);
   --tabs-active-color: var(--color-primary);
   --popover-border-color: var(--color-primary);
-  --index-normal: 1;
-  --index-top: 1000;
-  --index-popper: 2000;
-  --index-max: 99999;
-  --animation-time: 0.3s;
-  --animation-slowly-time: 0.5s;
 }
 
 .theme-dark {
@@ -492,22 +489,21 @@ template {
     53%,
     0.1
   );
-  --color-red: hsla(0, 89%, 71%, 1);
   --ele-primary-1: hsla(201, 87%, 53%, 1);
   --ele-primary-2: hsla(201, 87%, 53%, 0.5);
   --ele-primary-3: hsla(201, 87%, 53%, 0.7);
-  --ele-primary-shadow-1: hsla(215, 83%, 93%, 1);
-  --ele-primary-shadow-2: hsla(213, 69%, 97%, 1);
+  --ele-primary-shadow-1: hsla(201, 87%, 53%, 0.1);
+  --ele-primary-shadow-2: hsla(228, 17%, 12%, 1);
   --ele-secondary-1: hsla(201, 100%, 65%, 1);
   --ele-secondary-2: hsla(201, 87%, 53%, 0.5);
   --ele-secondary-3: hsla(201, 87%, 53%, 0.7);
-  --ele-minor-1: hsla(221, 40%, 19%, 1);
-  --ele-minor-2: hsla(221, 15%, 24%, 0.5);
+  --ele-minor-1: hsla(201, 87%, 53%, 0.5);
+  --ele-minor-2: hsla(201, 87%, 53%, 0.2);
   --ele-minor-3: hsla(201, 87%, 53%, 0.1);
   --common-color-1: hsla(227, 18%, 16%, 1);
   --common-color-2: hsla(226, 14%, 24%, 1);
   --common-color-3: hsla(213, 14%, 56%, 1);
-  --common-color-4: hsl(216, 14%, 85%, 1);
+  --common-color-4: hsla(216, 22%, 25%, 1);
   --ele-radius: 4px;
   --border-color-primary: hsla(216, 22%, 25%, 1);
   --border-color-secondray: hsla(216, 22%, 25%, 1);
@@ -519,7 +515,7 @@ template {
   );
   --white: hsla(0, 0%, 100%, 1);
   --grey: hsla(213, 14%, 56%, 1);
-  --disable-color: hsla(221, 15%, 24%, 1);
+  --disable-color: hsla(0, 0%, 100%, 0.5);
   --background-color: var(--color-secondary);
   --background-color-secondary: var(--color-minor-1);
   --hover-color: var(--color-primary);
@@ -532,27 +528,27 @@ template {
   --text-color-secondary: var(--grey);
   --border-color: var(--border-color-primary);
   --border-hover-color: var(--color-primary);
-  --nav-text-color: var(--text-color-primary);
+  --nav-text-color: var(--common-color-3);
   --nav-text-hover-color: var(--white);
   --table-scroll-bg-color: var(--background-color-secondary);
   --table-scroll-track-color: var(--grey);
-  --button-primary-color: var(--color-primary);
-  --button-primary-hover-color: var(--ele-secondary-1);
-  --button-primary-active-color: var(--ele-primary-3);
-  --button-primary-disabled-color: var(--ele-minor-1);
-  --button-primary-text-color: var(--white);
-  --button-primary-text-disabled-color: var(
-    --disable-color
-  );
-  --button-primary-text-hover-color: var(--white);
-  --button-default-color: var(--ele-primary-2);
-  --button-default-hover-color: var(--hover-color);
+  --button-default-color: var(--color-primary);
+  --button-default-hover-color: var(--ele-secondary-1);
+  --button-default-active-color: var(--ele-primary-3);
+  --button-default-disabled-color: var(--ele-minor-1);
   --button-default-text-color: var(--white);
   --button-default-text-disabled-color: var(
     --disable-color
   );
-  --button-default-disabled-color: var(--ele-minor-2);
   --button-default-text-hover-color: var(--white);
+  --button-ghost-color: var(--ele-primary-2);
+  --button-ghost-border-color: var(--color-primary);
+  --button-ghost-hover-color: var(--ele-secondary-2);
+  --button-ghost-text-color: var(--ele-primary-1);
+  --button-ghost-text-disabled-color: var(--ele-secondary-2);
+  --button-ghost-disabled-color: var(--ele-minor-2);
+  --button-ghost-disable-border-color: var(--ele-secondary-2);
+  --button-ghost-text-hover-color: var(--white);
   --button-group-color: var(--color-primary);
   --button-group-hover-color: var(--ele-secondary-1);
   --button-group-disabled-color: var(--ele-minor-2);
@@ -573,7 +569,7 @@ template {
     --background-color-secondary
   );
   --select-dropdown-bg-hover-color: var(--ele-minor-3);
-  --aside-bg-color: var(--white);
+  --aside-bg-color: var(--color-minor-1);
   --aside-decorator-color: var(--common-color-4);
   --aside-decorator-active-color: var(--ele-primary-1);
   --aside-font-active-color: var(--ele-primary-1);
@@ -593,9 +589,17 @@ html {
 }
 
 body {
+  --rq-green: #2ecc71;
+  --rq-red: #fd4d4d;
   --color-success: hsla(100, 54%, 49%, 1);
   --color-warning: hsla(37, 91%, 55%, 1);
   --color-danger: hsla(357, 91%, 55%, 1);
+  --index-normal: 1;
+  --index-top: 1000;
+  --index-popper: 2000;
+  --index-max: 99999;
+  --animation-time: 0.3s;
+  --animation-slowly-time: 0.5s;
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "wenquanyi micro hei", Arial, sans-serif;
   color: var(--text-color);
   background-color: var(--background-color, #f9f9fb);
@@ -631,109 +635,149 @@ body {
   background-color: inherit;
 }
 
-.el-button-group .el-button, .el-button-group .el-button:focus {
-  color: var(--button-group-text-color);
-  background-color: var(--button-group-color);
-  border-color: var(--border-color);
-}
-.el-button-group .el-button.is-disabled, .el-button-group .el-button.is-disabled:focus {
-  color: var(--button-group-text-color);
-  background-color: var(--button-group-disabled-color);
-  border-color: var(--border-color);
-}
-.el-button-group .el-button.is-disabled:hover {
-  color: var(--button-group-text-color);
-  background-color: var(--button-group-disabled-color);
-}
-.el-button-group .el-button:hover {
-  color: var(--button-group-text-color);
-  background-color: var(--button-group-hover-color);
-  border-color: var(--border-hover-color);
-}
-
-.el-button--default, .el-button--default:focus {
+.el-button-group .el-button {
+  font-size: 14px;
+  font-weight: normal;
   color: var(--button-default-text-color);
   background-color: var(--button-default-color);
   border-color: var(--border-color);
+}
+.el-button-group .el-button:focus, .el-button-group .el-button:active {
+  color: var(--button-default-text-color);
+  background-color: var(--button-default-color);
+}
+.el-button-group .el-button:hover {
+  color: var(--button-default-text-hover-color);
+  background-color: var(--button-default-hover-color);
+  border-color: var(--border-hover-color);
+}
+.el-button-group .el-button.is-disabled {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--button-default-text-color);
+  background-color: var(--button-default-disabled-color);
+  border-color: var(--border-color);
+}
+.el-button-group .el-button.is-disabled:focus, .el-button-group .el-button.is-disabled:active, .el-button-group .el-button.is-disabled:hover {
+  color: var(--button-default-text-color);
+  background-color: var(--button-default-disabled-color);
+}
+
+.el-range-input {
+  background-color: var(--background-color-secondary);
+}
+
+.el-radio__label {
+  color: var(--text-color-secondary);
+}
+.el-radio-group {
+  background-color: var(--background-color-secondary);
+}
+.el-radio.is-bordered.is-checked {
+  border-color: var(--border-hover-color);
+}
+.el-radio__input.is-checked + .el-radio__label {
+  color: var(--button-ghost-text-hover-color);
+}
+.el-radio__input.is-checked .el-radio__inner {
+  background-color: var(--button-ghost-text-color);
+  border-color: var(--button-ghost-border-color);
+}
+.el-radio__input, .el-radio-button {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--button-ghost-text-disabled-color);
+  background-color: inherit;
+  border-color: var(--button-ghost-text-disabled-color);
+}
+.el-radio__input__inner, .el-radio-button__inner {
+  color: var(--text-color-secondary);
+  background-color: inherit;
+  border: 1px solid var(border-color);
+}
+.el-radio__input__inner:hover, .el-radio-button__inner:hover {
+  color: var(--hover-color);
+}
+.el-radio__input__orig-radio:checked + .el-radio__input__inner, .el-radio__input__orig-radio:checked + .el-radio-button__inner, .el-radio-button__orig-radio:checked + .el-radio__input__inner, .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+  color: var(--button-ghost-text-hover-color);
+  background-color: var(--button-ghost-color);
+  border-color: var(--button-ghost-border-color);
+  box-shadow: -1px 0 0 0 var(--button-color);
+}
+
+.el-button--danger.is-plain {
+  background-color: inherit;
+}
+
+.el-button--default {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--button-default-text-color);
+  background-color: var(--button-default-color);
+  border-color: var(--border-color);
+}
+.el-button--default:focus, .el-button--default:active {
+  color: var(--button-default-text-color);
+  background-color: var(--button-default-click-color);
 }
 .el-button--default:hover {
   color: var(--button-default-text-hover-color);
   background-color: var(--button-default-hover-color);
   border-color: var(--border-hover-color);
 }
-.el-button--default.is-plain, .el-button--default.is-plain:focus {
-  color: var(--button-default-text-color);
-  background-color: var(--button-default-color);
-  border-color: var(--border-color);
-}
-.el-button--default.is-plain.is-loading {
-  color: var(--button-default-text-color);
-  background-color: var(--button-default-hover-color);
-  border-color: var(--border-hover-color);
-}
-.el-button--default.is-plain.is-disabled {
+.el-button--default.is-disabled {
+  font-size: 14px;
+  font-weight: normal;
   color: var(--button-default-text-disabled-color);
   background-color: var(--button-default-disabled-color);
   border-color: var(--border-color);
 }
-.el-button--default.is-plain.is-disabled:hover {
+.el-button--default.is-disabled:hover {
   color: var(--button-default-text-disabled-color);
   background-color: var(--button-default-disabled-color);
   border-color: var(--border-color);
+}
+.el-button--default.is-plain {
+  color: var(--button-ghost-text-color);
+  background-color: inherit;
+  border-color: var(--button-ghost-border-color);
+}
+.el-button--default.is-plain:focus, .el-button--default.is-plain:active {
+  color: var(--button-ghost-text-color);
+  background-color: var(--button-ghost-click-color);
 }
 .el-button--default.is-plain:hover {
-  color: var(--button-default-text-hover-color);
-  background-color: var(--button-default-hover-color);
-  border-color: var(--border-hover-color);
+  color: var(--button-ghost-text-hover-color);
+  background-color: var(--button-ghost-hover-color);
+  border-color: var(--button-ghost-border-color);
+}
+.el-button--default.is-plain.is-loading {
+  color: var(--button-ghost-text-color);
+  background-color: var(--button-ghost-hover-color);
+  border-color: var(--button-ghost-border-color);
+}
+.el-button--default.is-plain.is-disabled {
+  color: var(--button-ghost-text-disabled-color);
+  background-color: var(--button-ghost-disabled-color);
+  border-color: var(--button-ghost-text-disabled-color);
+}
+.el-button--default.is-plain.is-disabled:hover {
+  color: var(--button-ghost-text-disabled-color);
+  background-color: var(--button-ghost-disabled-color);
+  border-color: var(--button-ghost-text-disabled-color);
 }
 
-.el-button--primary, .el-button--primary:focus {
-  color: var(--button-primary-text-color);
-  background-color: var(--button-primary-color);
-  border-color: var(--border-color);
+.el-textarea__inner {
+  background-color: var(--background-color-secondary);
+  border: 1px solid var(--border-color);
+  border-color: var(--border-color-primary);
 }
-.el-button--primary:focus, .el-button--primary:active {
-  color: var(--button-primary-text-color);
-  background-color: var(--button-primary-color);
+.el-textarea__inner:focus {
+  border: 1px solid var(--color-primary);
+  border-color: var(--color-primary);
 }
-.el-button--primary:hover {
-  color: var(--button-primary-text-hover-color);
-  background-color: var(--button-primary-hover-color);
-  border-color: var(--border-hover-color);
-}
-.el-button--primary.is-disabled {
-  color: var(--button-primary-text-disabled-color);
-  background-color: var(--button-primary-disabled-color);
-  border-color: var(--border-color);
-}
-.el-button--primary.is-disabled:hover {
-  color: var(--button-primary-text-disabled-color);
-  background-color: var(--button-primary-disabled-color);
-  border-color: var(--border-color);
-}
-.el-button--primary.is-plain, .el-button--primary.is-plain:focus {
-  color: var(--button-primary-text-color);
-  background-color: var(--button-primary-color);
-  border-color: var(--border-color);
-}
-.el-button--primary.is-plain.is-loading {
-  color: var(--button-primary-text-color);
-  background-color: var(--button-primary-hover-color);
-  border-color: var(--border-hover-color);
-}
-.el-button--primary.is-plain.is-disabled {
-  color: var(--button-primary-text-disabled-color);
-  background-color: var(--button-primary-disabled-color);
-  border-color: var(--border-color);
-}
-.el-button--primary.is-plain.is-disabled:hover {
-  color: var(--button-primary-text-disabled-color);
-  background-color: var(--button-primary-disabled-color);
-  border-color: var(--border-color);
-}
-.el-button--primary.is-plain:hover {
-  background-color: var(--button-primary-hover-color);
-  border-color: var(--border-hover-color);
+.el-textarea__inner:hover {
+  color: var(--color-primary);
 }
 
 .el-checkbox {
@@ -845,52 +889,44 @@ body {
   background-color: var(--background-color-secondary);
 }
 
-.el-radio__label {
-  color: var(--text-color-secondary);
-}
-.el-radio-button__inner {
-  color: var(--text-color-secondary);
-}
-.el-radio-button__inner:hover {
-  color: var(--hover-color);
-}
-.el-radio-button__orig-radio:checked + .el-radio-button__inner {
-  color: var(--button-default-text-hover-color);
-  background-color: var(--button-default-hover-color);
-  border-color: var(--button-color);
-  box-shadow: -1px 0 0 0 var(--button-color);
-}
-
 .el-dropdown-menu,
-.el-select-dropdown,
-.el-select-dropdown.is-multiple {
+.el-select-dropdown {
   background-color: var(--select-dropdown-bg-color);
   border-color: var(--border-hover-color);
 }
-.el-dropdown-menu__item,
+.el-dropdown-menu__item.hover,
+.el-select-dropdown__item.hover {
+  background-color: var(--select-dropdown-bg-hover-color);
+}
+.el-dropdown-menu__item, .el-dropdown-menu.is-multiple .el-dropdown-menu__item,
 .el-select-dropdown__item,
-.el-select-dropdown.is-multiple__item {
+.el-dropdown-menu.is-multiple .el-select-dropdown__item,
+.el-select-dropdown.is-multiple .el-dropdown-menu__item,
+.el-select-dropdown.is-multiple .el-select-dropdown__item {
   font-weight: normal;
   color: var(--select-text-color);
+  background-color: var(--select-dropdown-bg-color);
 }
-.el-dropdown-menu__item.selected, .el-dropdown-menu__item.hover,
+.el-dropdown-menu__item:not(.is-disabled):hover, .el-dropdown-menu.is-multiple .el-dropdown-menu__item:not(.is-disabled):hover,
+.el-select-dropdown__item:not(.is-disabled):hover,
+.el-dropdown-menu.is-multiple .el-select-dropdown__item:not(.is-disabled):hover,
+.el-select-dropdown.is-multiple .el-dropdown-menu__item:not(.is-disabled):hover,
+.el-select-dropdown.is-multiple .el-select-dropdown__item:not(.is-disabled):hover {
+  background-color: var(--select-dropdown-bg-hover-color);
+}
+.el-dropdown-menu__item.selected, .el-dropdown-menu.is-multiple .el-dropdown-menu__item.selected,
 .el-select-dropdown__item.selected,
-.el-select-dropdown__item.hover,
-.el-select-dropdown.is-multiple__item.selected,
-.el-select-dropdown.is-multiple__item.hover {
+.el-dropdown-menu.is-multiple .el-select-dropdown__item.selected,
+.el-select-dropdown.is-multiple .el-dropdown-menu__item.selected,
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
   color: var(--select-text-hover-color);
   background-color: var(--select-dropdown-bg-hover-color);
 }
-.el-dropdown-menu__item.selected:hover, .el-dropdown-menu__item.hover:hover,
-.el-select-dropdown__item.selected:hover,
-.el-select-dropdown__item.hover:hover,
-.el-select-dropdown.is-multiple__item.selected:hover,
-.el-select-dropdown.is-multiple__item.hover:hover {
-  background-color: var(--select-dropdown-bg-hover-color);
-}
-.el-dropdown-menu__item:not(.is-disabled):hover,
-.el-select-dropdown__item:not(.is-disabled):hover,
-.el-select-dropdown.is-multiple__item:not(.is-disabled):hover {
+.el-dropdown-menu__item.selected.hover, .el-dropdown-menu.is-multiple .el-dropdown-menu__item.selected.hover,
+.el-select-dropdown__item.selected.hover,
+.el-dropdown-menu.is-multiple .el-select-dropdown__item.selected.hover,
+.el-select-dropdown.is-multiple .el-dropdown-menu__item.selected.hover,
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected.hover {
   background-color: var(--select-dropdown-bg-hover-color);
 }
 
@@ -903,14 +939,14 @@ body {
 }
 
 div.el-tabs.el-tabs--top {
-  color: var(--text-color-secondary);
+  color: var(--color-primary);
   background-color: var(--background-color-secondary, #fff);
 }
 div.el-tabs.el-tabs--top .el-form-item__label {
   color: var(--text-color);
 }
 div.el-tabs .el-tabs__active-bar {
-  background-color: var(--tabs-active-bar-bg);
+  background-color: var(--color-primary);
 }
 div.el-tabs .el-tabs__item {
   color: var(--text-color-secondary);
@@ -998,32 +1034,44 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 .el-picker-panel .el-date-picker__header-label {
   color: var(--text-color);
 }
+.el-picker-panel__footer {
+  background-color: var(--background-color-secondary);
+}
 
+.el-tooltip__popper,
 .el-popper {
   background-color: var(--background-color-secondary);
   border-color: var(--border-hover-color);
 }
+.el-tooltip__popper[x-placement^=left] .popper__arrow,
 .el-popper[x-placement^=left] .popper__arrow {
   border-left-color: var(--border-hover-color);
 }
+.el-tooltip__popper[x-placement^=left] .popper__arrow:after,
 .el-popper[x-placement^=left] .popper__arrow:after {
   border-left-color: var(--background-color-secondary);
 }
+.el-tooltip__popper[x-placement^=right] .popper__arrow,
 .el-popper[x-placement^=right] .popper__arrow {
   border-right-color: var(--border-hover-color);
 }
+.el-tooltip__popper[x-placement^=right] .popper__arrow:after,
 .el-popper[x-placement^=right] .popper__arrow:after {
   border-right-color: var(--background-color-secondary);
 }
+.el-tooltip__popper[x-placement^=bottom] .popper__arrow,
 .el-popper[x-placement^=bottom] .popper__arrow {
   border-bottom-color: var(--border-hover-color);
 }
+.el-tooltip__popper[x-placement^=bottom] .popper__arrow:after,
 .el-popper[x-placement^=bottom] .popper__arrow:after {
   border-bottom-color: var(--background-color-secondary);
 }
+.el-tooltip__popper[x-placement^=top] .popper__arrow,
 .el-popper[x-placement^=top] .popper__arrow {
   border-top-color: var(--border-hover-color);
 }
+.el-tooltip__popper[x-placement^=top] .popper__arrow:after,
 .el-popper[x-placement^=top] .popper__arrow:after {
   border-top-color: var(--background-color-secondary);
 }
@@ -1031,7 +1079,11 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 .el-pagination {
   padding: 8.5px 0;
   text-align: center;
-  background-color: var(--white);
+  background-color: inherit;
+}
+.el-pagination li {
+  color: var(--pagination-text-color);
+  background: var(--pagination-bg-color);
 }
 .el-pagination li.active {
   color: var(--pagination-text-active-color);
@@ -1050,7 +1102,7 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   height: 30px;
   padding: 0;
   margin-right: 12px;
-  font-weight: 400;
+  font-weight: normal;
   color: var(--pagination-text-color);
 }
 .el-pagination .btn-prev:hover,
@@ -1065,6 +1117,9 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 .el-pagination .el-icon i {
   line-height: 30px;
 }
+.el-pagination button.btn-next, .el-pagination button.btn-prev {
+  background: var(--pagination-bg-color);
+}
 .el-pagination button:disabled i {
   color: var(--pagination-text-disable-color);
 }
@@ -1076,6 +1131,9 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   width: 60px;
 }
 
+.el-menu {
+  background-color: var(--aside-bg-color);
+}
 .el-menu .iconfont {
   display: inline-block;
   width: 16px;
@@ -1086,7 +1144,7 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 .el-menu .el-menu-item {
   transition: border var(--animation-time) ease-in-out;
 }
-.el-menu .el-menu-item:hover {
+.el-menu .el-menu-item:hover, .el-menu .el-menu-item:focus {
   background-color: var(--aside-bg-active-color);
 }
 .el-menu .el-menu-item::after {
@@ -1121,13 +1179,19 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
+.el-menu .el-submenu .el-submenu__title {
+  color: var(--text-color);
+}
 .el-menu .el-submenu .el-submenu__title:hover {
   background-color: var(--aside-bg-active-color);
 }
-.el-menu .el-submenu.is-active > .el-submenu__title, .el-menu .el-submenu.is-active > .el-submenu__title i {
+.el-menu .el-submenu.is-opened {
+  background-color: var(--aside-collapse-bg-color);
+}
+.el-menu .el-submenu.is-opened > .el-submenu__title, .el-menu .el-submenu.is-opened > .el-submenu__title i {
   color: var(--aside-font-active-color);
 }
-.el-menu .el-submenu.is-active .el-menu {
+.el-menu .el-submenu.is-opened .el-menu {
   background-color: var(--aside-collapse-bg-color);
 }
 
@@ -2071,18 +2135,6 @@ text.highcharts-drilldown-data-label,
 .highcharts-color-0.highcharts-point {
   fill: #6c8ff1;
 }
-.highcharts-color-0.highcharts-area-series path:nth-child(1) {
-  fill: #6c8ff1;
-  fill-opacity: 0.2;
-}
-.highcharts-color-0.highcharts-area-series path:nth-child(2) {
-  stroke: #6c8ff1;
-  stroke-width: 1px;
-}
-.highcharts-color-0.highcharts-area-series .highcharts-point {
-  fill: rgba(108, 143, 241, 0.4);
-  stroke: #6c8ff1;
-}
 
 .highcharts-text-color-1 {
   fill: #ffcb37;
@@ -2098,18 +2150,6 @@ text.highcharts-drilldown-data-label,
 }
 .highcharts-color-1.highcharts-point {
   fill: #ffcb37;
-}
-.highcharts-color-1.highcharts-area-series path:nth-child(1) {
-  fill: #ffcb37;
-  fill-opacity: 0.2;
-}
-.highcharts-color-1.highcharts-area-series path:nth-child(2) {
-  stroke: #ffcb37;
-  stroke-width: 1px;
-}
-.highcharts-color-1.highcharts-area-series .highcharts-point {
-  fill: rgba(255, 203, 55, 0.4);
-  stroke: #ffcb37;
 }
 
 .highcharts-text-color-2 {
@@ -2127,18 +2167,6 @@ text.highcharts-drilldown-data-label,
 .highcharts-color-2.highcharts-point {
   fill: #50e3c2;
 }
-.highcharts-color-2.highcharts-area-series path:nth-child(1) {
-  fill: #50e3c2;
-  fill-opacity: 0.2;
-}
-.highcharts-color-2.highcharts-area-series path:nth-child(2) {
-  stroke: #50e3c2;
-  stroke-width: 1px;
-}
-.highcharts-color-2.highcharts-area-series .highcharts-point {
-  fill: rgba(80, 227, 194, 0.4);
-  stroke: #50e3c2;
-}
 
 .highcharts-text-color-3 {
   fill: #d94040;
@@ -2154,18 +2182,6 @@ text.highcharts-drilldown-data-label,
 }
 .highcharts-color-3.highcharts-point {
   fill: #d94040;
-}
-.highcharts-color-3.highcharts-area-series path:nth-child(1) {
-  fill: #d94040;
-  fill-opacity: 0.2;
-}
-.highcharts-color-3.highcharts-area-series path:nth-child(2) {
-  stroke: #d94040;
-  stroke-width: 1px;
-}
-.highcharts-color-3.highcharts-area-series .highcharts-point {
-  fill: rgba(217, 64, 64, 0.4);
-  stroke: #d94040;
 }
 
 .highcharts-text-color-4 {
@@ -2183,18 +2199,6 @@ text.highcharts-drilldown-data-label,
 .highcharts-color-4.highcharts-point {
   fill: #b6b6b6;
 }
-.highcharts-color-4.highcharts-area-series path:nth-child(1) {
-  fill: #b6b6b6;
-  fill-opacity: 0.2;
-}
-.highcharts-color-4.highcharts-area-series path:nth-child(2) {
-  stroke: #b6b6b6;
-  stroke-width: 1px;
-}
-.highcharts-color-4.highcharts-area-series .highcharts-point {
-  fill: rgba(182, 182, 182, 0.4);
-  stroke: #b6b6b6;
-}
 
 .highcharts-text-color-5 {
   fill: #0064cd;
@@ -2210,18 +2214,6 @@ text.highcharts-drilldown-data-label,
 }
 .highcharts-color-5.highcharts-point {
   fill: #0064cd;
-}
-.highcharts-color-5.highcharts-area-series path:nth-child(1) {
-  fill: #0064cd;
-  fill-opacity: 0.2;
-}
-.highcharts-color-5.highcharts-area-series path:nth-child(2) {
-  stroke: #0064cd;
-  stroke-width: 1px;
-}
-.highcharts-color-5.highcharts-area-series .highcharts-point {
-  fill: rgba(0, 100, 205, 0.4);
-  stroke: #0064cd;
 }
 
 .highcharts-text-color-6 {
@@ -2239,18 +2231,6 @@ text.highcharts-drilldown-data-label,
 .highcharts-color-6.highcharts-point {
   fill: #7ed321;
 }
-.highcharts-color-6.highcharts-area-series path:nth-child(1) {
-  fill: #7ed321;
-  fill-opacity: 0.2;
-}
-.highcharts-color-6.highcharts-area-series path:nth-child(2) {
-  stroke: #7ed321;
-  stroke-width: 1px;
-}
-.highcharts-color-6.highcharts-area-series .highcharts-point {
-  fill: rgba(126, 211, 33, 0.4);
-  stroke: #7ed321;
-}
 
 .highcharts-text-color-7 {
   fill: #167b58;
@@ -2266,18 +2246,6 @@ text.highcharts-drilldown-data-label,
 }
 .highcharts-color-7.highcharts-point {
   fill: #167b58;
-}
-.highcharts-color-7.highcharts-area-series path:nth-child(1) {
-  fill: #167b58;
-  fill-opacity: 0.2;
-}
-.highcharts-color-7.highcharts-area-series path:nth-child(2) {
-  stroke: #167b58;
-  stroke-width: 1px;
-}
-.highcharts-color-7.highcharts-area-series .highcharts-point {
-  fill: rgba(22, 123, 88, 0.4);
-  stroke: #167b58;
 }
 
 .highcharts-text-color-8 {
@@ -2295,18 +2263,6 @@ text.highcharts-drilldown-data-label,
 .highcharts-color-8.highcharts-point {
   fill: #6e48db;
 }
-.highcharts-color-8.highcharts-area-series path:nth-child(1) {
-  fill: #6e48db;
-  fill-opacity: 0.2;
-}
-.highcharts-color-8.highcharts-area-series path:nth-child(2) {
-  stroke: #6e48db;
-  stroke-width: 1px;
-}
-.highcharts-color-8.highcharts-area-series .highcharts-point {
-  fill: rgba(110, 72, 219, 0.4);
-  stroke: #6e48db;
-}
 
 .highcharts-text-color-9 {
   fill: #c17aff;
@@ -2322,18 +2278,6 @@ text.highcharts-drilldown-data-label,
 }
 .highcharts-color-9.highcharts-point {
   fill: #c17aff;
-}
-.highcharts-color-9.highcharts-area-series path:nth-child(1) {
-  fill: #c17aff;
-  fill-opacity: 0.2;
-}
-.highcharts-color-9.highcharts-area-series path:nth-child(2) {
-  stroke: #c17aff;
-  stroke-width: 1px;
-}
-.highcharts-color-9.highcharts-area-series .highcharts-point {
-  fill: rgba(193, 122, 255, 0.4);
-  stroke: #c17aff;
 }
 
 .highcharts-text-color-10 {
@@ -2351,18 +2295,6 @@ text.highcharts-drilldown-data-label,
 .highcharts-color-10.highcharts-point {
   fill: #ff9a00;
 }
-.highcharts-color-10.highcharts-area-series path:nth-child(1) {
-  fill: #ff9a00;
-  fill-opacity: 0.2;
-}
-.highcharts-color-10.highcharts-area-series path:nth-child(2) {
-  stroke: #ff9a00;
-  stroke-width: 1px;
-}
-.highcharts-color-10.highcharts-area-series .highcharts-point {
-  fill: rgba(255, 154, 0, 0.4);
-  stroke: #ff9a00;
-}
 
 .highcharts-text-color-11 {
   fill: #b5ea81;
@@ -2378,18 +2310,6 @@ text.highcharts-drilldown-data-label,
 }
 .highcharts-color-11.highcharts-point {
   fill: #b5ea81;
-}
-.highcharts-color-11.highcharts-area-series path:nth-child(1) {
-  fill: #b5ea81;
-  fill-opacity: 0.2;
-}
-.highcharts-color-11.highcharts-area-series path:nth-child(2) {
-  stroke: #b5ea81;
-  stroke-width: 1px;
-}
-.highcharts-color-11.highcharts-area-series .highcharts-point {
-  fill: rgba(181, 234, 129, 0.4);
-  stroke: #b5ea81;
 }
 
 .highcharts-text-color-12 {
@@ -2407,18 +2327,6 @@ text.highcharts-drilldown-data-label,
 .highcharts-color-12.highcharts-point {
   fill: #ff27aa;
 }
-.highcharts-color-12.highcharts-area-series path:nth-child(1) {
-  fill: #ff27aa;
-  fill-opacity: 0.2;
-}
-.highcharts-color-12.highcharts-area-series path:nth-child(2) {
-  stroke: #ff27aa;
-  stroke-width: 1px;
-}
-.highcharts-color-12.highcharts-area-series .highcharts-point {
-  fill: rgba(255, 39, 170, 0.4);
-  stroke: #ff27aa;
-}
 
 .highcharts-text-color-13 {
   fill: #00c7ff;
@@ -2435,18 +2343,6 @@ text.highcharts-drilldown-data-label,
 .highcharts-color-13.highcharts-point {
   fill: #00c7ff;
 }
-.highcharts-color-13.highcharts-area-series path:nth-child(1) {
-  fill: #00c7ff;
-  fill-opacity: 0.2;
-}
-.highcharts-color-13.highcharts-area-series path:nth-child(2) {
-  stroke: #00c7ff;
-  stroke-width: 1px;
-}
-.highcharts-color-13.highcharts-area-series .highcharts-point {
-  fill: rgba(0, 199, 255, 0.4);
-  stroke: #00c7ff;
-}
 
 .highcharts-text-color-14 {
   fill: #c25b00;
@@ -2462,18 +2358,6 @@ text.highcharts-drilldown-data-label,
 }
 .highcharts-color-14.highcharts-point {
   fill: #c25b00;
-}
-.highcharts-color-14.highcharts-area-series path:nth-child(1) {
-  fill: #c25b00;
-  fill-opacity: 0.2;
-}
-.highcharts-color-14.highcharts-area-series path:nth-child(2) {
-  stroke: #c25b00;
-  stroke-width: 1px;
-}
-.highcharts-color-14.highcharts-area-series .highcharts-point {
-  fill: rgba(194, 91, 0, 0.4);
-  stroke: #c25b00;
 }
 
 .highcharts-column-series rect.highcharts-point,
