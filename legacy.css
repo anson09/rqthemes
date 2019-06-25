@@ -819,8 +819,8 @@ body {
   border-color: var(--border-hover-color);
 }
 .el-radio__input.is-checked + .el-radio__label {
-  color: hsla(0,0%,100%,1);
-  color: var(--button-ghost-text-hover-color);
+  color: hsla(216,76%,44%,1);
+  color: var(--hover-color);
 }
 .el-radio__input.is-checked .el-radio__inner {
   background-color: hsla(216,76%,44%,1);
@@ -908,9 +908,13 @@ body {
   box-shadow: undefined;
   box-shadow: -1px 0 0 0 var(--button-color);
 }
-.el-radio-button:first-child .el-radio-button__inner {
+.el-radio-button:first-child-button__inner {
   border: 1px solid hsla(223,22%,87%,1);
   border: 1px solid var(--border-color);
+}
+.el-radio-button:first-child__orig-radio:checked + .el-radio-button:first-child__inner {
+  border-color: hsla(216,76%,44%,1);
+  border-color: var(--button-ghost-border-color);
 }
 
 .el-button--danger.is-plain {
