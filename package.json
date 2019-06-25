@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "highcharts": "^7.1.2",
+    "highcharts-tree": "^0.1.3",
     "normalize.css": "^8.0.1"
   }
 }

@@ -100,6 +100,21 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #b6b6b6, #0064cd, #7ed321, #167b58,
   }
 }
 
+// highcharts-tree
+$highcharts-tree-node-border-color: hsla(216, 76%, 44%, 1);
+$highcharts-tree-node-bg-toggle: hsla(216, 76%, 44%, 0.2);
+$highcharts-tree-node-bg-toggle-hover: hsla(216, 76%, 44%, 0.1);
+$highcharts-tree-node-bg: hsla(216, 76%, 44%, 0.4);
+$highcharts-tree-node-bg-hover: hsla(216, 76%, 44%, 0.2);
+@import "~highcharts-tree/css/highcharts-tree.scss";
+
+.highcharts-tree-node-data text,
+.highcharts-tree-node-title text,
+.highcharts-tree-legend-text {
+  color: var(--text-color);
+  fill: var(--text-color);
+}
+
 .highcharts-legend-item:hover text {
   fill: var(--text-color);
 }
