@@ -634,6 +634,7 @@ template {
   --table-scroll-bg-color: var(--background-color-secondary);
   --table-scroll-track-color: var(--grey);
   --button-default-color: var(--color-primary);
+  --button-default-click-color: var(--ele-primary-3);
   --button-default-hover-color: var(--ele-secondary-1);
   --button-default-active-color: var(--ele-primary-3);
   --button-default-disabled-color: var(--ele-minor-1);
