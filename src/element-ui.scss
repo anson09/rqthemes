@@ -103,10 +103,10 @@
   }
 
   &-button:first-child {
-    &-button__inner {
+    .el-radio-button__inner {
       border: 1px solid var(--border-color);
     }
-    &__orig-radio:checked + &__inner {
+    .el-radio__orig-radio:checked + .el-radio-button__inner {
       border-color: var(--button-ghost-border-color);
     }
   }
@@ -618,6 +618,7 @@ div.el-tabs {
   }
 
   .el-menu-item {
+    color: var(--text-color-secondary);
     transition: border var(--animation-time) ease-in-out;
     &:hover,
     &:focus {
@@ -659,6 +660,15 @@ div.el-tabs {
         background-color: var(--aside-bg-active-color);
       }
     }
+    &.is-active {
+      .el-submenu__title {
+        color: var(--aside-font-active-color);
+        i {
+          color: inherit;
+        }
+      }
+    }
+
     &.is-opened {
       background-color: var(--aside-collapse-bg-color);
       & > .el-submenu__title,
@@ -674,6 +684,7 @@ div.el-tabs {
 }
 
 .el-menu--popup {
+  background-color: var(--aside-collapse-bg-color);
   .el-menu-item.is-active {
     padding-right: 20px;
   }

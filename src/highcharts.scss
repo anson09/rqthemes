@@ -90,8 +90,17 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #b6b6b6, #0064cd, #7ed321, #167b58,
   fill: var(--text-color-secondary);
 }
 
-.highcharts-range-selector-buttons text {
-  fill: var(--text-color-secondary);
+.highcharts-range-selector {
+  color: var(--text-color-secondary);
+  background-color: var(--background-color-secondary);
+  border-color: var(--border-hover-color) !important;
+  &.active {
+    border-color: var(--border-hover-color) !important;
+  }
+
+  &-buttons text {
+    fill: var(--text-color-secondary);
+  }
 }
 
 .highcharts-button {
@@ -120,4 +129,14 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #b6b6b6, #0064cd, #7ed321, #167b58,
   &:hover text {
     fill: var(--text-color);
   }
+}
+
+.highcharts-scrollbar-track {
+  fill: var(--table-scroll-bg-color);
+  stroke: var(--table-scroll-bg-color);
+}
+
+.highcharts-scrollbar-thumb {
+  fill: var(--table-scroll-track-color);
+  stroke: var(--table-scroll-track-color);
 }

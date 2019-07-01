@@ -908,11 +908,11 @@ body {
   box-shadow: undefined;
   box-shadow: -1px 0 0 0 var(--button-color);
 }
-.el-radio-button:first-child-button__inner {
+.el-radio-button:first-child .el-radio-button__inner {
   border: 1px solid hsla(223,22%,87%,1);
   border: 1px solid var(--border-color);
 }
-.el-radio-button:first-child__orig-radio:checked + .el-radio-button:first-child__inner {
+.el-radio-button:first-child .el-radio__orig-radio:checked + .el-radio-button__inner {
   border-color: hsla(216,76%,44%,1);
   border-color: var(--button-ghost-border-color);
 }
@@ -1812,6 +1812,8 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   vertical-align: top;
 }
 .el-menu .el-menu-item {
+  color: hsla(0,0%,40%,1);
+  color: var(--text-color-secondary);
   transition: border 0.3s ease-in-out;
   transition: border var(--animation-time) ease-in-out;
 }
@@ -1867,6 +1869,13 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   background-color: hsla(215,83%,93%,1);
   background-color: var(--aside-bg-active-color);
 }
+.el-menu .el-submenu.is-active .el-submenu__title {
+  color: hsla(216,76%,44%,1);
+  color: var(--aside-font-active-color);
+}
+.el-menu .el-submenu.is-active .el-submenu__title i {
+  color: inherit;
+}
 .el-menu .el-submenu.is-opened {
   background-color: hsla(213,69%,97%,1);
   background-color: var(--aside-collapse-bg-color);
@@ -1884,6 +1893,10 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   background-color: var(--aside-collapse-bg-color);
 }
 
+.el-menu--popup {
+  background-color: hsla(213,69%,97%,1);
+  background-color: var(--aside-collapse-bg-color);
+}
 .el-menu--popup .el-menu-item.is-active {
   padding-right: 20px;
 }
@@ -3225,6 +3238,18 @@ text.highcharts-drilldown-data-label,
   fill: var(--text-color-secondary);
 }
 
+.highcharts-range-selector {
+  color: hsla(0,0%,40%,1);
+  color: var(--text-color-secondary);
+  background-color: hsla(0,0%,100%,1);
+  background-color: var(--background-color-secondary);
+  border-color: hsla(216,76%,44%,1) !important;
+  border-color: var(--border-hover-color) !important;
+}
+.highcharts-range-selector.active {
+  border-color: hsla(216,76%,44%,1) !important;
+  border-color: var(--border-hover-color) !important;
+}
 .highcharts-range-selector-buttons text {
   fill: hsla(0,0%,40%,1);
   fill: var(--text-color-secondary);
@@ -3254,4 +3279,18 @@ text.highcharts-drilldown-data-label,
 .highcharts-legend-item:hover text {
   fill: hsla(0,0%,20%,1);
   fill: var(--text-color);
+}
+
+.highcharts-scrollbar-track {
+  fill: hsla(0,0%,100%,1);
+  fill: var(--table-scroll-bg-color);
+  stroke: hsla(0,0%,100%,1);
+  stroke: var(--table-scroll-bg-color);
+}
+
+.highcharts-scrollbar-thumb {
+  fill: hsla(215,31%,88%,1);
+  fill: var(--table-scroll-track-color);
+  stroke: hsla(215,31%,88%,1);
+  stroke: var(--table-scroll-track-color);
 }

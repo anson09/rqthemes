@@ -705,10 +705,10 @@ body {
   border-color: var(--button-ghost-border-color);
   box-shadow: -1px 0 0 0 var(--button-color);
 }
-.el-radio-button:first-child-button__inner {
+.el-radio-button:first-child .el-radio-button__inner {
   border: 1px solid var(--border-color);
 }
-.el-radio-button:first-child__orig-radio:checked + .el-radio-button:first-child__inner {
+.el-radio-button:first-child .el-radio__orig-radio:checked + .el-radio-button__inner {
   border-color: var(--button-ghost-border-color);
 }
 
@@ -1149,6 +1149,7 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   vertical-align: top;
 }
 .el-menu .el-menu-item {
+  color: var(--text-color-secondary);
   transition: border var(--animation-time) ease-in-out;
 }
 .el-menu .el-menu-item:hover, .el-menu .el-menu-item:focus {
@@ -1192,6 +1193,12 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 .el-menu .el-submenu .el-submenu__title:hover {
   background-color: var(--aside-bg-active-color);
 }
+.el-menu .el-submenu.is-active .el-submenu__title {
+  color: var(--aside-font-active-color);
+}
+.el-menu .el-submenu.is-active .el-submenu__title i {
+  color: inherit;
+}
 .el-menu .el-submenu.is-opened {
   background-color: var(--aside-collapse-bg-color);
 }
@@ -1202,6 +1209,9 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   background-color: var(--aside-collapse-bg-color);
 }
 
+.el-menu--popup {
+  background-color: var(--aside-collapse-bg-color);
+}
 .el-menu--popup .el-menu-item.is-active {
   padding-right: 20px;
 }
@@ -2518,6 +2528,14 @@ text.highcharts-drilldown-data-label,
   fill: var(--text-color-secondary);
 }
 
+.highcharts-range-selector {
+  color: var(--text-color-secondary);
+  background-color: var(--background-color-secondary);
+  border-color: var(--border-hover-color) !important;
+}
+.highcharts-range-selector.active {
+  border-color: var(--border-hover-color) !important;
+}
 .highcharts-range-selector-buttons text {
   fill: var(--text-color-secondary);
 }
@@ -2540,4 +2558,14 @@ text.highcharts-drilldown-data-label,
 }
 .highcharts-legend-item:hover text {
   fill: var(--text-color);
+}
+
+.highcharts-scrollbar-track {
+  fill: var(--table-scroll-bg-color);
+  stroke: var(--table-scroll-bg-color);
+}
+
+.highcharts-scrollbar-thumb {
+  fill: var(--table-scroll-track-color);
+  stroke: var(--table-scroll-track-color);
 }
