@@ -64,8 +64,13 @@
     background-color: var(--background-color-secondary);
   }
 
-  &.is-bordered.is-checked {
-    border-color: var(--border-hover-color);
+  &.is-bordered {
+    &.is-checked {
+      border-color: var(--border-hover-color);
+    }
+    &.is-disabled {
+      border-color: var(--button-ghost-text-disabled-color);
+    }
   }
 
   &__input.is-checked + &__label {
@@ -76,6 +81,16 @@
     background-color: var(--button-ghost-text-color);
     border-color: var(--button-ghost-border-color);
   }
+
+  &__input.is-disabled &__inner {
+    background-color: var(--background-color-secondary);
+    border-color: var(--button-ghost-border-disabled-color);
+  }
+
+  &__input.is-disabled + span#{&}__label {
+    color: var(--button-ghost-text-disabled-color);
+  }
+
   &__input,
   &-button {
     font-size: 14px;
@@ -114,7 +129,19 @@
 
 .el-button--danger {
   &.is-plain {
-    background-color: inherit;
+    color: var(--color-danger);
+    background: inherit;
+    border-color: var(--color-danger);
+
+    &:active {
+      color: var(--color-danger);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--white);
+      background: var(--color-danger);
+    }
   }
 }
 
@@ -129,6 +156,7 @@
   &:active {
     color: var(--button-default-text-color);
     background-color: var(--button-default-click-color);
+    border-color: var(--border-color);
   }
 
   &:hover {
@@ -160,6 +188,7 @@
     &:active {
       color: var(--button-ghost-text-color);
       background-color: var(--button-ghost-click-color);
+      border-color: var(--button-ghost-border-color);
     }
 
     &:hover {
@@ -256,7 +285,24 @@
   }
 }
 
+.el-date-range-picker {
+  &__time-header {
+    border-color: var(--border-color);
+  }
+
+  &__content {
+    &.is-left,
+    &.is-right {
+      border-color: var(--border-color);
+    }
+  }
+}
+
 .el-date-table {
+  th {
+    color: var(--text-color-secondary);
+    border-color: var(--border-color);
+  }
   td {
     color: var(--text-color-secondary);
 
@@ -282,9 +328,12 @@
 
 .el-input {
   &__inner {
-    color: var(--input-text);
+    color: var(--input-text-color);
     background-color: var(--input-color);
     border-color: var(--border-color);
+    &:hover {
+      border-color: var(--border-hover-color);
+    }
   }
 
   &.is-disabled {
@@ -300,7 +349,7 @@
   }
 
   &-group__append {
-    color: var(--input-text);
+    color: var(--input-text-color);
     background-color: var(--input-color);
     border-color: var(--border-color);
   }
@@ -350,6 +399,9 @@
 .el-select-dropdown {
   background-color: var(--select-dropdown-bg-color);
   border-color: var(--border-hover-color);
+  &.el-popper {
+    --arrow-color: var(--border-hover-color);
+  }
 
   &__item.hover {
     background-color: var(--select-dropdown-bg-hover-color);
@@ -375,12 +427,24 @@
   }
 }
 
-.el-select .el-tag {
-  .el-tag__close.el-icon-close {
-    color: var(--select-decorator-text-color);
-    background-color: var(--select-decorator-bg-color);
-    &:hover {
-      background-color: var(--select-decorator-bg-active-color);
+.el-select {
+  &:active,
+  &:hover {
+    .el-input__inner {
+      border-color: var(--border-hover-color);
+    }
+  }
+
+  .el-tag {
+    color: var(--text-color-secondary);
+    background-color: var(--background-color);
+    border-color: transparent;
+    .el-tag__close.el-icon-close {
+      color: var(--background-color);
+      background-color: var(--text-color-secondary);
+      &:hover {
+        background-color: var(--text-color);
+      }
     }
   }
 }
@@ -511,43 +575,49 @@ div.el-tabs {
   }
   &__footer {
     background-color: var(--background-color-secondary);
+    border-color: var(--border-color);
   }
 }
 
 .el-tooltip__popper,
 .el-popper {
-  background-color: var(--background-color-secondary);
+  background-color: var(--background-color);
   border-color: var(--border-hover-color);
+  --arrow-color: var(--background-color);
 
   &[x-placement^="left"] .popper__arrow {
-    border-left-color: var(--border-hover-color);
+    border-left-color: var(--arrow-color);
 
     &:after {
-      border-left-color: var(--background-color-secondary);
+      border-left-color: var(--background-color);
     }
   }
   &[x-placement^="right"] .popper__arrow {
-    border-right-color: var(--border-hover-color);
+    border-right-color: var(--arrow-color);
 
     &:after {
-      border-right-color: var(--background-color-secondary);
+      border-right-color: var(--background-color);
     }
   }
   &[x-placement^="bottom"] .popper__arrow {
-    border-bottom-color: var(--border-hover-color);
+    border-bottom-color: var(--arrow-color);
 
     &:after {
-      border-bottom-color: var(--background-color-secondary);
+      border-bottom-color: var(--background-color);
     }
   }
 
   &[x-placement^="top"] .popper__arrow {
-    border-top-color: var(--border-hover-color);
+    border-top-color: var(--arrow-color);
 
     &:after {
-      border-top-color: var(--background-color-secondary);
+      border-top-color: var(--background-color);
     }
   }
+}
+
+.el-tooltip__popper.is-dark {
+  background-color: var(--background-color);
 }
 
 .el-pagination {
