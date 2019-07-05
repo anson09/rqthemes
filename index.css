@@ -1023,6 +1023,12 @@ div.el-tabs .el-tabs__item {
 div.el-tabs .el-tabs__item:hover, div.el-tabs .el-tabs__item.is-active {
   color: var(--tabs-active-color);
 }
+div.el-tabs .el-tabs__item.is-disabled {
+  color: var(--button-ghost-disabled-color);
+}
+div.el-tabs .el-tabs__item.is-disabled:hover {
+  color: var(--button-ghost-disabled-color);
+}
 
 .el-table {
   background-color: var(--table-color);
@@ -1110,8 +1116,8 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 
 .el-tooltip__popper,
 .el-popper {
-  background-color: var(--background-color);
   color: var(--text-color);
+  background-color: var(--background-color);
   border-color: var(--border-hover-color);
   --arrow-color: var(--background-color);
   --arrow-inside-color: var(--background-color);
@@ -1150,8 +1156,8 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 }
 
 .el-tooltip__popper.is-dark {
-  background-color: var(--background-color);
   color: var(--text-color);
+  background-color: var(--background-color);
   --arrow-inside-color: var(--background-color);
 }
 
@@ -2667,4 +2673,16 @@ text.highcharts-drilldown-data-label,
 .highcharts-navigator-outline,
 .highcharts-tick {
   stroke: var(--border-color);
+}
+
+.highcharts-root text {
+  fill: var(--text-color-secondary);
+}
+
+.highcharts-legend-nav-inactive {
+  fill: var(--border-color);
+}
+
+.highcharts-legend-nav-active {
+  fill: var(--border-hover-color);
 }

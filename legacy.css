@@ -1621,6 +1621,14 @@ div.el-tabs .el-tabs__item.is-active {
   color: hsla(216,76%,44%,1);
   color: var(--tabs-active-color);
 }
+div.el-tabs .el-tabs__item.is-disabled {
+  color: hsla(216,76%,44%,0.2);
+  color: var(--button-ghost-disabled-color);
+}
+div.el-tabs .el-tabs__item.is-disabled:hover {
+  color: hsla(216,76%,44%,0.2);
+  color: var(--button-ghost-disabled-color);
+}
 
 .el-table {
   background-color: hsla(0,0%,100%,1);
@@ -1735,10 +1743,10 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 }
 
 .el-tooltip__popper {
-  background-color: hsla(215,50%,95%,1);
-  background-color: var(--background-color);
   color: hsla(0,0%,20%,1);
   color: var(--text-color);
+  background-color: hsla(215,50%,95%,1);
+  background-color: var(--background-color);
   border-color: hsla(216,76%,44%,1);
   border-color: var(--border-hover-color);
   --arrow-color: hsla(215,50%,95%,1);
@@ -1748,10 +1756,10 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 }
 
 .el-popper {
-  background-color: hsla(215,50%,95%,1);
-  background-color: var(--background-color);
   color: hsla(0,0%,20%,1);
   color: var(--text-color);
+  background-color: hsla(215,50%,95%,1);
+  background-color: var(--background-color);
   border-color: hsla(216,76%,44%,1);
   border-color: var(--border-hover-color);
   --arrow-color: hsla(215,50%,95%,1);
@@ -1825,10 +1833,10 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 }
 
 .el-tooltip__popper.is-dark {
-  background-color: hsla(215,50%,95%,1);
-  background-color: var(--background-color);
   color: hsla(0,0%,20%,1);
   color: var(--text-color);
+  background-color: hsla(215,50%,95%,1);
+  background-color: var(--background-color);
   --arrow-inside-color: hsla(215,50%,95%,1);
   --arrow-inside-color: var(--background-color);
 }
@@ -3467,4 +3475,19 @@ text.highcharts-drilldown-data-label,
 .highcharts-tick {
   stroke: hsla(223,22%,87%,1);
   stroke: var(--border-color);
+}
+
+.highcharts-root text {
+  fill: hsla(0,0%,40%,1);
+  fill: var(--text-color-secondary);
+}
+
+.highcharts-legend-nav-inactive {
+  fill: hsla(223,22%,87%,1);
+  fill: var(--border-color);
+}
+
+.highcharts-legend-nav-active {
+  fill: hsla(216,76%,44%,1);
+  fill: var(--border-hover-color);
 }

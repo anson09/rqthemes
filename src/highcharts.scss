@@ -94,6 +94,10 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #b6b6b6, #0064cd, #7ed321, #167b58,
   fill: var(--text-color-secondary);
 }
 
+.highcharts-root text {
+  fill: var(--text-color-secondary);
+}
+
 .highcharts-range-input {
   stroke: var(--border-color);
   text {
@@ -166,4 +170,12 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #b6b6b6, #0064cd, #7ed321, #167b58,
 .highcharts-navigator-outline,
 .highcharts-tick {
   stroke: var(--border-color);
+}
+
+.highcharts-legend-nav-inactive {
+  fill: var(--border-color);
+}
+
+.highcharts-legend-nav-active {
+  fill: var(--border-hover-color);
 }

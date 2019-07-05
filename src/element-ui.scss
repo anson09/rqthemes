@@ -482,6 +482,12 @@ div.el-tabs {
     &.is-active {
       color: var(--tabs-active-color);
     }
+    &.is-disabled {
+      color: var(--button-ghost-disabled-color);
+      &:hover {
+        color: var(--button-ghost-disabled-color);
+      }
+    }
   }
 }
 
