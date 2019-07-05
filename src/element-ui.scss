@@ -285,6 +285,7 @@
   }
 }
 
+.el-date-picker,
 .el-date-range-picker {
   &__time-header {
     border-color: var(--border-color);
@@ -295,6 +296,9 @@
     &.is-right {
       border-color: var(--border-color);
     }
+  }
+  &.el-popper {
+    --arrow-color: var(--border-hover-color);
   }
 }
 
@@ -399,7 +403,12 @@
 .el-select-dropdown {
   background-color: var(--select-dropdown-bg-color);
   border-color: var(--border-hover-color);
+  &__list {
+    background-color: var(--select-dropdown-bg-color);
+  }
+
   &.el-popper {
+    --arrow-inside-color: var(--select-dropdown-bg-color);
     --arrow-color: var(--border-hover-color);
   }
 
@@ -428,6 +437,10 @@
 }
 
 .el-select {
+  &-group__wrap:not(:last-of-type)::after {
+    background: var(--border-color);
+  }
+
   &:active,
   &:hover {
     .el-input__inner {
@@ -581,29 +594,31 @@ div.el-tabs {
 
 .el-tooltip__popper,
 .el-popper {
+  color: var(--text-color);
   background-color: var(--background-color);
   border-color: var(--border-hover-color);
   --arrow-color: var(--background-color);
+  --arrow-inside-color: var(--background-color);
 
   &[x-placement^="left"] .popper__arrow {
     border-left-color: var(--arrow-color);
 
     &:after {
-      border-left-color: var(--background-color);
+      border-left-color: var(--arrow-inside-color);
     }
   }
   &[x-placement^="right"] .popper__arrow {
     border-right-color: var(--arrow-color);
 
     &:after {
-      border-right-color: var(--background-color);
+      border-right-color: var(--arrow-inside-color);
     }
   }
   &[x-placement^="bottom"] .popper__arrow {
     border-bottom-color: var(--arrow-color);
 
     &:after {
-      border-bottom-color: var(--background-color);
+      border-bottom-color: var(--arrow-inside-color);
     }
   }
 
@@ -611,13 +626,15 @@ div.el-tabs {
     border-top-color: var(--arrow-color);
 
     &:after {
-      border-top-color: var(--background-color);
+      border-top-color: var(--arrow-inside-color);
     }
   }
 }
 
 .el-tooltip__popper.is-dark {
+  color: var(--text-color);
   background-color: var(--background-color);
+  --arrow-inside-color: var(--background-color);
 }
 
 .el-pagination {
