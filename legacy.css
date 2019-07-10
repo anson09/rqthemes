@@ -743,8 +743,6 @@ body {
 }
 
 .el-button-group .el-button {
-  font-size: 14px;
-  font-weight: normal;
   color: hsla(0,0%,100%,1);
   color: var(--button-default-text-color);
   background-color: hsla(216,76%,44%,1);
@@ -773,8 +771,6 @@ body {
   border-color: var(--border-hover-color);
 }
 .el-button-group .el-button.is-disabled {
-  font-size: 14px;
-  font-weight: normal;
   color: hsla(0,0%,100%,1);
   color: var(--button-default-text-color);
   background-color: hsla(216,76%,44%,0.5);
@@ -843,8 +839,6 @@ body {
   color: var(--button-ghost-text-disabled-color);
 }
 .el-radio__input {
-  font-size: 14px;
-  font-weight: normal;
   color: hsla(216,76%,44%,0.5);
   color: var(--button-ghost-text-disabled-color);
   background-color: inherit;
@@ -852,8 +846,6 @@ body {
   border-color: var(--button-ghost-text-disabled-color);
 }
 .el-radio-button {
-  font-size: 14px;
-  font-weight: normal;
   color: hsla(216,76%,44%,0.5);
   color: var(--button-ghost-text-disabled-color);
   background-color: inherit;
@@ -956,8 +948,6 @@ body {
 }
 
 .el-button--default {
-  font-size: 14px;
-  font-weight: normal;
   color: hsla(0,0%,100%,1);
   color: var(--button-default-text-color);
   background-color: hsla(216,76%,44%,1);
@@ -990,8 +980,6 @@ body {
   border-color: var(--border-hover-color);
 }
 .el-button--default.is-disabled {
-  font-size: 14px;
-  font-weight: normal;
   color: hsla(0,0%,100%,0.8);
   color: var(--button-default-text-disabled-color);
   background-color: hsla(216,76%,44%,0.5);
@@ -1087,8 +1075,6 @@ body {
   color: var(--text-color);
 }
 .el-checkbox__label {
-  font-size: 14px;
-  font-weight: normal;
   color: hsla(0,0%,20%,1);
   color: var(--text-color);
 }
@@ -1439,42 +1425,36 @@ body {
   background-color: var(--select-dropdown-bg-hover-color);
 }
 .el-dropdown-menu__item {
-  font-weight: normal;
   color: hsla(0,0%,40%,1);
   color: var(--select-text-color);
   background-color: hsla(0,0%,100%,1);
   background-color: var(--select-dropdown-bg-color);
 }
 .el-dropdown-menu.is-multiple .el-dropdown-menu__item {
-  font-weight: normal;
   color: hsla(0,0%,40%,1);
   color: var(--select-text-color);
   background-color: hsla(0,0%,100%,1);
   background-color: var(--select-dropdown-bg-color);
 }
 .el-select-dropdown__item {
-  font-weight: normal;
   color: hsla(0,0%,40%,1);
   color: var(--select-text-color);
   background-color: hsla(0,0%,100%,1);
   background-color: var(--select-dropdown-bg-color);
 }
 .el-dropdown-menu.is-multiple .el-select-dropdown__item {
-  font-weight: normal;
   color: hsla(0,0%,40%,1);
   color: var(--select-text-color);
   background-color: hsla(0,0%,100%,1);
   background-color: var(--select-dropdown-bg-color);
 }
 .el-select-dropdown.is-multiple .el-dropdown-menu__item {
-  font-weight: normal;
   color: hsla(0,0%,40%,1);
   color: var(--select-text-color);
   background-color: hsla(0,0%,100%,1);
   background-color: var(--select-dropdown-bg-color);
 }
 .el-select-dropdown.is-multiple .el-select-dropdown__item {
-  font-weight: normal;
   color: hsla(0,0%,40%,1);
   color: var(--select-text-color);
   background-color: hsla(0,0%,100%,1);
@@ -1869,7 +1849,6 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   height: 30px;
   padding: 0;
   margin-right: 12px;
-  font-weight: normal;
   color: hsla(0,0%,40%,1);
   color: var(--pagination-text-color);
 }
@@ -1879,7 +1858,6 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   height: 30px;
   padding: 0;
   margin-right: 12px;
-  font-weight: normal;
   color: hsla(0,0%,40%,1);
   color: var(--pagination-text-color);
 }
@@ -1889,7 +1867,6 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   height: 30px;
   padding: 0;
   margin-right: 12px;
-  font-weight: normal;
   color: hsla(0,0%,40%,1);
   color: var(--pagination-text-color);
 }
@@ -1899,7 +1876,6 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   height: 30px;
   padding: 0;
   margin-right: 12px;
-  font-weight: normal;
   color: hsla(0,0%,40%,1);
   color: var(--pagination-text-color);
 }
@@ -3388,6 +3364,11 @@ text.highcharts-drilldown-data-label,
   fill: var(--text-color-secondary);
 }
 
+.highcharts-root text {
+  fill: hsla(0,0%,40%,1);
+  fill: var(--text-color-secondary);
+}
+
 .highcharts-range-input {
   stroke: hsla(223,22%,87%,1);
   stroke: var(--border-color);
@@ -3475,11 +3456,6 @@ text.highcharts-drilldown-data-label,
 .highcharts-tick {
   stroke: hsla(223,22%,87%,1);
   stroke: var(--border-color);
-}
-
-.highcharts-root text {
-  fill: hsla(0,0%,40%,1);
-  fill: var(--text-color-secondary);
 }
 
 .highcharts-legend-nav-inactive {

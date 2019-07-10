@@ -637,8 +637,6 @@ body {
 }
 
 .el-button-group .el-button {
-  font-size: 14px;
-  font-weight: normal;
   color: var(--button-default-text-color);
   background-color: var(--button-default-color);
   border-color: var(--border-color);
@@ -653,8 +651,6 @@ body {
   border-color: var(--border-hover-color);
 }
 .el-button-group .el-button.is-disabled {
-  font-size: 14px;
-  font-weight: normal;
   color: var(--button-default-text-color);
   background-color: var(--button-default-disabled-color);
   border-color: var(--border-color);
@@ -695,8 +691,6 @@ body {
   color: var(--button-ghost-text-disabled-color);
 }
 .el-radio__input, .el-radio-button {
-  font-size: 14px;
-  font-weight: normal;
   color: var(--button-ghost-text-disabled-color);
   background-color: inherit;
   border-color: var(--button-ghost-text-disabled-color);
@@ -736,8 +730,6 @@ body {
 }
 
 .el-button--default {
-  font-size: 14px;
-  font-weight: normal;
   color: var(--button-default-text-color);
   background-color: var(--button-default-color);
   border-color: var(--border-color);
@@ -753,8 +745,6 @@ body {
   border-color: var(--border-hover-color);
 }
 .el-button--default.is-disabled {
-  font-size: 14px;
-  font-weight: normal;
   color: var(--button-default-text-disabled-color);
   background-color: var(--button-default-disabled-color);
   border-color: var(--border-color);
@@ -812,8 +802,6 @@ body {
   color: var(--text-color);
 }
 .el-checkbox__label {
-  font-size: 14px;
-  font-weight: normal;
   color: var(--text-color);
 }
 .el-checkbox__input.is-checked + .el-checkbox__label {
@@ -961,7 +949,6 @@ body {
 .el-dropdown-menu.is-multiple .el-select-dropdown__item,
 .el-select-dropdown.is-multiple .el-dropdown-menu__item,
 .el-select-dropdown.is-multiple .el-select-dropdown__item {
-  font-weight: normal;
   color: var(--select-text-color);
   background-color: var(--select-dropdown-bg-color);
 }
@@ -1187,7 +1174,6 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   height: 30px;
   padding: 0;
   margin-right: 12px;
-  font-weight: normal;
   color: var(--pagination-text-color);
 }
 .el-pagination .btn-prev:hover,
@@ -2610,6 +2596,10 @@ text.highcharts-drilldown-data-label,
   fill: var(--text-color-secondary);
 }
 
+.highcharts-root text {
+  fill: var(--text-color-secondary);
+}
+
 .highcharts-range-input {
   stroke: var(--border-color);
 }
@@ -2673,10 +2663,6 @@ text.highcharts-drilldown-data-label,
 .highcharts-navigator-outline,
 .highcharts-tick {
   stroke: var(--border-color);
-}
-
-.highcharts-root text {
-  fill: var(--text-color-secondary);
 }
 
 .highcharts-legend-nav-inactive {

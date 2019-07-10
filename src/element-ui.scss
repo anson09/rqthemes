@@ -17,8 +17,6 @@
 // vars
 .el-button-group {
   .el-button {
-    font-size: 14px;
-    font-weight: normal;
     color: var(--button-default-text-color);
     background-color: var(--button-default-color);
     border-color: var(--border-color);
@@ -36,8 +34,6 @@
     }
 
     &.is-disabled {
-      font-size: 14px;
-      font-weight: normal;
       color: var(--button-default-text-color);
       background-color: var(--button-default-disabled-color);
       border-color: var(--border-color);
@@ -93,8 +89,6 @@
 
   &__input,
   &-button {
-    font-size: 14px;
-    font-weight: normal;
     color: var(--button-ghost-text-disabled-color);
     background-color: inherit;
     border-color: var(--button-ghost-text-disabled-color);
@@ -146,8 +140,6 @@
 }
 
 .el-button--default {
-  font-size: 14px;
-  font-weight: normal;
   color: var(--button-default-text-color);
   background-color: var(--button-default-color);
   border-color: var(--border-color);
@@ -166,8 +158,6 @@
   }
 
   &.is-disabled {
-    font-size: 14px;
-    font-weight: normal;
     color: var(--button-default-text-disabled-color);
     background-color: var(--button-default-disabled-color);
     border-color: var(--border-color);
@@ -234,8 +224,6 @@
   color: var(--text-color);
 
   &__label {
-    font-size: 14px;
-    font-weight: normal;
     color: var(--text-color);
   }
 
@@ -418,7 +406,6 @@
 
   &__item,
   &.is-multiple &__item {
-    font-weight: normal;
     color: var(--select-text-color);
     background-color: var(--select-dropdown-bg-color);
 
@@ -674,7 +661,6 @@ div.el-tabs {
     height: 30px;
     padding: 0;
     margin-right: 12px;
-    font-weight: normal;
     color: var(--pagination-text-color);
   }
   button {
