@@ -7,7 +7,6 @@
     "type": "git",
     "url": "ssh://git@git.ricequant.com:7999/node/ricequant-themes.git"
   },
-  "author": "ansonw",
   "license": "MIT",
   "scripts": {
     "build": "./scripts/updep.sh && parcel build src/index.scss --no-cache --no-minify --no-source-maps --no-content-hash -d ./ && LEGACY=true parcel build src/index.scss --no-cache --no-minify --no-source-maps --no-content-hash -d ./ --out-file legacy.css",
