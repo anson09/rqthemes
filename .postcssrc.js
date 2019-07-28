@@ -16,7 +16,13 @@ function getCssVar() {
       return `"--${p1}":"${p2}"`;
     });
 
-  return JSON.parse(`{${trans}}`);
+  const json = `{${trans}}`;
+
+  fs.writeFile("./light.json", json, () => {
+    console.log("<collecting vars to light.json success>");
+  });
+
+  return JSON.parse(json);
 }
 
 module.exports = {
