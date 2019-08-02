@@ -42,7 +42,7 @@
     89%,
     1
   ); // 标题/主文本/导航文字/日期选择器选中日期字体/Icon悬浮
-  --text-color-menu:hsla(216, 19%, 66%, 1);//导航栏默认字体
+  --text-color-menu: hsla(216, 19%, 66%, 1); //导航栏默认字体
   --white: hsla(0, 0%, 100%, 1); //主按钮文字
   --grey: hsla(213, 14%, 56%, 1); // 次文本/文本输入框字体/下拉选择字体/Icon默认
   --disable-color: hsla(0, 0%, 100%, 0.5); //字体禁用色
@@ -118,8 +118,10 @@
   --aside-decorator-color: var(--common-color-4); // 侧边栏饰品颜色
   --aside-decorator-active-color: var(--ele-primary-1); // 侧边栏饰品激活时颜色
   --aside-font-active-color: var(--ele-primary-1); // 侧边栏选中项字体颜色
-  --aside-bg-active-color: hsla(222, 38%, 95%, 1); // 侧边栏hover项背景颜色
-  --aside-collapse-bg-color: hsla(225, 40%, 98%, 1); // 侧边栏当前展开项背景颜色
+  --aside-bg-active-color: var(--ele-primary-shadow-1); // 侧边栏hover项背景颜色
+  --aside-collapse-bg-color: var(
+    --ele-primary-shadow-2
+  ); // 侧边栏当前展开项背景颜色
 
   --pagination-text-color: var(--grey); // 导航条文字颜色
   --pagination-text-disable-color: var(--disable-color); // 导航条禁用文字颜色

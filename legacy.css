@@ -676,8 +676,10 @@ template {
   --aside-decorator-color: var(--common-color-4);
   --aside-decorator-active-color: var(--ele-primary-1);
   --aside-font-active-color: var(--ele-primary-1);
-  --aside-bg-active-color: hsla(222, 38%, 95%, 1);
-  --aside-collapse-bg-color: hsla(225, 40%, 98%, 1);
+  --aside-bg-active-color: var(--ele-primary-shadow-1);
+  --aside-collapse-bg-color: var(
+    --ele-primary-shadow-2
+  );
   --pagination-text-color: var(--grey);
   --pagination-text-disable-color: var(--disable-color);
   --pagination-text-active-color: var(--white);
