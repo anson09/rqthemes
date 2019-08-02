@@ -687,23 +687,18 @@ div.el-tabs {
 
 .el-menu {
   background-color: var(--aside-bg-color);
-
-  .iconfont {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin-right: 10px;
-    vertical-align: top;
-  }
-
   .el-menu-item {
-    color: var(--text-color-secondary);
+    font-size: 16px;
+    color: var(--text-color-menu);
     transition: border var(--animation-time) ease-in-out;
+
     &:hover,
     &:focus {
-      background-color: var(--aside-bg-active-color);
+      color:var(--aside-font-active-color);
+      background-color: var(--aside-bg-color);
     }
     &::after {
+      top: 1px;
       float: right;
       margin-top: (50px - 10px) / 2;
       font-size: 0;
@@ -717,27 +712,82 @@ div.el-tabs {
     }
     &.is-active {
       color: var(--aside-font-active-color);
-      background-color: var(--aside-bg-active-color);
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        content: "";
-        border-left: 5px solid var(--aside-decorator-active-color);
-      }
-      &::after {
-        opacity: 1;
-        transform: translateX(0);
-      }
     }
+
   }
+
+
+  &--vertical{
+    .el-menu {
+      min-width: 0;
+        .el-menu-item{
+          width: 140px;
+          height: 32px;
+          line-height: 32px;
+          background-color: var(--aside-collapse-bg-color);
+          & > span{
+            position: relative;
+            left:17px;
+            font-size: 14px;
+          }
+          &::after{
+            position: relative;
+            top: -7px;
+            right: 85px;
+          }
+          &:hover,
+          &:focus {
+            color:var(--aside-font-active-color);
+            background-color: var(--aside-bg-active-color);
+            &::after {
+              opacity: 1;
+            }
+          }      
+        }      
+      }      
+    }
+
+
+
+  .iconfont {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+
   .el-submenu {
     .el-submenu__title {
-      color: var(--text-color);
+      color: var(--text-color-menu);
+      & > span{
+        font-size: 16px;
+      }
       &:hover {
+        background-color: var(--aside-bg-color);
+        opacity: 0.6;
+        span{
+          color:var(--aside-font-active-color);
+        }
+      }
+    }
+    .el-menu .el-menu-item{
+      font-size: 14px;
+      &:hover,
+      &:focus {
+        color:var(--aside-font-active-color);
         background-color: var(--aside-bg-active-color);
       }
+      &::after{
+        right: 117px;
+      }
+    }
+
+    .el-menu-item.is-active{
+      &::after {
+        opacity: 1;
+        transform: translate(4px);
+      }        
     }
     &.is-active {
       .el-submenu__title {
@@ -749,7 +799,12 @@ div.el-tabs {
     }
 
     &.is-opened {
-      background-color: var(--aside-collapse-bg-color);
+      & .el-submenu__title{
+        opacity: 0.8;
+      }
+      & > ul{
+        background-color: var(--aside-collapse-bg-color);
+      }
       & > .el-submenu__title,
       & > .el-submenu__title i {
         color: var(--aside-font-active-color);
@@ -759,12 +814,5 @@ div.el-tabs {
         background-color: var(--aside-collapse-bg-color);
       }
     }
-  }
-}
-
-.el-menu--popup {
-  background-color: var(--aside-collapse-bg-color);
-  .el-menu-item.is-active {
-    padding-right: 20px;
   }
 }

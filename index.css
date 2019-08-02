@@ -393,6 +393,7 @@ template {
     1
   );
   --text-color-minor: hsla(223, 22%, 87%, 1);
+  --text-color-menu:hsla(216, 19%, 66%, 1);
   --white: hsla(0, 0%, 100%, 1);
   --grey: hsla(0, 0%, 40%, 1);
   --disable-color: hsla(0, 0%, 100%, 0.8);
@@ -455,10 +456,8 @@ template {
   --aside-decorator-color: var(--common-color-4);
   --aside-decorator-active-color: var(--ele-primary-1);
   --aside-font-active-color: var(--ele-primary-1);
-  --aside-bg-active-color: var(--ele-primary-shadow-1);
-  --aside-collapse-bg-color: var(
-    --ele-primary-shadow-2
-  );
+  --aside-bg-active-color: hsla(222, 38%, 95%, 1);
+  --aside-collapse-bg-color: hsla(225, 40%, 98%, 1);
   --pagination-text-color: var(--grey);
   --pagination-text-disable-color: var(--disable-color);
   --pagination-text-active-color: var(--white);
@@ -513,6 +512,7 @@ template {
     89%,
     1
   );
+  --text-color-menu:hsla(216, 19%, 66%, 1);
   --white: hsla(0, 0%, 100%, 1);
   --grey: hsla(213, 14%, 56%, 1);
   --disable-color: hsla(0, 0%, 100%, 0.5);
@@ -574,10 +574,8 @@ template {
   --aside-decorator-color: var(--common-color-4);
   --aside-decorator-active-color: var(--ele-primary-1);
   --aside-font-active-color: var(--ele-primary-1);
-  --aside-bg-active-color: var(--ele-primary-shadow-1);
-  --aside-collapse-bg-color: var(
-    --ele-primary-shadow-2
-  );
+  --aside-bg-active-color: hsla(222, 38%, 95%, 1);
+  --aside-collapse-bg-color: hsla(225, 40%, 98%, 1);
   --pagination-text-color: var(--grey);
   --pagination-text-disable-color: var(--disable-color);
   --pagination-text-active-color: var(--white);
@@ -1205,21 +1203,17 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 .el-menu {
   background-color: var(--aside-bg-color);
 }
-.el-menu .iconfont {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  vertical-align: top;
-}
 .el-menu .el-menu-item {
-  color: var(--text-color-secondary);
+  font-size: 16px;
+  color: var(--text-color-menu);
   transition: border var(--animation-time) ease-in-out;
 }
 .el-menu .el-menu-item:hover, .el-menu .el-menu-item:focus {
-  background-color: var(--aside-bg-active-color);
+  color: var(--aside-font-active-color);
+  background-color: var(--aside-bg-color);
 }
 .el-menu .el-menu-item::after {
+  top: 1px;
   float: right;
   margin-top: 20px;
   font-size: 0;
@@ -1228,34 +1222,71 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   border-bottom: 4px solid transparent;
   border-left: 10px solid var(--aside-decorator-active-color);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  -webkit-transform: translateX(-8px);
-          transform: translateX(-8px);
+  transform: translateX(-8px);
 }
 .el-menu .el-menu-item.is-active {
   color: var(--aside-font-active-color);
+}
+.el-menu--vertical .el-menu {
+  min-width: 0;
+}
+.el-menu--vertical .el-menu .el-menu-item {
+  width: 140px;
+  height: 32px;
+  line-height: 32px;
+  background-color: var(--aside-collapse-bg-color);
+}
+.el-menu--vertical .el-menu .el-menu-item > span {
+  position: relative;
+  left: 17px;
+  font-size: 14px;
+}
+.el-menu--vertical .el-menu .el-menu-item::after {
+  position: relative;
+  top: -7px;
+  right: 85px;
+}
+.el-menu--vertical .el-menu .el-menu-item:hover, .el-menu--vertical .el-menu .el-menu-item:focus {
+  color: var(--aside-font-active-color);
   background-color: var(--aside-bg-active-color);
 }
-.el-menu .el-menu-item.is-active::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  content: "";
-  border-left: 5px solid var(--aside-decorator-active-color);
-}
-.el-menu .el-menu-item.is-active::after {
+.el-menu--vertical .el-menu .el-menu-item:hover::after, .el-menu--vertical .el-menu .el-menu-item:focus::after {
   opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+}
+.el-menu .iconfont {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  vertical-align: top;
 }
 .el-menu .el-submenu .el-submenu__title {
-  color: var(--text-color);
+  color: var(--text-color-menu);
+}
+.el-menu .el-submenu .el-submenu__title > span {
+  font-size: 16px;
 }
 .el-menu .el-submenu .el-submenu__title:hover {
+  background-color: var(--aside-bg-color);
+  opacity: 0.6;
+}
+.el-menu .el-submenu .el-submenu__title:hover span {
+  color: var(--aside-font-active-color);
+}
+.el-menu .el-submenu .el-menu .el-menu-item {
+  font-size: 14px;
+}
+.el-menu .el-submenu .el-menu .el-menu-item:hover, .el-menu .el-submenu .el-menu .el-menu-item:focus {
+  color: var(--aside-font-active-color);
   background-color: var(--aside-bg-active-color);
+}
+.el-menu .el-submenu .el-menu .el-menu-item::after {
+  right: 117px;
+}
+.el-menu .el-submenu .el-menu-item.is-active::after {
+  opacity: 1;
+  transform: translate(4px);
 }
 .el-menu .el-submenu.is-active .el-submenu__title {
   color: var(--aside-font-active-color);
@@ -1263,7 +1294,10 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 .el-menu .el-submenu.is-active .el-submenu__title i {
   color: inherit;
 }
-.el-menu .el-submenu.is-opened {
+.el-menu .el-submenu.is-opened .el-submenu__title {
+  opacity: 0.8;
+}
+.el-menu .el-submenu.is-opened > ul {
   background-color: var(--aside-collapse-bg-color);
 }
 .el-menu .el-submenu.is-opened > .el-submenu__title, .el-menu .el-submenu.is-opened > .el-submenu__title i {
@@ -1271,13 +1305,6 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 }
 .el-menu .el-submenu.is-opened .el-menu {
   background-color: var(--aside-collapse-bg-color);
-}
-
-.el-menu--popup {
-  background-color: var(--aside-collapse-bg-color);
-}
-.el-menu--popup .el-menu-item.is-active {
-  padding-right: 20px;
 }
 
 .highcharts-tree-node-title text {
