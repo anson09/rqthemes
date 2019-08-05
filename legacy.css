@@ -614,7 +614,7 @@ template {
     89%,
     1
   );
-  --text-color-menu:hsla(216, 19%, 66%, 1);
+  --text-color-menu: hsla(216, 19%, 66%, 1);
   --white: hsla(0, 0%, 100%, 1);
   --grey: hsla(213, 14%, 56%, 1);
   --disable-color: hsla(0, 0%, 100%, 0.5);
@@ -1922,30 +1922,25 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   width: 60px;
 }
 
-.el-menu {
-  background-color: hsla(0,0%,100%,1);
-  background-color: var(--aside-bg-color);
+.el-menu--vertical .el-menu {
+  min-width: 0;
+  padding: 0;
 }
-.el-menu .el-menu-item {
-  font-size: 16px;
+.el-menu--vertical .el-menu .el-menu-item {
+  width: 140px;
+  height: 32px;
+  line-height: 32px;
+  background-color: hsla(225,40%,98%,1);
+  background-color: var(--aside-collapse-bg-color);
   color: hsla(216,19%,66%,1);
   color: var(--text-color-menu);
-  transition: border 0.3s ease-in-out;
-  transition: border var(--animation-time) ease-in-out;
 }
-.el-menu .el-menu-item:hover {
-  color: hsla(216,76%,44%,1);
-  color: var(--aside-font-active-color);
-  background-color: hsla(0,0%,100%,1);
-  background-color: var(--aside-bg-color);
+.el-menu--vertical .el-menu .el-menu-item > span {
+  position: relative;
+  left: 17px;
+  font-size: 14px;
 }
-.el-menu .el-menu-item:focus {
-  color: hsla(216,76%,44%,1);
-  color: var(--aside-font-active-color);
-  background-color: hsla(0,0%,100%,1);
-  background-color: var(--aside-bg-color);
-}
-.el-menu .el-menu-item::after {
+.el-menu--vertical .el-menu .el-menu-item::after {
   top: 1px;
   float: right;
   margin-top: 20px;
@@ -1958,27 +1953,6 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   opacity: 0;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   transform: translateX(-8px);
-}
-.el-menu .el-menu-item.is-active {
-  color: hsla(216,76%,44%,1);
-  color: var(--aside-font-active-color);
-}
-.el-menu--vertical .el-menu {
-  min-width: 0;
-}
-.el-menu--vertical .el-menu .el-menu-item {
-  width: 140px;
-  height: 32px;
-  line-height: 32px;
-  background-color: hsla(225,40%,98%,1);
-  background-color: var(--aside-collapse-bg-color);
-}
-.el-menu--vertical .el-menu .el-menu-item > span {
-  position: relative;
-  left: 17px;
-  font-size: 14px;
-}
-.el-menu--vertical .el-menu .el-menu-item::after {
   position: relative;
   top: -7px;
   right: 85px;
@@ -1986,88 +1960,17 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 .el-menu--vertical .el-menu .el-menu-item:hover {
   color: hsla(216,76%,44%,1);
   color: var(--aside-font-active-color);
-  background-color: hsla(222,38%,95%,1);
-  background-color: var(--aside-bg-active-color);
+  background-color: hsla(0,0%,100%,1);
+  background-color: var(--aside-bg-color);
 }
 .el-menu--vertical .el-menu .el-menu-item:focus {
   color: hsla(216,76%,44%,1);
   color: var(--aside-font-active-color);
-  background-color: hsla(222,38%,95%,1);
-  background-color: var(--aside-bg-active-color);
+  background-color: hsla(0,0%,100%,1);
+  background-color: var(--aside-bg-color);
 }
 .el-menu--vertical .el-menu .el-menu-item:hover::after, .el-menu--vertical .el-menu .el-menu-item:focus::after {
   opacity: 1;
-}
-.el-menu .iconfont {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  vertical-align: top;
-}
-.el-menu .el-submenu .el-submenu__title {
-  color: hsla(216,19%,66%,1);
-  color: var(--text-color-menu);
-}
-.el-menu .el-submenu .el-submenu__title > span {
-  font-size: 16px;
-}
-.el-menu .el-submenu .el-submenu__title:hover {
-  background-color: hsla(0,0%,100%,1);
-  background-color: var(--aside-bg-color);
-  opacity: 0.6;
-}
-.el-menu .el-submenu .el-submenu__title:hover span {
-  color: hsla(216,76%,44%,1);
-  color: var(--aside-font-active-color);
-}
-.el-menu .el-submenu .el-menu .el-menu-item {
-  font-size: 14px;
-}
-.el-menu .el-submenu .el-menu .el-menu-item:hover {
-  color: hsla(216,76%,44%,1);
-  color: var(--aside-font-active-color);
-  background-color: hsla(222,38%,95%,1);
-  background-color: var(--aside-bg-active-color);
-}
-.el-menu .el-submenu .el-menu .el-menu-item:focus {
-  color: hsla(216,76%,44%,1);
-  color: var(--aside-font-active-color);
-  background-color: hsla(222,38%,95%,1);
-  background-color: var(--aside-bg-active-color);
-}
-.el-menu .el-submenu .el-menu .el-menu-item::after {
-  right: 117px;
-}
-.el-menu .el-submenu .el-menu-item.is-active::after {
-  opacity: 1;
-  transform: translate(4px);
-}
-.el-menu .el-submenu.is-active .el-submenu__title {
-  color: hsla(216,76%,44%,1);
-  color: var(--aside-font-active-color);
-}
-.el-menu .el-submenu.is-active .el-submenu__title i {
-  color: inherit;
-}
-.el-menu .el-submenu.is-opened .el-submenu__title {
-  opacity: 0.8;
-}
-.el-menu .el-submenu.is-opened > ul {
-  background-color: hsla(225,40%,98%,1);
-  background-color: var(--aside-collapse-bg-color);
-}
-.el-menu .el-submenu.is-opened > .el-submenu__title {
-  color: hsla(216,76%,44%,1);
-  color: var(--aside-font-active-color);
-}
-.el-menu .el-submenu.is-opened > .el-submenu__title i {
-  color: hsla(216,76%,44%,1);
-  color: var(--aside-font-active-color);
-}
-.el-menu .el-submenu.is-opened .el-menu {
-  background-color: hsla(225,40%,98%,1);
-  background-color: var(--aside-collapse-bg-color);
 }
 
 .highcharts-tree-node-title text {
