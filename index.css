@@ -857,28 +857,52 @@ body {
   min-width: 0;
   padding: 0;
 }
-.el-menu--vertical .el-menu .el-menu-item {
+.el-menu--vertical .el-menu .smallTitle {
+  width: 140px;
+  height: 32px;
+  line-height: 32px;
+  background-color: var(--white);
+  cursor: Default;
+}
+.el-menu--vertical .el-menu .smallTitle > span {
+  position: relative;
+  font-size: 16px;
+  left: -9px;
+  color: var(--aside-decorator-active-color);
+}
+.el-menu--vertical .el-menu .smallTitle > span::after {
+  content: "";
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-top: 7px solid var(--aside-decorator-active-color);
+  position: relative;
+  left: 45px;
+  opacity: 1;
+  top: 11px;
+}
+.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle) {
   width: 140px;
   height: 32px;
   line-height: 32px;
   color: var(--text-color-menu);
   background-color: var(--aside-collapse-bg-color);
 }
-.el-menu--vertical .el-menu .el-menu-item.is-active {
+.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle).is-active {
   background-color: var(--aside-bg-active-color);
 }
-.el-menu--vertical .el-menu .el-menu-item.is-active::after {
+.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle).is-active::after {
   opacity: 1;
 }
-.el-menu--vertical .el-menu .el-menu-item > span {
+.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle) > span {
   position: relative;
   left: 17px;
   font-size: 14px;
 }
-.el-menu--vertical .el-menu .el-menu-item::before {
+.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle)::before {
   display: none;
 }
-.el-menu--vertical .el-menu .el-menu-item::after {
+.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle)::after {
   position: relative;
   top: 1px;
   top: -7px;
@@ -894,11 +918,11 @@ body {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   transform: translateX(-8px);
 }
-.el-menu--vertical .el-menu .el-menu-item:hover, .el-menu--vertical .el-menu .el-menu-item:focus {
+.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle):hover, .el-menu--vertical .el-menu .el-menu-item:not(.smallTitle):focus {
   color: var(--aside-font-active-color);
   background-color: var(--aside-bg-active-color);
 }
-.el-menu--vertical .el-menu .el-menu-item:hover::after, .el-menu--vertical .el-menu .el-menu-item:focus::after {
+.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle):hover::after, .el-menu--vertical .el-menu .el-menu-item:not(.smallTitle):focus::after {
   opacity: 1;
 }
 

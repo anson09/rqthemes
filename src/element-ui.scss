@@ -290,11 +290,36 @@
   }
 }
 
+
 .el-menu--vertical {
   .el-menu {
     min-width: 0;
     padding: 0;
-    .el-menu-item {
+    .smallTitle{
+      width: 140px;
+      height: 32px;
+      line-height: 32px;
+      cursor:Default;
+      background-color: var(--white);
+      & > span{
+        position: relative;
+        left: -9px;
+        font-size: 16px;
+        color:var(--aside-decorator-active-color);
+        &::after{
+          position: relative;
+          top: 11px;
+          left:45px;
+          content: "";
+          border-top: 7px solid var(--aside-decorator-active-color);
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid transparent; 
+          opacity: 1;
+        }
+      }
+    }
+    .el-menu-item:not(.smallTitle) {
       width: 140px;
       height: 32px;
       line-height: 32px;
@@ -342,6 +367,7 @@
   }
 }
 
+
 .el-date-table {
   th {
     color: var(--text-color-secondary);
@@ -369,6 +395,7 @@
     }
   }
 }
+
 
 .el-input {
   &__inner {
