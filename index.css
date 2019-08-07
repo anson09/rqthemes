@@ -411,6 +411,7 @@ template {
   --border-hover-color: var(--color-primary);
   --nav-text-color: var(--common-color-1);
   --nav-text-hover-color: var(--white);
+  --nav-text-login-color:hsla(215, 22%, 89%, 1);
   --table-scroll-bg-color: var(--background-color-secondary);
   --table-scroll-track-color: var(--common-color-1);
   --button-default-color: var(--color-primary);
@@ -530,6 +531,7 @@ template {
   --border-hover-color: var(--color-primary);
   --nav-text-color: var(--common-color-3);
   --nav-text-hover-color: var(--white);
+  --nav-text-login-color:hsla(215, 22%, 89%, 1);
   --table-scroll-bg-color: var(--background-color-secondary);
   --table-scroll-track-color: var(--grey);
   --button-default-color: var(--color-primary);
@@ -849,6 +851,46 @@ body {
 .el-date-picker.el-popper,
 .el-date-range-picker.el-popper {
   --arrow-color: var(--border-hover-color);
+}
+
+.el-menu--vertical .el-menu {
+  min-width: 0;
+  padding: 0;
+}
+.el-menu--vertical .el-menu .el-menu-item {
+  width: 140px;
+  height: 32px;
+  line-height: 32px;
+  color: var(--text-color-menu);
+  background-color: var(--aside-collapse-bg-color);
+}
+.el-menu--vertical .el-menu .el-menu-item > span {
+  position: relative;
+  left: 17px;
+  font-size: 14px;
+}
+.el-menu--vertical .el-menu .el-menu-item::after {
+  position: relative;
+  top: 1px;
+  top: -7px;
+  right: 85px;
+  float: right;
+  margin-top: 20px;
+  font-size: 0;
+  content: "";
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 10px solid var(--aside-decorator-active-color);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateX(-8px);
+}
+.el-menu--vertical .el-menu .el-menu-item:hover, .el-menu--vertical .el-menu .el-menu-item:focus {
+  color: var(--aside-font-active-color);
+  background-color: var(--aside-bg-color);
+}
+.el-menu--vertical .el-menu .el-menu-item:hover::after, .el-menu--vertical .el-menu .el-menu-item:focus::after {
+  opacity: 1;
 }
 
 .el-date-table th {
@@ -1200,46 +1242,6 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 }
 .el-pagination .el-pagination__jump .el-input input {
   width: 60px;
-}
-
-.el-menu--vertical .el-menu {
-  min-width: 0;
-  padding: 0;
-}
-.el-menu--vertical .el-menu .el-menu-item {
-  width: 140px;
-  height: 32px;
-  line-height: 32px;
-  background-color: var(--aside-collapse-bg-color);
-  color: var(--text-color-menu);
-}
-.el-menu--vertical .el-menu .el-menu-item > span {
-  position: relative;
-  left: 17px;
-  font-size: 14px;
-}
-.el-menu--vertical .el-menu .el-menu-item::after {
-  top: 1px;
-  float: right;
-  margin-top: 20px;
-  font-size: 0;
-  content: "";
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  border-left: 10px solid var(--aside-decorator-active-color);
-  opacity: 0;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transform: translateX(-8px);
-  position: relative;
-  top: -7px;
-  right: 85px;
-}
-.el-menu--vertical .el-menu .el-menu-item:hover, .el-menu--vertical .el-menu .el-menu-item:focus {
-  color: var(--aside-font-active-color);
-  background-color: var(--aside-bg-color);
-}
-.el-menu--vertical .el-menu .el-menu-item:hover::after, .el-menu--vertical .el-menu .el-menu-item:focus::after {
-  opacity: 1;
 }
 
 .highcharts-tree-node-title text {

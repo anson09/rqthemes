@@ -43,7 +43,7 @@
     1
   ); // 标题/主文本/侧边栏文字/日期选择器选中日期字体/Icon悬浮
   --text-color-minor: hsla(223, 22%, 87%, 1); //导航默认字体
-  --text-color-menu:hsla(216, 19%, 66%, 1);//导航栏默认字体
+  --text-color-menu: hsla(216, 19%, 66%, 1); //导航栏默认字体
   --white: hsla(0, 0%, 100%, 1); //主按钮文字
   --grey: hsla(0, 0%, 40%, 1); // 次文本/文本输入框字体/下拉选择字体/Icon默认
   --disable-color: hsla(0, 0%, 100%, 0.8); //字体禁用色
@@ -58,7 +58,6 @@
   --table-hover-color: var(--ele-minor-3); //表格悬停颜色
   --table-active-color: var(--grey); //表格选中颜色
   --table-head-text-color: var(--common-color-3); //表格表头字体颜色
-
   --text-color: var(--text-color-primary); // 主文本色
   --text-color-secondary: var(--grey); // 次文本色
 
@@ -67,6 +66,7 @@
 
   --nav-text-color: var(--common-color-1); // 导航文字色
   --nav-text-hover-color: var(--white); // 导航文字悬停选中色
+  --nav-text-login-color: hsla(215, 22%, 89%, 1); //登录用户名颜色
 
   --table-scroll-bg-color: var(--background-color-secondary); // 导航条背景色
   --table-scroll-track-color: var(--common-color-1); // 导航块颜色
