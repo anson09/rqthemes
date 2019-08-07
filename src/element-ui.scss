@@ -300,10 +300,19 @@
       line-height: 32px;
       color: var(--text-color-menu);
       background-color: var(--aside-collapse-bg-color);
+      &.is-active {
+        background-color: var(--aside-bg-active-color);
+        &::after {
+          opacity: 1;
+        }
+      }
       & > span {
         position: relative;
         left: 17px;
         font-size: 14px;
+      }
+      &::before {
+        display: none;
       }
       &::after {
         position: relative;
@@ -324,7 +333,7 @@
       &:hover,
       &:focus {
         color: var(--aside-font-active-color);
-        background-color: var(--aside-bg-color);
+        background-color: var(--aside-bg-active-color);
         &::after {
           opacity: 1;
         }

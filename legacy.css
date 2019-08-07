@@ -496,7 +496,7 @@ template {
     1
   );
   --text-color-minor: hsla(223, 22%, 87%, 1);
-  --text-color-menu:hsla(216, 19%, 66%, 1);
+  --text-color-menu: hsla(216, 19%, 66%, 1);
   --white: hsla(0, 0%, 100%, 1);
   --grey: hsla(0, 0%, 40%, 1);
   --disable-color: hsla(0, 0%, 100%, 0.8);
@@ -514,7 +514,7 @@ template {
   --border-hover-color: var(--color-primary);
   --nav-text-color: var(--common-color-1);
   --nav-text-hover-color: var(--white);
-  --nav-text-login-color:hsla(215, 22%, 89%, 1);
+  --nav-text-login-color: hsla(215, 22%, 89%, 1);
   --table-scroll-bg-color: var(--background-color-secondary);
   --table-scroll-track-color: var(--common-color-1);
   --button-default-color: var(--color-primary);
@@ -634,7 +634,7 @@ template {
   --border-hover-color: var(--color-primary);
   --nav-text-color: var(--common-color-3);
   --nav-text-hover-color: var(--white);
-  --nav-text-login-color:hsla(215, 22%, 89%, 1);
+  --nav-text-login-color: hsla(215, 22%, 89%, 1);
   --table-scroll-bg-color: var(--background-color-secondary);
   --table-scroll-track-color: var(--grey);
   --button-default-color: var(--color-primary);
@@ -1290,10 +1290,20 @@ body {
   background-color: hsla(225,40%,98%,1);
   background-color: var(--aside-collapse-bg-color);
 }
+.el-menu--vertical .el-menu .el-menu-item.is-active {
+  background-color: hsla(222,38%,95%,1);
+  background-color: var(--aside-bg-active-color);
+}
+.el-menu--vertical .el-menu .el-menu-item.is-active::after {
+  opacity: 1;
+}
 .el-menu--vertical .el-menu .el-menu-item > span {
   position: relative;
   left: 17px;
   font-size: 14px;
+}
+.el-menu--vertical .el-menu .el-menu-item::before {
+  display: none;
 }
 .el-menu--vertical .el-menu .el-menu-item::after {
   position: relative;
@@ -1315,14 +1325,14 @@ body {
 .el-menu--vertical .el-menu .el-menu-item:hover {
   color: hsla(216,76%,44%,1);
   color: var(--aside-font-active-color);
-  background-color: hsla(0,0%,100%,1);
-  background-color: var(--aside-bg-color);
+  background-color: hsla(222,38%,95%,1);
+  background-color: var(--aside-bg-active-color);
 }
 .el-menu--vertical .el-menu .el-menu-item:focus {
   color: hsla(216,76%,44%,1);
   color: var(--aside-font-active-color);
-  background-color: hsla(0,0%,100%,1);
-  background-color: var(--aside-bg-color);
+  background-color: hsla(222,38%,95%,1);
+  background-color: var(--aside-bg-active-color);
 }
 .el-menu--vertical .el-menu .el-menu-item:hover::after, .el-menu--vertical .el-menu .el-menu-item:focus::after {
   opacity: 1;
