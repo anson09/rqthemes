@@ -16,8 +16,8 @@
   --ele-primary-1: hsla(216, 76%, 44%, 1); // 主按钮背景色/ 边框选中
   --ele-primary-2: hsla(216, 76%, 44%, 0.2); // 次要按钮背景色
   --ele-primary-3: hsla(216, 71%, 47%, 0.8); // 主要按钮点击色
-  --ele-primary-shadow-1: hsla(215, 83%, 93%, 1); // 半透明主色
-  --ele-primary-shadow-2: hsla(213, 69%, 97%, 1); // 半透明主色
+  --ele-primary-shallow-1: hsla(215, 83%, 93%, 1); // 半透明主色
+  --ele-primary-shallow-2: hsla(225, 40%, 98%, 1); // 半透明主色
   --ele-secondary-1: hsla(
     216,
     73%,
@@ -46,7 +46,8 @@
   --text-color-menu: hsla(216, 19%, 66%, 1); //导航栏默认字体
   --white: hsla(0, 0%, 100%, 1); //主按钮文字
   --grey: hsla(0, 0%, 40%, 1); // 次文本/文本输入框字体/下拉选择字体/Icon默认
-  --disable-color: hsla(0, 0%, 100%, 0.8); //字体禁用色
+  --disable-color: hsla(0, 0%, 100%, 0.8); //主按钮字体禁用色
+  --disable-primary-color: hsla(220, 11%, 78%, 1); //全局禁用色
 
   --background-color: var(--color-secondary); // 全局背景色
   --background-color-secondary: var(--color-minor-1); // 次要背景色
