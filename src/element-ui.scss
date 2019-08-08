@@ -298,6 +298,7 @@
     color: var(--text-color-menu);
     background-color: var(--aside-collapse-bg-color);
     &.is-active {
+      color: var(--aside-decorator-active-color);
       background-color: var(--aside-bg-active-color);
       &::after {
         opacity: 1;
@@ -344,7 +345,7 @@
       height: 32px;
       line-height: 32px;
       cursor: Default;
-      background-color: var(--white);
+      background-color: var(--aside-bg-color);
       & > span {
         position: relative;
         left: -9px;
