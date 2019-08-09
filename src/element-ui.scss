@@ -764,3 +764,10 @@ div.el-tabs {
     }
   }
 }
+
+.el-dialog {
+  background: var(--background-color-secondary, #fff);
+  .el-dialog__title {
+    color: var(--text-color-primary);
+  }
+}

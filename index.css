@@ -906,11 +906,11 @@ body {
   opacity: 1;
 }
 .el-menu--vertical .el-menu {
-  min-width: 0;
-  padding: 0;
   position: relative;
   top: 10px;
   right: 4px;
+  min-width: 0;
+  padding: 0;
 }
 .el-menu--vertical .el-menu .smallTitle {
   width: 140px;
@@ -1286,6 +1286,13 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 }
 .el-pagination .el-pagination__jump .el-input input {
   width: 60px;
+}
+
+::v-deep .el-dialog {
+  background: var(--background-color-secondary, #fff);
+}
+::v-deep .el-dialog .el-dialog__title {
+  color: var(--text-color-primary);
 }
 
 .highcharts-tree-node-title text {
