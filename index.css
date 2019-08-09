@@ -865,8 +865,8 @@ body {
   background-color: var(--aside-collapse-bg-color);
 }
 .el-menu--vertical .el-menu-item:not(.smallTitle).is-active {
-  background-color: var(--aside-bg-active-color);
   color: var(--aside-decorator-active-color);
+  background-color: var(--aside-bg-active-color);
 }
 .el-menu--vertical .el-menu-item:not(.smallTitle).is-active::after {
   opacity: 1;
@@ -908,6 +908,9 @@ body {
 .el-menu--vertical .el-menu {
   min-width: 0;
   padding: 0;
+  position: relative;
+  top: 10px;
+  right: 4px;
 }
 .el-menu--vertical .el-menu .smallTitle {
   width: 140px;
