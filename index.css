@@ -1288,10 +1288,10 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   width: 60px;
 }
 
-::v-deep .el-dialog {
+.el-dialog {
   background: var(--background-color-secondary, #fff);
 }
-::v-deep .el-dialog .el-dialog__title {
+.el-dialog .el-dialog__title {
   color: var(--text-color-primary);
 }
 
