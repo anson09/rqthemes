@@ -597,8 +597,8 @@ template {
   --ele-primary-1: hsla(201, 87%, 53%, 1);
   --ele-primary-2: hsla(201, 87%, 53%, 0.5);
   --ele-primary-3: hsla(201, 87%, 53%, 0.7);
-  --ele-primary-shadow-1: hsla(201, 87%, 53%, 0.1);
-  --ele-primary-shadow-2: hsla(228, 17%, 12%, 1);
+  --ele-primary-shallow-1: hsla(201, 87%, 53%, 0.1);
+  --ele-primary-shallow-2: hsla(228, 17%, 12%, 1);
   --ele-secondary-1: hsla(201, 100%, 65%, 1);
   --ele-secondary-2: hsla(201, 87%, 53%, 0.5);
   --ele-secondary-3: hsla(201, 87%, 53%, 0.7);
@@ -621,7 +621,8 @@ template {
   --text-color-menu: hsla(216, 19%, 66%, 1);
   --white: hsla(0, 0%, 100%, 1);
   --grey: hsla(213, 14%, 56%, 1);
-  --disable-color: hsla(0, 0%, 100%, 0.5);
+  --disable-color: hsla(221, 15%, 24%, 1);
+  --disable-primary-color: hsla(221, 15%, 24%, 1);
   --background-color: var(--color-secondary);
   --background-color-secondary: var(--color-minor-1);
   --hover-color: var(--color-primary);
@@ -681,9 +682,11 @@ template {
   --aside-decorator-color: var(--common-color-4);
   --aside-decorator-active-color: var(--ele-primary-1);
   --aside-font-active-color: var(--ele-primary-1);
-  --aside-bg-active-color: var(--ele-primary-shadow-1);
+  --aside-bg-active-color: var(
+    --ele-primary-shallow-1
+  );
   --aside-collapse-bg-color: var(
-    --ele-primary-shadow-2
+    --ele-primary-shallow-2
   );
   --pagination-text-color: var(--grey);
   --pagination-text-disable-color: var(--disable-color);
@@ -2024,10 +2027,6 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 }
 
 .el-dialog {
-  margin-top: 0 !important;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   background: hsla(0,0%,100%,1);
   background: var(--background-color-secondary, #fff);
 }

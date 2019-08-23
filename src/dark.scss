@@ -21,8 +21,8 @@
   --ele-primary-1: hsla(201, 87%, 53%, 1); // 主按钮背景色/ 边框选中
   --ele-primary-2: hsla(201, 87%, 53%, 0.5); // 次要按钮背景色
   --ele-primary-3: hsla(201, 87%, 53%, 0.7); // 主要按钮点击色
-  --ele-primary-shadow-1: hsla(201, 87%, 53%, 0.1); // 半透明主色
-  --ele-primary-shadow-2: hsla(228, 17%, 12%, 1); // 半透明主色
+  --ele-primary-shallow-1: hsla(201, 87%, 53%, 0.1); // 半透明主色
+  --ele-primary-shallow-2: hsla(228, 17%, 12%, 1); // 半透明主色
   --ele-secondary-1: hsla(201, 100%, 65%, 1); //主要按钮悬停
   --ele-secondary-2: hsla(201, 87%, 53%, 0.5); //次要按钮悬停
   --ele-secondary-3: hsla(201, 87%, 53%, 0.7); //次要按钮点击
@@ -45,7 +45,8 @@
   --text-color-menu: hsla(216, 19%, 66%, 1); //导航栏默认字体
   --white: hsla(0, 0%, 100%, 1); //主按钮文字
   --grey: hsla(213, 14%, 56%, 1); // 次文本/文本输入框字体/下拉选择字体/Icon默认
-  --disable-color: hsla(0, 0%, 100%, 0.5); //字体禁用色
+  --disable-color: hsla(221, 15%, 24%, 1); //主按钮字体禁用色
+  --disable-primary-color: hsla(221, 15%, 24%, 1); //全局禁用色
 
   --background-color: var(--color-secondary); // 全局背景色
   --background-color-secondary: var(--color-minor-1); // 次要背景色
@@ -119,9 +120,11 @@
   --aside-decorator-color: var(--common-color-4); // 侧边栏饰品颜色
   --aside-decorator-active-color: var(--ele-primary-1); // 侧边栏饰品激活时颜色
   --aside-font-active-color: var(--ele-primary-1); // 侧边栏选中项字体颜色
-  --aside-bg-active-color: var(--ele-primary-shadow-1); // 侧边栏hover项背景颜色
+  --aside-bg-active-color: var(
+    --ele-primary-shallow-1
+  ); // 侧边栏hover项背景颜色
   --aside-collapse-bg-color: var(
-    --ele-primary-shadow-2
+    --ele-primary-shallow-2
   ); // 侧边栏当前展开项背景颜色
 
   --pagination-text-color: var(--grey); // 导航条文字颜色
