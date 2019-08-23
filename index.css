@@ -366,8 +366,8 @@ template {
   --ele-primary-1: hsla(216, 76%, 44%, 1);
   --ele-primary-2: hsla(216, 76%, 44%, 0.2);
   --ele-primary-3: hsla(216, 71%, 47%, 0.8);
-  --ele-primary-shadow-1: hsla(215, 83%, 93%, 1);
-  --ele-primary-shadow-2: hsla(213, 69%, 97%, 1);
+  --ele-primary-shallow-1: hsla(215, 83%, 93%, 1);
+  --ele-primary-shallow-2: hsla(225, 40%, 98%, 1);
   --ele-secondary-1: hsla(
     216,
     73%,
@@ -397,6 +397,7 @@ template {
   --white: hsla(0, 0%, 100%, 1);
   --grey: hsla(0, 0%, 40%, 1);
   --disable-color: hsla(0, 0%, 100%, 0.8);
+  --disable-primary-color: hsla(220, 11%, 78%, 1);
   --background-color: var(--color-secondary);
   --background-color-secondary: var(--color-minor-1);
   --hover-color: var(--color-primary);
@@ -853,56 +854,29 @@ body {
   --arrow-color: var(--border-hover-color);
 }
 
-.el-menu--vertical .el-menu {
-  min-width: 0;
-  padding: 0;
-}
-.el-menu--vertical .el-menu .smallTitle {
-  width: 140px;
-  height: 32px;
-  line-height: 32px;
-  background-color: var(--white);
-  cursor: Default;
-}
-.el-menu--vertical .el-menu .smallTitle > span {
-  position: relative;
-  font-size: 16px;
-  left: -9px;
-  color: var(--aside-decorator-active-color);
-}
-.el-menu--vertical .el-menu .smallTitle > span::after {
-  content: "";
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-top: 7px solid var(--aside-decorator-active-color);
-  position: relative;
-  left: 45px;
-  opacity: 1;
-  top: 11px;
-}
-.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle) {
+.el-menu--vertical .el-menu-item:not(.smallTitle) {
   width: 140px;
   height: 32px;
   line-height: 32px;
   color: var(--text-color-menu);
   background-color: var(--aside-collapse-bg-color);
 }
-.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle).is-active {
+.el-menu--vertical .el-menu-item:not(.smallTitle).is-active {
+  color: var(--aside-decorator-active-color);
   background-color: var(--aside-bg-active-color);
 }
-.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle).is-active::after {
+.el-menu--vertical .el-menu-item:not(.smallTitle).is-active::after {
   opacity: 1;
 }
-.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle) > span {
+.el-menu--vertical .el-menu-item:not(.smallTitle) > span {
   position: relative;
   left: 17px;
   font-size: 14px;
 }
-.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle)::before {
+.el-menu--vertical .el-menu-item:not(.smallTitle)::before {
   display: none;
 }
-.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle)::after {
+.el-menu--vertical .el-menu-item:not(.smallTitle)::after {
   position: relative;
   top: 1px;
   top: -7px;
@@ -915,14 +889,48 @@ body {
   border-bottom: 4px solid transparent;
   border-left: 10px solid var(--aside-decorator-active-color);
   opacity: 0;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transform: translateX(-8px);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform: translateX(-8px);
+          transform: translateX(-8px);
 }
-.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle):hover, .el-menu--vertical .el-menu .el-menu-item:not(.smallTitle):focus {
+.el-menu--vertical .el-menu-item:not(.smallTitle):hover, .el-menu--vertical .el-menu-item:not(.smallTitle):focus {
   color: var(--aside-font-active-color);
   background-color: var(--aside-bg-active-color);
 }
-.el-menu--vertical .el-menu .el-menu-item:not(.smallTitle):hover::after, .el-menu--vertical .el-menu .el-menu-item:not(.smallTitle):focus::after {
+.el-menu--vertical .el-menu-item:not(.smallTitle):hover::after, .el-menu--vertical .el-menu-item:not(.smallTitle):focus::after {
+  opacity: 1;
+}
+.el-menu--vertical .el-menu {
+  position: relative;
+  top: 10px;
+  right: 4px;
+  min-width: 0;
+  padding: 0;
+}
+.el-menu--vertical .el-menu .smallTitle {
+  width: 140px;
+  height: 32px;
+  line-height: 32px;
+  cursor: Default;
+  background-color: var(--aside-bg-color);
+}
+.el-menu--vertical .el-menu .smallTitle > span {
+  position: relative;
+  left: -9px;
+  font-size: 16px;
+  color: var(--aside-decorator-active-color);
+}
+.el-menu--vertical .el-menu .smallTitle > span::after {
+  position: relative;
+  top: 11px;
+  left: 45px;
+  content: "";
+  border-top: 7px solid var(--aside-decorator-active-color);
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
   opacity: 1;
 }
 
@@ -1275,6 +1283,17 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 }
 .el-pagination .el-pagination__jump .el-input input {
   width: 60px;
+}
+
+.el-dialog {
+  margin-top: 0 !important;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: var(--background-color-secondary, #fff);
+}
+.el-dialog .el-dialog__title {
+  color: var(--text-color-primary);
 }
 
 .highcharts-tree-node-title text {
