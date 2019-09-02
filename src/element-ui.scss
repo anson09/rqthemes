@@ -287,6 +287,9 @@
   }
   &.el-popper {
     --arrow-color: var(--border-hover-color);
+    .popper__arrow {
+      display: none;
+    }
   }
 }
 
@@ -478,6 +481,12 @@
   &.el-popper {
     --arrow-inside-color: var(--select-dropdown-bg-color);
     --arrow-color: var(--border-hover-color);
+    .el-scrollbar {
+      border-radius: 4px;
+    }
+    .popper__arrow {
+      display: none;
+    }
   }
 
   &__item.hover {
@@ -668,10 +677,10 @@ div.el-tabs {
 .el-tooltip__popper,
 .el-popper {
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--background-color-secondary);
   border-color: var(--border-hover-color);
-  --arrow-color: var(--background-color);
-  --arrow-inside-color: var(--background-color);
+  --arrow-color: var(--border-hover-color);
+  --arrow-inside-color: var(--background-color-secondary);
 
   &[x-placement^="left"] .popper__arrow {
     border-left-color: var(--arrow-color);
@@ -706,8 +715,17 @@ div.el-tabs {
 
 .el-tooltip__popper.is-dark {
   color: var(--text-color);
-  background-color: var(--background-color);
-  --arrow-inside-color: var(--background-color);
+  background-color: var(--background-color-secondary);
+  --arrow-inside-color: var(--background-color-secondary);
+  border: 1px solid var(--border-hover-color);
+}
+
+.el-popover {
+  max-width: 250px;
+  padding: 8px 12px 12px 12px;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
 }
 
 .el-pagination {
