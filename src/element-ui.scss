@@ -481,9 +481,7 @@
   &.el-popper {
     --arrow-inside-color: var(--select-dropdown-bg-color);
     --arrow-color: var(--border-hover-color);
-    .el-scrollbar {
-      border-radius: 4px;
-    }
+    overflow: hidden;
     .popper__arrow {
       display: none;
     }
@@ -724,7 +722,7 @@ div.el-tabs {
   max-width: 250px;
   padding: 8px 12px 12px 12px;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 1.5;
   text-align: center;
 }
 
