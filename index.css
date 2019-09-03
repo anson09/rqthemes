@@ -856,6 +856,10 @@ body {
 .el-date-range-picker.el-popper {
   --arrow-color: var(--border-hover-color);
 }
+.el-date-picker.el-popper .popper__arrow,
+.el-date-range-picker.el-popper .popper__arrow {
+  display: none;
+}
 
 .el-menu--vertical .el-menu-item:not(.smallTitle) {
   width: 140px;
@@ -1025,6 +1029,11 @@ body {
 .el-select-dropdown.el-popper {
   --arrow-inside-color: var(--select-dropdown-bg-color);
   --arrow-color: var(--border-hover-color);
+  overflow: hidden;
+}
+.el-dropdown-menu.el-popper .popper__arrow,
+.el-select-dropdown.el-popper .popper__arrow {
+  display: none;
 }
 .el-dropdown-menu__item.hover,
 .el-select-dropdown__item.hover {
@@ -1190,10 +1199,10 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 .el-tooltip__popper,
 .el-popper {
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--background-color-secondary);
   border-color: var(--border-hover-color);
-  --arrow-color: var(--background-color);
-  --arrow-inside-color: var(--background-color);
+  --arrow-color: var(--border-hover-color);
+  --arrow-inside-color: var(--background-color-secondary);
 }
 .el-tooltip__popper[x-placement^=left] .popper__arrow,
 .el-popper[x-placement^=left] .popper__arrow {
@@ -1230,8 +1239,17 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 
 .el-tooltip__popper.is-dark {
   color: var(--text-color);
-  background-color: var(--background-color);
-  --arrow-inside-color: var(--background-color);
+  background-color: var(--background-color-secondary);
+  --arrow-inside-color: var(--background-color-secondary);
+  border: 1px solid var(--border-hover-color);
+}
+
+.el-popover {
+  max-width: 250px;
+  padding: 8px 12px 12px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .el-pagination {
@@ -1288,10 +1306,10 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   width: 60px;
 }
 
-::v-deep .el-dialog {
+.el-dialog {
   background: var(--background-color-secondary, #fff);
 }
-::v-deep .el-dialog .el-dialog__title {
+.el-dialog .el-dialog__title {
   color: var(--text-color-primary);
 }
 
