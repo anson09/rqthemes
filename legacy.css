@@ -1285,6 +1285,14 @@ body {
 .el-date-range-picker.el-popper .popper__arrow {
   display: none;
 }
+.el-date-picker.el-popper[x-placement^=top],
+.el-date-range-picker.el-popper[x-placement^=top] {
+  margin-bottom: 2px;
+}
+.el-date-picker.el-popper[x-placement^=top],
+.el-date-range-picker.el-popper[x-placement^=top] {
+  margin-top: 2px;
+}
 
 .el-menu--vertical .el-menu-item:not(.smallTitle) {
   width: 140px;
@@ -1529,6 +1537,14 @@ body {
 .el-dropdown-menu.el-popper .popper__arrow,
 .el-select-dropdown.el-popper .popper__arrow {
   display: none;
+}
+.el-dropdown-menu.el-popper[x-placement^=top],
+.el-select-dropdown.el-popper[x-placement^=top] {
+  margin-bottom: 2px;
+}
+.el-dropdown-menu.el-popper[x-placement^=top],
+.el-select-dropdown.el-popper[x-placement^=top] {
+  margin-top: 2px;
 }
 .el-dropdown-menu__item.hover {
   background-color: hsla(216,76%,44%,0.1);
@@ -1938,6 +1954,7 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 }
 
 .el-popover {
+  min-width: 0;
   max-width: 250px;
   padding: 8px 12px 12px 12px;
   font-size: 12px;
