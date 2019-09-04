@@ -290,6 +290,12 @@
     .popper__arrow {
       display: none;
     }
+    &[x-placement^="top"] {
+      margin-bottom: 2px;
+    }
+    &[x-placement^="top"] {
+      margin-top: 2px;
+    }
   }
 }
 
@@ -484,6 +490,12 @@
     overflow: hidden;
     .popper__arrow {
       display: none;
+    }
+    &[x-placement^="top"] {
+      margin-bottom: 2px;
+    }
+    &[x-placement^="top"] {
+      margin-top: 2px;
     }
   }
 
@@ -719,6 +731,7 @@ div.el-tabs {
 }
 
 .el-popover {
+  min-width: 0;
   max-width: 250px;
   padding: 8px 12px 12px 12px;
   font-size: 12px;
