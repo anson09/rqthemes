@@ -1289,8 +1289,8 @@ body {
 .el-date-range-picker.el-popper[x-placement^=top] {
   margin-bottom: 2px;
 }
-.el-date-picker.el-popper[x-placement^=top],
-.el-date-range-picker.el-popper[x-placement^=top] {
+.el-date-picker.el-popper[x-placement^=bottom],
+.el-date-range-picker.el-popper[x-placement^=bottom] {
   margin-top: 2px;
 }
 
@@ -1542,8 +1542,8 @@ body {
 .el-select-dropdown.el-popper[x-placement^=top] {
   margin-bottom: 2px;
 }
-.el-dropdown-menu.el-popper[x-placement^=top],
-.el-select-dropdown.el-popper[x-placement^=top] {
+.el-dropdown-menu.el-popper[x-placement^=bottom],
+.el-select-dropdown.el-popper[x-placement^=bottom] {
   margin-top: 2px;
 }
 .el-dropdown-menu__item.hover {
