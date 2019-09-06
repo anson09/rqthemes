@@ -348,7 +348,7 @@ template {
   display: none;
 }
 /**
-将icon从设计师给的文件中提取至 iconfont.scss
+iconfont已移除，用element-ui自带的，同时项目里也有自己的iconfont
  */
  
 @charset "UTF-8";
