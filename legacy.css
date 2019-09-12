@@ -1334,11 +1334,8 @@ body {
   border-left: 10px solid hsla(216,76%,44%,1);
   border-left: 10px solid var(--aside-decorator-active-color);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  -webkit-transform: translateX(-8px);
-          transform: translateX(-8px);
+  transform: translateX(-8px);
 }
 .el-menu--vertical .el-menu-item:not(.smallTitle):hover {
   color: hsla(216,76%,44%,1);
@@ -2376,8 +2373,20 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   stroke-width: 3;
 }
 
+.highcharts-point-inactive {
+  opacity: 0.2;
+  transition: opacity 50ms;
+  /* quick in */
+}
+
+.highcharts-series-inactive {
+  opacity: 0.2;
+  transition: opacity 50ms;
+  /* quick in */
+}
+
 .highcharts-state-hover path {
-  transition: stroke-width 50;
+  transition: stroke-width 50ms;
   /* quick in */
 }
 
@@ -2608,6 +2617,16 @@ g.highcharts-series,
 
 .highcharts-treemap-series .highcharts-internal-node-interactive:hover {
   fill-opacity: 0.75;
+}
+
+.highcharts-vector-series .highcharts-point {
+  fill: none;
+  stroke-width: 2px;
+}
+
+.highcharts-windbarb-series .highcharts-point {
+  fill: none;
+  stroke-width: 2px;
 }
 
 /* Legend */
