@@ -1,6 +1,4 @@
 <style lang="scss">
-@import "element-ui/lib/theme-chalk/base.css";
-@import "@rqjs/rqcomponents/dist/rqcomponents.esm.css";
 @import "@rqjs/rqcomponents/packages/common/assets/icon/iconfont.css";
 * {
   transition: all .2s;
