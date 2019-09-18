@@ -800,3 +800,7 @@ div.el-tabs {
     color: var(--text-color-primary);
   }
 }
+
+.theme-light {
+  @import "./light/index.css";
+}
