@@ -25,8 +25,8 @@
 
 - in js: import '@rqjs/rqthemes'
 - in css: @import '@rqjs/rqthemes'
-- **ie support light theme only**, and please use @rqjs/rqrhemes/legacy.css
-- fetch light vars from @rqjs/rqrhemes/light.json
+- **ie support light theme only**, and please use @rqjs/rqthemes/legacy.css
+- fetch light vars from @rqjs/rqthemes/light.json
 - place it after element-ui default css file
 
 ## Commands
