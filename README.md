@@ -57,4 +57,4 @@ import src/index.scss directly in project, modify and see changes.
 
 3. [`lint 规范`](http://wiki.ricequant.com/pages/viewpage.action?pageId=45875427)
 
-4. [`semver 规范`](https://semver.org/) (release alpha/beta/rc in dev branch)
+4. [`npm 发布规范`](http://wiki.ricequant.com/pages/viewpage.action?pageId=52232790)

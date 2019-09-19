@@ -287,6 +287,95 @@
   }
   &.el-popper {
     --arrow-color: var(--border-hover-color);
+    .popper__arrow {
+      display: none;
+    }
+    &[x-placement^="top"] {
+      margin-bottom: 2px;
+    }
+    &[x-placement^="bottom"] {
+      margin-top: 2px;
+    }
+  }
+}
+
+.el-menu--vertical {
+  .el-menu-item:not(.smallTitle) {
+    width: 140px;
+    height: 32px;
+    line-height: 32px;
+    color: var(--text-color-menu);
+    background-color: var(--aside-collapse-bg-color);
+    &.is-active {
+      color: var(--aside-decorator-active-color);
+      background-color: var(--aside-bg-active-color);
+      &::after {
+        opacity: 1;
+      }
+    }
+    & > span {
+      position: relative;
+      left: 17px;
+      font-size: 14px;
+    }
+    &::before {
+      display: none;
+    }
+    &::after {
+      position: relative;
+      top: 1px;
+      top: -7px;
+      right: 85px;
+      float: right;
+      margin-top: (50px - 10px) / 2;
+      font-size: 0;
+      content: "";
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 10px solid var(--aside-decorator-active-color);
+      opacity: 0;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      transform: translateX(-8px);
+    }
+    &:hover,
+    &:focus {
+      color: var(--aside-font-active-color);
+      background-color: var(--aside-bg-active-color);
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  .el-menu {
+    position: relative;
+    top: 10px;
+    right: 4px;
+    min-width: 0;
+    padding: 0;
+    .smallTitle {
+      width: 140px;
+      height: 32px;
+      line-height: 32px;
+      cursor: Default;
+      background-color: var(--aside-bg-color);
+      & > span {
+        position: relative;
+        left: -9px;
+        font-size: 16px;
+        color: var(--aside-decorator-active-color);
+        &::after {
+          position: relative;
+          top: 11px;
+          left: 45px;
+          content: "";
+          border-top: 7px solid var(--aside-decorator-active-color);
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid transparent;
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 
@@ -398,6 +487,16 @@
   &.el-popper {
     --arrow-inside-color: var(--select-dropdown-bg-color);
     --arrow-color: var(--border-hover-color);
+    overflow: hidden;
+    .popper__arrow {
+      display: none;
+    }
+    &[x-placement^="top"] {
+      margin-bottom: 2px;
+    }
+    &[x-placement^="bottom"] {
+      margin-top: 2px;
+    }
   }
 
   &__item.hover {
@@ -588,10 +687,10 @@ div.el-tabs {
 .el-tooltip__popper,
 .el-popper {
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--background-color-secondary);
   border-color: var(--border-hover-color);
-  --arrow-color: var(--background-color);
-  --arrow-inside-color: var(--background-color);
+  --arrow-color: var(--border-hover-color);
+  --arrow-inside-color: var(--background-color-secondary);
 
   &[x-placement^="left"] .popper__arrow {
     border-left-color: var(--arrow-color);
@@ -626,8 +725,18 @@ div.el-tabs {
 
 .el-tooltip__popper.is-dark {
   color: var(--text-color);
-  background-color: var(--background-color);
-  --arrow-inside-color: var(--background-color);
+  background-color: var(--background-color-secondary);
+  --arrow-inside-color: var(--background-color-secondary);
+  border: 1px solid var(--border-hover-color);
+}
+
+.el-popover {
+  min-width: 0;
+  max-width: 250px;
+  padding: 8px 12px 12px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .el-pagination {
@@ -685,86 +794,9 @@ div.el-tabs {
   }
 }
 
-.el-menu {
-  background-color: var(--aside-bg-color);
-
-  .iconfont {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin-right: 10px;
-    vertical-align: top;
-  }
-
-  .el-menu-item {
-    color: var(--text-color-secondary);
-    transition: border var(--animation-time) ease-in-out;
-    &:hover,
-    &:focus {
-      background-color: var(--aside-bg-active-color);
-    }
-    &::after {
-      float: right;
-      margin-top: (50px - 10px) / 2;
-      font-size: 0;
-      content: "";
-      border-top: 4px solid transparent;
-      border-bottom: 4px solid transparent;
-      border-left: 10px solid var(--aside-decorator-active-color);
-      opacity: 0;
-      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-      transform: translateX(-8px);
-    }
-    &.is-active {
-      color: var(--aside-font-active-color);
-      background-color: var(--aside-bg-active-color);
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        content: "";
-        border-left: 5px solid var(--aside-decorator-active-color);
-      }
-      &::after {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-  }
-  .el-submenu {
-    .el-submenu__title {
-      color: var(--text-color);
-      &:hover {
-        background-color: var(--aside-bg-active-color);
-      }
-    }
-    &.is-active {
-      .el-submenu__title {
-        color: var(--aside-font-active-color);
-        i {
-          color: inherit;
-        }
-      }
-    }
-
-    &.is-opened {
-      background-color: var(--aside-collapse-bg-color);
-      & > .el-submenu__title,
-      & > .el-submenu__title i {
-        color: var(--aside-font-active-color);
-      }
-
-      .el-menu {
-        background-color: var(--aside-collapse-bg-color);
-      }
-    }
-  }
-}
-
-.el-menu--popup {
-  background-color: var(--aside-collapse-bg-color);
-  .el-menu-item.is-active {
-    padding-right: 20px;
+.el-dialog {
+  background: var(--background-color-secondary, #fff);
+  .el-dialog__title {
+    color: var(--text-color-primary);
   }
 }

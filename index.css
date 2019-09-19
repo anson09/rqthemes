@@ -366,8 +366,8 @@ template {
   --ele-primary-1: hsla(216, 76%, 44%, 1);
   --ele-primary-2: hsla(216, 76%, 44%, 0.2);
   --ele-primary-3: hsla(216, 71%, 47%, 0.8);
-  --ele-primary-shadow-1: hsla(215, 83%, 93%, 1);
-  --ele-primary-shadow-2: hsla(213, 69%, 97%, 1);
+  --ele-primary-shallow-1: hsla(215, 83%, 93%, 1);
+  --ele-primary-shallow-2: hsla(225, 40%, 98%, 1);
   --ele-secondary-1: hsla(
     216,
     73%,
@@ -393,9 +393,11 @@ template {
     1
   );
   --text-color-minor: hsla(223, 22%, 87%, 1);
+  --text-color-menu: hsla(216, 19%, 66%, 1);
   --white: hsla(0, 0%, 100%, 1);
   --grey: hsla(0, 0%, 40%, 1);
   --disable-color: hsla(0, 0%, 100%, 0.8);
+  --disable-primary-color: hsla(220, 11%, 78%, 1);
   --background-color: var(--color-secondary);
   --background-color-secondary: var(--color-minor-1);
   --hover-color: var(--color-primary);
@@ -410,6 +412,7 @@ template {
   --border-hover-color: var(--color-primary);
   --nav-text-color: var(--common-color-1);
   --nav-text-hover-color: var(--white);
+  --nav-text-login-color: hsla(215, 22%, 89%, 1);
   --table-scroll-bg-color: var(--background-color-secondary);
   --table-scroll-track-color: var(--common-color-1);
   --button-default-color: var(--color-primary);
@@ -455,10 +458,8 @@ template {
   --aside-decorator-color: var(--common-color-4);
   --aside-decorator-active-color: var(--ele-primary-1);
   --aside-font-active-color: var(--ele-primary-1);
-  --aside-bg-active-color: var(--ele-primary-shadow-1);
-  --aside-collapse-bg-color: var(
-    --ele-primary-shadow-2
-  );
+  --aside-bg-active-color: hsla(222, 38%, 95%, 1);
+  --aside-collapse-bg-color: hsla(225, 40%, 98%, 1);
   --pagination-text-color: var(--grey);
   --pagination-text-disable-color: var(--disable-color);
   --pagination-text-active-color: var(--white);
@@ -492,8 +493,8 @@ template {
   --ele-primary-1: hsla(201, 87%, 53%, 1);
   --ele-primary-2: hsla(201, 87%, 53%, 0.5);
   --ele-primary-3: hsla(201, 87%, 53%, 0.7);
-  --ele-primary-shadow-1: hsla(201, 87%, 53%, 0.1);
-  --ele-primary-shadow-2: hsla(228, 17%, 12%, 1);
+  --ele-primary-shallow-1: hsla(201, 87%, 53%, 0.1);
+  --ele-primary-shallow-2: hsla(228, 17%, 12%, 1);
   --ele-secondary-1: hsla(201, 100%, 65%, 1);
   --ele-secondary-2: hsla(201, 87%, 53%, 0.5);
   --ele-secondary-3: hsla(201, 87%, 53%, 0.7);
@@ -513,9 +514,11 @@ template {
     89%,
     1
   );
+  --text-color-menu: hsla(216, 19%, 66%, 1);
   --white: hsla(0, 0%, 100%, 1);
   --grey: hsla(213, 14%, 56%, 1);
-  --disable-color: hsla(0, 0%, 100%, 0.5);
+  --disable-color: hsla(221, 15%, 24%, 1);
+  --disable-primary-color: hsla(221, 15%, 24%, 1);
   --background-color: var(--color-secondary);
   --background-color-secondary: var(--color-minor-1);
   --hover-color: var(--color-primary);
@@ -530,6 +533,7 @@ template {
   --border-hover-color: var(--color-primary);
   --nav-text-color: var(--common-color-3);
   --nav-text-hover-color: var(--white);
+  --nav-text-login-color: hsla(215, 22%, 89%, 1);
   --table-scroll-bg-color: var(--background-color-secondary);
   --table-scroll-track-color: var(--grey);
   --button-default-color: var(--color-primary);
@@ -574,9 +578,11 @@ template {
   --aside-decorator-color: var(--common-color-4);
   --aside-decorator-active-color: var(--ele-primary-1);
   --aside-font-active-color: var(--ele-primary-1);
-  --aside-bg-active-color: var(--ele-primary-shadow-1);
+  --aside-bg-active-color: var(
+    --ele-primary-shallow-1
+  );
   --aside-collapse-bg-color: var(
-    --ele-primary-shadow-2
+    --ele-primary-shallow-2
   );
   --pagination-text-color: var(--grey);
   --pagination-text-disable-color: var(--disable-color);
@@ -850,6 +856,95 @@ body {
 .el-date-range-picker.el-popper {
   --arrow-color: var(--border-hover-color);
 }
+.el-date-picker.el-popper .popper__arrow,
+.el-date-range-picker.el-popper .popper__arrow {
+  display: none;
+}
+.el-date-picker.el-popper[x-placement^=top],
+.el-date-range-picker.el-popper[x-placement^=top] {
+  margin-bottom: 2px;
+}
+.el-date-picker.el-popper[x-placement^=bottom],
+.el-date-range-picker.el-popper[x-placement^=bottom] {
+  margin-top: 2px;
+}
+
+.el-menu--vertical .el-menu-item:not(.smallTitle) {
+  width: 140px;
+  height: 32px;
+  line-height: 32px;
+  color: var(--text-color-menu);
+  background-color: var(--aside-collapse-bg-color);
+}
+.el-menu--vertical .el-menu-item:not(.smallTitle).is-active {
+  color: var(--aside-decorator-active-color);
+  background-color: var(--aside-bg-active-color);
+}
+.el-menu--vertical .el-menu-item:not(.smallTitle).is-active::after {
+  opacity: 1;
+}
+.el-menu--vertical .el-menu-item:not(.smallTitle) > span {
+  position: relative;
+  left: 17px;
+  font-size: 14px;
+}
+.el-menu--vertical .el-menu-item:not(.smallTitle)::before {
+  display: none;
+}
+.el-menu--vertical .el-menu-item:not(.smallTitle)::after {
+  position: relative;
+  top: 1px;
+  top: -7px;
+  right: 85px;
+  float: right;
+  margin-top: 20px;
+  font-size: 0;
+  content: "";
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 10px solid var(--aside-decorator-active-color);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateX(-8px);
+}
+.el-menu--vertical .el-menu-item:not(.smallTitle):hover, .el-menu--vertical .el-menu-item:not(.smallTitle):focus {
+  color: var(--aside-font-active-color);
+  background-color: var(--aside-bg-active-color);
+}
+.el-menu--vertical .el-menu-item:not(.smallTitle):hover::after, .el-menu--vertical .el-menu-item:not(.smallTitle):focus::after {
+  opacity: 1;
+}
+.el-menu--vertical .el-menu {
+  position: relative;
+  top: 10px;
+  right: 4px;
+  min-width: 0;
+  padding: 0;
+}
+.el-menu--vertical .el-menu .smallTitle {
+  width: 140px;
+  height: 32px;
+  line-height: 32px;
+  cursor: Default;
+  background-color: var(--aside-bg-color);
+}
+.el-menu--vertical .el-menu .smallTitle > span {
+  position: relative;
+  left: -9px;
+  font-size: 16px;
+  color: var(--aside-decorator-active-color);
+}
+.el-menu--vertical .el-menu .smallTitle > span::after {
+  position: relative;
+  top: 11px;
+  left: 45px;
+  content: "";
+  border-top: 7px solid var(--aside-decorator-active-color);
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  opacity: 1;
+}
 
 .el-date-table th {
   color: var(--text-color-secondary);
@@ -939,6 +1034,19 @@ body {
 .el-select-dropdown.el-popper {
   --arrow-inside-color: var(--select-dropdown-bg-color);
   --arrow-color: var(--border-hover-color);
+  overflow: hidden;
+}
+.el-dropdown-menu.el-popper .popper__arrow,
+.el-select-dropdown.el-popper .popper__arrow {
+  display: none;
+}
+.el-dropdown-menu.el-popper[x-placement^=top],
+.el-select-dropdown.el-popper[x-placement^=top] {
+  margin-bottom: 2px;
+}
+.el-dropdown-menu.el-popper[x-placement^=bottom],
+.el-select-dropdown.el-popper[x-placement^=bottom] {
+  margin-top: 2px;
 }
 .el-dropdown-menu__item.hover,
 .el-select-dropdown__item.hover {
@@ -1104,10 +1212,10 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 .el-tooltip__popper,
 .el-popper {
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--background-color-secondary);
   border-color: var(--border-hover-color);
-  --arrow-color: var(--background-color);
-  --arrow-inside-color: var(--background-color);
+  --arrow-color: var(--border-hover-color);
+  --arrow-inside-color: var(--background-color-secondary);
 }
 .el-tooltip__popper[x-placement^=left] .popper__arrow,
 .el-popper[x-placement^=left] .popper__arrow {
@@ -1144,8 +1252,18 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
 
 .el-tooltip__popper.is-dark {
   color: var(--text-color);
-  background-color: var(--background-color);
-  --arrow-inside-color: var(--background-color);
+  background-color: var(--background-color-secondary);
+  --arrow-inside-color: var(--background-color-secondary);
+  border: 1px solid var(--border-hover-color);
+}
+
+.el-popover {
+  min-width: 0;
+  max-width: 250px;
+  padding: 8px 12px 12px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .el-pagination {
@@ -1202,82 +1320,11 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   width: 60px;
 }
 
-.el-menu {
-  background-color: var(--aside-bg-color);
+.el-dialog {
+  background: var(--background-color-secondary, #fff);
 }
-.el-menu .iconfont {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  vertical-align: top;
-}
-.el-menu .el-menu-item {
-  color: var(--text-color-secondary);
-  transition: border var(--animation-time) ease-in-out;
-}
-.el-menu .el-menu-item:hover, .el-menu .el-menu-item:focus {
-  background-color: var(--aside-bg-active-color);
-}
-.el-menu .el-menu-item::after {
-  float: right;
-  margin-top: 20px;
-  font-size: 0;
-  content: "";
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  border-left: 10px solid var(--aside-decorator-active-color);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  -webkit-transform: translateX(-8px);
-          transform: translateX(-8px);
-}
-.el-menu .el-menu-item.is-active {
-  color: var(--aside-font-active-color);
-  background-color: var(--aside-bg-active-color);
-}
-.el-menu .el-menu-item.is-active::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  content: "";
-  border-left: 5px solid var(--aside-decorator-active-color);
-}
-.el-menu .el-menu-item.is-active::after {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-.el-menu .el-submenu .el-submenu__title {
-  color: var(--text-color);
-}
-.el-menu .el-submenu .el-submenu__title:hover {
-  background-color: var(--aside-bg-active-color);
-}
-.el-menu .el-submenu.is-active .el-submenu__title {
-  color: var(--aside-font-active-color);
-}
-.el-menu .el-submenu.is-active .el-submenu__title i {
-  color: inherit;
-}
-.el-menu .el-submenu.is-opened {
-  background-color: var(--aside-collapse-bg-color);
-}
-.el-menu .el-submenu.is-opened > .el-submenu__title, .el-menu .el-submenu.is-opened > .el-submenu__title i {
-  color: var(--aside-font-active-color);
-}
-.el-menu .el-submenu.is-opened .el-menu {
-  background-color: var(--aside-collapse-bg-color);
-}
-
-.el-menu--popup {
-  background-color: var(--aside-collapse-bg-color);
-}
-.el-menu--popup .el-menu-item.is-active {
-  padding-right: 20px;
+.el-dialog .el-dialog__title {
+  color: var(--text-color-primary);
 }
 
 .highcharts-tree-node-title text {
@@ -1571,8 +1618,20 @@ div.el-table--enable-row-hover .el-table__body tr:hover > td > div.cell > a {
   stroke-width: 3;
 }
 
+.highcharts-point-inactive {
+  opacity: 0.2;
+  transition: opacity 50ms;
+  /* quick in */
+}
+
+.highcharts-series-inactive {
+  opacity: 0.2;
+  transition: opacity 50ms;
+  /* quick in */
+}
+
 .highcharts-state-hover path {
-  transition: stroke-width 50;
+  transition: stroke-width 50ms;
   /* quick in */
 }
 
@@ -1803,6 +1862,16 @@ g.highcharts-series,
 
 .highcharts-treemap-series .highcharts-internal-node-interactive:hover {
   fill-opacity: 0.75;
+}
+
+.highcharts-vector-series .highcharts-point {
+  fill: none;
+  stroke-width: 2px;
+}
+
+.highcharts-windbarb-series .highcharts-point {
+  fill: none;
+  stroke-width: 2px;
 }
 
 /* Legend */
