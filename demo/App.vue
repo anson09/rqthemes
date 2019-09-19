@@ -1,7 +1,7 @@
 <style lang="scss">
 @import "@rqjs/rqcomponents/packages/common/assets/icon/iconfont.css";
 * {
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .component {
@@ -134,6 +134,7 @@
         <el-row>
           <el-input-number
             v-model="inputNumber"
+            controls-position="right"
             :min="1"
             :max="10"
           ></el-input-number>
@@ -200,18 +201,30 @@
         </el-row>
         <h4>Table</h4>
         <el-row>
-          <el-table :data="tableData" style="width: 70%">
-            <el-table-column
-              prop="date"
-              label="Date"
-              width="180"
-            ></el-table-column>
-            <el-table-column
-              prop="name"
-              label="Name"
-              width="180"
-            ></el-table-column>
-            <el-table-column prop="address" label="Address"></el-table-column>
+          <el-table :data="tableData" border style="width: 600px">
+            <el-table-column fixed prop="date" label="日期" width="150">
+            </el-table-column>
+            <el-table-column prop="name" label="姓名" width="120">
+            </el-table-column>
+            <el-table-column prop="province" label="省份" width="120">
+            </el-table-column>
+            <el-table-column prop="city" label="市区" width="120">
+            </el-table-column>
+            <el-table-column prop="address" label="地址" width="300">
+            </el-table-column>
+            <el-table-column prop="zip" label="邮编" width="120">
+            </el-table-column>
+            <el-table-column fixed="right" label="操作" width="100">
+              <template slot-scope="scope">
+                <el-button
+                  @click="handleClick(scope.row)"
+                  type="text"
+                  size="small"
+                  >查看</el-button
+                >
+                <el-button type="text" size="small">编辑</el-button>
+              </template>
+            </el-table-column>
           </el-table>
         </el-row>
         <h4>Tag</h4>
@@ -235,6 +248,7 @@
         <h4>Pagination</h4>
         <el-row>
           <el-pagination
+            background
             layout="prev, pager, next"
             :total="1000"
           ></el-pagination>
@@ -622,73 +636,73 @@ export default {
   },
   data() {
     return {
-      radio: '1',
-      radio1: 'Washington',
-      radio2: '1',
+      radio: "1",
+      radio1: "Washington",
+      radio2: "1",
       checked: true,
-      checked1: ['Shanghai'],
+      checked1: ["Shanghai"],
       checked2: true,
-      input: 'Element',
+      input: "Element",
       inputNumber: 1,
       selectOptions: [
         {
-          value: 'Option1',
-          label: 'Option1'
+          value: "Option1",
+          label: "Option1"
         },
         {
-          value: 'Option2',
-          label: 'Option2'
+          value: "Option2",
+          label: "Option2"
         },
         {
-          value: 'Option3',
-          label: 'Option3'
+          value: "Option3",
+          label: "Option3"
         },
         {
-          value: 'Option4',
-          label: 'Option4'
+          value: "Option4",
+          label: "Option4"
         },
         {
-          value: 'Option5',
-          label: 'Option5'
+          value: "Option5",
+          label: "Option5"
         }
       ],
-      selectValue: '',
+      selectValue: "",
       cascadeOptions: [
         {
-          value: 'guide',
-          label: 'Guide',
+          value: "guide",
+          label: "Guide",
           children: [
             {
-              value: 'disciplines',
-              label: 'Disciplines',
+              value: "disciplines",
+              label: "Disciplines",
               children: [
                 {
-                  value: 'consistency',
-                  label: 'Consistency'
+                  value: "consistency",
+                  label: "Consistency"
                 },
                 {
-                  value: 'feedback',
-                  label: 'Feedback'
+                  value: "feedback",
+                  label: "Feedback"
                 }
               ]
             }
           ]
         },
         {
-          value: 'resource',
-          label: 'Resource',
+          value: "resource",
+          label: "Resource",
           children: [
             {
-              value: 'axure',
-              label: 'Axure Components'
+              value: "axure",
+              label: "Axure Components"
             },
             {
-              value: 'sketch',
-              label: 'Sketch Templates'
+              value: "sketch",
+              label: "Sketch Templates"
             },
             {
-              value: 'docs',
-              label: 'Design Documentation'
+              value: "docs",
+              label: "Design Documentation"
             }
           ]
         }
@@ -696,7 +710,7 @@ export default {
       cascaderValue: [],
       switchValue: true,
       slider: 28,
-      datePicker: '',
+      datePicker: "",
       rate: null,
       transferData: (() => {
         const data = [];
@@ -712,70 +726,105 @@ export default {
       transfer: [1, 4],
       tableData: [
         {
-          date: '2016-05-03',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
+          date: "2016-05-02",
+          name: "王小虎",
+          province: "上海",
+          city: "普陀区",
+          address: "上海市普陀区金沙江路 1518 弄",
+          zip: 200333
         },
         {
-          date: '2016-05-02',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
+          date: "2016-05-04",
+          name: "王小虎",
+          province: "上海",
+          city: "普陀区",
+          address: "上海市普陀区金沙江路 1517 弄",
+          zip: 200333
         },
         {
-          date: '2016-05-04',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
+          date: "2016-05-01",
+          name: "王小虎",
+          province: "上海",
+          city: "普陀区",
+          address: "上海市普陀区金沙江路 1519 弄",
+          zip: 200333
         },
         {
-          date: '2016-05-01',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
+          date: "2016-05-03",
+          name: "王小虎",
+          province: "上海",
+          city: "普陀区",
+          address: "上海市普陀区金沙江路 1516 弄",
+          zip: 200333
         }
       ],
-      menu: '1',
-      tab: 'first',
-      collapse: ['1'],
-      treeData: [{
-        label: 'Level one 1',
-        children: [{
-          label: 'Level two 1-1',
-          children: [{
-            label: 'Level three 1-1-1'
-          }]
-        }]
-      }, {
-        label: 'Level one 2',
-        children: [{
-          label: 'Level two 2-1',
-          children: [{
-            label: 'Level three 2-1-1'
-          }]
-        }, {
-          label: 'Level two 2-2',
-          children: [{
-            label: 'Level three 2-2-1'
-          }]
-        }]
-      }, {
-        label: 'Level one 3',
-        children: [{
-          label: 'Level two 3-1',
-          children: [{
-            label: 'Level three 3-1-1'
-          }]
-        }, {
-          label: 'Level two 3-2',
-          children: [{
-            label: 'Level three 3-2-1'
-          }]
-        }]
-      }],
+      menu: "1",
+      tab: "first",
+      collapse: ["1"],
+      treeData: [
+        {
+          label: "Level one 1",
+          children: [
+            {
+              label: "Level two 1-1",
+              children: [
+                {
+                  label: "Level three 1-1-1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          label: "Level one 2",
+          children: [
+            {
+              label: "Level two 2-1",
+              children: [
+                {
+                  label: "Level three 2-1-1"
+                }
+              ]
+            },
+            {
+              label: "Level two 2-2",
+              children: [
+                {
+                  label: "Level three 2-2-1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          label: "Level one 3",
+          children: [
+            {
+              label: "Level two 3-1",
+              children: [
+                {
+                  label: "Level three 3-1-1"
+                }
+              ]
+            },
+            {
+              label: "Level two 3-2",
+              children: [
+                {
+                  label: "Level three 3-2-1"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       defaultTreeProps: {
-        children: 'children',
-        label: 'label'
+        children: "children",
+        label: "label"
       },
       avatarData: {
-        url: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'
+        url:
+          "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
       }
     };
   },

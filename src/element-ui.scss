@@ -81,13 +81,16 @@
       }
     }
 
-    &__input.is-checked + .el-radio__label {
-      color: var(--hover-color);
-    }
-
-    &__input.is-checked .el-radio__inner {
-      background-color: var(--button-ghost-text-color);
-      border-color: var(--button-ghost-border-color);
+    &__input {
+      &.is-checked {
+        + .el-radio__label {
+          color: var(--hover-color);
+        }
+        .el-radio__inner {
+          background-color: var(--button-ghost-text-color);
+          border-color: var(--button-ghost-border-color);
+        }
+      }
     }
 
     &__input.is-disabled .el-radio__inner {
@@ -98,6 +101,9 @@
     &__input.is-disabled + span#{&}__label {
       color: var(--button-ghost-text-disabled-color);
     }
+    // &-button {
+    //
+    // }
 
     &__input,
     &-button {
@@ -121,14 +127,9 @@
         border-color: var(--button-ghost-border-color);
         box-shadow: -1px 0 0 0 var(--button-color);
       }
-    }
 
-    &-button:first-child {
-      .el-radio-button__inner {
-        border: 1px solid var(--border-color);
-      }
-      .el-radio__orig-radio:checked + .el-radio-button__inner {
-        border-color: var(--button-ghost-border-color);
+      &.is-active:hover .el-radio-button__inner {
+        color: #1b5fc4;
       }
     }
   }
@@ -463,7 +464,6 @@
   }
 
   .el-message-box {
-    background-color: var(--background-color);
     border-color: var(--border-color);
 
     &__title {
@@ -783,6 +783,7 @@
       height: 30px;
       padding: 0;
       margin-right: 12px;
+      line-height: 30px;
       color: var(--pagination-text-color);
     }
     button {
