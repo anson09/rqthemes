@@ -2,4 +2,6 @@
 .vscode
 node_modules
 .cache
-.depversion
+.depVersion
+yarn.lock
+dist

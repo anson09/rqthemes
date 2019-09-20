@@ -33,7 +33,6 @@
   --common-color-2: hsla(226, 14%, 24%, 1); //表格里隔行颜色
   --common-color-3: hsla(213, 14%, 56%, 1); //表格表头字体
   --common-color-4: hsla(216, 22%, 25%, 1); //aside 折叠条颜色
-  --ele-radius: 4px; // 组件/浮层圆角
   --border-color-primary: hsla(216, 22%, 25%, 1); // 组件边框
   --border-color-secondray: hsla(216, 22%, 25%, 1); // 表格线条
   --text-color-primary: hsla(
@@ -150,4 +149,6 @@
   ); // 激活的二级tab标题字体颜色
 
   --popover-border-color: var(--color-primary);
+  --arrow-color: var(--hover-color);
+  --arrow-inside-color: var(--background-color-secondary);
 }

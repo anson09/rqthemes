@@ -1,22 +1,158 @@
-.el-tag {
-  &.stock {
-    color: #dc4f4f;
-    background-color: #fdeeee;
-  }
-
-  &.bond {
-    color: #ec9f21;
-    background-color: #fef5e7;
-  }
+/* stylelint-disable no-descending-specificity */
+.theme-dark {
+  @import "./dark/index.scss";
 }
 
-.el-tree {
-  background-color: inherit;
+.theme-light {
+  @import "./light/index.scss";
 }
+/* stylelint-enable */
 
-// vars
-.el-button-group {
-  .el-button {
+.theme-light,
+.theme-dark {
+  .el-tag {
+    &.stock {
+      color: #dc4f4f;
+      background-color: #fdeeee;
+    }
+
+    &.bond {
+      color: #ec9f21;
+      background-color: #fef5e7;
+    }
+  }
+
+  .el-tree {
+    background: transparent;
+  }
+
+  // vars
+  .el-button-group {
+    .el-button {
+      color: var(--button-default-text-color);
+      background-color: var(--button-default-color);
+      border-color: var(--border-color);
+
+      &:focus,
+      &:active {
+        color: var(--button-default-text-color);
+        background-color: var(--button-default-color);
+      }
+
+      &:hover {
+        color: var(--button-default-text-hover-color);
+        background-color: var(--button-default-hover-color);
+        border-color: var(--border-hover-color);
+      }
+
+      &.is-disabled {
+        color: var(--button-default-text-color);
+        background-color: var(--button-default-disabled-color);
+        border-color: var(--border-color);
+
+        &:focus,
+        &:active,
+        &:hover {
+          color: var(--button-default-text-color);
+          background-color: var(--button-default-disabled-color);
+        }
+      }
+    }
+  }
+
+  .el-range-input {
+    background-color: var(--background-color-secondary);
+  }
+  .el-radio {
+    &__label {
+      color: var(--text-color-secondary);
+    }
+
+    &-group {
+      background-color: var(--background-color-secondary);
+    }
+
+    &.is-bordered {
+      &.is-checked {
+        border-color: var(--border-hover-color);
+      }
+      &.is-disabled {
+        border-color: var(--button-ghost-text-disabled-color);
+      }
+    }
+
+    &__input {
+      &.is-checked {
+        + .el-radio__label {
+          color: var(--hover-color);
+        }
+        .el-radio__inner {
+          background-color: var(--button-ghost-text-color);
+          border-color: var(--button-ghost-border-color);
+        }
+      }
+    }
+
+    &__input.is-disabled .el-radio__inner {
+      background-color: var(--background-color-secondary);
+      border-color: var(--button-ghost-border-disabled-color);
+    }
+
+    &__input.is-disabled + span#{&}__label {
+      color: var(--button-ghost-text-disabled-color);
+    }
+    // &-button {
+    //
+    // }
+
+    &__input,
+    &-button {
+      color: var(--button-ghost-text-disabled-color);
+      background: transparent;
+      border-color: var(--button-ghost-text-disabled-color);
+
+      &__inner {
+        color: var(--text-color-secondary);
+        background: transparent;
+        border: 1px solid var(--border-color);
+
+        &:hover {
+          color: var(--hover-color);
+        }
+      }
+
+      &__orig-radio:checked + .el-radio-button__inner {
+        color: var(--button-ghost-text-hover-color);
+        background-color: var(--button-ghost-color);
+        border-color: var(--button-ghost-border-color);
+        box-shadow: -1px 0 0 0 var(--button-color);
+      }
+
+      &.is-active:hover .el-radio-button__inner {
+        color: #1b5fc4;
+      }
+    }
+  }
+
+  .el-button--danger {
+    &.is-plain {
+      color: var(--color-danger);
+      background: inherit;
+      border-color: var(--color-danger);
+
+      &:active {
+        color: var(--color-danger);
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--white);
+        background: var(--color-danger);
+      }
+    }
+  }
+
+  .el-button--default {
     color: var(--button-default-text-color);
     background-color: var(--button-default-color);
     border-color: var(--border-color);
@@ -24,7 +160,8 @@
     &:focus,
     &:active {
       color: var(--button-default-text-color);
-      background-color: var(--button-default-color);
+      background-color: var(--button-default-click-color);
+      border-color: var(--border-color);
     }
 
     &:hover {
@@ -34,216 +171,106 @@
     }
 
     &.is-disabled {
-      // color: var(--button-default-text-color);
-      background-color: var(--button-default-disabled-color);
-      border-color: var(--border-color);
-
-      &:focus,
-      &:active,
-      &:hover {
-        color: var(--button-default-text-color);
-        background-color: var(--button-default-disabled-color);
-      }
-    }
-  }
-}
-
-.el-range-input {
-  background-color: var(--background-color-secondary);
-}
-.el-radio {
-  &__label {
-    color: var(--text-color-secondary);
-  }
-
-  &-group {
-    background-color: var(--background-color-secondary);
-  }
-
-  &.is-bordered {
-    &.is-checked {
-      border-color: var(--border-hover-color);
-    }
-    &.is-disabled {
-      border-color: var(--button-ghost-text-disabled-color);
-    }
-  }
-
-  &__input.is-checked + &__label {
-    color: var(--hover-color);
-  }
-
-  &__input.is-checked &__inner {
-    background-color: var(--button-ghost-text-color);
-    border-color: var(--button-ghost-border-color);
-  }
-
-  &__input.is-disabled &__inner {
-    background-color: var(--background-color-secondary);
-    border-color: var(--button-ghost-border-disabled-color);
-  }
-
-  &__input.is-disabled + span#{&}__label {
-    color: var(--button-ghost-text-disabled-color);
-  }
-
-  &__input,
-  &-button {
-    color: var(--button-ghost-text-disabled-color);
-    background-color: inherit;
-    border-color: var(--button-ghost-text-disabled-color);
-
-    &__inner {
-      color: var(--text-color-secondary);
-      background-color: inherit;
-      border: 1px solid var(--border-color);
-
-      &:hover {
-        color: var(--hover-color);
-      }
-    }
-
-    &__orig-radio:checked + &__inner {
-      color: var(--button-ghost-text-hover-color);
-      background-color: var(--button-ghost-color);
-      border-color: var(--button-ghost-border-color);
-      box-shadow: -1px 0 0 0 var(--button-color);
-    }
-  }
-
-  &-button:first-child {
-    .el-radio-button__inner {
-      border: 1px solid var(--border-color);
-    }
-    .el-radio__orig-radio:checked + .el-radio-button__inner {
-      border-color: var(--button-ghost-border-color);
-    }
-  }
-}
-
-.el-button--danger {
-  &.is-plain {
-    color: var(--color-danger);
-    background: inherit;
-    border-color: var(--color-danger);
-
-    &:active {
-      color: var(--color-danger);
-    }
-
-    &:hover,
-    &:focus {
-      color: var(--white);
-      background: var(--color-danger);
-    }
-  }
-}
-
-.el-button--default {
-  color: var(--button-default-text-color);
-  background-color: var(--button-default-color);
-  border-color: var(--border-color);
-
-  &:focus,
-  &:active {
-    color: var(--button-default-text-color);
-    background-color: var(--button-default-click-color);
-    border-color: var(--border-color);
-  }
-
-  &:hover {
-    color: var(--button-default-text-hover-color);
-    background-color: var(--button-default-hover-color);
-    border-color: var(--border-hover-color);
-  }
-
-  &.is-disabled {
-    color: var(--button-default-text-disabled-color);
-    background-color: var(--button-default-disabled-color);
-    border-color: var(--border-color);
-
-    &:hover {
       color: var(--button-default-text-disabled-color);
       background-color: var(--button-default-disabled-color);
       border-color: var(--border-color);
-    }
-  }
-
-  &.is-plain {
-    color: var(--button-ghost-text-color);
-    background-color: inherit;
-    border-color: var(--button-ghost-border-color);
-
-    &:focus,
-    &:active {
-      color: var(--button-ghost-text-color);
-      background-color: var(--button-ghost-click-color);
-      border-color: var(--button-ghost-border-color);
-    }
-
-    &:hover {
-      color: var(--button-ghost-text-hover-color);
-      background-color: var(--button-ghost-hover-color);
-      border-color: var(--button-ghost-border-color);
-    }
-
-    &.is-loading {
-      color: var(--button-ghost-text-color);
-      background-color: var(--button-ghost-hover-color);
-      border-color: var(--button-ghost-border-color);
-    }
-
-    &.is-disabled {
-      color: var(--button-ghost-text-disabled-color);
-      background-color: var(--button-ghost-disabled-color);
-      border-color: var(--button-ghost-text-disabled-color);
 
       &:hover {
+        color: var(--button-default-text-disabled-color);
+        background-color: var(--button-default-disabled-color);
+        border-color: var(--border-color);
+      }
+    }
+
+    &.is-plain {
+      color: var(--button-ghost-text-color);
+      background: transparent;
+      border-color: var(--button-ghost-border-color);
+
+      &:focus,
+      &:active {
+        color: var(--button-ghost-text-color);
+        background-color: var(--button-ghost-click-color);
+        border-color: var(--button-ghost-border-color);
+      }
+
+      &:hover {
+        color: var(--button-ghost-text-hover-color);
+        background-color: var(--button-ghost-hover-color);
+        border-color: var(--button-ghost-border-color);
+      }
+
+      &.is-loading {
+        color: var(--button-ghost-text-color);
+        background-color: var(--button-ghost-hover-color);
+        border-color: var(--button-ghost-border-color);
+      }
+
+      &.is-disabled {
         color: var(--button-ghost-text-disabled-color);
         background-color: var(--button-ghost-disabled-color);
         border-color: var(--button-ghost-text-disabled-color);
+
+        &:hover {
+          color: var(--button-ghost-text-disabled-color);
+          background-color: var(--button-ghost-disabled-color);
+          border-color: var(--button-ghost-text-disabled-color);
+        }
       }
     }
   }
-}
 
-.el-textarea__inner {
-  background-color: var(--background-color-secondary);
-  border: 1px solid var(--border-color);
-  border-color: var(--border-color-primary);
-  &:focus {
-    border: 1px solid var(--color-primary);
-    border-color: var(--color-primary);
+  .el-textarea__inner {
+    background-color: var(--background-color-secondary);
+    border: 1px solid var(--border-color);
+    border-color: var(--border-color-primary);
+    &:focus {
+      border: 1px solid var(--color-primary);
+      border-color: var(--color-primary);
+    }
+    &:hover {
+      color: var(--color-primary);
+    }
   }
-  &:hover {
-    color: var(--color-primary);
-  }
-}
 
-.el-checkbox {
-  color: var(--text-color);
-
-  &__label {
+  .el-checkbox {
     color: var(--text-color);
-  }
 
-  &__input.is-checked + &__label {
-    color: var(--checkbox-color);
-  }
+    &__label {
+      color: var(--text-color);
+    }
 
-  &__inner,
-  &__input {
-    &.is-checked,
-    &.is-indeterminate {
-      border-color: var(--border-hover-color);
-
-      span.el-checkbox__inner {
-        background-color: var(--checkbox-color);
+    &__inner,
+    &__input {
+      &.is-checked,
+      &.is-indeterminate {
         border-color: var(--border-hover-color);
 
-        &:before {
-          background-color: var(--checkbox-inner-color);
+        span.el-checkbox__inner {
+          background-color: var(--checkbox-color);
+          border-color: var(--border-hover-color);
+
+          &:before {
+            background-color: var(--checkbox-inner-color);
+          }
+          &:after {
+            border-color: var(--checkbox-inner-color);
+          }
+
+          &.is-focus {
+            border-color: var(--checkbox-inner-color);
+          }
         }
+
+        & + .el-checkbox__label {
+          color: var(--checkbox-color);
+        }
+      }
+
+      span#{&}__inner {
+        background-color: var(--background-color-secondary);
+        border-color: var(--border-color);
+
         &:after {
           border-color: var(--checkbox-inner-color);
         }
@@ -252,533 +279,539 @@
           border-color: var(--checkbox-inner-color);
         }
       }
-
-      & + .el-checkbox__label {
-        color: var(--checkbox-color);
-      }
     }
 
-    span#{&}__inner {
-      background-color: var(--background-color-secondary);
-      border-color: var(--border-color);
-
-      &:after {
-        border-color: var(--checkbox-inner-color);
-      }
-
-      &.is-focus {
-        border-color: var(--checkbox-inner-color);
-      }
+    &__input.is-checked + .el-checkbox__label {
+      color: var(--checkbox-color);
     }
   }
-}
 
-.el-date-picker,
-.el-date-range-picker {
-  &__time-header {
-    border-color: var(--border-color);
-  }
-
-  &__content {
-    &.is-left,
-    &.is-right {
+  .el-date-picker,
+  .el-date-range-picker {
+    &__time-header {
       border-color: var(--border-color);
     }
-  }
-  &.el-popper {
-    --arrow-color: var(--border-hover-color);
-  }
-}
 
-.el-menu--vertical {
-  .el-menu-item:not(.smallTitle) {
-    width: 140px;
-    height: 32px;
-    line-height: 32px;
-    color: var(--text-color-menu);
-    background-color: var(--aside-collapse-bg-color);
-    &.is-active {
-      color: var(--aside-decorator-active-color);
-      background-color: var(--aside-bg-active-color);
-      &::after {
-        opacity: 1;
+    &__content {
+      &.is-left,
+      &.is-right {
+        border-color: var(--border-color);
       }
     }
-    & > span {
-      position: relative;
-      left: 17px;
-      font-size: 14px;
-    }
-    &::before {
-      display: none;
-    }
-    &::after {
-      position: relative;
-      top: 1px;
-      top: -7px;
-      right: 85px;
-      float: right;
-      margin-top: (50px - 10px) / 2;
-      font-size: 0;
-      content: "";
-      border-top: 4px solid transparent;
-      border-bottom: 4px solid transparent;
-      border-left: 10px solid var(--aside-decorator-active-color);
-      opacity: 0;
-      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-      transform: translateX(-8px);
-    }
-    &:hover,
-    &:focus {
-      color: var(--aside-font-active-color);
-      background-color: var(--aside-bg-active-color);
-      &::after {
-        opacity: 1;
+    &.el-popper {
+      --arrow-color: var(--border-hover-color);
+      .popper__arrow {
+        display: none;
+      }
+      &[x-placement^="top"] {
+        margin-bottom: 2px;
+      }
+      &[x-placement^="bottom"] {
+        margin-top: 2px;
       }
     }
   }
-  .el-menu {
-    position: relative;
-    top: 10px;
-    right: 4px;
-    min-width: 0;
-    padding: 0;
-    .smallTitle {
+
+  .el-menu--vertical {
+    .el-menu-item:not(.smallTitle) {
       width: 140px;
       height: 32px;
       line-height: 32px;
-      cursor: Default;
-      background-color: var(--aside-bg-color);
+      color: var(--text-color-menu);
+      background-color: var(--aside-collapse-bg-color);
+      &.is-active {
+        color: var(--aside-decorator-active-color);
+        background-color: var(--aside-bg-active-color);
+        &::after {
+          opacity: 1;
+        }
+      }
       & > span {
         position: relative;
-        left: -9px;
-        font-size: 16px;
-        color: var(--aside-decorator-active-color);
+        left: 17px;
+        font-size: 14px;
+      }
+      &::before {
+        display: none;
+      }
+      &::after {
+        position: relative;
+        top: 1px;
+        top: -7px;
+        right: 85px;
+        float: right;
+        margin-top: (50px - 10px) / 2;
+        font-size: 0;
+        content: "";
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 10px solid var(--aside-decorator-active-color);
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transform: translateX(-8px);
+      }
+      &:hover,
+      &:focus {
+        color: var(--aside-font-active-color);
+        background-color: var(--aside-bg-active-color);
         &::after {
-          position: relative;
-          top: 11px;
-          left: 45px;
-          content: "";
-          border-top: 7px solid var(--aside-decorator-active-color);
-          border-right: 5px solid transparent;
-          border-bottom: 5px solid transparent;
-          border-left: 5px solid transparent;
           opacity: 1;
         }
       }
     }
-  }
-}
-
-.el-date-table {
-  th {
-    color: var(--text-color-secondary);
-    border-color: var(--border-color);
-  }
-  td {
-    color: var(--text-color-secondary);
-
-    &.current:not(.disabled) span {
-      color: var(--date-table-current-text-color);
-      background-color: var(--date-table-current-color);
+    .el-menu {
+      position: relative;
+      top: 10px;
+      right: 4px;
+      min-width: 0;
+      padding: 0;
+      .smallTitle {
+        width: 140px;
+        height: 32px;
+        line-height: 32px;
+        cursor: Default;
+        background-color: var(--aside-bg-color);
+        & > span {
+          position: relative;
+          left: -9px;
+          font-size: 16px;
+          color: var(--aside-decorator-active-color);
+          &::after {
+            position: relative;
+            top: 11px;
+            left: 45px;
+            content: "";
+            border-top: 7px solid var(--aside-decorator-active-color);
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid transparent;
+            opacity: 1;
+          }
+        }
+      }
     }
+  }
 
-    &.available {
-      color: var(--text-color);
+  .el-date-table {
+    th {
+      color: var(--text-color-secondary);
+      border-color: var(--border-color);
+    }
+    td {
+      color: var(--text-color-secondary);
 
-      &:nth-child(1),
-      &:nth-child(7) {
-        color: var(--date-table-current-color);
+      &.current:not(.disabled) span {
+        color: var(--date-table-current-text-color);
+        background-color: var(--date-table-current-color);
+      }
+
+      &.available {
+        color: var(--text-color);
+
+        &:nth-child(1),
+        &:nth-child(7) {
+          color: var(--date-table-current-color);
+        }
+      }
+
+      &.disabled div {
+        background-color: var(--background-color-secondary);
+      }
+    }
+  }
+
+  .el-input {
+    &__inner {
+      color: var(--input-text-color);
+      background-color: var(--input-color);
+      border-color: var(--border-color);
+      &:hover {
+        border-color: var(--border-hover-color);
       }
     }
 
-    &.disabled div {
+    &.is-disabled {
+      .el-input__inner {
+        color: var(--input-text-disabled-color);
+        background-color: var(--background-color-secondary);
+        border-color: var(--border-color);
+      }
+    }
+
+    &:hover .el-input__inner {
+      border-color: var(--border-hover-color);
+    }
+
+    &-group__append {
+      color: var(--input-text-color);
+      background-color: var(--input-color);
+      border-color: var(--border-color);
+    }
+  }
+
+  .el-form-item {
+    &.is-success .el-input__inner {
+      border-color: var(--color-success);
+    }
+
+    &.is-error .el-input__inner {
+      border-color: var(--color-danger);
+    }
+
+    &__label {
+      color: var(--text-color);
+    }
+  }
+
+  .el-message-box {
+    border-color: var(--border-color);
+
+    &__title {
+      color: var(--text-color);
+    }
+
+    &__content {
+      color: var(--text-color-secondary);
+    }
+  }
+
+  .el-input-number.is-controls-right {
+    .el-input-number__decrease,
+    .el-input-number__increase {
+      color: var(--input-text-color);
+      background-color: var(--input-color);
+      border-color: var(--border-color);
+    }
+  }
+
+  .el-loading-mask {
+    background-color: var(--background-color-secondary);
+  }
+
+  .el-dropdown-menu,
+  .el-select-dropdown {
+    background-color: var(--select-dropdown-bg-color);
+    border-color: var(--border-hover-color);
+    &__list {
+      background-color: var(--select-dropdown-bg-color);
+    }
+
+    &.el-popper {
+      --arrow-inside-color: var(--select-dropdown-bg-color);
+      --arrow-color: var(--border-hover-color);
+      overflow: hidden;
+      .popper__arrow {
+        display: none;
+      }
+      &[x-placement^="top"] {
+        margin-bottom: 2px;
+      }
+      &[x-placement^="bottom"] {
+        margin-top: 2px;
+      }
+    }
+
+    &__item.hover {
+      background-color: var(--select-dropdown-bg-hover-color);
+    }
+
+    &__item,
+    &.is-multiple .el-dropdown__item,
+    &.is-multiple .el-select-dropdown__item {
+      color: var(--select-text-color);
+      background-color: var(--select-dropdown-bg-color);
+
+      &:not(.is-disabled):hover {
+        background-color: var(--select-dropdown-bg-hover-color);
+      }
+
+      &.selected {
+        color: var(--select-text-hover-color);
+        background-color: var(--select-dropdown-bg-hover-color);
+        &.hover {
+          background-color: var(--select-dropdown-bg-hover-color);
+        }
+      }
+    }
+  }
+
+  .el-select {
+    &-group__wrap:not(:last-of-type)::after {
+      background: var(--border-color);
+    }
+
+    &:active,
+    &:hover {
+      .el-input__inner {
+        border-color: var(--border-hover-color);
+      }
+    }
+
+    .el-tag {
+      color: var(--text-color-secondary);
+      background-color: var(--background-color);
+      border-color: transparent;
+      .el-tag__close.el-icon-close {
+        color: var(--background-color);
+        background-color: var(--text-color-secondary);
+        &:hover {
+          background-color: var(--text-color);
+        }
+      }
+    }
+  }
+
+  div.el-tabs {
+    &.el-tabs--top {
+      color: var(--color-primary);
+      background-color: var(--background-color-secondary, #fff);
+
+      .el-form-item__label {
+        color: var(--text-color);
+      }
+    }
+
+    .el-tabs__active-bar {
+      background-color: var(--color-primary);
+    }
+
+    .el-tabs__item {
+      color: var(--text-color-secondary);
+      &:hover,
+      &.is-active {
+        color: var(--tabs-active-color);
+      }
+      &.is-disabled {
+        color: var(--button-ghost-disabled-color);
+        &:hover {
+          color: var(--button-ghost-disabled-color);
+        }
+      }
+    }
+  }
+
+  .el-table {
+    background-color: var(--table-color);
+
+    &::before {
+      background-color: var(--border-color);
+    }
+
+    thead {
+      color: var(--table-head-text-color);
+    }
+
+    tr th {
+      background-color: var(--table-head-bg-color);
+      border-right-color: var(--border-color);
+
+      &.is-leaf {
+        border-bottom-color: var(--border-color);
+      }
+    }
+
+    tr {
+      background-color: var(--table-color);
+    }
+
+    td {
+      color: var(--text-color-secondary);
+      border-color: var(--border-color);
+    }
+
+    .hover-row:hover td {
+      background-color: var(--background-color);
+    }
+
+    tr.summary-row {
+      background-color: var(--background-color);
+    }
+
+    &__body-wrapper {
+      &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        padding: 10px;
+        margin: 10px;
+        background-color: var(--table-scroll-bg-color);
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: var(--table-scroll-bg-color);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--table-scroll-track-color);
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    &--border {
+      border-color: var(--border-color);
+
+      &::after {
+        background-color: var(--border-color);
+      }
+    }
+
+    &--striped .el-table__body tr.el-table__row--striped td {
+      background-color: var(--background-color-secondary);
+    }
+
+    .el-table--enable-row-hover .el-table__body tr:hover > td {
+      & > div.cell > a {
+        color: var(--hover-color);
+      }
+
+      background-color: var(--background-color);
+    }
+  }
+
+  .el-tree-node {
+    &__content:hover {
+      background-color: var(--background-color-secondary);
+    }
+
+    &:focus &__content {
       background-color: var(--background-color-secondary);
     }
   }
-}
 
-.el-input {
-  &__inner {
-    color: var(--input-text-color);
-    background-color: var(--input-color);
-    border-color: var(--border-color);
-    &:hover {
-      border-color: var(--border-hover-color);
+  .el-picker-panel {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border-color: var(--border-hover-color);
+
+    &__icon-btn {
+      color: var(--text-color);
     }
-  }
 
-  &.is-disabled {
-    .el-input__inner {
-      color: var(--input-text-disabled-color);
+    .el-date-picker__header-label {
+      color: var(--text-color);
+    }
+    &__footer {
       background-color: var(--background-color-secondary);
       border-color: var(--border-color);
     }
   }
 
-  &:hover &__inner {
+  .el-tooltip__popper,
+  .el-popper {
+    color: var(--text-color);
+    background-color: var(--background-color-secondary);
     border-color: var(--border-hover-color);
-  }
-
-  &-group__append {
-    color: var(--input-text-color);
-    background-color: var(--input-color);
-    border-color: var(--border-color);
-  }
-}
-
-.el-form-item {
-  &.is-success .el-input__inner {
-    border-color: var(--color-success);
-  }
-
-  &.is-error .el-input__inner {
-    border-color: var(--color-danger);
-  }
-
-  &__label {
-    color: var(--text-color);
-  }
-}
-
-.el-message-box {
-  background-color: var(--background-color);
-  border-color: var(--border-color);
-
-  &__title {
-    color: var(--text-color);
-  }
-
-  &__content {
-    color: var(--text-color-secondary);
-  }
-}
-
-.el-input-number.is-controls-right {
-  .el-input-number__decrease,
-  .el-input-number__increase {
-    color: var(--input-text-color);
-    background-color: var(--input-color);
-    border-color: var(--border-color);
-  }
-}
-
-.el-loading-mask {
-  background-color: var(--background-color-secondary);
-}
-
-.el-dropdown-menu,
-.el-select-dropdown {
-  background-color: var(--select-dropdown-bg-color);
-  border-color: var(--border-hover-color);
-  &__list {
-    background-color: var(--select-dropdown-bg-color);
-  }
-
-  &.el-popper {
-    --arrow-inside-color: var(--select-dropdown-bg-color);
     --arrow-color: var(--border-hover-color);
-  }
+    --arrow-inside-color: var(--background-color-secondary);
 
-  &__item.hover {
-    background-color: var(--select-dropdown-bg-hover-color);
-  }
+    &[x-placement^="left"] .popper__arrow {
+      border-left-color: var(--arrow-color);
 
-  &__item,
-  &.is-multiple &__item {
-    color: var(--select-text-color);
-    background-color: var(--select-dropdown-bg-color);
+      &:after {
+        border-left-color: var(--arrow-inside-color);
+      }
+    }
+    &[x-placement^="right"] .popper__arrow {
+      border-right-color: var(--arrow-color);
 
-    &:not(.is-disabled):hover {
-      background-color: var(--select-dropdown-bg-hover-color);
+      &:after {
+        border-right-color: var(--arrow-inside-color);
+      }
+    }
+    &[x-placement^="bottom"] .popper__arrow {
+      border-bottom-color: var(--arrow-color);
+
+      &:after {
+        border-bottom-color: var(--arrow-inside-color);
+      }
     }
 
-    &.selected {
-      color: var(--select-text-hover-color);
-      background-color: var(--select-dropdown-bg-hover-color);
-      &.hover {
-        background-color: var(--select-dropdown-bg-hover-color);
+    &[x-placement^="top"] .popper__arrow {
+      border-top-color: var(--arrow-color);
+
+      &:after {
+        border-top-color: var(--arrow-inside-color);
       }
     }
   }
-}
 
-.el-select {
-  &-group__wrap:not(:last-of-type)::after {
-    background: var(--border-color);
-  }
-
-  &:active,
-  &:hover {
-    .el-input__inner {
-      border-color: var(--border-hover-color);
-    }
-  }
-
-  .el-tag {
-    color: var(--text-color-secondary);
-    background-color: var(--background-color);
-    border-color: transparent;
-    .el-tag__close.el-icon-close {
-      color: var(--background-color);
-      background-color: var(--text-color-secondary);
-      &:hover {
-        background-color: var(--text-color);
-      }
-    }
-  }
-}
-
-div.el-tabs {
-  &.el-tabs--top {
-    color: var(--color-primary);
-    background-color: var(--background-color-secondary, #fff);
-
-    .el-form-item__label {
-      color: var(--text-color);
-    }
-  }
-
-  .el-tabs__active-bar {
-    background-color: var(--color-primary);
-  }
-
-  .el-tabs__item {
-    color: var(--text-color-secondary);
-    &:hover,
-    &.is-active {
-      color: var(--tabs-active-color);
-    }
-    &.is-disabled {
-      color: var(--button-ghost-disabled-color);
-      &:hover {
-        color: var(--button-ghost-disabled-color);
-      }
-    }
-  }
-}
-
-.el-table {
-  background-color: var(--table-color);
-
-  &::before {
-    background-color: var(--border-color);
-  }
-
-  thead {
-    color: var(--table-head-text-color);
-  }
-
-  tr th {
-    background-color: var(--table-head-bg-color);
-    border-right-color: var(--border-color);
-
-    &.is-leaf {
-      border-bottom-color: var(--border-color);
-    }
-  }
-
-  tr {
-    background-color: var(--table-color);
-  }
-
-  td {
-    color: var(--text-color-secondary);
-    border-color: var(--border-color);
-  }
-
-  .hover-row:hover td {
-    background-color: var(--background-color);
-  }
-
-  tr.summary-row {
-    background-color: var(--background-color);
-  }
-
-  &__body-wrapper {
-    &::-webkit-scrollbar {
-      width: 10px;
-      height: 10px;
-      padding: 10px;
-      margin: 10px;
-      background-color: var(--table-scroll-bg-color);
-    }
-
-    &::-webkit-scrollbar-track {
-      background-color: var(--table-scroll-bg-color);
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: var(--table-scroll-track-color);
-      border-radius: 10px;
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    }
-  }
-
-  &--border {
-    border-color: var(--border-color);
-
-    &::after {
-      background-color: var(--border-color);
-    }
-  }
-
-  &--striped &__body tr#{&}__row--striped td {
-    background-color: var(--background-color-secondary);
-  }
-
-  div#{&}--enable-row-hover &__body tr:hover > td {
-    & > div.cell > a {
-      color: var(--hover-color);
-    }
-
-    background-color: var(--background-color);
-  }
-}
-
-.el-tree-node {
-  &__content:hover {
-    background-color: var(--background-color-secondary);
-  }
-
-  &:focus &__content {
-    background-color: var(--background-color-secondary);
-  }
-}
-
-.el-picker-panel {
-  color: var(--text-color);
-  background-color: var(--background-color);
-  border-color: var(--border-hover-color);
-
-  &__icon-btn {
+  .el-tooltip__popper.is-dark {
     color: var(--text-color);
-  }
-
-  .el-date-picker__header-label {
-    color: var(--text-color);
-  }
-  &__footer {
     background-color: var(--background-color-secondary);
-    border-color: var(--border-color);
-  }
-}
-
-.el-tooltip__popper,
-.el-popper {
-  color: var(--text-color);
-  background-color: var(--background-color);
-  border-color: var(--border-hover-color);
-  --arrow-color: var(--background-color);
-  --arrow-inside-color: var(--background-color);
-
-  &[x-placement^="left"] .popper__arrow {
-    border-left-color: var(--arrow-color);
-
-    &:after {
-      border-left-color: var(--arrow-inside-color);
-    }
-  }
-  &[x-placement^="right"] .popper__arrow {
-    border-right-color: var(--arrow-color);
-
-    &:after {
-      border-right-color: var(--arrow-inside-color);
-    }
-  }
-  &[x-placement^="bottom"] .popper__arrow {
-    border-bottom-color: var(--arrow-color);
-
-    &:after {
-      border-bottom-color: var(--arrow-inside-color);
-    }
+    --arrow-inside-color: var(--background-color-secondary);
+    border: 1px solid var(--border-hover-color);
   }
 
-  &[x-placement^="top"] .popper__arrow {
-    border-top-color: var(--arrow-color);
+  .el-popover {
+    min-width: 0;
+    max-width: 250px;
+    padding: 8px 12px 12px 12px;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+  }
 
-    &:after {
-      border-top-color: var(--arrow-inside-color);
-    }
-  }
-}
-
-.el-tooltip__popper.is-dark {
-  color: var(--text-color);
-  background-color: var(--background-color);
-  --arrow-inside-color: var(--background-color);
-}
-
-.el-pagination {
-  padding: 8.5px 0;
-  text-align: center;
-  background-color: inherit;
-  li {
-    color: var(--pagination-text-color);
-    background: var(--pagination-bg-color);
-  }
-  li.active {
-    color: var(--pagination-text-active-color);
-    background: var(--pagination-bg-active-color);
-    border-radius: 2px;
-    &:hover {
-      color: var(--pagination-text-active-color);
-    }
-  }
-  .btn-prev,
-  .btn-next,
-  .number,
-  .el-icon {
-    &:hover {
-      color: var(--pagination-text-hover-color);
-    }
-    i {
-      line-height: 30px;
-    }
-    width: 30px;
-    min-width: 30px;
-    height: 30px;
-    padding: 0;
-    margin-right: 12px;
-    color: var(--pagination-text-color);
-  }
-  button {
-    &.btn-next,
-    &.btn-prev {
+  .el-pagination {
+    padding: 8.5px 0;
+    text-align: center;
+    background: transparent;
+    li {
+      color: var(--pagination-text-color);
       background: var(--pagination-bg-color);
     }
-    &:disabled {
+    li.active {
+      color: var(--pagination-text-active-color);
+      background: var(--pagination-bg-active-color);
+      border-radius: 2px;
+      &:hover {
+        color: var(--pagination-text-active-color);
+      }
+    }
+    .btn-prev,
+    .btn-next,
+    .number,
+    .el-icon {
+      &:hover {
+        color: var(--pagination-text-hover-color);
+      }
       i {
-        color: var(--pagination-text-disable-color);
+        line-height: 30px;
+      }
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      padding: 0;
+      margin-right: 12px;
+      line-height: 30px;
+      color: var(--pagination-text-color);
+    }
+    button {
+      &.btn-next,
+      &.btn-prev {
+        background: var(--pagination-bg-color);
+      }
+      &:disabled {
+        i {
+          color: var(--pagination-text-disable-color);
+        }
       }
     }
-  }
-  .el-pagination__jump {
-    .el-input {
-      width: 60px;
-      margin-right: 7px;
-      input {
+    .el-pagination__jump {
+      .el-input {
         width: 60px;
+        margin-right: 7px;
+        input {
+          width: 60px;
+        }
       }
     }
   }
-}
 
-.el-dialog {
-  top: 50%;
-  margin-top: 0 !important; //overwrite js
-  background: var(--background-color-secondary, #fff);
-  transform: translateY(-50%);
-  .el-dialog__title {
-    color: var(--text-color-primary);
+  .el-dialog {
+    background: var(--background-color-secondary, #fff);
+    .el-dialog__title {
+      color: var(--text-color-primary);
+    }
   }
-}
-
-.theme-light {
-  @import "./light/index.css";
-}
-
-.theme-dark {
-  // @import './light/theme/index.css';
 }

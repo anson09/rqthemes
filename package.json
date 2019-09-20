@@ -1,6 +1,6 @@
 {
   "name": "@rqjs/rqthemes",
-  "version": "0.7.0-alpha.6",
+  "version": "0.7.2-beta.4",
   "description": "ricequant themes",
   "main": "index.css",
   "repository": {
@@ -10,6 +10,7 @@
   "author": "ansonw",
   "license": "MIT",
   "scripts": {
+    "dev": " rm -rf dist && parcel watch ./demo/index.html --no-autoinstall --out-dir dist",
     "build": "./scripts/updep.sh && parcel build src/index.scss --no-cache --no-minify --no-source-maps --no-content-hash -d ./ && LEGACY=true parcel build src/index.scss --no-cache --no-minify --no-source-maps --no-content-hash -d ./ --out-file legacy.css",
     "lint": "./scripts/lint.sh",
     "clean": "rm -rf index.css legacy.css"
@@ -18,24 +19,31 @@
     "access": "public"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.0.0",
-    "@commitlint/config-conventional": "^8.0.0",
-    "autoprefixer": "^9.6.0",
-    "husky": "^2.5.0",
-    "lint-staged": "^8.2.1",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@rqjs/rqcomponents": "0.0.6-alpha.55",
+    "@vue/component-compiler-utils": "^3.0.0",
+    "autoprefixer": "^9.6.1",
+    "element-ui": "^2.12.0",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "parcel": "^1.12.3",
     "parcel-bundler": "^1.12.3",
     "postcss-css-variables": "^0.13.0",
     "prettier": "^1.18.2",
     "sass": "^1.22.9",
     "stylelint": "^10.1.0",
     "stylelint-config-prettier": "^5.2.0",
-    "stylelint-config-recess-order": "^2.0.2",
+    "stylelint-config-recess-order": "^2.0.3",
     "stylelint-config-recommended-scss": "^3.3.0",
-    "stylelint-scss": "^3.8.0"
+    "stylelint-scss": "^3.10.1",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
-    "highcharts": "^7.1.2",
-    "highcharts-tree": "^0.1.3",
-    "normalize.css": "^8.0.1"
+    "highcharts": "^7.2.0",
+    "highcharts-tree": "^0.1.4",
+    "normalize.css": "^8.0.1",
+    "vue-hot-reload-api": "^2.3.4"
   }
 }
