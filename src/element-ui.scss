@@ -23,7 +23,7 @@
   }
 
   .el-tree {
-    background-color: inherit;
+    background: transparent;
   }
 
   // vars
@@ -108,12 +108,12 @@
     &__input,
     &-button {
       color: var(--button-ghost-text-disabled-color);
-      background-color: inherit;
+      background: transparent;
       border-color: var(--button-ghost-text-disabled-color);
 
       &__inner {
         color: var(--text-color-secondary);
-        background-color: inherit;
+        background: transparent;
         border: 1px solid var(--border-color);
 
         &:hover {
@@ -184,7 +184,7 @@
 
     &.is-plain {
       color: var(--button-ghost-text-color);
-      background-color: inherit;
+      background: transparent;
       border-color: var(--button-ghost-border-color);
 
       &:focus,
@@ -755,7 +755,7 @@
   .el-pagination {
     padding: 8.5px 0;
     text-align: center;
-    background-color: inherit;
+    background: transparent;
     li {
       color: var(--pagination-text-color);
       background: var(--pagination-bg-color);
