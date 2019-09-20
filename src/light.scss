@@ -129,7 +129,20 @@
   --pagination-text-active-color: var(--white); // 导航条选中项文字颜色
   --pagination-text-hover-color: var(--color-primary); // 导航条hover文字颜色
   --pagination-bg-active-color: var(--color-primary); // 导航条选中项背景颜色
-  --tabs-active-bar-bg: var(--color-primary); // 激活的tab下划线颜色
-  --tabs-active-color: var(--color-primary); // 激活的tab标题字体颜色
+
+  --tabs-bg-color: hsla(228, 23.8%, 95.9%, 1); // tab的背景颜色
+  --tabs-text-color: hsla(211, 15%, 70%, 1); // tab的文字颜色
+  --tabs-bg-active-color: var(--color-minor-1); // tab的背景颜色
+  --tabs-text-active-color: var(--color-primary); // 激活的tab标题字体颜色
+  --tabs-border-active-color: hsla(216, 22%, 23%, 1); // 激活的tab下划线颜色
+
+  --sub-tabs-bg-color: hsla(210, 20%, 98%, 1); // 二级tab的背景颜色
+  --sub-tabs-text-color: hsla(211, 15%, 70%, 1); // 二级tab的文字颜色
+  --sub-tabs-bg-active-color: hsla(216, 76%, 44%, 0.5); // 二级tab的背景颜色
+  --sub-tabs-text-active-color: var(--white); // 激活的二级tab标题字体颜色
+
+  --title-text-color: hsla(211, 15%, 70%, 1);
+  --title-text-active-color: hsla(215, 22%, 89%, 1);
+  --title-bg-color: hsla(210, 20%, 98%, 1);
   --popover-border-color: var(--color-primary);
 }
