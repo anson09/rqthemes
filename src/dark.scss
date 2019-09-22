@@ -58,6 +58,12 @@
   --table-active-color: var(--grey); //表格选中颜色
   --table-head-text-color: var(--common-color-3); //表格表头字体颜色
 
+  --table-highlight-bg-color: var(--common-color-1); // 高亮的表格背景
+  --table-blue-color: var(--color-minor-1); // 蓝色表格
+  --table-blue-bg-color: var(--common-color-1); // 蓝色表格背景
+  --table-green-color: hsla(146, 48%, 49%, 1); // 绿色表格
+  --table-green-bg-color: var(--common-color-1); // 绿色表格背景
+
   --text-color: var(--text-color-primary); // 主文本色
   --text-color-secondary: var(--grey); // 次文本色
 

@@ -151,7 +151,14 @@
   --table-color: var(--color-minor-1); //表格颜色
   --table-hover-color: var(--ele-minor-3); //表格悬停颜色
   --table-active-color: var(--grey); //表格选中颜色
+
+  --table-highlight-bg-color: var(--white); // 高亮的表格背景
   --table-head-text-color: var(--common-color-3); //表格表头字体颜色
+  --table-blue-color: var(--color-minor-1); // 蓝色表格
+  --table-blue-bg-color: hsl(216, 75.8%, 43.7%, 0.05); // 蓝色表格背景
+  --table-green-color: hsla(146, 48%, 49%, 1); // 绿色表格
+  --table-green-bg-color: hsla(146, 48%, 49%, 0.05); // 绿色表格背景
+
   --text-color: var(--text-color-primary); // 主文本色
   --text-color-secondary: var(--grey); // 次文本色
 
