@@ -40,3 +40,6 @@ body {
   background-color: var(--table-scroll-track-color);
   border-radius: 10px;
 }
+::-webkit-scrollbar-corner {
+  background-color: var(--table-scroll-bg-color);
+}
