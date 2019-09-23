@@ -179,3 +179,7 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #b6b6b6, #0064cd, #7ed321, #167b58,
 .highcharts-legend-nav-active {
   fill: var(--border-hover-color);
 }
+
+.highcharts-series-inactive {
+  opacity: 1;
+}
