@@ -597,6 +597,7 @@
             <div slot="header" class="clearfix">
               <span>Card name</span>
             </div>
+	    <p>body</p>
           </el-card>
         </el-row>
         <h4>Carousel</h4>

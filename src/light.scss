@@ -29,6 +29,7 @@
   --bg-final: hsla(228, 24%, 96%, 1); //网站背景色
   --bg-header: hsla(0, 0%, 98%, 1); //功能组件背景色
   --bg-bg: hsla(0, 0%, 100%, 1); //布局背景
+  --bg-shadows: 0px 2px 4px 0px hsla(226, 19%, 16%, 0.2);
 
   //border-color//
   --border-primary: hsla(223, 22%, 87%, 1); //主要边框
@@ -135,4 +136,10 @@
   //---unknown---//
   --arrow-color: var(--hover-color);
   --arrow-inside-color: var(--background-color-secondary);
+
+  //---components-card--//
+  --card-header-bg: white;
+  --card-header-text: teal;
+  --card-body-bg: silver;
+  --card-body-text: brown;
 }
