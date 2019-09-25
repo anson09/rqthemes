@@ -10,6 +10,11 @@
 
 .theme-light,
 .theme-dark {
+  .el-cascader {
+    .el-inner:hover {
+      border-color: var(--components-hover);
+    }
+  }
   .el-tag {
     &.stock {
       color: #dc4f4f;
@@ -31,7 +36,7 @@
     .el-button {
       color: var(--button-default-text-color);
       background-color: var(--button-default-color);
-      border-color: var(--border-color);
+      border-color: var(--border-primary);
 
       &:focus,
       &:active {
@@ -42,13 +47,13 @@
       &:hover {
         color: var(--button-default-text-hover-color);
         background-color: var(--button-default-hover-color);
-        border-color: var(--border-hover-color);
+        border-color: var(--border-hover);
       }
 
       &.is-disabled {
         color: var(--button-default-text-color);
         background-color: var(--button-default-disabled-color);
-        border-color: var(--border-color);
+        border-color: var(--disable-primary);
 
         &:focus,
         &:active,
@@ -65,26 +70,26 @@
   }
   .el-radio {
     &__label {
-      color: var(--text-color-secondary);
+      color: var(--text-normal);
     }
 
     &-group {
-      background-color: var(--background-color-secondary);
+      background-color: var(--bg-bg);
     }
 
     &.is-bordered {
       &.is-checked {
-        border-color: var(--border-hover-color);
+        border-color: var(--border-hover);
       }
       &.is-disabled {
-        border-color: var(--button-ghost-text-disabled-color);
+        border-color: var(--disable-primary);
       }
     }
 
     &__input {
       &.is-checked {
         + .el-radio__label {
-          color: var(--hover-color);
+          color: var(--button-group-hover-color);
         }
         .el-radio__inner {
           background-color: var(--button-ghost-text-color);
@@ -112,19 +117,19 @@
       border-color: var(--button-ghost-text-disabled-color);
 
       &__inner {
-        color: var(--text-color-secondary);
+        color: var(--text-normal);
         background: transparent;
-        border: 1px solid var(--border-color);
+        border: 1px solid var(--border-primary);
 
         &:hover {
-          color: var(--hover-color);
+          color: var(--components-hover);
         }
       }
 
       &__orig-radio:checked + .el-radio-button__inner {
         color: var(--button-ghost-text-hover-color);
         background-color: var(--button-ghost-color);
-        border-color: var(--button-ghost-border-color);
+        border-color: var(--border-primary);
         box-shadow: -1px 0 0 0 var(--button-color);
       }
 
@@ -155,19 +160,19 @@
   .el-button--default {
     color: var(--button-default-text-color);
     background-color: var(--button-default-color);
-    border-color: var(--border-color);
+    border-color: var(--button-default-color);
 
     &:focus,
     &:active {
       color: var(--button-default-text-color);
       background-color: var(--button-default-click-color);
-      border-color: var(--border-color);
+      border-color: var(--primary-color);
     }
 
     &:hover {
       color: var(--button-default-text-hover-color);
       background-color: var(--button-default-hover-color);
-      border-color: var(--border-hover-color);
+      border-color: var(--border-hover);
     }
 
     &.is-disabled {
@@ -178,7 +183,7 @@
       &:hover {
         color: var(--button-default-text-disabled-color);
         background-color: var(--button-default-disabled-color);
-        border-color: var(--border-color);
+        border-color: var(--border-hover);
       }
     }
 
@@ -234,42 +239,48 @@
   }
 
   .el-checkbox {
-    color: var(--text-color);
+    color: var(--text-normal);
 
     &__label {
-      color: var(--text-color);
+      color: var(--text-normal);
     }
 
     &__inner,
     &__input {
+      &.is-disabled {
+        .el-checkbox__inner {
+          background-color: var(--disable-secondary);
+          border-color: var(--border-primary);
+        }
+      }
       &.is-checked,
       &.is-indeterminate {
-        border-color: var(--border-hover-color);
+        border-color: var(--border-primary);
 
         span.el-checkbox__inner {
           background-color: var(--checkbox-color);
-          border-color: var(--border-hover-color);
+          // border-color: var(--border-primary);
 
           &:before {
-            background-color: var(--checkbox-inner-color);
+            background-color: var(--checkbox-color);
           }
           &:after {
             border-color: var(--checkbox-inner-color);
           }
 
           &.is-focus {
-            border-color: var(--checkbox-inner-color);
+            // border-color: var(--checkbox-inner-color);
           }
         }
 
         & + .el-checkbox__label {
-          color: var(--checkbox-color);
+          color: var(--text-normal);
         }
       }
 
       span#{&}__inner {
-        background-color: var(--background-color-secondary);
-        border-color: var(--border-color);
+        background-color: var(--checkbox-color);
+        border-color: var(--checkbox-inner-color);
 
         &:after {
           border-color: var(--checkbox-inner-color);
@@ -282,24 +293,24 @@
     }
 
     &__input.is-checked + .el-checkbox__label {
-      color: var(--checkbox-color);
+      color: var(--text-normal);
     }
   }
 
   .el-date-picker,
   .el-date-range-picker {
     &__time-header {
-      border-color: var(--border-color);
+      border-color: var(--border-primary);
     }
 
     &__content {
       &.is-left,
       &.is-right {
-        border-color: var(--border-color);
+        border-color: var(--border-primary);
       }
     }
     &.el-popper {
-      --arrow-color: var(--border-hover-color);
+      --arrow-color: var(--border-hover);
       .popper__arrow {
         display: none;
       }
@@ -317,7 +328,7 @@
       width: 140px;
       height: 32px;
       line-height: 32px;
-      color: var(--text-color-menu);
+      color: var(--text-title);
       background-color: var(--aside-collapse-bg-color);
       &.is-active {
         color: var(--aside-decorator-active-color);
@@ -365,6 +376,13 @@
       right: 4px;
       min-width: 0;
       padding: 0;
+
+      &--horizontal {
+        .el-menu-item:not(.is-disabled):hover,
+        .el-submenu .el-submenu__title:hover {
+          background-color: var(--bg-primary);
+        }
+      }
       .smallTitle {
         width: 140px;
         height: 32px;
@@ -395,7 +413,7 @@
   .el-date-table {
     th {
       color: var(--text-color-secondary);
-      border-color: var(--border-color);
+      border-color: var(--border-primary);
     }
     td {
       color: var(--text-color-secondary);
@@ -424,28 +442,28 @@
     &__inner {
       color: var(--input-text-color);
       background-color: var(--input-color);
-      border-color: var(--border-color);
+      border-color: var(--border-primary);
       &:hover {
-        border-color: var(--border-hover-color);
+        border-color: var(--border-hover);
       }
     }
 
     &.is-disabled {
       .el-input__inner {
         color: var(--input-text-disabled-color);
-        background-color: var(--background-color-secondary);
-        border-color: var(--border-color);
+        background-color: var(--input-color);
+        border-color: var(--border-primary);
       }
     }
 
     &:hover .el-input__inner {
-      border-color: var(--border-hover-color);
+      border-color: var(--border-hover);
     }
 
     &-group__append {
       color: var(--input-text-color);
       background-color: var(--input-color);
-      border-color: var(--border-color);
+      border-color: var(--border-primary);
     }
   }
 
@@ -464,7 +482,7 @@
   }
 
   .el-message-box {
-    border-color: var(--border-color);
+    border-color: var(--border-primary);
 
     &__title {
       color: var(--text-color);
@@ -480,7 +498,7 @@
     .el-input-number__increase {
       color: var(--input-text-color);
       background-color: var(--input-color);
-      border-color: var(--border-color);
+      border-color: var(--border-primary);
     }
   }
 
@@ -491,14 +509,14 @@
   .el-dropdown-menu,
   .el-select-dropdown {
     background-color: var(--select-dropdown-bg-color);
-    border-color: var(--border-hover-color);
+    border-color: var(--border-hover);
     &__list {
       background-color: var(--select-dropdown-bg-color);
     }
 
     &.el-popper {
-      --arrow-inside-color: var(--select-dropdown-bg-color);
-      --arrow-color: var(--border-hover-color);
+      --arrow-inside-color: var(---bg-bg);
+      --arrow-color: var(--border-hover);
       overflow: hidden;
       .popper__arrow {
         display: none;
@@ -512,7 +530,7 @@
     }
 
     &__item.hover {
-      background-color: var(--select-dropdown-bg-hover-color);
+      background-color: var(--bg-bg);
     }
 
     &__item,
@@ -537,25 +555,25 @@
 
   .el-select {
     &-group__wrap:not(:last-of-type)::after {
-      background: var(--border-color);
+      background: var(--border-primary);
     }
 
     &:active,
     &:hover {
       .el-input__inner {
-        border-color: var(--border-hover-color);
+        border-color: var(--border-hover);
       }
     }
 
     .el-tag {
-      color: var(--text-color-secondary);
-      background-color: var(--background-color);
+      color: var(--text-normal);
+      background-color: var(--bg-bg);
       border-color: transparent;
       .el-tag__close.el-icon-close {
-        color: var(--background-color);
-        background-color: var(--text-color-secondary);
+        color: var(--border-hover);
+        background-color: var(--text-normal);
         &:hover {
-          background-color: var(--text-color);
+          background-color: var(--text-normal);
         }
       }
     }
@@ -563,23 +581,24 @@
 
   div.el-tabs {
     &.el-tabs--top {
-      color: var(--color-primary);
-      background-color: var(--background-color-secondary, #fff);
+      color: var(--primary-color);
+      background-color: var(--bg-header);
 
       .el-form-item__label {
-        color: var(--text-color);
+        color: var(--text-normal);
       }
     }
 
     .el-tabs__active-bar {
-      background-color: var(--color-primary);
+      background-color: var(--primary-color);
     }
 
     .el-tabs__item {
-      color: var(--text-color-secondary);
+      color: var(--text-normal);
       &:hover,
       &.is-active {
         color: var(--tabs-active-color);
+        background-color: var(--bg-primary);
       }
       &.is-disabled {
         color: var(--button-ghost-disabled-color);
@@ -591,22 +610,21 @@
   }
 
   .el-table {
-    background-color: var(--table-color);
+    background-color: var(--table-primary-bg-color);
 
     &::before {
-      background-color: var(--border-color);
+      background-color: var(--border-secondary);
     }
-
     thead {
       color: var(--table-head-text-color);
     }
 
     tr th {
       background-color: var(--table-head-bg-color);
-      border-right-color: var(--border-color);
+      border-right-color: var(--border-secondary);
 
       &.is-leaf {
-        border-bottom-color: var(--border-color);
+        border-bottom-color: var(--border-secondary);
       }
     }
 
@@ -616,7 +634,7 @@
 
     td {
       color: var(--text-color-secondary);
-      border-color: var(--border-color);
+      border-color: var(--border-secondary);
     }
 
     .hover-row:hover td {
@@ -627,83 +645,88 @@
       background-color: var(--background-color);
     }
 
+    &__row.el-table__row--level {
+      &-0 {
+        background-color: var(--table-primary-bg-color);
+      }
+      &-1 {
+        background-color: var(--table-secondary-bg-color);
+      }
+      &-2 {
+        background-color: var(--table-minor-bg-color);
+      }
+    }
+
     &__body-wrapper {
       &::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
+        width: 4px;
+        height: 6px;
         padding: 10px;
         margin: 10px;
         background-color: var(--table-scroll-bg-color);
       }
 
-      &::-webkit-scrollbar-track {
-        background-color: var(--table-scroll-bg-color);
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      }
-
       &::-webkit-scrollbar-thumb {
-        background-color: var(--table-scroll-track-color);
         border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
       }
     }
 
     &--border {
-      border-color: var(--border-color);
+      border-color: var(--border-primary);
 
       &::after {
-        background-color: var(--border-color);
+        background-color: var(--border-primary);
       }
     }
 
     &--striped .el-table__body tr.el-table__row--striped td {
-      background-color: var(--background-color-secondary);
+      background-color: var(--bg-secondary);
     }
 
     .el-table--enable-row-hover .el-table__body tr:hover > td {
       & > div.cell > a {
-        color: var(--hover-color);
+        color: var(--table-hover-color);
       }
 
-      background-color: var(--background-color);
+      background-color: var(--table-primary-bg-color);
     }
   }
 
   .el-tree-node {
     &__content:hover {
-      background-color: var(--background-color-secondary);
+      background-color: var(--bg-secondary);
     }
 
-    &:focus &__content {
-      background-color: var(--background-color-secondary);
+    &:focus .el-tree-node__content {
+      background-color: var(--bg-bg);
     }
   }
 
   .el-picker-panel {
     color: var(--text-color);
     background-color: var(--background-color);
-    border-color: var(--border-hover-color);
+    border-color: var(--border-hover);
 
     &__icon-btn {
-      color: var(--text-color);
+      color: var(--text-normal);
     }
 
     .el-date-picker__header-label {
-      color: var(--text-color);
+      color: var(--text-normal);
     }
     &__footer {
-      background-color: var(--background-color-secondary);
-      border-color: var(--border-color);
+      background-color: var(--bg-secondary);
+      border-color: var(--border-primary);
     }
   }
 
   .el-tooltip__popper,
   .el-popper {
-    color: var(--text-color);
-    background-color: var(--background-color-secondary);
-    border-color: var(--border-hover-color);
-    --arrow-color: var(--border-hover-color);
-    --arrow-inside-color: var(--background-color-secondary);
+    color: var(--text-normal);
+    background-color: var(--bg-primary);
+    border-color: var(--border-hover);
+    --arrow-color: var(--border-hover);
+    --arrow-inside-color: var(--bg-primary);
 
     &[x-placement^="left"] .popper__arrow {
       border-left-color: var(--arrow-color);
@@ -737,10 +760,10 @@
   }
 
   .el-tooltip__popper.is-dark {
-    color: var(--text-color);
-    background-color: var(--background-color-secondary);
-    --arrow-inside-color: var(--background-color-secondary);
-    border: 1px solid var(--border-hover-color);
+    color: var(--text-normal);
+    background-color: var(--bg-bg);
+    --arrow-inside-color: var(--bg-secondary);
+    border: 1px solid var(--border-hover);
   }
 
   .el-popover {
@@ -756,6 +779,7 @@
     padding: 8.5px 0;
     text-align: center;
     background: transparent;
+
     li {
       color: var(--pagination-text-color);
       background: var(--pagination-bg-color);
@@ -766,6 +790,11 @@
       border-radius: 2px;
       &:hover {
         color: var(--pagination-text-active-color);
+      }
+    }
+    &.is-background {
+      .el-pager li:not(.disable).active {
+        color: var(--text-btn);
       }
     }
     .btn-prev,
@@ -809,9 +838,9 @@
   }
 
   .el-dialog {
-    background: var(--background-color-secondary, #fff);
+    background: var(--bg-bg);
     .el-dialog__title {
-      color: var(--text-color-primary);
+      color: var(--text-title);
     }
   }
 }

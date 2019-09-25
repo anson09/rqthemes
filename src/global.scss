@@ -20,8 +20,8 @@ body {
 
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
     "Microsoft YaHei", "微软雅黑", "wenquanyi micro hei", Arial, sans-serif;
-  color: var(--text-color);
-  background-color: var(--background-color, #f9f9fb);
+  color: var(--text-normal);
+  background-color: var(--bg-bg);
 }
 
 ::-webkit-scrollbar {
