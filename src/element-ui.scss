@@ -647,13 +647,13 @@
 
     &__row.el-table__row--level {
       &-0 {
-        background-color: var(--table-primary-bg-color);
-      }
-      &-1 {
         background-color: var(--table-secondary-bg-color);
       }
-      &-2 {
+      &-1 {
         background-color: var(--table-minor-bg-color);
+      }
+      &-2 {
+        background-color: var(--table-primary-bg-color);
       }
     }
 
