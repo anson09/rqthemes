@@ -141,4 +141,26 @@
   --card-header-text: teal;
   --card-body-bg: silver;
   --card-body-text: brown;
+
+  --tabs-bg-color: hsla(229, 17%, 12%, 1); // tab的背景颜色
+  --tabs-text-color: hsla(211, 15%, 70%, 1); // tab的文字颜色
+  --tabs-bg-active-color: var(--color-minor-1); // tab的背景颜色
+  --tabs-text-active-color: hsla(220, 100%, 65%, 1); // 激活的tab标题字体颜色
+  --tabs-border-active-color: hsla(222, 33%, 94%, 1); // 激活的tab下划线颜色
+
+  --sub-tabs-bg-color: hsla(226, 14%, 18.2%, 1); // 二级tab的背景颜色
+  --sub-tabs-text-color: hsla(211, 15%, 70%, 1); // 二级tab的文字颜色
+  --sub-tabs-bg-active-color: hsla(226, 13.8%, 24.1%, 1); // 二级tab的背景颜色
+  --sub-tabs-text-active-color: hsla(
+    215,
+    22%,
+    89%,
+    1
+  ); // 激活的二级tab标题字体颜色
+
+  --popover-border-color: var(--color-primary);
+  --arrow-color: var(--hover-color);
+  --arrow-inside-color: var(--background-color-secondary);
+
+  --icon-color: hsla(221, 47%, 39%, 1);
 }

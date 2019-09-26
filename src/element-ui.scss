@@ -654,6 +654,10 @@
       &-2 {
         background-color: var(--table-primary-bg-color);
       }
+
+      &::-webkit-scrollbar-corner {
+        background-color: var(--table-scroll-bg-color);
+      }
     }
 
     &--border {
@@ -753,11 +757,9 @@
 
   .el-popover {
     min-width: 0;
-    max-width: 250px;
     padding: 8px 12px 12px 12px;
     font-size: 12px;
     line-height: 1.5;
-    text-align: center;
   }
 
   .el-pagination {
