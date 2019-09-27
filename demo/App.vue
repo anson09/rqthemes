@@ -593,7 +593,7 @@
         </el-row>
         <h4>Card</h4>
         <el-row>
-          <el-card class="box-card">
+          <el-card class="box-card" shadow="never">
             <div slot="header" class="clearfix">
               <span>Card name</span>
             </div>

@@ -1,10 +1,15 @@
 .theme-light {
   //brand-color//
   --primary-color: hsla(216, 76%, 44%, 1); //品牌色
+  --primary-color-1: hsla(216, 76%, 44%, 0.1);
   --primary-color-2: hsla(216, 76%, 44%, 0.2);
+  --primary-color-3: hsla(216, 76%, 44%, 0.3);
   --primary-color-4: hsla(216, 76%, 44%, 0.4);
+  --primary-color-5: hsla(216, 76%, 44%, 0.5);
   --primary-color-6: hsla(216, 76%, 44%, 0.6);
+  --primary-color-7: hsla(216, 76%, 44%, 0.7);
   --primary-color-8: hsla(216, 76%, 44%, 0.8);
+  --primary-color-9: hsla(216, 76%, 44%, 0.9);
 
   //error-color//
   --error-color: hsla(0, 94%, 66%, 1); //错误提醒色
@@ -137,10 +142,12 @@
   --arrow-color: var(--hover-color);
   --arrow-inside-color: var(--background-color-secondary);
 
+  --icon-normal: var(--primary-color-3);
+  --icon-hover: var(--primary-color-8);
+
   //---components-card--//
-  --card-header-bg: white;
-  --card-header-text: teal;
-  --card-body-bg: silver;
-  --card-body-text: brown;
-  --icon-color: hsla(215, 59%, 83%, 1);
+  --card-header-bg: var(--bg-primary);
+  --card-header-text: var(--text-title);
+  --card-body-bg: var(--bg-bg);
+  --card-body-text: var(--text-normal);
 }

@@ -106,9 +106,6 @@
     &__input.is-disabled + span#{&}__label {
       color: var(--button-ghost-text-disabled-color);
     }
-    // &-button {
-    //
-    // }
 
     &__input,
     &-button {
@@ -578,7 +575,7 @@
     }
   }
 
-  div.el-tabs {
+  .el-tabs {
     &.el-tabs--top {
       color: var(--primary-color);
       background-color: var(--bg-header);
@@ -604,6 +601,16 @@
         &:hover {
           color: var(--button-ghost-disabled-color);
         }
+      }
+    }
+    &--border-card {
+      .el-tabs__header {
+        color: var(--card-header-text);
+        background-color: var(--card-header-bg);
+      }
+      .el-tabs__content {
+        color: var(--card-body-text);
+        background-color: var(--card-body-bg);
       }
     }
   }

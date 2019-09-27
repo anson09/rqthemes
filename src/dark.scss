@@ -1,11 +1,15 @@
 .theme-dark {
   //brand-color//
   --primary-color: hsla(220, 100%, 65%, 1); //品牌色
+  --primary-color-1: hsla(220, 100%, 65%, 0.1);
   --primary-color-2: hsla(220, 100%, 65%, 0.2);
+  --primary-color-3: hsla(220, 100%, 65%, 0.3);
   --primary-color-4: hsla(220, 100%, 65%, 0.4);
+  --primary-color-5: hsla(220, 100%, 65%, 0.5);
   --primary-color-6: hsla(220, 100%, 65%, 0.6);
+  --primary-color-7: hsla(220, 100%, 65%, 0.7);
   --primary-color-8: hsla(220, 100%, 65%, 0.8);
-
+  --primary-color-9: hsla(220, 100%, 65%, 0.9);
   //error-color//
   --error-color: hsla(0, 94%, 66%, 1); //错误提醒色
   --error-color-6: hsla(0, 94%, 66%, 0.6);
@@ -136,12 +140,6 @@
   --arrow-color: var(--border-primary);
   --arrow-inside-color: var(--bg-primary);
 
-  //---components-card--//
-  --card-header-bg: white;
-  --card-header-text: teal;
-  --card-body-bg: silver;
-  --card-body-text: brown;
-
   --tabs-bg-color: hsla(229, 17%, 12%, 1); // tab的背景颜色
   --tabs-text-color: hsla(211, 15%, 70%, 1); // tab的文字颜色
   --tabs-bg-active-color: var(--color-minor-1); // tab的背景颜色
@@ -162,5 +160,12 @@
   --arrow-color: var(--hover-color);
   --arrow-inside-color: var(--background-color-secondary);
 
-  --icon-color: hsla(221, 47%, 39%, 1);
+  --icon-normal: var(--primary-color-3);
+  --icon-hover: var(--primary-color-8);
+
+  //---components-card--//
+  --card-header-bg: var(--bg-primary);
+  --card-header-text: var(--text-title);
+  --card-body-bg: var(--bg-bg);
+  --card-body-text: var(--text-normal);
 }
