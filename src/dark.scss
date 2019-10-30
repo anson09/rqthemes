@@ -62,18 +62,18 @@
   --button-default-color: var(--primary-color); // 主按钮背景色
   --button-default-click-color: var(--primary-color-6); // 默认按钮点击背景色
   --button-default-hover-color: var(--primary-color-8); // 主按钮悬停背景色
-  --button-default-disabled-color: var(--disable-bg); // 主按钮禁用背景色
-  --button-default-text-color: var(--white); // 主按钮字体色
-  --button-default-text-disabled-color: var(--disable-text); // 主按钮禁用字体色
-  --button-default-text-hover-color: var(--white); // 主按钮悬停字体色
+  --button-default-disabled-color: var(--primary-color-5); // 主按钮禁用背景色
+  --button-default-text-color: var(--text-btn); // 主按钮字体色
+  --button-default-text-disabled-color: var(--text-btn); // 主按钮禁用字体色
+  --button-default-text-hover-color: var(--text-btn); // 主按钮悬停字体色
 
   --button-ghost-color: var(--opacity); // 默认按钮背景色
   --button-ghost-border-color: var(--primary-color); // 默认按钮边框背景色
   --button-ghost-hover-color: var(--primary-color-4); // 默认按钮悬停背景色
   --button-ghost-text-color: var(--primary-color); // 默认按钮字体色
-  --button-ghost-text-disabled-color: var(--disable-text); // 按钮禁用字体色
-  --button-ghost-disabled-color: var(---disable-secondary); // 按钮禁用背景色
-  --button-ghost-disable-border-color: var(---disable-primary); //按钮禁用边框色
+  --button-ghost-text-disabled-color: var(--primary-color-5); // 按钮禁用字体色
+  --button-ghost-disabled-color: var(--opacity); // 按钮禁用背景色
+  --button-ghost-disable-border-color: var(--primary-color-5); //按钮禁用边框色
   --button-ghost-text-hover-color: var(--primary-color); // 按钮悬停字体色
 
   --button-group-color: var(--opacity); // 按钮组背景色
@@ -94,14 +94,20 @@
   --table-primary-bg-color: var(--table-primary); //表格第一层级
   --table-secondary-bg-color: var(--table-secondary); //表格第二层级
   --table-minor-bg-color: var(--table-minor); //表格第三层级
-  --table-color: var(--table-primary); //表格背景颜色
+  --table-color: var(--table-primary); //表格颜色
   --table-hover-color: var(--primary-color-2); //表格悬停颜色
   --table-active-color: var(--grey); //表格选中颜色
   --table-head-text-color: var(--text-normal); //表格表头字体颜色
 
+  --table-highlight-bg-color: var(--white); //高亮的表格背景
+  --table-blue-color: var(--primary-color); //蓝色表格
+  --table-blue-bg-color: var(--components-click); //蓝色表格背景
+  --table-green-color: var(--green); //绿色表格
+  --table-green-bg-color: var(--bg-green); //绿色表格背景
+
   //---components-aside---//
   --aside-bg-color: var(--bg-primary); // 侧边栏背景颜色
-  --aside-decorator-color: var(--border-primary); // 侧边栏饰品颜色
+  --aside-decorator-color: var(--grey); // 侧边栏饰品颜色
   --aside-decorator-active-color: var(--primary-color); // 侧边栏饰品激活时颜色
   --aside-font-active-color: var(--primary-color); // 侧边栏选中项字体颜色
   --aside-bg-active-color: var(--primary-color-2); // 侧边栏hover项背景颜色
@@ -124,6 +130,19 @@
   --checkbox-color: var(--bg-bg); // checkbox背景色
   --checkbox-inner-color: var(--primary-color); // checkbox内部icon颜色
 
+  //---components-tabs---//
+  --tabs-bg-color: var(--bg-header); // tab的背景颜色
+  --tabs-text-color: var(--text-title); // tab的文字颜色
+  --tabs-bg-active-color: var(--white); // 激活的tab的背景颜色
+  --tabs-text-active-color: var(--primary-color); // 激活的tab标题字体颜色
+  --tabs-border-active-color: var(--primary-color); // 激活的tab下划线颜色
+  --tabs-active-color: var(--primary-color); // 激活的tab标题字体颜色
+
+  --sub-tabs-bg-color: var(--opacity); // 二级tab的背景颜色
+  --sub-tabs-text-color: var(--text-secondary); // 二级tab的文字颜色
+  --sub-tabs-bg-active-color: var(--primary-color-5); // 激活的二级tab的背景颜色
+  --sub-tabs-text-active-color: var(--white); // 激活的二级tab标题字体颜色
+
   //---components-datepicker---//
   --date-table-weekend-color: var(--primary-color-6); // 日期选择器周末颜色高亮
   --date-table-current-text-color: var(--white); // 日期选择器选中日期，字体颜色
@@ -133,39 +152,20 @@
   --date-table-bg: var(--bg-bg); //日期选择器背景
 
   //---components-scrollbar---//
-  --table-scroll-bg-color: var(--background-color-secondary); // 滚动条背景色
-  --table-scroll-track-color: var(--grey); // 滚动条颜色
+  --table-scroll-bg-color: var(--opacity); // 滚动条背景色
+  --table-scroll-track-color: #8a8fa2; // 滚动条颜色
 
   //---unknown---//
-  --arrow-color: var(--border-primary);
-  --arrow-inside-color: var(--bg-primary);
-
-  --tabs-bg-color: hsla(229, 17%, 12%, 1); // tab的背景颜色
-  --tabs-text-color: hsla(211, 15%, 70%, 1); // tab的文字颜色
-  --tabs-bg-active-color: var(--color-minor-1); // tab的背景颜色
-  --tabs-text-active-color: hsla(220, 100%, 65%, 1); // 激活的tab标题字体颜色
-  --tabs-border-active-color: hsla(222, 33%, 94%, 1); // 激活的tab下划线颜色
-
-  --sub-tabs-bg-color: hsla(226, 14%, 18.2%, 1); // 二级tab的背景颜色
-  --sub-tabs-text-color: hsla(211, 15%, 70%, 1); // 二级tab的文字颜色
-  --sub-tabs-bg-active-color: hsla(226, 13.8%, 24.1%, 1); // 二级tab的背景颜色
-  --sub-tabs-text-active-color: hsla(
-    215,
-    22%,
-    89%,
-    1
-  ); // 激活的二级tab标题字体颜色
-
-  --popover-border-color: var(--color-primary);
   --arrow-color: var(--hover-color);
-  --arrow-inside-color: var(--background-color-secondary);
-
-  --icon-normal: var(--primary-color-3);
-  --icon-hover: var(--primary-color-8);
+  --arrow-inside-color: var(--bg-secondary);
 
   //---components-card--//
   --card-header-bg: var(--bg-primary);
   --card-header-text: var(--text-title);
   --card-body-bg: var(--bg-bg);
   --card-body-text: var(--text-normal);
+
+  //---icon-color---//
+  --icon-normal: var(--primary-color-3);
+  --icon-hover: var(--primary-color-8);
 }
