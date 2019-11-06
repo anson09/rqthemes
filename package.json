@@ -7,7 +7,6 @@
     "type": "git",
     "url": "ssh://git@git.ricequant.com:7999/node/ricequant-themes.git"
   },
-  "author": "ansonw",
   "license": "MIT",
   "scripts": {
     "dev": " rm -rf dist && parcel watch ./demo/index.html --no-autoinstall --out-dir dist",
