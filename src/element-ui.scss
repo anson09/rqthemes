@@ -100,7 +100,7 @@
 
     &__input.is-disabled .el-radio__inner {
       background-color: var(--background-color-secondary);
-      border-color: var(--button-ghost-border-disabled-color);
+      border-color: var(--button-ghost-disabled-border-color);
     }
 
     &__input.is-disabled + span#{&}__label {
@@ -127,7 +127,7 @@
         color: var(--button-ghost-text-hover-color);
         background-color: var(--button-ghost-color);
         border-color: var(--border-primary);
-        box-shadow: -1px 0 0 0 var(--button-color);
+        box-shadow: -1px 0 0 0 var(--button-default-color);
       }
 
       &.is-active:hover .el-radio-button__inner {
@@ -192,7 +192,7 @@
       &:focus,
       &:active {
         color: var(--button-ghost-text-color);
-        background-color: var(--button-ghost-click-color);
+        background-color: var(--button-default-text-hover-color);
         border-color: var(--button-ghost-border-color);
       }
 
@@ -225,13 +225,13 @@
   .el-textarea__inner {
     background-color: var(--background-color-secondary);
     border: 1px solid var(--border-color);
-    border-color: var(--border-color-primary);
+    border-color: var(--border-primary);
     &:focus {
-      border: 1px solid var(--color-primary);
-      border-color: var(--color-primary);
+      border: 1px solid var(--primary-color);
+      border-color: var(--primary-color);
     }
     &:hover {
-      color: var(--color-primary);
+      color: var(--primary-color);
     }
   }
 
@@ -408,11 +408,11 @@
 
   .el-date-table {
     th {
-      color: var(--text-color-secondary);
+      color: var(--text-normal);
       border-color: var(--border-primary);
     }
     td {
-      color: var(--text-color-secondary);
+      color: var(--text-normal);
 
       &.current:not(.disabled) span {
         color: var(--date-table-current-text-color);
@@ -485,7 +485,7 @@
     }
 
     &__content {
-      color: var(--text-color-secondary);
+      color: var(--text-normal);
     }
   }
 
@@ -636,7 +636,7 @@
     }
 
     td {
-      color: var(--text-color-secondary);
+      color: var(--text-normal);
       border-color: var(--border-secondary);
     }
 

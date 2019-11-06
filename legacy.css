@@ -488,6 +488,8 @@ template {
 :root{}
 :root{}
 :root{}
+:root{}
+:root{}
 @charset "UTF-8";
 .theme-light {
   --primary-color: hsla(216, 76%, 44%, 1);
@@ -517,6 +519,7 @@ template {
   --bg-final: hsla(228, 24%, 96%, 1);
   --bg-header: hsla(0, 0%, 98%, 1);
   --bg-bg: hsla(0, 0%, 100%, 1);
+  --bg-minor:hsla(216, 20%, 95%, 1);
   --bg-shadows: 0px 2px 4px 0px hsla(226, 19%, 16%, 0.2);
   --bg-green: hsla(146, 48%, 49%, 0.05);
   --border-primary: hsla(223, 22%, 87%, 1);
@@ -548,7 +551,7 @@ template {
   --button-ghost-text-color: var(--primary-color);
   --button-ghost-text-disabled-color: var(--primary-color-5);
   --button-ghost-disabled-color: var(--opacity);
-  --button-ghost-disable-border-color: var(--primary-color-5);
+  --button-ghost-disabled-border-color: var(--primary-color-5);
   --button-ghost-text-hover-color: var(--primary-color);
   --button-group-color: var(--opacity);
   --button-group-hover-color: var(--primary-color-8);
@@ -581,12 +584,13 @@ template {
   --pagination-text-disable-color: var(--disable-text);
   --pagination-text-active-color: var(--white);
   --pagination-text-hover-color: var(--primary-color);
+  --pagination-bg-color: var(--bg-minor);
   --pagination-bg-active-color: var(--primary-color);
   --input-color: var(--bg-bg);
   --input-border: var(--border-primary);
   --input-text-color: var(--text-normal);
   --input-text-disabled-color: var(--disable-text);
-  --checkbox-color: var(--color-primary);
+  --checkbox-color: var(--bg-bg);
   --checkbox-inner-color: var(--primary-color);
   --tabs-bg-color: var(--bg-header);
   --tabs-text-color: var(--text-title);
@@ -644,6 +648,7 @@ template {
   --bg-final: hsla(227, 18%, 10%, 1);
   --bg-header: hsla(229, 17%, 12%, 1);
   --bg-bg: hsla(226, 17%, 15%, 1);
+  --bg-minor:hsla(226, 14%, 24%, 1);
   --bg-shadows: 0px 2px 4px 0px hsla(216, 40%, 6%, 0.2);
   --bg-green: hsla(146, 48%, 49%, 0.05);
   --border-primary: hsla(216, 22%, 25%, 1);
@@ -665,7 +670,7 @@ template {
   --button-default-color: var(--primary-color);
   --button-default-click-color: var(--primary-color-6);
   --button-default-hover-color: var(--primary-color-8);
-  --button-default-disabled-color: var(--disable-bg);
+  --button-default-disabled-color: var(--disable-primary);
   --button-default-text-color: var(--white);
   --button-default-text-disabled-color: var(--disable-text);
   --button-default-text-hover-color: var(--white);
@@ -674,8 +679,8 @@ template {
   --button-ghost-hover-color: var(--primary-color-4);
   --button-ghost-text-color: var(--primary-color);
   --button-ghost-text-disabled-color: var(--disable-text);
-  --button-ghost-disabled-color: var(---disable-secondary);
-  --button-ghost-disable-border-color: var(---disable-primary);
+  --button-ghost-disabled-color: var(--disable-secondary);
+  --button-ghost-disabled-border-color: var(--disable-primary);
   --button-ghost-text-hover-color: var(--primary-color);
   --button-group-color: var(--opacity);
   --button-group-hover-color: var(--primary-color-8);
@@ -708,6 +713,7 @@ template {
   --pagination-text-disable-color: var(--disable-text);
   --pagination-text-active-color: var(--white);
   --pagination-text-hover-color: var(--primary-color);
+  --pagination-bg-color: var(--bg-minor);
   --pagination-bg-active-color: var(--primary-color);
   --input-color: var(--bg-bg);
   --input-border: var(--border-primary);
@@ -24929,7 +24935,7 @@ body {
 .theme-dark .el-button-group .el-button.is-disabled {
   color: hsla(0, 0%, 100%, 1);
   color: var(--button-default-text-color);
-  background-color: undefined;
+  background-color: hsla(223, 17%, 16%, 1);
   background-color: var(--button-default-disabled-color);
   border-color: hsla(223, 17%, 16%, 1);
   border-color: var(--disable-primary);
@@ -24955,19 +24961,19 @@ body {
 .theme-dark .el-button-group .el-button.is-disabled:focus {
   color: hsla(0, 0%, 100%, 1);
   color: var(--button-default-text-color);
-  background-color: undefined;
+  background-color: hsla(223, 17%, 16%, 1);
   background-color: var(--button-default-disabled-color);
 }
 .theme-dark .el-button-group .el-button.is-disabled:active {
   color: hsla(0, 0%, 100%, 1);
   color: var(--button-default-text-color);
-  background-color: undefined;
+  background-color: hsla(223, 17%, 16%, 1);
   background-color: var(--button-default-disabled-color);
 }
 .theme-dark .el-button-group .el-button.is-disabled:hover {
   color: hsla(0, 0%, 100%, 1);
   color: var(--button-default-text-color);
-  background-color: undefined;
+  background-color: hsla(223, 17%, 16%, 1);
   background-color: var(--button-default-disabled-color);
 }
 .theme-light .el-range-input {
@@ -25033,14 +25039,14 @@ body {
 .theme-light .el-radio__input.is-disabled .el-radio__inner {
   background-color: hsla(0,0%,98%,1);
   background-color: var(--background-color-secondary);
-  border-color: undefined;
-  border-color: var(--button-ghost-border-disabled-color);
+  border-color: hsla(216, 76%, 44%, 0.5);
+  border-color: var(--button-ghost-disabled-border-color);
 }
 .theme-dark .el-radio__input.is-disabled .el-radio__inner {
   background-color: hsla(0,0%,98%,1);
   background-color: var(--background-color-secondary);
-  border-color: undefined;
-  border-color: var(--button-ghost-border-disabled-color);
+  border-color: hsla(223, 17%, 16%, 1);
+  border-color: var(--button-ghost-disabled-border-color);
 }
 .theme-light .el-radio__input.is-disabled + span.theme-light .el-radio {
   color: hsla(216, 76%, 44%, 0.5);
@@ -25137,8 +25143,8 @@ body {
   background-color: var(--button-ghost-color);
   border-color: hsla(223, 22%, 87%, 1);
   border-color: var(--border-primary);
-  box-shadow: undefined;
-  box-shadow: -1px 0 0 0 var(--button-color);
+  box-shadow: -1px 0 0 0 hsla(216, 76%, 44%, 1);
+  box-shadow: -1px 0 0 0 var(--button-default-color);
 }
 .theme-light .el-radio-button__orig-radio:checked + .el-radio-button__inner {
   color: hsla(216, 76%, 44%, 1);
@@ -25147,8 +25153,8 @@ body {
   background-color: var(--button-ghost-color);
   border-color: hsla(223, 22%, 87%, 1);
   border-color: var(--border-primary);
-  box-shadow: undefined;
-  box-shadow: -1px 0 0 0 var(--button-color);
+  box-shadow: -1px 0 0 0 hsla(216, 76%, 44%, 1);
+  box-shadow: -1px 0 0 0 var(--button-default-color);
 }
 .theme-dark .el-radio__input__orig-radio:checked + .el-radio-button__inner {
   color: hsla(220, 100%, 65%, 1);
@@ -25157,8 +25163,8 @@ body {
   background-color: var(--button-ghost-color);
   border-color: hsla(216, 22%, 25%, 1);
   border-color: var(--border-primary);
-  box-shadow: undefined;
-  box-shadow: -1px 0 0 0 var(--button-color);
+  box-shadow: -1px 0 0 0 hsla(220, 100%, 65%, 1);
+  box-shadow: -1px 0 0 0 var(--button-default-color);
 }
 .theme-dark .el-radio-button__orig-radio:checked + .el-radio-button__inner {
   color: hsla(220, 100%, 65%, 1);
@@ -25167,8 +25173,8 @@ body {
   background-color: var(--button-ghost-color);
   border-color: hsla(216, 22%, 25%, 1);
   border-color: var(--border-primary);
-  box-shadow: undefined;
-  box-shadow: -1px 0 0 0 var(--button-color);
+  box-shadow: -1px 0 0 0 hsla(220, 100%, 65%, 1);
+  box-shadow: -1px 0 0 0 var(--button-default-color);
 }
 .theme-light .el-radio__input.is-active:hover .el-radio-button__inner, .theme-light .el-radio-button.is-active:hover .el-radio-button__inner,
 .theme-dark .el-radio__input.is-active:hover .el-radio-button__inner,
@@ -25296,7 +25302,7 @@ body {
 .theme-dark .el-button--default.is-disabled {
   color: hsla(216, 12%, 25%, 1);
   color: var(--button-default-text-disabled-color);
-  background-color: undefined;
+  background-color: hsla(223, 17%, 16%, 1);
   background-color: var(--button-default-disabled-color);
   border-color: hsla(223,22%,87%,1);
   border-color: var(--border-color);
@@ -25312,7 +25318,7 @@ body {
 .theme-dark .el-button--default.is-disabled:hover {
   color: hsla(216, 12%, 25%, 1);
   color: var(--button-default-text-disabled-color);
-  background-color: undefined;
+  background-color: hsla(223, 17%, 16%, 1);
   background-color: var(--button-default-disabled-color);
   border-color: hsla(220, 100%, 65%, 0.8);
   border-color: var(--border-hover);
@@ -25334,32 +25340,32 @@ body {
 .theme-light .el-button--default.is-plain:focus {
   color: hsla(216, 76%, 44%, 1);
   color: var(--button-ghost-text-color);
-  background-color: undefined;
-  background-color: var(--button-ghost-click-color);
+  background-color: hsla(0, 0%, 100%, 1);
+  background-color: var(--button-default-text-hover-color);
   border-color: hsla(216, 76%, 44%, 1);
   border-color: var(--button-ghost-border-color);
 }
 .theme-light .el-button--default.is-plain:active {
   color: hsla(216, 76%, 44%, 1);
   color: var(--button-ghost-text-color);
-  background-color: undefined;
-  background-color: var(--button-ghost-click-color);
+  background-color: hsla(0, 0%, 100%, 1);
+  background-color: var(--button-default-text-hover-color);
   border-color: hsla(216, 76%, 44%, 1);
   border-color: var(--button-ghost-border-color);
 }
 .theme-dark .el-button--default.is-plain:focus {
   color: hsla(220, 100%, 65%, 1);
   color: var(--button-ghost-text-color);
-  background-color: undefined;
-  background-color: var(--button-ghost-click-color);
+  background-color: hsla(0, 0%, 100%, 1);
+  background-color: var(--button-default-text-hover-color);
   border-color: hsla(220, 100%, 65%, 1);
   border-color: var(--button-ghost-border-color);
 }
 .theme-dark .el-button--default.is-plain:active {
   color: hsla(220, 100%, 65%, 1);
   color: var(--button-ghost-text-color);
-  background-color: undefined;
-  background-color: var(--button-ghost-click-color);
+  background-color: hsla(0, 0%, 100%, 1);
+  background-color: var(--button-default-text-hover-color);
   border-color: hsla(220, 100%, 65%, 1);
   border-color: var(--button-ghost-border-color);
 }
@@ -25406,7 +25412,7 @@ body {
 .theme-dark .el-button--default.is-plain.is-disabled {
   color: hsla(216, 12%, 25%, 1);
   color: var(--button-ghost-text-disabled-color);
-  background-color: undefined;
+  background-color: hsla(223, 17%, 16%, 0.4);
   background-color: var(--button-ghost-disabled-color);
   border-color: hsla(216, 12%, 25%, 1);
   border-color: var(--button-ghost-text-disabled-color);
@@ -25422,7 +25428,7 @@ body {
 .theme-dark .el-button--default.is-plain.is-disabled:hover {
   color: hsla(216, 12%, 25%, 1);
   color: var(--button-ghost-text-disabled-color);
-  background-color: undefined;
+  background-color: hsla(223, 17%, 16%, 0.4);
   background-color: var(--button-ghost-disabled-color);
   border-color: hsla(216, 12%, 25%, 1);
   border-color: var(--button-ghost-text-disabled-color);
@@ -25432,36 +25438,36 @@ body {
   background-color: var(--background-color-secondary);
   border: 1px solid hsla(223,22%,87%,1);
   border: 1px solid var(--border-color);
-  border-color: undefined;
-  border-color: var(--border-color-primary);
+  border-color: hsla(223, 22%, 87%, 1);
+  border-color: var(--border-primary);
 }
 .theme-dark .el-textarea__inner {
   background-color: hsla(0,0%,98%,1);
   background-color: var(--background-color-secondary);
   border: 1px solid hsla(223,22%,87%,1);
   border: 1px solid var(--border-color);
-  border-color: undefined;
-  border-color: var(--border-color-primary);
+  border-color: hsla(216, 22%, 25%, 1);
+  border-color: var(--border-primary);
 }
 .theme-light .el-textarea__inner:focus {
-  border: undefined;
-  border: 1px solid var(--color-primary);
-  border-color: undefined;
-  border-color: var(--color-primary);
+  border: 1px solid hsla(216, 76%, 44%, 1);
+  border: 1px solid var(--primary-color);
+  border-color: hsla(216, 76%, 44%, 1);
+  border-color: var(--primary-color);
 }
 .theme-dark .el-textarea__inner:focus {
-  border: undefined;
-  border: 1px solid var(--color-primary);
-  border-color: undefined;
-  border-color: var(--color-primary);
+  border: 1px solid hsla(220, 100%, 65%, 1);
+  border: 1px solid var(--primary-color);
+  border-color: hsla(220, 100%, 65%, 1);
+  border-color: var(--primary-color);
 }
 .theme-light .el-textarea__inner:hover {
-  color: undefined;
-  color: var(--color-primary);
+  color: hsla(216, 76%, 44%, 1);
+  color: var(--primary-color);
 }
 .theme-dark .el-textarea__inner:hover {
-  color: undefined;
-  color: var(--color-primary);
+  color: hsla(220, 100%, 65%, 1);
+  color: var(--primary-color);
 }
 .theme-light .el-checkbox {
   color: hsla(220, 3%, 39%, 1);
@@ -25536,19 +25542,19 @@ body {
   border-color: var(--border-primary);
 }
 .theme-light .el-checkbox__inner.is-checked span.el-checkbox__inner {
-  background-color: undefined;
+  background-color: hsla(0, 0%, 100%, 1);
   background-color: var(--checkbox-color);
 }
 .theme-light .el-checkbox__inner.is-indeterminate span.el-checkbox__inner {
-  background-color: undefined;
+  background-color: hsla(0, 0%, 100%, 1);
   background-color: var(--checkbox-color);
 }
 .theme-light .el-checkbox__input.is-checked span.el-checkbox__inner {
-  background-color: undefined;
+  background-color: hsla(0, 0%, 100%, 1);
   background-color: var(--checkbox-color);
 }
 .theme-light .el-checkbox__input.is-indeterminate span.el-checkbox__inner {
-  background-color: undefined;
+  background-color: hsla(0, 0%, 100%, 1);
   background-color: var(--checkbox-color);
 }
 .theme-dark .el-checkbox__inner.is-checked span.el-checkbox__inner {
@@ -25568,19 +25574,19 @@ body {
   background-color: var(--checkbox-color);
 }
 .theme-light .el-checkbox__inner.is-checked span.el-checkbox__inner:before {
-  background-color: undefined;
+  background-color: hsla(0, 0%, 100%, 1);
   background-color: var(--checkbox-color);
 }
 .theme-light .el-checkbox__inner.is-indeterminate span.el-checkbox__inner:before {
-  background-color: undefined;
+  background-color: hsla(0, 0%, 100%, 1);
   background-color: var(--checkbox-color);
 }
 .theme-light .el-checkbox__input.is-checked span.el-checkbox__inner:before {
-  background-color: undefined;
+  background-color: hsla(0, 0%, 100%, 1);
   background-color: var(--checkbox-color);
 }
 .theme-light .el-checkbox__input.is-indeterminate span.el-checkbox__inner:before {
-  background-color: undefined;
+  background-color: hsla(0, 0%, 100%, 1);
   background-color: var(--checkbox-color);
 }
 .theme-dark .el-checkbox__inner.is-checked span.el-checkbox__inner:before {
@@ -25664,13 +25670,13 @@ body {
   color: var(--text-normal);
 }
 .theme-light .el-checkbox__inner span.theme-light .el-checkbox__inner {
-  background-color: undefined;
+  background-color: hsla(0, 0%, 100%, 1);
   background-color: var(--checkbox-color);
   border-color: hsla(216, 76%, 44%, 1);
   border-color: var(--checkbox-inner-color);
 }
 .theme-light .el-checkbox__inner .theme-light .el-checkbox__input {
-  background-color: undefined;
+  background-color: hsla(0, 0%, 100%, 1);
   background-color: var(--checkbox-color);
   border-color: hsla(216, 76%, 44%, 1);
   border-color: var(--checkbox-inner-color);
@@ -25688,13 +25694,13 @@ body {
   border-color: var(--checkbox-inner-color);
 }
 .theme-light .el-checkbox__input span.theme-light .el-checkbox__inner {
-  background-color: undefined;
+  background-color: hsla(0, 0%, 100%, 1);
   background-color: var(--checkbox-color);
   border-color: hsla(216, 76%, 44%, 1);
   border-color: var(--checkbox-inner-color);
 }
 .theme-light .el-checkbox__input .theme-light .el-checkbox__input {
-  background-color: undefined;
+  background-color: hsla(0, 0%, 100%, 1);
   background-color: var(--checkbox-color);
   border-color: hsla(216, 76%, 44%, 1);
   border-color: var(--checkbox-inner-color);
@@ -26161,24 +26167,24 @@ body {
   background-color: var(--bg-primary);
 }
 .theme-light .el-date-table th {
-  color: undefined;
-  color: var(--text-color-secondary);
+  color: hsla(220, 3%, 39%, 1);
+  color: var(--text-normal);
   border-color: hsla(223, 22%, 87%, 1);
   border-color: var(--border-primary);
 }
 .theme-dark .el-date-table th {
-  color: undefined;
-  color: var(--text-color-secondary);
+  color: hsla(211, 15%, 70%, 1);
+  color: var(--text-normal);
   border-color: hsla(216, 22%, 25%, 1);
   border-color: var(--border-primary);
 }
 .theme-light .el-date-table td {
-  color: undefined;
-  color: var(--text-color-secondary);
+  color: hsla(220, 3%, 39%, 1);
+  color: var(--text-normal);
 }
 .theme-dark .el-date-table td {
-  color: undefined;
-  color: var(--text-color-secondary);
+  color: hsla(211, 15%, 70%, 1);
+  color: var(--text-normal);
 }
 .theme-light .el-date-table td.current:not(.disabled) span {
   color: hsla(0, 0%, 100%, 1);
@@ -26329,12 +26335,12 @@ body {
   color: var(--text-color);
 }
 .theme-light .el-message-box__content {
-  color: undefined;
-  color: var(--text-color-secondary);
+  color: hsla(220, 3%, 39%, 1);
+  color: var(--text-normal);
 }
 .theme-dark .el-message-box__content {
-  color: undefined;
-  color: var(--text-color-secondary);
+  color: hsla(211, 15%, 70%, 1);
+  color: var(--text-normal);
 }
 .theme-light .el-input-number.is-controls-right .el-input-number__decrease {
   color: hsla(220, 3%, 39%, 1);
@@ -26801,7 +26807,7 @@ body {
   color: var(--button-ghost-disabled-color);
 }
 .theme-dark .el-tabs .el-tabs__item.is-disabled {
-  color: undefined;
+  color: hsla(223, 17%, 16%, 0.4);
   color: var(--button-ghost-disabled-color);
 }
 .theme-light .el-tabs .el-tabs__item.is-disabled:hover {
@@ -26809,7 +26815,7 @@ body {
   color: var(--button-ghost-disabled-color);
 }
 .theme-dark .el-tabs .el-tabs__item.is-disabled:hover {
-  color: undefined;
+  color: hsla(223, 17%, 16%, 0.4);
   color: var(--button-ghost-disabled-color);
 }
 .theme-light .el-tabs--border-card .el-tabs__header {
@@ -26894,14 +26900,14 @@ body {
   background-color: var(--table-color);
 }
 .theme-light .el-table td {
-  color: undefined;
-  color: var(--text-color-secondary);
+  color: hsla(220, 3%, 39%, 1);
+  color: var(--text-normal);
   border-color: hsla(222, 33%, 94%, 1);
   border-color: var(--border-secondary);
 }
 .theme-dark .el-table td {
-  color: undefined;
-  color: var(--text-color-secondary);
+  color: hsla(211, 15%, 70%, 1);
+  color: var(--text-normal);
   border-color: hsla(216, 22%, 23%, 1);
   border-color: var(--border-secondary);
 }
@@ -27265,13 +27271,13 @@ body {
 .theme-light .el-pagination li {
   color: hsla(220, 3%, 39%, 1);
   color: var(--pagination-text-color);
-  background: undefined;
+  background: hsla(216, 20%, 95%, 1);
   background: var(--pagination-bg-color);
 }
 .theme-dark .el-pagination li {
   color: hsla(211, 15%, 70%, 1);
   color: var(--pagination-text-color);
-  background: undefined;
+  background: hsla(226, 14%, 24%, 1);
   background: var(--pagination-bg-color);
 }
 .theme-light .el-pagination li.active {
@@ -27427,19 +27433,19 @@ body {
   line-height: 30px;
 }
 .theme-light .el-pagination button.btn-next {
-  background: undefined;
+  background: hsla(216, 20%, 95%, 1);
   background: var(--pagination-bg-color);
 }
 .theme-light .el-pagination button.btn-prev {
-  background: undefined;
+  background: hsla(216, 20%, 95%, 1);
   background: var(--pagination-bg-color);
 }
 .theme-dark .el-pagination button.btn-next {
-  background: undefined;
+  background: hsla(226, 14%, 24%, 1);
   background: var(--pagination-bg-color);
 }
 .theme-dark .el-pagination button.btn-prev {
-  background: undefined;
+  background: hsla(226, 14%, 24%, 1);
   background: var(--pagination-bg-color);
 }
 .theme-light .el-pagination button:disabled i {
@@ -28855,14 +28861,14 @@ text.highcharts-drilldown-data-label,
 }
 
 .highcharts-column-series rect.highcharts-point {
-  stroke: hsla(0,0%,98%,1);
-  stroke: var(--background-color-secondary);
+  stroke: hsla(0,0%,100%,1);
+  stroke: var(--bg-bg);
   stroke-linejoin: round;
 }
 
 .highcharts-pie-series .highcharts-point {
-  stroke: hsla(0,0%,98%,1);
-  stroke: var(--background-color-secondary);
+  stroke: hsla(0,0%,100%,1);
+  stroke: var(--bg-bg);
   stroke-linejoin: round;
 }
 
@@ -28887,77 +28893,77 @@ text.highcharts-drilldown-data-label,
 }
 
 .highcharts-background {
-  fill: hsla(0,0%,98%,1);
-  fill: var(--background-color-secondary);
+  fill: hsla(0,0%,100%,1);
+  fill: var(--bg-bg);
 }
 
 .highcharts-yaxis-grid .highcharts-grid-line {
   stroke: hsla(223,22%,87%,1);
-  stroke: var(--border-color);
+  stroke: var(--border-primary);
 }
 
 .highcharts-navigator-xaxis .highcharts-grid-line {
   stroke: hsla(223,22%,87%,1);
-  stroke: var(--border-color);
+  stroke: var(--border-primary);
 }
 
 .highcharts-axis-line {
   stroke: hsla(223,22%,87%,1);
-  stroke: var(--border-color);
+  stroke: var(--border-primary);
 }
 
 .highcharts-axis-labels text {
-  fill: undefined;
-  fill: var(--text-color-secondary);
+  fill: hsla(220,3%,39%,1);
+  fill: var(--text-normal);
 }
 
 .highcharts-data-label text {
-  fill: undefined;
-  fill: var(--text-color-secondary);
+  fill: hsla(220,3%,39%,1);
+  fill: var(--text-normal);
 }
 
 .highcharts-root text {
-  fill: undefined;
-  fill: var(--text-color-secondary);
+  fill: hsla(220,3%,39%,1);
+  fill: var(--text-normal);
 }
 
 .highcharts-range-input {
   stroke: hsla(223,22%,87%,1);
-  stroke: var(--border-color);
+  stroke: var(--border-primary);
 }
 .highcharts-range-input text {
-  fill: undefined;
-  fill: var(--text-color-secondary);
+  fill: hsla(220,3%,39%,1);
+  fill: var(--text-normal);
 }
 
 .highcharts-range-selector {
-  color: undefined;
-  color: var(--text-color-secondary);
-  background-color: hsla(0,0%,98%,1);
-  background-color: var(--background-color-secondary);
+  color: hsla(220,3%,39%,1);
+  color: var(--text-normal);
+  background-color: hsla(0,0%,100%,1);
+  background-color: var(--bg-bg);
   border-color: hsla(216,76%,44%,0.8) !important;
-  border-color: var(--border-hover-color) !important;
+  border-color: var(--border-hover) !important;
 }
 .highcharts-range-selector.active {
   border-color: hsla(216,76%,44%,0.8) !important;
-  border-color: var(--border-hover-color) !important;
+  border-color: var(--border-hover) !important;
 }
 .highcharts-range-selector-buttons text {
-  fill: undefined;
-  fill: var(--text-color-secondary);
+  fill: hsla(220,3%,39%,1);
+  fill: var(--text-normal);
 }
 
 .highcharts-button {
   fill: hsla(214,28%,95%,1);
-  fill: var(--table-head-bg-color);
+  fill: var(--table-header);
 }
 .highcharts-button text {
-  fill: undefined;
-  fill: var(--text-color-secondary);
+  fill: hsla(220,3%,39%,1);
+  fill: var(--text-normal);
 }
 .highcharts-button-disabled {
-  fill: hsla(228,24%,96%,1);
-  fill: var(--background-color);
+  fill: hsla(0,0%,100%,1);
+  fill: var(--bg-primary);
 }
 .highcharts-button-pressed text {
   fill: hsla(220,3%,39%,1);
@@ -28965,8 +28971,8 @@ text.highcharts-drilldown-data-label,
 }
 
 .highcharts-legend-item text {
-  fill: undefined;
-  fill: var(--text-color-secondary);
+  fill: hsla(220,3%,39%,1);
+  fill: var(--text-normal);
 }
 .highcharts-legend-item:hover text {
   fill: hsla(220,3%,39%,1);
@@ -28988,36 +28994,36 @@ text.highcharts-drilldown-data-label,
 }
 
 .highcharts-navigator-handle {
-  fill: hsla(0,0%,98%,1);
-  fill: var(--background-color-secondary);
+  fill: hsla(0,0%,100%,1);
+  fill: var(--bg-bg);
   stroke: hsla(223,22%,87%,1);
-  stroke: var(--border-color);
+  stroke: var(--border-primary);
 }
 
 .highcharts-scrollbar-button {
   fill: hsla(214,28%,95%,1);
-  fill: var(--table-head-bg-color);
+  fill: var(--table-header);
   stroke: none;
 }
 
 .highcharts-navigator-outline {
   stroke: hsla(223,22%,87%,1);
-  stroke: var(--border-color);
+  stroke: var(--border-primary);
 }
 
 .highcharts-tick {
   stroke: hsla(223,22%,87%,1);
-  stroke: var(--border-color);
+  stroke: var(--border-primary);
 }
 
 .highcharts-legend-nav-inactive {
   fill: hsla(223,22%,87%,1);
-  fill: var(--border-color);
+  fill: var(--border-primary);
 }
 
 .highcharts-legend-nav-active {
   fill: hsla(216,76%,44%,0.8);
-  fill: var(--border-hover-color);
+  fill: var(--border-hover);
 }
 
 .highcharts-series-inactive {

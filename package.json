@@ -1,6 +1,6 @@
 {
   "name": "@rqjs/rqthemes",
-  "version": "0.7.4-beta.11",
+  "version": "0.7.4-beta.12",
   "description": "ricequant themes",
   "main": "index.css",
   "repository": {
@@ -13,7 +13,8 @@
     "dev": " rm -rf dist && parcel watch ./demo/index.html --no-autoinstall --out-dir dist",
     "build": "./scripts/updep.sh && parcel build src/index.scss --no-cache --no-minify --no-source-maps --no-content-hash -d ./ && LEGACY=true parcel build src/index.scss --no-cache --no-minify --no-source-maps --no-content-hash -d ./ --out-file legacy.css",
     "lint": "./scripts/lint.sh",
-    "clean": "rm -rf index.css legacy.css"
+    "clean": "rm -rf index.css legacy.css light.json",
+    "debug": "cat legacy.css| awk '/undefinded/{getline; print}' | sort | uniq"
   },
   "publishConfig": {
     "access": "public"

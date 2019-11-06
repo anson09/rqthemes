@@ -1,7 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 
+let once = false;
 function getCssVar() {
+  if (once) {
+    const json = fs.readFileSync(path.resolve(__dirname, `src/light.json`), "utf8");
+    return JSON.parse(json);
+  }
+  once = true;
   const FILES = ["global", "light", "compatibility"];
 
   let source = FILES.map(file =>
@@ -17,8 +23,7 @@ function getCssVar() {
     });
 
   const json = `{${trans}}`;
-
-  fs.writeFile("./light.json", json, () => {
+  fs.writeFileSync("./light.json", json, () => {
     console.log("<collecting vars to light.json success>");
   });
 
