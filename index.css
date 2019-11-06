@@ -376,7 +376,7 @@ template {
   --bg-final: hsla(228, 24%, 96%, 1);
   --bg-header: hsla(0, 0%, 98%, 1);
   --bg-bg: hsla(0, 0%, 100%, 1);
-  --bg-minor:hsla(216, 20%, 95%, 1);
+  --bg-minor: hsla(216, 20%, 95%, 1);
   --bg-shadows: 0px 2px 4px 0px hsla(226, 19%, 16%, 0.2);
   --bg-green: hsla(146, 48%, 49%, 0.05);
   --border-primary: hsla(223, 22%, 87%, 1);
@@ -417,7 +417,9 @@ template {
   --select-text-color: var(--text-normal);
   --select-text-hover-color: var(--primary-color);
   --select-dropdown-bg-color: var(--bg-bg);
-  --select-dropdown-bg-hover-color: var(--primary-color-2);
+  --select-dropdown-bg-hover-color: var(
+    --primary-color-2
+  );
   --table-head-bg-color: var(--table-header);
   --table-primary-bg-color: var(--table-primary);
   --table-secondary-bg-color: var(--table-secondary);
@@ -430,7 +432,7 @@ template {
   --table-blue-color: var(--primary-color);
   --table-blue-bg-color: var(--components-click);
   --table-green-color: var(--green);
-  --table-green-bg-color:var(--bg-green);
+  --table-green-bg-color: var(--bg-green);
   --aside-bg-color: var(--bg-primary);
   --aside-decorator-color: var(--grey);
   --aside-decorator-active-color: var(--primary-color);
@@ -461,7 +463,9 @@ template {
   --sub-tabs-text-active-color: var(--white);
   --date-table-weekend-color: var(--primary-color-6);
   --date-table-current-text-color: var(--white);
-  --date-table-current-color: var(--primary-color);
+  --date-table-current-color: var(
+    --primary-color
+  );
   --date-table-bg: var(--bg-bg);
   --table-scroll-bg-color: var(--opacity);
   --table-scroll-track-color: #8a8fa2;
@@ -505,7 +509,7 @@ template {
   --bg-final: hsla(227, 18%, 10%, 1);
   --bg-header: hsla(229, 17%, 12%, 1);
   --bg-bg: hsla(226, 17%, 15%, 1);
-  --bg-minor:hsla(226, 14%, 24%, 1);
+  --bg-minor: hsla(226, 14%, 24%, 1);
   --bg-shadows: 0px 2px 4px 0px hsla(216, 40%, 6%, 0.2);
   --bg-green: hsla(146, 48%, 49%, 0.05);
   --border-primary: hsla(216, 22%, 25%, 1);
@@ -546,7 +550,9 @@ template {
   --select-text-color: var(--text-normal);
   --select-text-hover-color: var(--primary-color);
   --select-dropdown-bg-color: var(--bg-bg);
-  --select-dropdown-bg-hover-color: var(--primary-color-2);
+  --select-dropdown-bg-hover-color: var(
+    --primary-color-2
+  );
   --table-head-bg-color: var(--table-header);
   --table-primary-bg-color: var(--table-primary);
   --table-secondary-bg-color: var(--table-secondary);
@@ -559,7 +565,7 @@ template {
   --table-blue-color: var(--primary-color);
   --table-blue-bg-color: var(--components-click);
   --table-green-color: var(--green);
-  --table-green-bg-color:var(--bg-green);
+  --table-green-bg-color: var(--bg-green);
   --aside-bg-color: var(--bg-primary);
   --aside-decorator-color: var(--border-primary);
   --aside-decorator-active-color: var(--primary-color);
@@ -590,7 +596,9 @@ template {
   --sub-tabs-text-active-color: var(--white);
   --date-table-weekend-color: var(--primary-color-6);
   --date-table-current-text-color: var(--white);
-  --date-table-current-color: var(--primary-color);
+  --date-table-current-color: var(
+    --primary-color
+  );
   --date-table-bg: var(--bg-bg);
   --table-scroll-bg-color: var(--background-color-secondary);
   --table-scroll-track-color: var(--grey);
