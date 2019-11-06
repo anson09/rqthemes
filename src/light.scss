@@ -13,6 +13,7 @@
 
   //error-color//
   --error-color: hsla(0, 94%, 66%, 1); //错误提醒色
+  --error-color-2: hsla(0, 94%, 66%, 0.2); //红色按钮禁止色
   --error-color-6: hsla(0, 94%, 66%, 0.6); //红色按钮点击色
   --error-color-8: hsla(0, 94%, 66%, 0.8); //红色按钮悬浮色
 
@@ -130,7 +131,7 @@
   --input-text-disabled-color: var(--disable-text); // 文本禁用字体色
 
   //---components-checkbox---//
-  --checkbox-color: var(--bg-bg); // checkbox背景色
+  --checkbox-color: var(--color-primary); // checkbox背景色
   --checkbox-inner-color: var(--primary-color); // checkbox内部icon颜色
 
   //---components-tabs---//
@@ -160,7 +161,7 @@
 
   //---unknown---//
   --arrow-color: var(--hover-color);
-  --arrow-inside-color: var(--bg-secondary);
+  --arrow-inside-color: var(--background-color-secondary);
 
   //---components-card--//
   --card-header-bg: var(--bg-primary);
@@ -171,4 +172,6 @@
   //---icon-color---//
   --icon-normal: var(--primary-color-3);
   --icon-hover: var(--primary-color-8);
+  --icon-click: var(--primary-color);
+  --icon-disable: var(--primary-color-1);
 }

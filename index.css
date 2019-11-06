@@ -360,6 +360,7 @@ template {
   --primary-color-8: hsla(216, 76%, 44%, 0.8);
   --primary-color-9: hsla(216, 76%, 44%, 0.9);
   --error-color: hsla(0, 94%, 66%, 1);
+  --error-color-2: hsla(0, 94%, 66%, 0.2);
   --error-color-6: hsla(0, 94%, 66%, 0.6);
   --error-color-8: hsla(0, 94%, 66%, 0.8);
   --text-title: hsla(220, 3%, 19%, 1);
@@ -415,9 +416,7 @@ template {
   --select-text-color: var(--text-normal);
   --select-text-hover-color: var(--primary-color);
   --select-dropdown-bg-color: var(--bg-bg);
-  --select-dropdown-bg-hover-color: var(
-    --primary-color-2
-  );
+  --select-dropdown-bg-hover-color: var(--primary-color-2);
   --table-head-bg-color: var(--table-header);
   --table-primary-bg-color: var(--table-primary);
   --table-secondary-bg-color: var(--table-secondary);
@@ -430,7 +429,7 @@ template {
   --table-blue-color: var(--primary-color);
   --table-blue-bg-color: var(--components-click);
   --table-green-color: var(--green);
-  --table-green-bg-color: var(--bg-green);
+  --table-green-bg-color:var(--bg-green);
   --aside-bg-color: var(--bg-primary);
   --aside-decorator-color: var(--grey);
   --aside-decorator-active-color: var(--primary-color);
@@ -446,7 +445,7 @@ template {
   --input-border: var(--border-primary);
   --input-text-color: var(--text-normal);
   --input-text-disabled-color: var(--disable-text);
-  --checkbox-color: var(--bg-bg);
+  --checkbox-color: var(--color-primary);
   --checkbox-inner-color: var(--primary-color);
   --tabs-bg-color: var(--bg-header);
   --tabs-text-color: var(--text-title);
@@ -460,20 +459,20 @@ template {
   --sub-tabs-text-active-color: var(--white);
   --date-table-weekend-color: var(--primary-color-6);
   --date-table-current-text-color: var(--white);
-  --date-table-current-color: var(
-    --primary-color
-  );
+  --date-table-current-color: var(--primary-color);
   --date-table-bg: var(--bg-bg);
   --table-scroll-bg-color: var(--opacity);
   --table-scroll-track-color: #8a8fa2;
   --arrow-color: var(--hover-color);
-  --arrow-inside-color: var(--bg-secondary);
+  --arrow-inside-color: var(--background-color-secondary);
   --card-header-bg: var(--bg-primary);
   --card-header-text: var(--text-title);
   --card-body-bg: var(--bg-bg);
   --card-body-text: var(--text-normal);
   --icon-normal: var(--primary-color-3);
   --icon-hover: var(--primary-color-8);
+  --icon-click: var(--primary-color);
+  --icon-disable: var(--primary-color-1);
 }
 
 .theme-dark {
@@ -488,6 +487,7 @@ template {
   --primary-color-8: hsla(220, 100%, 65%, 0.8);
   --primary-color-9: hsla(220, 100%, 65%, 0.9);
   --error-color: hsla(0, 94%, 66%, 1);
+  --error-color-2: hsla(0, 94%, 66%, 0.2);
   --error-color-6: hsla(0, 94%, 66%, 0.6);
   --error-color-8: hsla(0, 94%, 66%, 0.8);
   --text-title: hsla(215, 22%, 89%, 1);
@@ -504,6 +504,7 @@ template {
   --bg-header: hsla(229, 17%, 12%, 1);
   --bg-bg: hsla(226, 17%, 15%, 1);
   --bg-shadows: 0px 2px 4px 0px hsla(216, 40%, 6%, 0.2);
+  --bg-green: hsla(146, 48%, 49%, 0.05);
   --border-primary: hsla(216, 22%, 25%, 1);
   --border-secondary: hsla(216, 22%, 23%, 1);
   --border-hover: hsla(220, 100%, 65%, 0.8);
@@ -523,17 +524,17 @@ template {
   --button-default-color: var(--primary-color);
   --button-default-click-color: var(--primary-color-6);
   --button-default-hover-color: var(--primary-color-8);
-  --button-default-disabled-color: var(--primary-color-5);
-  --button-default-text-color: var(--text-btn);
-  --button-default-text-disabled-color: var(--text-btn);
-  --button-default-text-hover-color: var(--text-btn);
+  --button-default-disabled-color: var(--disable-bg);
+  --button-default-text-color: var(--white);
+  --button-default-text-disabled-color: var(--disable-text);
+  --button-default-text-hover-color: var(--white);
   --button-ghost-color: var(--opacity);
   --button-ghost-border-color: var(--primary-color);
   --button-ghost-hover-color: var(--primary-color-4);
   --button-ghost-text-color: var(--primary-color);
-  --button-ghost-text-disabled-color: var(--primary-color-5);
-  --button-ghost-disabled-color: var(--opacity);
-  --button-ghost-disable-border-color: var(--primary-color-5);
+  --button-ghost-text-disabled-color: var(--disable-text);
+  --button-ghost-disabled-color: var(---disable-secondary);
+  --button-ghost-disable-border-color: var(---disable-primary);
   --button-ghost-text-hover-color: var(--primary-color);
   --button-group-color: var(--opacity);
   --button-group-hover-color: var(--primary-color-8);
@@ -542,9 +543,7 @@ template {
   --select-text-color: var(--text-normal);
   --select-text-hover-color: var(--primary-color);
   --select-dropdown-bg-color: var(--bg-bg);
-  --select-dropdown-bg-hover-color: var(
-    --primary-color-2
-  );
+  --select-dropdown-bg-hover-color: var(--primary-color-2);
   --table-head-bg-color: var(--table-header);
   --table-primary-bg-color: var(--table-primary);
   --table-secondary-bg-color: var(--table-secondary);
@@ -557,9 +556,9 @@ template {
   --table-blue-color: var(--primary-color);
   --table-blue-bg-color: var(--components-click);
   --table-green-color: var(--green);
-  --table-green-bg-color: var(--bg-green);
+  --table-green-bg-color:var(--bg-green);
   --aside-bg-color: var(--bg-primary);
-  --aside-decorator-color: var(--grey);
+  --aside-decorator-color: var(--border-primary);
   --aside-decorator-active-color: var(--primary-color);
   --aside-font-active-color: var(--primary-color);
   --aside-bg-active-color: var(--primary-color-2);
@@ -587,20 +586,20 @@ template {
   --sub-tabs-text-active-color: var(--white);
   --date-table-weekend-color: var(--primary-color-6);
   --date-table-current-text-color: var(--white);
-  --date-table-current-color: var(
-    --primary-color
-  );
+  --date-table-current-color: var(--primary-color);
   --date-table-bg: var(--bg-bg);
-  --table-scroll-bg-color: var(--opacity);
-  --table-scroll-track-color: #8a8fa2;
-  --arrow-color: var(--hover-color);
-  --arrow-inside-color: var(--bg-secondary);
+  --table-scroll-bg-color: var(--background-color-secondary);
+  --table-scroll-track-color: var(--grey);
+  --arrow-color: var(--border-primary);
+  --arrow-inside-color: var(--bg-primary);
   --card-header-bg: var(--bg-primary);
   --card-header-text: var(--text-title);
   --card-body-bg: var(--bg-bg);
   --card-body-text: var(--text-normal);
   --icon-normal: var(--primary-color-3);
   --icon-hover: var(--primary-color-8);
+  --icon-click: var(--primary-color);
+  --icon-disable: var(--primary-color-1);
 }
 
 html {
