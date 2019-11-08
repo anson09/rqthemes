@@ -37,6 +37,7 @@
   --bg-bg: hsla(226, 17%, 15%, 1); //布局背景
   --bg-minor: hsla(226, 14%, 24%, 1); //翻页器默认背景
   --bg-shadows: 0px 2px 4px 0px hsla(216, 40%, 6%, 0.2); //全局背景阴影
+  --bg-shadows-tabs: 0px 0px 10px 0px hsla(227, 18%, 10%, 1); //tabs选中背景阴影
   --bg-green: hsla(146, 48%, 49%, 0.05); //对账完成后表格背景
 
   //border-color//
@@ -104,9 +105,9 @@
   --table-active-color: var(--grey); //表格选中颜色
   --table-head-text-color: var(--text-normal); //表格表头字体颜色
 
-  --table-highlight-bg-color: var(--white); // 高亮的表格背景
+  --table-highlight-bg-color: var(--bg-header); // 高亮的表格背景
   --table-blue-color: var(--primary-color); // 蓝色表格
-  --table-blue-bg-color: var(--components-click); // 蓝色表格背景
+  --table-blue-bg-color: var(--primary-color-1); // 蓝色表格背景
   --table-green-color: var(--green); // 绿色表格
   --table-green-bg-color: var(--bg-green); // 绿色表格背景
 
@@ -139,13 +140,15 @@
   //---components-tabs---//
   --tabs-bg-color: var(--bg-header); // tab的背景颜色
   --tabs-text-color: var(--text-title); // tab的文字颜色
-  --tabs-bg-active-color: var(--white); // 激活的tab的背景颜色
+  --tabs-bg-active-color: var(--bg-bg); // 激活的tab的背景颜色
   --tabs-text-active-color: var(--primary-color); // 激活的tab标题字体颜色
   --tabs-border-active-color: var(--primary-color); // 激活的tab下划线颜色
   --tabs-active-color: var(--primary-color); // 激活的tab标题字体颜色
+  --tabs-active-shadows: var(--bg-shadows-tabs); // 激活的tab背景阴影
 
   --sub-tabs-bg-color: var(--opacity); // 二级tab的背景颜色
   --sub-tabs-text-color: var(--text-secondary); // 二级tab的文字颜色
+  --sub-tabs-text-hover-color: var(--primary-color-5); // 悬停的二级的文字颜色
   --sub-tabs-bg-active-color: var(--primary-color-5); // 激活的二级tab的背景颜色
   --sub-tabs-text-active-color: var(--white); // 激活的二级tab标题字体颜色
 
@@ -165,13 +168,13 @@
   --arrow-color: var(--border-primary);
   --arrow-inside-color: var(--bg-primary);
 
-  //---components-card--//
+  //---components-card---//
   --card-header-bg: var(--bg-primary);
   --card-header-text: var(--text-title);
   --card-body-bg: var(--bg-bg);
   --card-body-text: var(--text-normal);
 
-  //---icon-color---//
+  //---components-icon---//
   --icon-normal: var(--primary-color-3);
   --icon-hover: var(--primary-color-8);
   --icon-click: var(--primary-color);
