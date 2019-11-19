@@ -136,6 +136,12 @@
   //---components-checkbox---//
   --checkbox-color: var(--bg-bg); // checkbox背景色
   --checkbox-inner-color: var(--primary-color); // checkbox内部icon颜色
+  --checkbox-text-hover-color: var(
+    --primary-color-5
+  ); // checkbox的hover文字颜色
+  --checkbox-icon-hover-color: var(
+    --primary-color-5
+  ); // checkbox的hover icon颜色
 
   //---components-tabs---//
   --tabs-bg-color: var(--bg-header); // tab的背景颜色
