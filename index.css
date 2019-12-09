@@ -25406,11 +25406,11 @@ body {
 }
 .theme-light .el-tabs .el-tabs__item.is-disabled,
 .theme-dark .el-tabs .el-tabs__item.is-disabled {
-  color: var(--button-ghost-disabled-color);
+  color: var(--disable-text);
 }
 .theme-light .el-tabs .el-tabs__item.is-disabled:hover,
 .theme-dark .el-tabs .el-tabs__item.is-disabled:hover {
-  color: var(--button-ghost-disabled-color);
+  color: var(--disable-text);
 }
 .theme-light .el-tabs--border-card .el-tabs__header,
 .theme-dark .el-tabs--border-card .el-tabs__header {

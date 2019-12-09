@@ -26864,20 +26864,20 @@ body {
   background-color: var(--bg-primary);
 }
 .theme-light .el-tabs .el-tabs__item.is-disabled {
-  color: hsla(0, 0%, 0%, 0);
-  color: var(--button-ghost-disabled-color);
+  color: hsla(220, 11%, 78%, 1);
+  color: var(--disable-text);
 }
 .theme-dark .el-tabs .el-tabs__item.is-disabled {
-  color: hsla(223, 17%, 16%, 0.4);
-  color: var(--button-ghost-disabled-color);
+  color: hsla(216, 12%, 25%, 1);
+  color: var(--disable-text);
 }
 .theme-light .el-tabs .el-tabs__item.is-disabled:hover {
-  color: hsla(0, 0%, 0%, 0);
-  color: var(--button-ghost-disabled-color);
+  color: hsla(220, 11%, 78%, 1);
+  color: var(--disable-text);
 }
 .theme-dark .el-tabs .el-tabs__item.is-disabled:hover {
-  color: hsla(223, 17%, 16%, 0.4);
-  color: var(--button-ghost-disabled-color);
+  color: hsla(216, 12%, 25%, 1);
+  color: var(--disable-text);
 }
 .theme-light .el-tabs--border-card .el-tabs__header {
   color: hsla(220, 3%, 19%, 1);
