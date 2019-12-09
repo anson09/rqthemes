@@ -603,9 +603,9 @@
         background-color: var(--bg-primary);
       }
       &.is-disabled {
-        color: var(--button-ghost-disabled-color);
+        color: var(--disable-text);
         &:hover {
-          color: var(--button-ghost-disabled-color);
+          color: var(--disable-text);
         }
       }
     }
