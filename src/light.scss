@@ -12,10 +12,16 @@
   --primary-color-9: hsla(216, 76%, 44%, 0.9);
 
   //error-color//
-  --error-color: hsla(0, 94%, 66%, 1); //错误提醒色
-  --error-color-2: hsla(0, 94%, 66%, 0.2); //红色按钮禁止色
-  --error-color-6: hsla(0, 94%, 66%, 0.6); //红色按钮点击色
-  --error-color-8: hsla(0, 94%, 66%, 0.8); //红色按钮悬浮色
+  --error-color: hsla(0, 94%, 66%, 1); //错误提醒色/红色按钮字体/border
+  --error-color-1: hsla(0, 94%, 66%, 0.1); //红色按钮悬浮色
+  --error-color-2: hsla(0, 94%, 66%, 0.2); //图标按钮禁止色/红色按钮点击色
+  --error-color-6: hsla(0, 94%, 66%, 0.6); //图标按钮点击色
+  --error-color-8: hsla(0, 94%, 66%, 0.8); //图标按钮悬浮色
+
+  //succeed-color//
+  --succeed-color: hsla(146, 48%, 49%, 1); //成功提醒色
+  --succeed-color-1: hsla(146, 48%, 49%, 0.1); //绿色按钮悬浮色
+  --succeed-color-2: hsla(146, 48%, 49%, 0.2); //绿色按钮点击色
 
   //text-color//
   --text-title: hsla(220, 3%, 19%, 1); //标题字体色值
@@ -86,6 +92,26 @@
   --button-group-hover-color: var(--primary-color-8); // 按钮组悬停背景色
   --button-group-disabled-color: var(--disable-primary); // 按钮组禁用背景色
   --button-group-text-color: var(--white); // 按钮组字体色
+
+  --button-red-color: var(--opacity); // 按钮背景色
+  --button-red-border-color: var(--error-color); // 按钮边框色
+  --button-red-hover-color: var(--error-color-1); // 悬停背景色
+  --button-red-click-color: var(--error-color-2); // 点击背景色
+  --button-red-text-color: var(--error-color); // 按钮字体色
+  --button-red-text-hover-color: var(--error-color); // 按钮悬停字体色
+  --button-red-text-disabled-color: var(--disable-text); // 按钮禁用字体色
+  --button-red-disabled-color: var(--disable-secondary); // 按钮禁用背景色
+  --button-red-disabled-border-color: var(--disable-primary); //按钮禁用边框色
+
+  --button-green-color: var(--opacity); // 按钮背景色
+  --button-green-border-color: var(--succeed-color); // 按钮边框色
+  --button-green-hover-color: var(--succeed-color-1); // 悬停背景色
+  --button-green-click-color: var(--succeed-color-2); // 点击背景色
+  --button-green-text-color: var(--succeed-color); // 按钮字体色
+  --button-green-text-hover-color: var(--succeed-color); // 按钮悬停字体色
+  --button-green-text-disabled-color: var(--disable-text); // 按钮禁用字体色
+  --button-green-disabled-color: var(--disable-secondary); // 按钮禁用背景色
+  --button-green-disabled-border-color: var(--disable-primary); //按钮禁用边框色
 
   //---components-select---//
   --select-text-color: var(--text-normal); // 下拉默认字体色

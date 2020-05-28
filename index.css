@@ -360,9 +360,13 @@ template {
   --primary-color-8: hsla(216, 76%, 44%, 0.8);
   --primary-color-9: hsla(216, 76%, 44%, 0.9);
   --error-color: hsla(0, 94%, 66%, 1);
+  --error-color-1: hsla(0, 94%, 66%, 0.1);
   --error-color-2: hsla(0, 94%, 66%, 0.2);
   --error-color-6: hsla(0, 94%, 66%, 0.6);
   --error-color-8: hsla(0, 94%, 66%, 0.8);
+  --succeed-color: hsla(146, 48%, 49%, 1);
+  --succeed-color-1: hsla(146, 48%, 49%, 0.1);
+  --succeed-color-2: hsla(146, 48%, 49%, 0.2);
   --text-title: hsla(220, 3%, 19%, 1);
   --text-normal: hsla(220, 3%, 39%, 1);
   --text-secondary: hsla(220, 4%, 58%, 1);
@@ -415,6 +419,24 @@ template {
   --button-group-hover-color: var(--primary-color-8);
   --button-group-disabled-color: var(--disable-primary);
   --button-group-text-color: var(--white);
+  --button-red-color: var(--opacity);
+  --button-red-border-color: var(--error-color);
+  --button-red-hover-color: var(--error-color-1);
+  --button-red-click-color: var(--error-color-2);
+  --button-red-text-color: var(--error-color);
+  --button-red-text-hover-color: var(--error-color);
+  --button-red-text-disabled-color: var(--disable-text);
+  --button-red-disabled-color: var(--disable-secondary);
+  --button-red-disabled-border-color: var(--disable-primary);
+  --button-green-color: var(--opacity);
+  --button-green-border-color: var(--succeed-color);
+  --button-green-hover-color: var(--succeed-color-1);
+  --button-green-click-color: var(--succeed-color-2);
+  --button-green-text-color: var(--succeed-color);
+  --button-green-text-hover-color: var(--succeed-color);
+  --button-green-text-disabled-color: var(--disable-text);
+  --button-green-disabled-color: var(--disable-secondary);
+  --button-green-disabled-border-color: var(--disable-primary);
   --select-text-color: var(--text-normal);
   --select-text-hover-color: var(--primary-color);
   --select-dropdown-bg-color: var(--bg-bg);
@@ -502,9 +524,13 @@ template {
   --primary-color-8: hsla(220, 100%, 65%, 0.8);
   --primary-color-9: hsla(220, 100%, 65%, 0.9);
   --error-color: hsla(0, 94%, 66%, 1);
+  --error-color-1: hsla(0, 94%, 66%, 0.1);
   --error-color-2: hsla(0, 94%, 66%, 0.2);
   --error-color-6: hsla(0, 94%, 66%, 0.6);
   --error-color-8: hsla(0, 94%, 66%, 0.8);
+  --succeed-color: hsla(146, 48%, 49%, 1);
+  --succeed-color-1: hsla(146, 48%, 49%, 0.1);
+  --succeed-color-2: hsla(146, 48%, 49%, 0.2);
   --text-title: hsla(215, 22%, 89%, 1);
   --text-normal: hsla(211, 15%, 70%, 1);
   --text-secondary: hsla(211, 10%, 50%, 1);
@@ -557,6 +583,24 @@ template {
   --button-group-hover-color: var(--primary-color-8);
   --button-group-disabled-color: var(--disable-primary);
   --button-group-text-color: var(--white);
+  --button-red-color: var(--opacity);
+  --button-red-border-color: var(--error-color);
+  --button-red-hover-color: var(--error-color-1);
+  --button-red-click-color: var(--error-color-2);
+  --button-red-text-color: var(--error-color);
+  --button-red-text-hover-color: var(--error-color);
+  --button-red-text-disabled-color: var(--disable-text);
+  --button-red-disabled-color: var(--disable-secondary);
+  --button-red-disabled-border-color: var(--disable-primary);
+  --button-green-color: var(--opacity);
+  --button-green-border-color: var(--succeed-color);
+  --button-green-hover-color: var(--succeed-color-1);
+  --button-green-click-color: var(--succeed-color-2);
+  --button-green-text-color: var(--succeed-color);
+  --button-green-text-hover-color: var(--succeed-color);
+  --button-green-text-disabled-color: var(--disable-text);
+  --button-green-disabled-color: var(--disable-secondary);
+  --button-green-disabled-border-color: var(--disable-primary);
   --select-text-color: var(--text-normal);
   --select-text-hover-color: var(--primary-color);
   --select-dropdown-bg-color: var(--bg-bg);
@@ -24745,7 +24789,8 @@ body {
 .theme-dark .el-button-group .el-button {
   color: var(--button-default-text-color);
   background-color: var(--button-default-color);
-  border-color: var(--border-primary);
+  background-clip: padding-box;
+  border-color: var(--button-default-color);
 }
 .theme-light .el-button-group .el-button:focus, .theme-light .el-button-group .el-button:active,
 .theme-dark .el-button-group .el-button:focus,
@@ -24757,13 +24802,13 @@ body {
 .theme-dark .el-button-group .el-button:hover {
   color: var(--button-default-text-hover-color);
   background-color: var(--button-default-hover-color);
-  border-color: var(--border-hover);
+  border-color: var(--button-default-hover-color);
 }
 .theme-light .el-button-group .el-button.is-disabled,
 .theme-dark .el-button-group .el-button.is-disabled {
   color: var(--button-default-text-color);
   background-color: var(--button-default-disabled-color);
-  border-color: var(--disable-primary);
+  border-color: var(--button-default-disabled-color);
 }
 .theme-light .el-button-group .el-button.is-disabled:focus, .theme-light .el-button-group .el-button.is-disabled:active, .theme-light .el-button-group .el-button.is-disabled:hover,
 .theme-dark .el-button-group .el-button.is-disabled:focus,
@@ -24863,6 +24908,7 @@ body {
 .theme-dark .el-button--default {
   color: var(--button-default-text-color);
   background-color: var(--button-default-color);
+  background-clip: padding-box;
   border-color: var(--button-default-color);
 }
 .theme-light .el-button--default:focus, .theme-light .el-button--default:active,
@@ -24870,25 +24916,25 @@ body {
 .theme-dark .el-button--default:active {
   color: var(--button-default-text-color);
   background-color: var(--button-default-click-color);
-  border-color: var(--primary-color);
+  border-color: var(--button-default-click-color);
 }
 .theme-light .el-button--default:hover,
 .theme-dark .el-button--default:hover {
   color: var(--button-default-text-hover-color);
   background-color: var(--button-default-hover-color);
-  border-color: var(--border-hover);
+  border-color: var(--button-default-hover-color);
 }
 .theme-light .el-button--default.is-disabled,
 .theme-dark .el-button--default.is-disabled {
   color: var(--button-default-text-disabled-color);
   background-color: var(--button-default-disabled-color);
-  border-color: var(--border-color);
+  border-color: var(--button-default-disabled-color);
 }
 .theme-light .el-button--default.is-disabled:hover,
 .theme-dark .el-button--default.is-disabled:hover {
   color: var(--button-default-text-disabled-color);
   background-color: var(--button-default-disabled-color);
-  border-color: var(--border-hover);
+  border-color: var(--button-default-disabled-color);
 }
 .theme-light .el-button--default.is-plain,
 .theme-dark .el-button--default.is-plain {
