@@ -36,7 +36,8 @@
     .el-button {
       color: var(--button-default-text-color);
       background-color: var(--button-default-color);
-      border-color: var(--border-primary);
+      background-clip: padding-box;
+      border-color: var(--button-default-color);
 
       &:focus,
       &:active {
@@ -47,13 +48,13 @@
       &:hover {
         color: var(--button-default-text-hover-color);
         background-color: var(--button-default-hover-color);
-        border-color: var(--border-hover);
+        border-color: var(--button-default-hover-color);
       }
 
       &.is-disabled {
         color: var(--button-default-text-color);
         background-color: var(--button-default-disabled-color);
-        border-color: var(--disable-primary);
+        border-color: var(--button-default-disabled-color);
 
         &:focus,
         &:active,
@@ -157,30 +158,31 @@
   .el-button--default {
     color: var(--button-default-text-color);
     background-color: var(--button-default-color);
+    background-clip: padding-box;
     border-color: var(--button-default-color);
 
     &:focus,
     &:active {
       color: var(--button-default-text-color);
       background-color: var(--button-default-click-color);
-      border-color: var(--primary-color);
+      border-color: var(--button-default-click-color);
     }
 
     &:hover {
       color: var(--button-default-text-hover-color);
       background-color: var(--button-default-hover-color);
-      border-color: var(--border-hover);
+      border-color: var(--button-default-hover-color);
     }
 
     &.is-disabled {
       color: var(--button-default-text-disabled-color);
       background-color: var(--button-default-disabled-color);
-      border-color: var(--border-color);
+      border-color: var(--button-default-disabled-color);
 
       &:hover {
         color: var(--button-default-text-disabled-color);
         background-color: var(--button-default-disabled-color);
-        border-color: var(--border-hover);
+        border-color: var(--button-default-disabled-color);
       }
     }
 
