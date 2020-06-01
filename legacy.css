@@ -517,6 +517,7 @@ template {
 :root{}
 :root{}
 :root{}
+:root{}
 @charset "UTF-8";
 .theme-light {
   --primary-color: hsla(216, 76%, 44%, 1);
@@ -532,6 +533,7 @@ template {
   --error-color: hsla(0, 94%, 66%, 1);
   --error-color-1: hsla(0, 94%, 66%, 0.1);
   --error-color-2: hsla(0, 94%, 66%, 0.2);
+  --error-color-3: hsla(0, 94%, 66%, 0.3);
   --error-color-6: hsla(0, 94%, 66%, 0.6);
   --error-color-8: hsla(0, 94%, 66%, 0.8);
   --succeed-color: hsla(146, 48%, 49%, 1);
@@ -696,6 +698,7 @@ template {
   --error-color: hsla(0, 94%, 66%, 1);
   --error-color-1: hsla(0, 94%, 66%, 0.1);
   --error-color-2: hsla(0, 94%, 66%, 0.2);
+  --error-color-3: hsla(0, 94%, 66%, 0.3);
   --error-color-6: hsla(0, 94%, 66%, 0.6);
   --error-color-8: hsla(0, 94%, 66%, 0.8);
   --succeed-color: hsla(146, 48%, 49%, 1);
