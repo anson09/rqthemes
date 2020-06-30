@@ -194,7 +194,7 @@
       &:focus,
       &:active {
         color: var(--button-ghost-text-color);
-        background-color: var(--button-default-text-hover-color);
+        background-color: var(--button-ghost-color);
         border-color: var(--button-ghost-border-color);
       }
 
