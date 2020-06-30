@@ -25444,32 +25444,32 @@ body {
 .theme-light .el-button--default.is-plain:focus {
   color: hsla(216, 76%, 44%, 1);
   color: var(--button-ghost-text-color);
-  background-color: hsla(0, 0%, 100%, 1);
-  background-color: var(--button-default-text-hover-color);
+  background-color: hsla(0, 0%, 0%, 0);
+  background-color: var(--button-ghost-color);
   border-color: hsla(216, 76%, 44%, 1);
   border-color: var(--button-ghost-border-color);
 }
 .theme-light .el-button--default.is-plain:active {
   color: hsla(216, 76%, 44%, 1);
   color: var(--button-ghost-text-color);
-  background-color: hsla(0, 0%, 100%, 1);
-  background-color: var(--button-default-text-hover-color);
+  background-color: hsla(0, 0%, 0%, 0);
+  background-color: var(--button-ghost-color);
   border-color: hsla(216, 76%, 44%, 1);
   border-color: var(--button-ghost-border-color);
 }
 .theme-dark .el-button--default.is-plain:focus {
   color: hsla(220, 100%, 65%, 1);
   color: var(--button-ghost-text-color);
-  background-color: hsla(0, 0%, 100%, 1);
-  background-color: var(--button-default-text-hover-color);
+  background-color: hsla(0, 0%, 0%, 0);
+  background-color: var(--button-ghost-color);
   border-color: hsla(220, 100%, 65%, 1);
   border-color: var(--button-ghost-border-color);
 }
 .theme-dark .el-button--default.is-plain:active {
   color: hsla(220, 100%, 65%, 1);
   color: var(--button-ghost-text-color);
-  background-color: hsla(0, 0%, 100%, 1);
-  background-color: var(--button-default-text-hover-color);
+  background-color: hsla(0, 0%, 0%, 0);
+  background-color: var(--button-ghost-color);
   border-color: hsla(220, 100%, 65%, 1);
   border-color: var(--button-ghost-border-color);
 }
