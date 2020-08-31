@@ -13,12 +13,20 @@
     "build": "./scripts/updep.sh && npm run parcel -- -d ./ && LEGACY=true npm run parcel -- -d ./ --out-file legacy.css",
     "parcel": "parcel build src/index.scss --no-cache --no-minify --no-source-maps --no-content-hash",
     "lint": "./scripts/lint.sh",
-    "clean": "rm -rf index.css legacy.css light.json dist",
-    "debug": "cat legacy.css| awk '/undefinded/{getline; print}' | sort | uniq"
+    "clean": "rm -rf index.css legacy.css light.json demo/dist demo/.cache",
+    "debug": "cat legacy.css| awk '/undefinded/{getline; print}' | sort | uniq",
+    "release": "standard-version --no-verify",
+    "prepublishOnly": "npm run build && npm run debug"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
+  "files": [
+    "index.css",
+    "legacy.css",
+    "light.json"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
@@ -32,9 +40,9 @@
     "postcss-css-variables": "^0.13.0",
     "prettier": "^1.18.2",
     "sass": "^1.22.9",
+    "standard-version": "^9.0.0",
     "stylelint": "^10.1.0",
     "stylelint-config-prettier": "^5.2.0",
-    "stylelint-config-recess-order": "^2.0.3",
     "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-scss": "^3.10.1",
     "vue": "^2.6.10",
