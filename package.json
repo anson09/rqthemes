@@ -28,8 +28,8 @@
     "light.json"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@rqjs/rqcomponents": "0.0.6-alpha.55",
     "@vue/component-compiler-utils": "^3.0.0",
     "autoprefixer": "^9.6.1",
@@ -51,7 +51,6 @@
   "dependencies": {
     "highcharts": "^7.2.0",
     "highcharts-tree": "^0.1.4",
-    "normalize.css": "^8.0.1",
     "vue-hot-reload-api": "^2.3.4"
   }
 }

@@ -9,7 +9,6 @@
 
 ## Includes
 
-- normalize.css
 - themes variables
 - global themes
 - element themes
