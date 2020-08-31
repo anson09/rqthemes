@@ -1,7 +1,9 @@
 .DS_Store
 .vscode
-node_modules
-.cache
 .depVersion
-yarn.lock
-dist
+node_modules
+demo/.cache
+demo/dist
+index.css
+legacy.css
+light.json

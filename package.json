@@ -9,11 +9,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": " rm -rf dist && parcel watch ./demo/index.html --no-autoinstall --out-dir dist",
+    "dev": " parcel ./demo/index.html --out-dir demo/dist --cache-dir demo/.cache",
     "build": "./scripts/updep.sh && npm run parcel -- -d ./ && LEGACY=true npm run parcel -- -d ./ --out-file legacy.css",
     "parcel": "parcel build src/index.scss --no-cache --no-minify --no-source-maps --no-content-hash",
     "lint": "./scripts/lint.sh",
-    "clean": "rm -rf index.css legacy.css light.json",
+    "clean": "rm -rf index.css legacy.css light.json dist",
     "debug": "cat legacy.css| awk '/undefinded/{getline; print}' | sort | uniq"
   },
   "publishConfig": {
@@ -29,7 +29,6 @@
     "husky": "^3.0.5",
     "lint-staged": "^9.2.5",
     "parcel": "^1.12.3",
-    "parcel-bundler": "^1.12.3",
     "postcss-css-variables": "^0.13.0",
     "prettier": "^1.18.2",
     "sass": "^1.22.9",
