@@ -14,7 +14,6 @@
 - global themes
 - element themes
 - highcharts themes(styled mode)
-  <!-- - iconfont -->
 
 ## Caveats
 
@@ -27,18 +26,17 @@
 - in css: @import '@rqjs/rqthemes'
 - **ie support light theme only**, and please use @rqjs/rqthemes/legacy.css
 - fetch light vars from @rqjs/rqthemes/light.json
-- place it after element-ui default css file
 
 ## Commands
 
 ```bash
+npm run dev : preview element themes
+
 npm run build : build to css
 
 npm run lint : audit code style
 
 npm run clean : clear cache
-
-npm publish: publish to npm
 ```
 
 ## Branchs
