@@ -10,8 +10,9 @@
   "license": "MIT",
   "scripts": {
     "dev": " parcel ./demo/index.html --out-dir demo/dist --cache-dir demo/.cache",
-    "build": "./scripts/updep.sh && npm run parcel -- -d ./ && LEGACY=true npm run parcel -- -d ./ --out-file legacy.css",
-    "parcel": "parcel build src/index.scss --no-cache --no-minify --no-source-maps --no-content-hash",
+    "build": "./scripts/updep.sh && npm run _parcel -- -d ./ && LEGACY=true npm run _parcel -- -d ./ --out-file legacy.css",
+    "_parcel": "parcel build src/index.scss --no-cache --no-minify --no-source-maps",
+    "postbuild": "./scripts/postbuild.sh",
     "lint": "./scripts/lint.sh",
     "clean": "rm -rf index.css legacy.css light.json demo/dist demo/.cache",
     "debug": "cat legacy.css| awk '/undefinded/{getline; print}' | sort | uniq",
@@ -25,32 +26,32 @@
   "files": [
     "index.css",
     "legacy.css",
-    "light.json"
+    "light.json",
+    "fonts"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "@rqjs/rqcomponents": "0.0.6-alpha.55",
-    "@vue/component-compiler-utils": "^3.0.0",
-    "autoprefixer": "^9.6.1",
-    "element-ui": "^2.12.0",
-    "husky": "^3.0.5",
-    "lint-staged": "^9.2.5",
-    "parcel": "^1.12.3",
-    "postcss-css-variables": "^0.13.0",
-    "prettier": "^1.18.2",
-    "sass": "^1.22.9",
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "@vue/component-compiler-utils": "^3.2.0",
+    "autoprefixer": "^9.8.6",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
+    "parcel": "^1.12.4",
+    "postcss-css-variables": "^0.17.0",
+    "prettier": "^2.1.1",
+    "sass": "^1.26.10",
     "standard-version": "^9.0.0",
-    "stylelint": "^10.1.0",
-    "stylelint-config-prettier": "^5.2.0",
-    "stylelint-config-recommended-scss": "^3.3.0",
-    "stylelint-scss": "^3.10.1",
-    "vue": "^2.6.10",
-    "vue-template-compiler": "^2.6.10"
+    "stylelint": "^13.7.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-scss": "^3.18.0",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
-    "highcharts": "^7.2.0",
-    "highcharts-tree": "^0.1.4",
+    "element-ui": "^2.13.2",
+    "highcharts": "^8.2.0",
+    "highcharts-tree": "^0.1.5-alpha.7",
     "vue-hot-reload-api": "^2.3.4"
   }
 }

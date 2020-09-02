@@ -3,3 +3,6 @@
 dist
 package-lock.json
 light.json
+CHANGELOG.md
+src/light/index.scss
+src/dark/index.scss
