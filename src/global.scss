@@ -3,17 +3,11 @@ html {
 }
 
 body {
-  --rq-green: #2ecc71;
-  --rq-red: #fd4d4d;
-
   --color-success: hsla(100, 54%, 49%, 1); // 成功
   --color-warning: hsla(37, 91%, 55%, 1); // 警告
   --color-danger: hsla(0, 89%, 71%, 1); // 错误
 
-  --index-normal: 1; // 普通的
-  --index-top: 1000; // model覆盖用的黑屏mask之下，（to-top, nav, select-panel, time-picker等）
-  --index-popper: 2000; // model-mask之下，（弹出层, 区域loading-mask, tooltip, popover等）
-  --index-max: 99999; // 顶层
+  --index-normal: 1; // z-index define
 
   --animation-time: 0.3s;
   --animation-slowly-time: 0.5s;
