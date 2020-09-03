@@ -4,6 +4,5 @@ dist
 package-lock.json
 light.json
 CHANGELOG.md
-demo/App.vue
-src/light/index.scss
-src/dark/index.scss
+demo/ELement.vue
+lib

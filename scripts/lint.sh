@@ -2,4 +2,4 @@
 set -ex
 
 stylelint --fix "src/**/*.scss"
-prettier --write "**/*.{scss,json,yml,md}"
+prettier --write "**/*.{scss,js,json,yml,md}"

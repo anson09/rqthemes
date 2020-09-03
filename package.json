@@ -2,7 +2,7 @@
   "name": "@rqjs/rqthemes",
   "version": "0.7.7",
   "description": "ricequant themes",
-  "main": "index.css",
+  "main": "lib/index.css",
   "repository": {
     "type": "git",
     "url": "ssh://git@git.ricequant.com:7999/node/ricequant-themes.git"
@@ -10,11 +10,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel ./demo/index.html --out-dir demo/dist --cache-dir demo/.cache",
-    "build": "./scripts/updep.sh && npm run _parcel -- -d ./ && LEGACY=true npm run _parcel -- -d ./ --out-file legacy.css",
-    "_parcel": "parcel build src/index.scss --no-cache --no-minify --no-source-maps",
+    "build": "./scripts/make.sh",
     "postbuild": "./scripts/postbuild.sh",
     "lint": "./scripts/lint.sh",
-    "clean": "rm -rf index.css legacy.css light.json demo/dist demo/.cache",
+    "clean": "rm -rf demo/dist demo/.cache",
     "debug": "cat legacy.css| awk '/undefinded/{getline; print}' | sort | uniq",
     "release": "standard-version --no-verify",
     "prepublishOnly": "npm run build && npm run debug"
@@ -24,10 +23,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
-    "index.css",
-    "legacy.css",
-    "light.json",
-    "fonts"
+    "lib"
   ],
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
@@ -35,7 +31,7 @@
     "@vue/component-compiler-utils": "^3.2.0",
     "autoprefixer": "^9.8.6",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.13",
+    "lint-staged": "^10.3.0",
     "parcel": "^1.12.4",
     "postcss-css-variables": "^0.17.0",
     "prettier": "^2.1.1",

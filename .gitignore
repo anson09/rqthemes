@@ -4,7 +4,4 @@
 node_modules
 demo/.cache
 demo/dist
-index.css
-legacy.css
-light.json
-fonts
+lib

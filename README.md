@@ -7,24 +7,27 @@
 - unify mutiple products theme
 - save base scss preprocess time
 
-## Includes
+## Usage
 
-- themes variables
-- global themes
-- element-ui themes
-- highcharts themes(styled mode)
+First,import one of element-ui themes or both of them
+
+- element light theme: `import '@rqjs/rqthemes/lib/element-light.css'`
+- element dark theme: `import '@rqjs/rqthemes/lib/element-dark.css'`
+
+Second, import entry file, which contains global themes/themes variables/highcharts themes(styled mode)
+
+- in js: `import '@rqjs/rqthemes'`
+- or in css: `@import '@rqjs/rqthemes'`
+- **ie support light theme only**, and please use `@rqjs/rqthemes/lib/legacy.css`
+
+In the End,
+
+- fetch light vars from `@rqjs/rqthemes/light.json`
 
 ## Caveats
 
-- `highcharts` reqiure v7.0.0+, using styled mode
+- **highcharts reqiure v7.0.0+, using styled mode**
 - themes supports only **default** and **plain** button in element
-
-## Usage
-
-- in js: import '@rqjs/rqthemes'
-- in css: @import '@rqjs/rqthemes'
-- **ie support light theme only**, and please use @rqjs/rqthemes/legacy.css
-- fetch light vars from @rqjs/rqthemes/light.json
 
 ## Commands
 
@@ -35,7 +38,7 @@ npm run build : generating publish files
 
 npm run lint : audit code style
 
-npm run clean : clear cache
+npm run clean : clear demo cache
 ```
 
 ## Branchs

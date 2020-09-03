@@ -1,7 +1,8 @@
-/**
-iconfont已移除，用element-ui自带的，同时项目里也有自己的iconfont
- */
-
+/*
+1. expand index.css
+2. remove element font releated css
+3. rename index.css to light.scss
+*/
 @charset "UTF-8";
 .el-pagination--small .arrow.disabled,
 .el-table .hidden-columns,
@@ -29,17 +30,6 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
 .el-input__suffix,
 .el-tree.is-dragging .el-tree-node__content * {
   pointer-events: none;
-}
-
-@keyframes rotating {
-  0% {
-    -webkit-transform: rotateZ(0);
-    transform: rotateZ(0);
-  }
-  100% {
-    -webkit-transform: rotateZ(360deg);
-    transform: rotateZ(360deg);
-  }
 }
 .el-pagination {
   white-space: nowrap;
@@ -996,11 +986,11 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
   box-shadow: -1px 0 0 0 #1b5fc4;
 }
 .el-radio-button__orig-radio:disabled + .el-radio-button__inner {
-  color: #d5dfee;
+  color: #c0c9da;
   cursor: not-allowed;
   background-image: none;
-  background-color: #8dafe1;
-  border-color: #8dafe1;
+  background-color: #fff;
+  border-color: #ebeef5;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -1015,12 +1005,12 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
   border-radius: 4px;
 }
 .el-radio-button--medium .el-radio-button__inner {
-  padding: 4px 20px;
+  padding: 6px 20px;
   font-size: 14px;
   border-radius: 0;
 }
 .el-radio-button--medium .el-radio-button__inner.is-round {
-  padding: 4px 20px;
+  padding: 6px 20px;
 }
 .el-radio-button--small .el-radio-button__inner {
   padding: 4px 16px;
@@ -1407,6 +1397,7 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
   min-height: 60px;
   text-align: center;
   width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3999,7 +3990,7 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
 .el-tree-node__content > .el-tree-node__expand-icon {
   padding: 6px;
 }
-.el-tree-node__content > label.el-checkbox {
+.el-tree-node__content > .el-checkbox {
   margin-right: 8px;
 }
 .el-tree-node__content:hover {
@@ -10032,11 +10023,11 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
 .el-button.is-disabled,
 .el-button.is-disabled:focus,
 .el-button.is-disabled:hover {
-  color: #d5dfee;
+  color: #c0c9da;
   cursor: not-allowed;
   background-image: none;
-  background-color: #8dafe1;
-  border-color: #8dafe1;
+  background-color: #fff;
+  border-color: #ebeef5;
 }
 .el-link,
 .el-transfer-panel__filter .el-icon-circle-close {
@@ -10049,8 +10040,8 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
 .el-button.is-disabled.is-plain:focus,
 .el-button.is-disabled.is-plain:hover {
   background-color: #fff;
-  border-color: #8dafe1;
-  color: #d5dfee;
+  border-color: #ebeef5;
+  color: #c0c9da;
 }
 .el-button.is-loading {
   position: relative;
@@ -10348,7 +10339,7 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
   border-color: transparent;
 }
 .el-button--medium {
-  padding: 4px 20px;
+  padding: 6px 20px;
   font-size: 14px;
   border-radius: 2px;
 }
@@ -10358,10 +10349,10 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
   border-radius: 3px;
 }
 .el-button--medium.is-round {
-  padding: 4px 20px;
+  padding: 6px 20px;
 }
 .el-button--medium.is-circle {
-  padding: 4px;
+  padding: 6px;
 }
 .el-button--small,
 .el-button--small.is-round {
@@ -10516,6 +10507,10 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
   background-color: #1b5fc4;
   font-size: 0;
 }
+.el-transfer-panel__item + .el-transfer-panel__item,
+.el-transfer__button [class*="el-icon-"] + span {
+  margin-left: 0;
+}
 .el-transfer__button.is-with-texts {
   border-radius: 4px;
 }
@@ -10534,9 +10529,6 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
 .el-transfer__button i,
 .el-transfer__button span {
   font-size: 14px;
-}
-.el-transfer__button [class*="el-icon-"] + span {
-  margin-left: 0;
 }
 .el-transfer-panel {
   border: 1px solid #ebeef5;
@@ -10574,10 +10566,6 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
   line-height: 30px;
   padding-left: 15px;
   display: block;
-}
-.el-transfer-panel__item + .el-transfer-panel__item {
-  margin-left: 0;
-  display: block !important;
 }
 .el-transfer-panel__item.el-checkbox {
   color: #606266;
@@ -11616,16 +11604,16 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
   border-left-color: #1b5fc4;
 }
 .el-checkbox-button.is-disabled .el-checkbox-button__inner {
-  color: #d5dfee;
+  color: #c0c9da;
   cursor: not-allowed;
   background-image: none;
-  background-color: #8dafe1;
-  border-color: #8dafe1;
+  background-color: #fff;
+  border-color: #ebeef5;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .el-checkbox-button.is-disabled:first-child .el-checkbox-button__inner {
-  border-left-color: #8dafe1;
+  border-left-color: #ebeef5;
 }
 .el-checkbox-button:first-child .el-checkbox-button__inner {
   border-left: 1px solid #d8dce6;
@@ -11640,12 +11628,12 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
   border-radius: 0 4px 4px 0;
 }
 .el-checkbox-button--medium .el-checkbox-button__inner {
-  padding: 4px 20px;
+  padding: 6px 20px;
   font-size: 14px;
   border-radius: 0;
 }
 .el-checkbox-button--medium .el-checkbox-button__inner.is-round {
-  padding: 4px 20px;
+  padding: 6px 20px;
 }
 .el-checkbox-button--small .el-checkbox-button__inner {
   padding: 4px 16px;
@@ -11675,6 +11663,7 @@ iconfont已移除，用element-ui自带的，同时项目里也有自己的iconf
   cursor: pointer;
   margin-right: 30px;
 }
+.el-cascader-node > .el-checkbox,
 .el-cascader-node > .el-radio,
 .el-radio:last-child {
   margin-right: 0;
