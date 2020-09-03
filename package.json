@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": " parcel ./demo/index.html --out-dir demo/dist --cache-dir demo/.cache",
+    "dev": "parcel ./demo/index.html --out-dir demo/dist --cache-dir demo/.cache",
     "build": "./scripts/updep.sh && npm run _parcel -- -d ./ && LEGACY=true npm run _parcel -- -d ./ --out-file legacy.css",
     "_parcel": "parcel build src/index.scss --no-cache --no-minify --no-source-maps",
     "postbuild": "./scripts/postbuild.sh",

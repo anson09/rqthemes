@@ -11,7 +11,7 @@
 
 - themes variables
 - global themes
-- element themes
+- element-ui themes
 - highcharts themes(styled mode)
 
 ## Caveats
@@ -29,9 +29,9 @@
 ## Commands
 
 ```bash
-npm run dev : preview element themes
+npm run dev : preview element-ui themes
 
-npm run build : build to css
+npm run build : generating publish files
 
 npm run lint : audit code style
 
@@ -41,10 +41,6 @@ npm run clean : clear cache
 ## Branchs
 
 master: https://www.npmjs.com/package/@rqjs/rqthemes
-
-## Developer
-
-import src/index.scss directly in project, modify and see changes.
 
 ## Contributions
 
