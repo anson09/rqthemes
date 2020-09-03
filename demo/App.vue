@@ -38,6 +38,7 @@
 </style>
 <template>
   <div class="component-preview">
+    <ThemeSwitch></ThemeSwitch>
     <h4>Button</h4>
     <el-row class="demo-line">
       <el-button>Default</el-button>
@@ -375,7 +376,11 @@
   </div>
 </template>
 <script>
+import ThemeSwitch from './ThemeSwitch';
 export default {
+  components: {
+    ThemeSwitch
+  },
   data() {
     return {
       radio: '1',
