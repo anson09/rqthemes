@@ -7,7 +7,7 @@ function getCssVar() {
     return json;
   } else {
     once = true;
-    const FILES = ["global", "light", "compatibility"];
+    const FILES = ["global", "vars/light", "vars/compatibility"];
 
     let source = FILES.map((file) =>
       fs.readFileSync(path.resolve(__dirname, `src/${file}.scss`), "utf8")

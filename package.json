@@ -14,7 +14,7 @@
     "postbuild": "./scripts/postbuild.sh",
     "lint": "./scripts/lint.sh",
     "clean": "rm -rf demo/dist demo/.cache",
-    "debug": "cat legacy.css| awk '/undefinded/{getline; print}' | sort | uniq",
+    "debug": "cat lib/legacy.css| awk '/undefinded/{getline; print}' | sort | uniq",
     "release": "standard-version --no-verify",
     "prepublishOnly": "npm run build && npm run debug"
   },

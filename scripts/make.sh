@@ -11,6 +11,6 @@ parcel() {
 rm -rf lib
 parcel src/index.scss index.css
 LEGACY=true parcel src/index.scss legacy.css
-parcel src/element-light.scss element-light.css
-parcel src/element-product.scss element-product.css
-parcel src/element-dark.scss element-dark.css
+parcel src/element-ui/light.scss element-light.css
+parcel src/element-ui/product.scss element-product.css
+parcel src/element-ui/dark.scss element-dark.css

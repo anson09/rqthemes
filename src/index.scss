@@ -1,7 +1,7 @@
-@import "./light";
-@import "./product";
-@import "./dark";
+@import "./vars/light";
+@import "./vars/product";
+@import "./vars/dark";
+@import "./vars/compatibility";
 @import "./global";
-@import "./compatibility";
-@import "./element-ui";
+@import "./element-ui/rq-reset";
 @import "./highcharts";
