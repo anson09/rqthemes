@@ -13,6 +13,7 @@ First,import one of element-ui themes or both of them
 
 - element light theme: `import '@rqjs/rqthemes/lib/element-light.css'`
 - element dark theme: `import '@rqjs/rqthemes/lib/element-dark.css'`
+- element product(light-next) theme: `import '@rqjs/rqthemes/lib/element-product.css'`
 
 Second, import entry file, which contains global themes/themes variables/highcharts themes(styled mode)
 
@@ -32,7 +33,7 @@ In the End,
 ## Commands
 
 ```bash
-npm run dev : preview element-ui themes
+npm run dev : preview element-ui themes,visit http://localhost:1234
 
 npm run build : generating publish files
 
