@@ -1,6 +1,4 @@
-.theme-light,
-.theme-dark,
-.theme-product {
+[class*="theme-"] {
   .el-cascader {
     .el-inner:hover {
       border-color: var(--components-hover);
