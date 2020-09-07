@@ -11,3 +11,5 @@ do
     awk '{print}' $INJECT_CONTENT $ITEM > $ITEM.tmp
     mv $ITEM.tmp $ITEM
 done
+
+echo "$(sed '/:root{}/d' lib/legacy.css)" > lib/legacy.css
