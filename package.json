@@ -11,12 +11,10 @@
   "scripts": {
     "dev": "parcel ./demo/index.html --out-dir demo/dist --cache-dir demo/.cache",
     "build": "./scripts/make.sh",
-    "postbuild": "./scripts/postbuild.sh",
     "lint": "./scripts/lint.sh",
     "clean": "rm -rf demo/dist demo/.cache",
-    "debug": "cat lib/legacy.css| awk '/undefinded/{getline; print}' | sort | uniq",
     "release": "standard-version --no-verify",
-    "prepublishOnly": "npm run build && npm run debug"
+    "prepublishOnly": "npm run build"
   },
   "publishConfig": {
     "access": "public",
