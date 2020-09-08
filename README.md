@@ -4,7 +4,7 @@
 
 ## Goal
 
-- unify mutiple products theme
+- unify mutiple products theme, **product projects can use variables defined in src/vars**
 - save base scss preprocess time
 
 ## Usage
