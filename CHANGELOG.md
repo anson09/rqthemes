@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-next.0](http://git.ricequant.com:7999///compare/v0.7.7...v1.0.0-next.0) (2020-09-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* split element-ui themes from default index.css
+* output includes element base.css
+* drop normalize.css output
+
+### Features
+
+* add new theme product(light-next) ([7c9f2ac](http://git.ricequant.com:7999///commit/7c9f2ac940a985f8055a3d40301049d9f65ab5af))
+* build validating ([a55a8eb](http://git.ricequant.com:7999///commit/a55a8eb116447345ee74320701ddfc07b09c6690))
+* demo theme switch ([9d4302b](http://git.ricequant.com:7999///commit/9d4302ba6356196e4edd4e83d6a257fe18de7fac))
+* drop normalize.css output ([3709ae6](http://git.ricequant.com:7999///commit/3709ae6c00382aa092927680027beb8b2b9e210d))
+* output includes element base.css ([454c488](http://git.ricequant.com:7999///commit/454c488612a476838df8c5ab464cb94ca2d9dae4))
+* remove useless var ([6e84345](http://git.ricequant.com:7999///commit/6e8434551c85c2c1445f77c2a02bc68c7dedfc9c))
+* split element-ui themes from default index.css ([96fa93b](http://git.ricequant.com:7999///commit/96fa93bc786a03d76569d554773f7b9b002bfecc))
+
+
+### Bug Fixes
+
+* button ghost hover color ([18c4a94](http://git.ricequant.com:7999///commit/18c4a94d112fa9601889179bec0aeef1f842a62d))
+* highcharts font family ([e922ce0](http://git.ricequant.com:7999///commit/e922ce0c803ce81c68f927aac07d355b279cfaf0))
+
 ### 0.7.7 (2020-08-31)
 
 
