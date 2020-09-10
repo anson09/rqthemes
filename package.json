@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": "parcel ./demo/index.html --out-dir demo/dist --cache-dir demo/.cache",
+    "dev": "./scripts/updep.sh && parcel ./demo/index.html --out-dir demo/dist --cache-dir demo/.cache",
     "build": "./scripts/make.sh",
     "lint": "./scripts/lint.sh",
     "clean": "rm -rf demo/dist demo/.cache",
