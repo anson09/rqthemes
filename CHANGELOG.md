@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v1.0.0-next.1&sourceBranch=refs/tags/v1.0.0) (2020-10-14)
+
+
+### Features
+
+* dev mode instant review ([bd961d0](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/bd961d0a8b62c325da1ef5d1eb98d51d37afcec5))
+
+
+### CI
+
+* dep check ([34391b9](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/34391b9d632220d8d5800f0b193a4d2c95c1ff07))
+
 ## 1.0.0-next.1 (2020-09-09)
 
 
