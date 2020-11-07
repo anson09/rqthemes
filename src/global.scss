@@ -17,23 +17,3 @@ body {
   color: var(--text-normal);
   background-color: var(--bg-bg);
 }
-
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-  padding: 10px;
-  margin: 10px;
-  background-color: var(--table-scroll-bg-color);
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--table-scroll-bg-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--table-scroll-track-color);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-corner {
-  background-color: var(--table-scroll-bg-color);
-}
