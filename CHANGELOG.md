@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v1.0.0&sourceBranch=refs/tags/v1.0.1) (2020-11-07)
+
+
+### Bug Fixes
+
+* default scrollbar style ([ac49ebf](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/ac49ebfbee69cf812a30b0920ee9196f553fd6b6))
+
+
+### Chores
+
+* updep ([c31e8e9](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/c31e8e94f87dbe19d4f7ec5f19c1f89e9b2f9c76))
+
 ## [1.0.0](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v1.0.0-next.1&sourceBranch=refs/tags/v1.0.0) (2020-10-14)
 
 
