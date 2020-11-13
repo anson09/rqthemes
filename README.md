@@ -55,3 +55,6 @@ master: https://www.npmjs.com/package/@rqjs/rqthemes
 3. [`lint 规范`](http://wiki.ricequant.com/pages/viewpage.action?pageId=45875427)
 
 4. [`npm 发布规范`](http://wiki.ricequant.com/pages/viewpage.action?pageId=52232790)
+
+5. files structure description  
+   ![structure](rqthemes.png)
