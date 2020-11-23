@@ -23,7 +23,7 @@ Second, import entry file, which contains global themes/themes variables/highcha
 
 In the End,
 
-- fetch light vars from `@rqjs/rqthemes/light.json`
+- fetch light vars from `@rqjs/rqthemes/lib/light.json`
 
 ## Caveats
 

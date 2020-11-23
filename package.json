@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "ricequant themes",
   "main": "lib/index.css",
+  "style": "lib/index.css",
   "repository": {
     "type": "git",
     "url": "ssh://git@git.ricequant.com:7999/node/ricequant-themes.git"
