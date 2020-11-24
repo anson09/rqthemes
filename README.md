@@ -2,6 +2,10 @@
 
 > ricequant common themes
 
+## Release
+
+https://www.npmjs.com/package/@rqjs/rqthemes
+
 ## Goal
 
 - unify mutiple products theme, **product projects can use variables defined in src/vars**
@@ -30,7 +34,9 @@ In the End,
 - **highcharts reqiure v7.0.0+, using styled mode**
 - themes supports only **default** and **plain** button in element
 
-## Commands
+## Developer
+
+### Commands
 
 ```bash
 npm run dev : preview element-ui themes,visit http://localhost:1234
@@ -42,11 +48,7 @@ npm run lint : audit code style
 npm run clean : clear demo cache
 ```
 
-## Branchs
-
-master: https://www.npmjs.com/package/@rqjs/rqthemes
-
-## Contributions
+### Contributions
 
 1. colors vars in themes files is **maintained by designer**.
 
@@ -54,7 +56,7 @@ master: https://www.npmjs.com/package/@rqjs/rqthemes
 
 3. [`lint 规范`](http://wiki.ricequant.com/pages/viewpage.action?pageId=45875427)
 
-4. [`npm 发布规范`](http://wiki.ricequant.com/pages/viewpage.action?pageId=52232790)
+4. [`npm 规范`](http://wiki.ricequant.com/pages/viewpage.action?pageId=52232790)
 
 5. files structure description  
    ![structure](rqthemes.png)
