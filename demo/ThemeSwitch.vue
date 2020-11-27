@@ -2,7 +2,6 @@
   <el-radio-group class="switcher" v-model="radio" @change="update">
     <el-radio-button label="Light"></el-radio-button>
     <el-radio-button label="Dark"></el-radio-button>
-    <el-radio-button label="Product"></el-radio-button>
   </el-radio-group>
 </template>
 <script>
@@ -17,7 +16,6 @@ export default {
       const className = {
         Light: "theme-light",
         Dark: "theme-dark",
-        Product: "theme-product",
       };
       document.querySelector("body").className = className[e];
     },

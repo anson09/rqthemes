@@ -13,7 +13,6 @@ rm -rf lib
 parcel src/index.scss index.css
 LEGACY=true parcel src/index.scss legacy.css
 parcel src/element-ui/light.scss element-light.css
-parcel src/element-ui/product.scss element-product.css
 parcel src/element-ui/dark.scss element-dark.css
 
 INJECT_CONTENT=node_modules/element-ui/lib/theme-chalk/base.css
