@@ -10,6 +10,7 @@ parcel() {
 ./scripts/updep.sh
 rm -rf lib
 
+parcel src/vars/index.scss vars.css
 parcel src/index.scss index.css
 LEGACY=true parcel src/index.scss legacy.css
 parcel src/element-ui/light.scss element-light.css

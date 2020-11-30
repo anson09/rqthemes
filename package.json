@@ -20,7 +20,7 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "dev": "./scripts/updep.sh && parcel ./demo/index.html --out-dir demo/dist --cache-dir demo/.cache",
+    "start": "./scripts/updep.sh && parcel ./demo/index.html --out-dir demo/dist --cache-dir demo/.cache",
     "build": "./scripts/make.sh",
     "lint": "./scripts/lint.sh",
     "clean": "rm -rf demo/dist demo/.cache",

@@ -8,38 +8,37 @@ https://www.npmjs.com/package/@rqjs/rqthemes
 
 ## Goal
 
-- unify mutiple products theme, **product projects can use variables defined in src/vars**
+- unify mutiple products theme, **product projects using variables defined in src/vars(lib/vars)**
 - save base scss preprocess time
 
 ## Usage
 
-First,import one of element-ui themes or both of them
+1. import one of element-ui themes or both of them
 
 - element light theme: `import '@rqjs/rqthemes/lib/element-light.css'`
 - element dark theme: `import '@rqjs/rqthemes/lib/element-dark.css'`
-- element product(light-next) theme: `import '@rqjs/rqthemes/lib/element-product.css'`
 
-Second, import entry file, which contains global themes/themes variables/highcharts themes(styled mode)
+2. import all vars
 
-- in js: `import '@rqjs/rqthemes'`
-- or in css: `@import '@rqjs/rqthemes'`
-- **ie support light theme only**, and please use `@rqjs/rqthemes/lib/legacy.css`
+- `import '@rqjs/rqthemes/lib/vars.css'`
 
-In the End,
+3. import entry file, which contains global style, element-ui reset and highcharts theme(styled mode)
 
-- fetch light vars from `@rqjs/rqthemes/lib/light.json`
+- `import '@rqjs/rqthemes'`
+- please use `import @rqjs/rqthemes/lib/legacy.css` instead if project need support IE
+- _postcss IE polyfill could fetch light vars from `@rqjs/rqthemes/lib/light.json`_
 
 ## Caveats
 
+- **IE support light theme only**
 - **highcharts reqiure v7.0.0+, using styled mode**
-- themes supports only **default** and **plain** button in element
 
 ## Developer
 
 ### Commands
 
 ```bash
-npm run dev : preview element-ui themes,visit http://localhost:1234
+npm run start : preview element-ui themes,visit http://localhost:1234
 
 npm run build : generating publish files
 
@@ -50,7 +49,7 @@ npm run clean : clear demo cache
 
 ### Contributions
 
-1. colors vars in themes files is **maintained by designer**.
+1. color vars in theme files is **maintained by designer**.
 
 2. [`git 规范`](http://wiki.ricequant.com/pages/viewpage.action?pageId=17269198)
 

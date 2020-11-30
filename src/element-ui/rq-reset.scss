@@ -283,21 +283,6 @@
     &__input.is-checked + .el-checkbox__label {
       color: var(--text-normal);
     }
-
-    &:not(.is-disabled):hover {
-      span.el-checkbox__inner {
-        border-color: var(--checkbox-icon-hover-color);
-        &:before {
-          background-color: var(--checkbox-icon-hover-color);
-        }
-        &:after {
-          border-color: var(--checkbox-icon-hover-color);
-        }
-      }
-      .el-checkbox__label {
-        color: var(--checkbox-text-hover-color);
-      }
-    }
   }
 
   .el-date-picker,
