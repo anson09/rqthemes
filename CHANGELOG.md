@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.0](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v1.0.1&sourceBranch=refs/tags/v2.0.0-next.0) (2020-11-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* need import vars file alone now
+* product theme type is removed
+
+### Features
+
+* move product theme to new light theme ([f89299a](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/f89299a9004e6d3f0f7f738fccb8bb841b40f394))
+* theme vars could be imported standalone ([84ae4c3](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/84ae4c375ed4c8e34bbd8d65a335f0193292735b))
+
+
+### Docs
+
+* files structure description ([bb45701](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/bb457010110e7026ea8232af9e12131c7dea9c81))
+* light.json path ([b2819f4](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/b2819f471227b890265b2ff3bcca1c0f7eca2025))
+
+
+### Chores
+
+* no install dependency now ([3dd30d6](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/3dd30d60d2f8dfd631c8dc333bf136d7ef8a3dee))
+* package meta ([f24bb96](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/f24bb96249449f478c98a1138057b3483b76e502))
+
 ### [1.0.1](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v1.0.0&sourceBranch=refs/tags/v1.0.1) (2020-11-07)
 
 
