@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# set -euo pipefail
+set -euo pipefail
 
 parcel() {
     SOURCE=$1
@@ -28,7 +28,7 @@ done
 
 cp -R node_modules/element-ui/lib/theme-chalk/fonts lib
 
-UNCOEVR_VARIABLES=$(cat $LEGACY_FILE_PATH|grep -A 1 undefined)
+UNCOEVR_VARIABLES=$(cat $LEGACY_FILE_PATH|grep -A 1 undefined) || true
 
 if [ -n "$UNCOEVR_VARIABLES" ]
 then
