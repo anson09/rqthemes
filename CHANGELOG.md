@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.1](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.0&sourceBranch=refs/tags/v2.0.0-next.1) (2020-12-02)
+
+
+### Bug Fixes
+
+* bash set config ([f21d745](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/f21d7457225e81a224ae40c63588382f81a2ca04))
+* light.json error value ([ee30104](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/ee30104da7474ab7fa932079275b85aa0b9373cd))
+
 ## [2.0.0-next.0](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v1.0.1&sourceBranch=refs/tags/v2.0.0-next.0) (2020-11-30)
 
 
