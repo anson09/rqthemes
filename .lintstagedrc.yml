@@ -1,5 +1,5 @@
 "*.scss":
-  - stylelint --fix
+  - stylelint --fix --aei
   - prettier --write
 "*.{js,yml,json,md}":
   - prettier --write

@@ -3,6 +3,10 @@
 2. remove element font releated css
 3. rename index.css to dark.scss
 */
+/*
+update check:
+1. bug fix: dark padding: 9px 12px incompatible with light padding：8px 12px
+*/
 @charset "UTF-8";
 .el-pagination--small .arrow.disabled,
 .el-table .hidden-columns,
@@ -948,12 +952,12 @@
   cursor: pointer;
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  padding: 9px 24px;
+  padding: 8px 24px;
   font-size: 14px;
   border-radius: 0;
 }
 .el-radio-button__inner.is-round {
-  padding: 9px 24px;
+  padding: 8px 24px;
 }
 .el-radio-button__inner:hover {
   color: #4f89ff;
@@ -9973,7 +9977,7 @@
   -webkit-transition: 0.1s;
   transition: 0.1s;
   font-weight: 400;
-  padding: 9px 24px;
+  padding: 8px 24px;
   font-size: 14px;
   border-radius: 2px;
 }
@@ -11556,12 +11560,12 @@
   margin: 0;
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  padding: 9px 24px;
+  padding: 8px 24px;
   font-size: 14px;
   border-radius: 0;
 }
 .el-checkbox-button__inner.is-round {
-  padding: 9px 24px;
+  padding: 8px 24px;
 }
 .el-checkbox-button__inner:hover {
   color: #4f89ff;
