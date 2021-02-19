@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.2](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.1&sourceBranch=refs/tags/v2.0.0-next.2) (2021-02-19)
+
+
+### Features
+
+* update highchart colors ([179ed82](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/179ed821ee4c3c0160e2a42303f8607b32b4fd1c))
+
+
+### Bug Fixes
+
+* element export dark file bug ([83d1543](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/83d1543a3cadeca9432a290e1e773759a18a74b7))
+
+
+### Chores
+
+* move nodejs active lts version forward ([b5b2f46](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/b5b2f46eb30053be2a8a86cc4dfbc749bd4f65df))
+
+
+### CI
+
+* updep version robust ([0612a8b](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/0612a8bdaf375c4a1e9394bcbad744a4efd3cb16))
+
 ## [2.0.0-next.1](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.0&sourceBranch=refs/tags/v2.0.0-next.1) (2020-12-02)
 
 
