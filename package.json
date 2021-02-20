@@ -25,7 +25,9 @@
     "lint": "./scripts/lint.sh",
     "clean": "rm -rf demo/dist demo/.cache",
     "release": "standard-version --no-verify",
-    "prepublishOnly": "npm run build"
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable && npm run build",
+    "postpublish": "pinst --enable"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
@@ -33,11 +35,12 @@
     "@vue/component-compiler-utils": "^3.2.0",
     "autoprefixer": "^9.8.6",
     "element-ui": "^2.15.0",
-    "highcharts": "^8.2.2",
+    "highcharts": "^9.0.1",
     "highcharts-tree": "^0.1.5-alpha.7",
-    "husky": "^4.3.8",
+    "husky": "^5.0.9",
     "lint-staged": "^10.5.4",
     "parcel": "^1.12.4",
+    "pinst": "^2.1.4",
     "postcss-css-variables": "^0.17.0",
     "prettier": "^2.2.1",
     "sass": "^1.32.8",
