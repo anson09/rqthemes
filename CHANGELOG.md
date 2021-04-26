@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.3](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.2&sourceBranch=refs/tags/v2.0.0-next.3) (2021-04-26)
+
+
+### Chores
+
+* add vetur dep ([616d09b](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/616d09bc77bb1c76f60c732fe17b097f215e8fa7))
+* update husky v5 and highcharts v9 ([25961a8](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/25961a83e68f0fc40b55a19fd0a3c34d131a3c81))
+* updep ([802c1d6](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/802c1d6004ed9689816da6276b9914e1475af5ac))
+
 ## [2.0.0-next.2](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.1&sourceBranch=refs/tags/v2.0.0-next.2) (2021-02-19)
 
 
