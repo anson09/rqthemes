@@ -27,7 +27,9 @@
     "release": "standard-version --no-verify",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable && npm run build",
-    "postpublish": "pinst --enable"
+    "postpublish": "pinst --enable",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
