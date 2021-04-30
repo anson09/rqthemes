@@ -26,9 +26,7 @@
     "clean": "rm -rf demo/dist demo/.cache",
     "release": "standard-version --no-verify",
     "postinstall": "husky install",
-    "prepublishOnly": "pinst --disable && npm run build",
-    "postpublish": "pinst --enable",
-    "prepack": "pinst --disable",
+    "prepack": "pinst --disable && npm run build",
     "postpack": "pinst --enable"
   },
   "devDependencies": {
