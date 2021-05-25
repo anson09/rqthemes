@@ -369,7 +369,7 @@
           top: -7px;
           right: 85px;
           float: right;
-          margin-top: (50px - 10px) / 2;
+          margin-top: calc((50px - 10px) / 2);
           font-size: 0;
           content: "";
           border-top: 4px solid transparent;
