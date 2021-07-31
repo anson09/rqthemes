@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.4](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.3&sourceBranch=refs/tags/v2.0.0-next.4) (2021-07-31)
+
+
+### Features
+
+* remove element rqset ([6014c54](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/6014c543498f424422a2035b875d78b29c31447e))
+
+
+### Bug Fixes
+
+* husky install in pack mode ([2a16e78](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/2a16e78ff811f585b41578a00642da3ae2c8d27f))
+* publish will active pack hook ([947f5d9](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/947f5d95b458562552d950ada17e90268d98cad4))
+
+
+### CI
+
+* new anka machine ([888f2e6](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/888f2e66f6c3bb537afa681a27bad7df8cf4e0a8))
+
+
+### Chores
+
+* updep ([33fe3c5](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/33fe3c5aec515679703a78548759bbd2e408b006))
+* updep ([6a1d440](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/6a1d440ef339da9759f6ad7e9d31e35b11f8f348))
+* updep ([8448cef](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/8448cef9f1a01bc4c019044155bd1c99faedccd9))
+
 ## [2.0.0-next.3](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.2&sourceBranch=refs/tags/v2.0.0-next.3) (2021-04-26)
 
 
