@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.5](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.4&sourceBranch=refs/tags/v2.0.0-next.5) (2021-08-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* delete all variables outside light/dark definition
+
+### Features
+
+* delete all variables outside light/dark definition ([e2f0028](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/e2f0028addc6776042848af4cd22c47b6743a1e2))
+
 ## [2.0.0-next.4](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.3&sourceBranch=refs/tags/v2.0.0-next.4) (2021-07-31)
 
 
