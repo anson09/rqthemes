@@ -136,7 +136,7 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #00c1c4, #0064cd, #7ed321, #167b58,
 
   &-pressed {
     text {
-      fill: var(--text-color);
+      fill: var(--components-hover);
     }
   }
 }
@@ -147,7 +147,7 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #00c1c4, #0064cd, #7ed321, #167b58,
   }
 
   &:hover text {
-    fill: var(--text-color);
+    fill: var(--components-hover);
   }
 }
 

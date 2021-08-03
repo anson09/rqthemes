@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 function getCssVar() {
-  const FILES = ["global", "vars/light", "vars/compatibility"];
+  const FILES = ["vars/light"];
 
   const source = FILES.map((file) =>
     fs.readFileSync(path.resolve(__dirname, `src/${file}.scss`), "utf8")

@@ -3,11 +3,7 @@
 2. remove element font releated css
 3. rename index.css to dark.scss
 */
-/*
-update check:
-1. bug fix: dark padding: 9px 12px incompatible with light padding：8px 12px
-*/
-@charset "UTF-8";
+
 .el-pagination--small .arrow.disabled,
 .el-table .hidden-columns,
 .el-table td.is-hidden > *,

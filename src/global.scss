@@ -3,15 +3,6 @@ html {
 }
 
 body {
-  --color-success: hsla(100, 54%, 49%, 1); // 成功
-  --color-warning: hsla(37, 91%, 55%, 1); // 警告
-  --color-danger: hsla(0, 89%, 71%, 1); // 错误
-
-  --index-normal: 1; // z-index define
-
-  --animation-time: 0.3s;
-  --animation-slowly-time: 0.5s;
-
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
     "Microsoft YaHei", "微软雅黑", "wenquanyi micro hei", Arial, sans-serif;
   color: var(--text-normal);

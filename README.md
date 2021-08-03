@@ -8,8 +8,7 @@ https://www.npmjs.com/package/@rqjs/rqthemes
 
 ## Goal
 
-- unify mutiple products theme, **product projects using variables defined in src/vars(lib/vars)**
-- save base scss preprocess time
+unify mutiple products theme, **product projects using variables defined in src/vars(lib/vars)**
 
 ## Usage
 
@@ -22,7 +21,7 @@ https://www.npmjs.com/package/@rqjs/rqthemes
 
 - `import '@rqjs/rqthemes/lib/vars.css'`
 
-3. import entry file, which contains global style, element-ui reset and highcharts theme(styled mode)
+3. import entry file, which contains global style,and highcharts theme(styled mode)
 
 - `import '@rqjs/rqthemes'`
 - please use `import @rqjs/rqthemes/lib/legacy.css` instead if project need support IE
