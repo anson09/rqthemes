@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.6](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.5&sourceBranch=refs/tags/v2.0.0-next.6) (2021-08-04)
+
+
+### Features
+
+* update light color ([ea74230](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/ea7423066b7207b9fd4026fc9a0a66fe67a37027))
+
 ## [2.0.0-next.5](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.4&sourceBranch=refs/tags/v2.0.0-next.5) (2021-08-03)
 
 
