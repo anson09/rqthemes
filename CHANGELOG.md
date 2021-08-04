@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.7](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.6&sourceBranch=refs/tags/v2.0.0-next.7) (2021-08-04)
+
+
+### Features
+
+* udpate dark variables ([4ef068b](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/4ef068b486330496c332fb93b443fb1c25c79d2c))
+
 ## [2.0.0-next.6](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.5&sourceBranch=refs/tags/v2.0.0-next.6) (2021-08-04)
 
 
