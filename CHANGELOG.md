@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.8](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.7&sourceBranch=refs/tags/v2.0.0-next.8) (2021-08-07)
+
+
+### Features
+
+* update element light theme ([9ac4f4f](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/9ac4f4f52a3bd696a2c2a6b276fa9aaa7f7b6ac7))
+
 ## [2.0.0-next.7](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.6&sourceBranch=refs/tags/v2.0.0-next.7) (2021-08-04)
 
 
