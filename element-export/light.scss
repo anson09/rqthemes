@@ -20,16 +20,16 @@
 .el-upload-list__item.is-success:not(.focusing):focus {
   outline-width: 0;
 }
-.el-input__suffix,
-.el-tree.is-dragging .el-tree-node__content * {
-  pointer-events: none;
-}
 .el-pagination--small .arrow.disabled,
 .el-table .hidden-columns,
 .el-table td.is-hidden > *,
 .el-table th.is-hidden > *,
 .el-table--hidden {
   visibility: hidden;
+}
+.el-input__suffix,
+.el-tree.is-dragging .el-tree-node__content * {
+  pointer-events: none;
 }
 .el-pagination {
   white-space: nowrap;
@@ -576,8 +576,8 @@
 }
 .el-dropdown-menu__item:focus,
 .el-dropdown-menu__item:not(.is-disabled):hover {
-  background-color: rgba(40, 116, 230, 0.9);
-  color: rgba(40, 116, 230, 0.2);
+  background-color: rgba(40, 116, 230, 0.1);
+  color: #505053;
 }
 .el-dropdown-menu__item--divided:before,
 .el-menu,
@@ -1861,8 +1861,8 @@
   font-size: 14px;
 }
 .el-table-filter__list-item:hover {
-  background-color: rgba(40, 116, 230, 0.9);
-  color: rgba(40, 116, 230, 0.2);
+  background-color: rgba(40, 116, 230, 0.1);
+  color: #505053;
 }
 .el-table-filter__list-item.is-active {
   background-color: #2874e6;
@@ -3380,10 +3380,10 @@
 }
 .el-tabs__item {
   padding: 0 20px;
-  height: 40px;
+  height: 30px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  line-height: 40px;
+  line-height: 30px;
   display: inline-block;
   list-style: none;
   font-size: 14px;
@@ -3470,7 +3470,7 @@
 .el-tabs--card > .el-tabs__header .el-tabs__item {
   border-bottom: 1px solid transparent;
   border-left: 1px solid #ebeef5;
-  border-top: 1px solid #ebeef5;
+  border-top: 0 solid #ebeef5;
   -webkit-transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
     padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
@@ -3501,7 +3501,7 @@
   padding: 15px;
 }
 .el-tabs--border-card > .el-tabs__header {
-  padding-top: 4px;
+  padding-top: 2px;
   background-color: #f3f4f7;
   border-bottom: 1px solid #ebeef5;
   margin: 0;
@@ -11717,7 +11717,7 @@
   color: #505053;
   font-weight: 500;
   cursor: pointer;
-  margin-right: 30px;
+  margin-right: 24px;
 }
 .el-cascader-node > .el-radio,
 .el-radio:last-child {
@@ -11732,7 +11732,8 @@
   height: 30px;
   background-color: #f3f4f7;
 }
-.el-radio.is-bordered:hover {
+.el-radio.is-bordered:hover,
+.el-radio.is-bordered:hover .el-radio__inner {
   border-color: rgba(40, 116, 230, 0.4);
 }
 .el-radio.is-bordered.is-checked {
@@ -11894,7 +11895,7 @@
   height: 0;
   cursor: pointer;
   border-radius: inherit;
-  background-color: rgba(135, 135, 140, 0.3);
+  background-color: #f0f2f5;
   -webkit-transition: 0.3s background-color;
   transition: 0.3s background-color;
 }
