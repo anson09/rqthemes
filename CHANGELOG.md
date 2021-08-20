@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-next.10](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.9&sourceBranch=refs/tags/v2.0.0-next.10) (2021-08-20)
+
+
+### Features
+
+* update element dark export ([a1e2ea3](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/a1e2ea37476ab66060d4ae5c5b8b989d1191dc90))
+* update element export and vars ([07ace62](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/07ace62339aa725a767dcdd380b92233184d217b))
+
 ## [2.0.0-next.9](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.8&sourceBranch=refs/tags/v2.0.0-next.9) (2021-08-14)
 
 
