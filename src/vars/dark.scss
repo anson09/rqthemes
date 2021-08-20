@@ -36,6 +36,7 @@
   --text-placeholder: hsla(216, 23%, 74%, 1); //占位符字色
   --text-btn: hsla(0, 0%, 100%, 1); //按钮字体色值
   --text-link: hsla(220, 100%, 65%, 1); //文字链接
+  --text-menu: hsla(216, 19%, 66%, 1); //菜单颜色
 
   //components-interaction//
   --components-hover: hsla(220, 62%, 55%, 0.8); //组件悬停状态
@@ -61,7 +62,7 @@
 
   //disable-color//
   --disable-text: hsla(216, 12%, 25%, 1); //禁止文字色
-  --disable-primary: hsla(223, 17%, 16%, 1); //主要禁止背景色
+  --disable-primary: rgba(255, 255, 255, 0.04); //主要禁止背景色
   --disable-secondary: hsla(223, 17%, 16%, 0.4); //次要禁止背景色
 
   //table-color//
