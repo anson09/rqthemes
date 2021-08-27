@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.10&sourceBranch=refs/tags/v2.0.0) (2021-08-27)
+
+
+### Features
+
+* update dark theme and delete highcharts-tree ([f6d0bb8](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/f6d0bb8673ad18e0f64ef7fafda3e75b577ab2d9))
+
 ## [2.0.0-next.10](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.9&sourceBranch=refs/tags/v2.0.0-next.10) (2021-08-20)
 
 
