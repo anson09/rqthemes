@@ -30,8 +30,8 @@
   --excel-color-2: hsla(146, 48%, 49%, 0.2); //绿色按钮点击色
 
   //text-color//
-  --text-title: hsla(215, 22%, 89%, 1); //标题字体色值
-  --text-normal: hsla(211, 15%, 70%, 1); //常规字体色值
+  --text-title: hsla(0, 0%, 100%, 0.75); //标题字体色值
+  --text-normal: hsla(0, 0%, 100%, 0.55); //常规字体色值
   --text-secondary: hsla(211, 10%, 50%, 1); //提醒字体色值
   --text-placeholder: hsla(216, 23%, 74%, 1); //占位符字色
   --text-btn: hsla(0, 0%, 100%, 1); //按钮字体色值
@@ -61,7 +61,7 @@
   --border-hover: hsla(220, 100%, 65%, 0.8); //边框悬停
 
   //disable-color//
-  --disable-text: hsla(216, 12%, 25%, 1); //禁止文字色
+  --disable-text: hsla(0, 0%, 100%, 0.35); //禁止文字色
   --disable-primary: rgba(255, 255, 255, 0.04); //主要禁止背景色
   --disable-secondary: hsla(223, 17%, 16%, 0.4); //次要禁止背景色
 

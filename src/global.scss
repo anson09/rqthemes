@@ -7,4 +7,12 @@ body {
     "Microsoft YaHei", "微软雅黑", "wenquanyi micro hei", Arial, sans-serif;
   color: var(--text-normal);
   background-color: var(--bg-bg);
+
+  &.theme-light {
+    color-scheme: light;
+  }
+
+  &.theme-dark {
+    color-scheme: dark;
+  }
 }
