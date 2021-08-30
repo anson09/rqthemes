@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0&sourceBranch=refs/tags/v2.0.1) (2021-08-30)
+
+
+### Bug Fixes
+
+* element bundle switchs to master from dev ([10b0e07](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/10b0e074a4466843efef9003bf1df43e0d926593))
+
 ## [2.0.0](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0-next.10&sourceBranch=refs/tags/v2.0.0) (2021-08-27)
 
 
