@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.1&sourceBranch=refs/tags/v2.0.2) (2021-09-03)
+
+
+### Chores
+
+* update element exported ([07c7cde](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/07c7cde7e0230d58037b3bbe86c803fe6ba9b388))
+
 ### [2.0.1](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.0&sourceBranch=refs/tags/v2.0.1) (2021-08-30)
 
 
