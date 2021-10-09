@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.3](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.2&sourceBranch=refs/tags/v2.0.3) (2021-10-09)
+
+
+### CI
+
+* update server address ([7a0ddf8](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/7a0ddf8cf20a64010c06ad1e0e71ffb939d51ef2))
+
+
+### Chores
+
+* update element dep ([3b7a5b5](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/3b7a5b56d32704f1ba7bd1941e27d6cff1076ae1))
+
 ### [2.0.2](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.1&sourceBranch=refs/tags/v2.0.2) (2021-09-03)
 
 
