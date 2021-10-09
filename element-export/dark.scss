@@ -952,7 +952,7 @@
   white-space: nowrap;
   background: #272a34;
   border: 1px solid #323d4e;
-  font-weight: 16px;
+  font-weight: 500;
   border-left: 0;
   color: rgba(255, 255, 255, 0.85);
   -webkit-appearance: none;
@@ -3380,7 +3380,7 @@
 }
 .el-tabs__nav-wrap {
   overflow: hidden;
-  margin-bottom: -1px;
+  margin-bottom: 2px;
   position: relative;
   padding-left: 16px;
 }
@@ -3563,7 +3563,7 @@
 .el-tabs--border-card > .el-tabs__header {
   padding-top: 4px;
   background-color: rgba(255, 255, 255, 0.04);
-  border-bottom: 2px solid #272a34;
+  border-bottom: 0 solid #272a34;
   margin: 0;
 }
 .el-tabs--border-card > .el-tabs__header .el-tabs__item {
@@ -10825,7 +10825,7 @@
   margin: 0;
   -webkit-transition: 0.1s;
   transition: 0.1s;
-  font-weight: 16px;
+  font-weight: 500;
   padding: 7px 20px;
   font-size: 14px;
   border-radius: 4px;
