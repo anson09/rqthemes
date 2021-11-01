@@ -1,86 +1,86 @@
 .theme-light {
-  //brand-color//
-  --primary-color: hsla(216, 79%, 53%, 1);
-  --primary-color-1: hsla(216, 79%, 53%, 0.1);
-  --primary-color-2: hsla(216, 79%, 53%, 0.2);
-  --primary-color-3: hsla(216, 79%, 53%, 0.3);
-  --primary-color-4: hsla(216, 79%, 53%, 0.4);
-  --primary-color-5: hsla(216, 79%, 53%, 0.5);
-  --primary-color-6: hsla(216, 79%, 53%, 0.6);
-  --primary-color-7: hsla(216, 79%, 53%, 0.7);
-  --primary-color-8: hsla(216, 79%, 53%, 0.8);
-  --primary-color-9: hsla(216, 79%, 53%, 0.9);
+  // brand-color
+  --primary-color: hsl(216deg 79% 53% / 100%);
+  --primary-color-1: hsl(216deg 79% 53% / 10%);
+  --primary-color-2: hsl(216deg 79% 53% / 20%);
+  --primary-color-3: hsl(216deg 79% 53% / 30%);
+  --primary-color-4: hsl(216deg 79% 53% / 40%);
+  --primary-color-5: hsl(216deg 79% 53% / 50%);
+  --primary-color-6: hsl(216deg 79% 53% / 60%);
+  --primary-color-7: hsl(216deg 79% 53% / 70%);
+  --primary-color-8: hsl(216deg 79% 53% / 80%);
+  --primary-color-9: hsl(216deg 79% 53% / 90%);
 
-  //error-color//
-  --error-color: hsla(11, 100%, 59%, 1); //错误提醒色/红色按钮字体/border
-  --error-color-1: hsla(11, 100%, 59%, 0.1); //红色按钮悬浮色
-  --error-color-2: hsla(11, 100%, 59%, 0.2); //图标按钮禁止色/红色按钮点击色
-  --error-color-3: hsla(11, 100%, 59%, 0.3); //图标按钮禁止色/红色按钮点击色
-  --error-color-6: hsla(11, 100%, 59%, 0.6); //图标按钮点击色
-  --error-color-8: hsla(11, 100%, 59%, 0.8); //图标按钮悬浮色
+  // error-color
+  --error-color: hsl(11deg 100% 59% / 100%); // 错误提醒色/红色按钮字体/border
+  --error-color-1: hsl(11deg 100% 59% / 10%); // 红色按钮悬浮色
+  --error-color-2: hsl(11deg 100% 59% / 20%); // 图标按钮禁止色/红色按钮点击色
+  --error-color-3: hsl(11deg 100% 59% / 30%); // 图标按钮禁止色/红色按钮点击色
+  --error-color-6: hsl(11deg 100% 59% / 60%); // 图标按钮点击色
+  --error-color-8: hsl(11deg 100% 59% / 80%); // 图标按钮悬浮色
 
-  //succeed-color//
-  --succeed-color: hsla(155, 54%, 46%, 1); //成功提醒色
-  --succeed-color-1: hsla(155, 54%, 46%, 0.1); //绿色按钮悬浮色
-  --succeed-color-2: hsla(155, 54%, 46%, 0.2); //绿色按钮点击色
+  // succeed-color
+  --succeed-color: hsl(155deg 54% 46% / 100%); // 成功提醒色
+  --succeed-color-1: hsl(155deg 54% 46% / 10%); // 绿色按钮悬浮色
+  --succeed-color-2: hsl(155deg 54% 46% / 20%); // 绿色按钮点击色
 
-  //excel-color//
-  --excel-color: hsla(146, 48%, 49%, 1); //成功提醒色
-  --excel-color-1: hsla(146, 48%, 49%, 0.1); //绿色按钮悬浮色
-  --excel-color-2: hsla(146, 48%, 49%, 0.2); //绿色按钮点击色
+  // excel-color
+  --excel-color: hsl(146deg 48% 49% / 100%); // 成功提醒色
+  --excel-color-1: hsl(146deg 48% 49% / 10%); // 绿色按钮悬浮色
+  --excel-color-2: hsl(146deg 48% 49% / 20%); // 绿色按钮点击色
 
-  //text-color//
-  --text-title: hsl(240, 3%, 12%); //标题字体色值
-  --text-normal: hsla(240, 2%, 32%, 1); //常规字体色值
-  --text-secondary: hsla(240, 2%, 54%, 1); //提醒字体色值
-  --text-placeholder: hsla(216, 23%, 74%, 1); //占位符字色
-  --text-btn: hsla(0, 0%, 100%, 1); //按钮字体色值
-  --text-link: hsla(216, 79%, 53%, 1); //文字链接
-  --text-menu: hsla(216, 19%, 66%, 1); //菜单颜色
+  // text-color
+  --text-title: hsl(240deg 3% 12%); // 标题字体色值
+  --text-normal: hsl(240deg 2% 32% / 100%); // 常规字体色值
+  --text-secondary: hsl(240deg 2% 54% / 100%); // 提醒字体色值
+  --text-placeholder: hsl(216deg 23% 74% / 100%); // 占位符字色
+  --text-btn: hsl(0deg 0% 100% / 100%); // 按钮字体色值
+  --text-link: hsl(216deg 79% 53% / 100%); // 文字链接
+  --text-menu: hsl(216deg 19% 66% / 100%); // 菜单颜色
 
-  //components-interaction//
-  --components-hover: hsla(220, 62%, 55%, 0.8); //组件悬停状态
-  --components-click: hsla(220, 49%, 44%, 0.6); //组件点击状态
-  --components-active: hsla(216, 79%, 53%, 1); //组件活跃状态
+  // components-interaction
+  --components-hover: hsl(220deg 62% 55% / 80%); // 组件悬停状态
+  --components-click: hsl(220deg 49% 44% / 60%); // 组件点击状态
+  --components-active: hsl(216deg 79% 53% / 100%); // 组件活跃状态
 
-  //background-color//
-  --bg-primary: hsla(0, 0%, 100%, 1); //侧边栏一级背景色
-  --bg-secondary: hsla(225, 40%, 98%, 1); //侧边栏二级背景色
-  --bg-final: hsla(220, 100%, 99%, 1); //网站背景色
-  --bg-header: hsla(216, 20%, 96%, 1); //功能组件背景色
-  --bg-bg: hsla(220, 100%, 99%, 1); //布局背景
-  --bg-minor: hsla(216, 20%, 95%, 1); //翻页器默认背景
-  --bg-tip: hsla(216, 70%, 30%, 1); //tip颜色
-  --bg-shadows: 2px 0px 4px rgba(27, 95, 196, 0.1); //全局背景阴影
-  --bg-shadows-tabs: 0px 0px 10px 0px hsla(216, 76%, 44%, 0.1); //tabs选中背景阴影
-  --bg-green: hsla(146, 48%, 49%, 0.05); //对账完成后表格背景
+  // background-color
+  --bg-primary: hsl(0deg 0% 100% / 100%); // 侧边栏一级背景色
+  --bg-secondary: hsl(225deg 40% 98% / 100%); // 侧边栏二级背景色
+  --bg-final: hsl(220deg 100% 99% / 100%); // 网站背景色
+  --bg-header: hsl(216deg 20% 96% / 100%); // 功能组件背景色
+  --bg-bg: hsl(220deg 100% 99% / 100%); // 布局背景
+  --bg-minor: hsl(216deg 20% 95% / 100%); // 翻页器默认背景
+  --bg-tip: hsl(216deg 70% 30% / 100%); // tip颜色
+  --bg-shadows: 2px 0 4px rgb(27 95 196 / 10%); // 全局背景阴影
+  --bg-shadows-tabs: 0 0 10px 0 hsl(216deg 76% 44% / 10%); // tabs选中背景阴影
+  --bg-green: hsl(146deg 48% 49% / 5%); // 对账完成后表格背景
 
-  //border-color//
-  --border-primary: hsla(216, 79%, 93%, 1); //主要边框
-  --border-secondary: hsla(222, 33%, 94%, 1); //表格边框
-  --border-hover: hsla(216, 79%, 53%, 0.8); //边框悬停
+  // border-color
+  --border-primary: hsl(216deg 79% 93% / 100%); // 主要边框
+  --border-secondary: hsl(222deg 33% 94% / 100%); // 表格边框
+  --border-hover: hsl(216deg 79% 53% / 80%); // 边框悬停
 
-  //disable-color//
-  --disable-text: hsla(220, 11%, 78%, 1); //禁止文字色
-  --disable-primary: hsla(216, 33%, 97%, 1); //主要禁止背景色
-  --disable-secondary: hsla(222, 17%, 88%, 1); //次要禁止背景色
+  // disable-color
+  --disable-text: hsl(220deg 11% 78% / 100%); // 禁止文字色
+  --disable-primary: hsl(216deg 33% 97% / 100%); // 主要禁止背景色
+  --disable-secondary: hsl(222deg 17% 88% / 100%); // 次要禁止背景色
 
-  //table-color//
-  --table-header: hsla(216, 79%, 53%, 0.1); //表格头部
-  --table-primary: hsla(0, 0%, 100%, 1); //表格默认背景
-  --table-secondary: hsla(216, 79%, 53%, 0.08); //表格二级背景
-  --table-minor: hsla(240, 20%, 99%, 1); //表格三级背景
+  // table-color
+  --table-header: hsl(216deg 79% 53% / 10%); // 表格头部
+  --table-primary: hsl(0deg 0% 100% / 100%); // 表格默认背景
+  --table-secondary: hsl(216deg 79% 53% / 8%); // 表格二级背景
+  --table-minor: hsl(240deg 20% 99% / 100%); // 表格三级背景
 
-  //normal-color//
-  --white: hsla(0, 0%, 100%, 1);
-  --grey: hsla(220, 4%, 58%, 1);
-  --red: hsla(0, 94%, 66%, 1);
-  --green: hsla(155, 54%, 46%, 1);
-  --orange: hsla(40, 100%, 50%, 1);
-  --purple: hsla(249, 46%, 54%, 1);
-  --opacity: hsla(0, 0%, 0%, 0);
+  // normal-color
+  --white: hsl(0deg 0% 100% / 100%);
+  --grey: hsl(220deg 4% 58% / 100%);
+  --red: hsl(0deg 94% 66% / 100%);
+  --green: hsl(155deg 54% 46% / 100%);
+  --orange: hsl(40deg 100% 50% / 100%);
+  --purple: hsl(249deg 46% 54% / 100%);
+  --opacity: hsl(0deg 0% 0% / 0%);
 
-  //---components-button---//
+  // ---components-button---
   --button-default-color: var(--primary-color); // 主按钮背景色
   --button-default-click-color: var(--primary-color-6); // 默认按钮点击背景色
   --button-default-hover-color: var(--primary-color-8); // 主按钮悬停背景色
@@ -88,22 +88,23 @@
   --button-default-text-color: var(--white); // 主按钮字体色
   --button-default-text-disabled-color: var(--disable-text); // 主按钮禁用字体色
   --button-default-text-hover-color: var(--white); // 主按钮悬停字体色
-
   --button-ghost-color: var(--opacity); // 默认按钮背景色
   --button-ghost-border-color: var(--primary-color); // 默认按钮边框背景色
   --button-ghost-hover-color: var(--primary-color-4); // 默认按钮悬停背景色
   --button-ghost-text-color: var(--primary-color); // 默认按钮字体色
   --button-ghost-text-disabled-color: var(--disable-text); // 按钮禁用字体色
   --button-ghost-disabled-color: var(--disable-secondary); // 按钮禁用背景色
-  --button-ghost-disabled-border-color: var(--disable-primary); //按钮禁用边框色
-  --button-ghost-text-hover-color: var(--primary-color); // 按钮悬停字体色
+  --button-ghost-disabled-border-color: var(
+    --disable-primary
+  ); // 按钮禁用边框色
 
+  --button-ghost-text-hover-color: var(--primary-color); // 按钮悬停字体色
   --button-group-color: var(--opacity); // 按钮组背景色
   --button-group-hover-color: var(--primary-color-8); // 按钮组悬停背景色
   --button-group-disabled-color: var(--disable-primary); // 按钮组禁用背景色
   --button-group-text-color: var(--white); // 按钮组字体色
 
-  //---components-select---//
+  // ---components-select---
   --select-text-color: var(--text-normal); // 下拉默认字体色
   --select-text-hover-color: var(--primary-color); // 下拉选择字体悬停色
   --select-dropdown-bg-color: var(--bg-bg); // 下拉选择背景颜色
@@ -111,23 +112,22 @@
     --primary-color-2
   ); // 下拉选择悬停背景颜色
 
-  //---components-table---//
-  --table-head-bg-color: var(--table-header); //表格表头颜色
-  --table-primary-bg-color: var(--table-primary); //表格第一层级
-  --table-secondary-bg-color: var(--table-secondary); //表格第二层级
-  --table-minor-bg-color: var(--table-minor); //表格第三层级
-  --table-color: var(--table-primary); //表格背景颜色
-  --table-hover-color: var(--primary-color-2); //表格悬停颜色
-  --table-active-color: var(--grey); //表格选中颜色
-  --table-head-text-color: var(--text-normal); //表格表头字体颜色
-
+  // ---components-table---
+  --table-head-bg-color: var(--table-header); // 表格表头颜色
+  --table-primary-bg-color: var(--table-primary); // 表格第一层级
+  --table-secondary-bg-color: var(--table-secondary); // 表格第二层级
+  --table-minor-bg-color: var(--table-minor); // 表格第三层级
+  --table-color: var(--table-primary); // 表格背景颜色
+  --table-hover-color: var(--primary-color-2); // 表格悬停颜色
+  --table-active-color: var(--grey); // 表格选中颜色
+  --table-head-text-color: var(--text-normal); // 表格表头字体颜色
   --table-highlight-bg-color: var(--bg-header); // 高亮的表格背景
   --table-blue-color: var(--primary-color); // 蓝色表格
   --table-blue-bg-color: var(--primary-color-1); // 蓝色表格背景
   --table-green-color: var(--green); // 绿色表格
   --table-green-bg-color: var(--bg-green); // 绿色表格背景
 
-  //---components-aside---//
+  // ---components-aside---
   --aside-bg-color: var(--bg-primary); // 侧边栏背景颜色
   --aside-decorator-color: var(--border-primary); // 侧边栏饰品颜色
   --aside-decorator-active-color: var(--primary-color); // 侧边栏饰品激活时颜色
@@ -135,25 +135,25 @@
   --aside-bg-active-color: var(--primary-color-1); // 侧边栏hover项背景颜色
   --aside-collapse-bg-color: var(--bg-secondary); // 侧边栏当前展开项背景颜色
 
-  //---components-pagination---//
-  --pagination-text-color: var(--text-normal); //  翻页器文字颜色
-  --pagination-text-disable-color: var(--disable-text); //  翻页器禁用文字颜色
-  --pagination-text-active-color: var(--white); //  翻页器选中项文字颜色
-  --pagination-text-hover-color: var(--primary-color); //  翻页器hover文字颜色
+  // ---components-pagination---
+  --pagination-text-color: var(--text-normal); // 翻页器文字颜色
+  --pagination-text-disable-color: var(--disable-text); // 翻页器禁用文字颜色
+  --pagination-text-active-color: var(--white); // 翻页器选中项文字颜色
+  --pagination-text-hover-color: var(--primary-color); // 翻页器hover文字颜色
   --pagination-bg-color: var(--bg-minor); // 翻页器默认背景颜色
-  --pagination-bg-active-color: var(--primary-color); //  翻页器选中项背景颜色
+  --pagination-bg-active-color: var(--primary-color); // 翻页器选中项背景颜色
 
-  //---components-input---//
+  // ---components-input---
   --input-color: var(--bg-bg); // 文本输入框背景色
-  --input-border: var(--border-primary); //文本框边框
+  --input-border: var(--border-primary); // 文本框边框
   --input-text-color: var(--text-normal); // 文本输入框字体色
   --input-text-disabled-color: var(--disable-text); // 文本禁用字体色
 
-  //---components-checkbox---//
+  // ---components-checkbox---
   --checkbox-color: var(--bg-bg); // checkbox背景色
   --checkbox-inner-color: var(--primary-color); // checkbox内部icon颜色
 
-  //---components-tabs---//
+  // ---components-tabs---
   --tabs-bg-color: var(--bg-header); // tab的背景颜色
   --tabs-text-color: var(--text-title); // tab的文字颜色
   --tabs-bg-active-color: var(--bg-bg); // 激活的tab的背景颜色
@@ -161,36 +161,36 @@
   --tabs-border-active-color: var(--primary-color); // 激活的tab下划线颜色
   --tabs-active-color: var(--primary-color); // 激活的tab标题字体颜色
   --tabs-active-shadows: var(--bg-shadows-tabs); // 激活的tab背景阴影
-
   --sub-tabs-bg-color: var(--opacity); // 二级tab的背景颜色
   --sub-tabs-text-color: var(--text-secondary); // 二级tab的文字颜色
   --sub-tabs-text-hover-color: var(--primary-color-5); // 悬停的二级的文字颜色
   --sub-tabs-bg-active-color: var(--primary-color-5); // 激活的二级tab的背景颜色
   --sub-tabs-text-active-color: var(--white); // 激活的二级tab标题字体颜色
 
-  //---components-datepicker---//
+  // ---components-datepicker---
   --date-table-weekend-color: var(--primary-color-6); // 日期选择器周末颜色高亮
   --date-table-current-text-color: var(--white); // 日期选择器选中日期，字体颜色
   --date-table-current-color: var(
     --primary-color
   ); // 日期选择器选中日期的圆圈背景色
-  --date-table-bg: var(--bg-bg); //日期选择器背景
 
-  //---components-scrollbar---//
+  --date-table-bg: var(--bg-bg); // 日期选择器背景
+
+  // ---components-scrollbar---
   --table-scroll-bg-color: var(--bg-header); // 滚动条背景色
   --table-scroll-track-color: var(--grey); // 滚动条颜色
 
-  //---unknown---//
+  // ---unknown---
   --arrow-color: var(--border-primary);
   --arrow-inside-color: var(--bg-primary);
 
-  //---components-card---//
+  // ---components-card---
   --card-header-bg: var(--bg-primary);
   --card-header-text: var(--text-title);
   --card-body-bg: var(--bg-bg);
   --card-body-text: var(--text-normal);
 
-  //---components-icon---//
+  // ---components-icon---
   --icon-normal: var(--primary-color-5);
   --icon-hover: var(--primary-color-8);
   --icon-click: var(--primary-color);

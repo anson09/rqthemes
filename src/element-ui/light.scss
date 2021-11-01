@@ -1,3 +1,4 @@
 .theme-light {
-  @import "../../element-export/light.scss";
+  /* stylelint-disable-next-line no-invalid-position-at-import-rule */
+  @import "../../element-export/light";
 }

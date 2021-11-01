@@ -1,7 +1,8 @@
 $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #00c1c4, #0064cd, #7ed321, #167b58,
   #6e48db, #c17aff, #ff9a00, #b5ea81, #ff27aa, #00c7ff, #e47d03;
 
-@import "~highcharts/css/highcharts.scss";
+@use "sass:list";
+@import "~highcharts/css/highcharts";
 
 .highcharts-container {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
@@ -9,7 +10,7 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #00c1c4, #0064cd, #7ed321, #167b58,
 }
 
 @for $i from 1 through length($colors) {
-  $color: nth($colors, $i);
+  $color: list.nth($colors, $i);
   .highcharts-text-color-#{$i - 1} {
     fill: $color;
   }
@@ -32,6 +33,7 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #00c1c4, #0064cd, #7ed321, #167b58,
     }
   }
 }
+
 .highcharts-column-series rect.highcharts-point,
 .highcharts-pie-series .highcharts-point {
   stroke: var(--bg-bg);
@@ -58,7 +60,7 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #00c1c4, #0064cd, #7ed321, #167b58,
   pointer-events: none;
 }
 
-//vars
+// vars
 .highcharts-background {
   fill: var(--bg-bg);
 }
@@ -89,6 +91,7 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #00c1c4, #0064cd, #7ed321, #167b58,
 
 .highcharts-range-input {
   stroke: var(--border-primary);
+
   text {
     fill: var(--text-normal);
   }
@@ -98,6 +101,7 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #00c1c4, #0064cd, #7ed321, #167b58,
   color: var(--text-normal);
   background-color: var(--bg-bg);
   border-color: var(--border-hover) !important;
+
   &.active {
     border-color: var(--border-hover) !important;
   }
@@ -170,7 +174,7 @@ $colors: #6c8ff1, #ffcb37, #50e3c2, #d94040, #00c1c4, #0064cd, #7ed321, #167b58,
 }
 
 .highcharts-series-inactive {
-  opacity: 1;
+  opacity: 100%;
 }
 
 .highcharts-tooltip-box .highcharts-label-box {
