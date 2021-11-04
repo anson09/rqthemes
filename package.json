@@ -25,9 +25,9 @@
     "lint": "./scripts/lint.sh",
     "clean": "rm -rf demo/dist demo/.cache",
     "release": "standard-version --no-verify",
-    "postinstall": "husky install",
-    "prepack": "pinst --disable && npm run build",
-    "postpack": "pinst --enable"
+    "prepare": "husky install",
+    "prepack": "./scripts/hooks.sh --disable && npm run build",
+    "postpack": "./scripts/hooks.sh --enable"
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
@@ -39,7 +39,6 @@
     "husky": "^7.0.2",
     "lint-staged": "^11.2.1",
     "parcel-bundler": "^1.12.5",
-    "pinst": "^2.1.6",
     "postcss-css-variables": "^0.17.0",
     "postcss-scss": "^4.0.2",
     "prettier": "^2.4.1",
