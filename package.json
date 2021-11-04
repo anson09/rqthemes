@@ -1,6 +1,6 @@
 {
   "name": "@rqjs/rqthemes",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "ricequant themes",
   "main": "lib/index.css",
   "style": "lib/index.css",
@@ -26,8 +26,8 @@
     "clean": "rm -rf demo/dist demo/.cache",
     "release": "standard-version --no-verify",
     "prepare": "husky install",
-    "prepack": "./scripts/hooks.sh --disable && npm run build",
-    "postpack": "./scripts/hooks.sh --enable"
+    "prepack": "./scripts/hook.sh --disable && npm run build",
+    "postpack": "./scripts/hook.sh --enable"
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",

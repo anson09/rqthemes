@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.5](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.4&sourceBranch=refs/tags/v2.0.5) (2021-11-04)
+
+
+### Bug Fixes
+
+* npm taobao registry modify _postinstall script ([6c8e7ad](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/6c8e7ada2cfb75cfdc30b59f11cb417bc3476b33))
+
+
+### Chores
+
+* updep ([8c2dc06](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/8c2dc0627589f84171b1ad844f6ef1798e750b9f))
+
 ### [2.0.4](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.3&sourceBranch=refs/tags/v2.0.4) (2021-11-01)
 
 
