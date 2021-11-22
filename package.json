@@ -30,14 +30,14 @@
     "postpack": "./scripts/hook.sh --enable"
   },
   "devDependencies": {
-    "@commitlint/cli": "^14.1.0",
-    "@commitlint/config-conventional": "^14.1.0",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "@vue/component-compiler-utils": "^3.2.2",
     "autoprefixer": "^9.8.8",
     "element-ui": "^2.15.6",
     "highcharts": "^9.2.2",
     "husky": "^7.0.2",
-    "lint-staged": "^11.2.1",
+    "lint-staged": "^12.1.2",
     "parcel-bundler": "^1.12.5",
     "postcss": "^8.3.11",
     "postcss-css-variables": "^0.17.0",
@@ -46,7 +46,7 @@
     "standard-version": "^9.3.1",
     "stylelint": "^14.0.1",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard-scss": "^2.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
     "vue": "^2.6.14",
     "vue-hot-reload-api": "^2.3.4",
     "vue-template-compiler": "^2.6.14"
