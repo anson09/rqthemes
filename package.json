@@ -30,8 +30,8 @@
     "postpack": "./scripts/hook.sh --enable"
   },
   "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
     "@vue/component-compiler-utils": "^3.2.2",
     "autoprefixer": "^9.8.8",
     "element-ui": "^2.15.6",
