@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.6](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.4&sourceBranch=refs/tags/v2.0.6) (2021-12-31)
+
+
+### Bug Fixes
+
+* depVersion ([19ac521](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/19ac521bc4a27f1d022ffc1bfa0bd645662dc209))
+* merge element fix ([f7ea575](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/f7ea575bf9df71e3494ee59bc91123b888fa0079))
+* npm taobao registry modify _postinstall script ([6c8e7ad](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/6c8e7ada2cfb75cfdc30b59f11cb417bc3476b33))
+
+
+### Code Style
+
+* update stylelint rules ([a3f0837](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/a3f0837237c00aea2543f65a8d0c27dfb9297340))
+
+
+### Chores
+
+* **release:** 2.0.5 ([6935182](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/6935182d6bfd0fde016e3594c03b4a91035a75e1))
+* updep ([a602574](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/a602574d0dfd1545dff41a65be4ff052850fecfe))
+* updep ([8c2dc06](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/8c2dc0627589f84171b1ad844f6ef1798e750b9f))
+
 ### [2.0.5](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.4&sourceBranch=refs/tags/v2.0.5) (2021-11-04)
 
 
