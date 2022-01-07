@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.7](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.6&sourceBranch=refs/tags/v2.0.7) (2022-01-07)
+
+
+### Bug Fixes
+
+* latest hsl color format is unsupport in ie ([8339f42](http://git.ricequant.com/projects/NODE/repos/rqthemes/commits/8339f4281deddd1ea47db51151d5bf871cad4f7a))
+
 ### [2.0.6](http://git.ricequant.com/projects/NODE/repos/rqthemes/compare/diff?targetBranch=refs/tags/v2.0.4&sourceBranch=refs/tags/v2.0.6) (2021-12-31)
 
 
